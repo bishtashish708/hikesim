@@ -73,9 +73,17 @@ export function ElevationChart({ points }: ElevationChartProps) {
       }
     });
 
-    setHoverIndex(nearestIndex);
-    setHoverX(chartCoords[nearestIndex].x);
-    setHoverY(offsetY);
+    const nextX = chartCoords[nearestIndex].x;
+    const nextY = offsetY;
+    if (hoverIndex !== nearestIndex) {
+      setHoverIndex(nearestIndex);
+    }
+    if (hoverX !== nextX) {
+      setHoverX(nextX);
+    }
+    if (hoverY !== nextY) {
+      setHoverY(nextY);
+    }
   };
 
   const handlePointerLeave = () => {

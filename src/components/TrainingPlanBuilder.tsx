@@ -6,15 +6,14 @@ import {
   buildTrainingPlan,
   getMinPrepWeeks,
   getNextMonday,
-  type TrainingPlanOutput,
-} from "@/lib/training/trainingPlan";
+} from "@/lib/training/buildTrainingPlan";
 import {
   getPlanIntensity,
   sanitizeNumber,
   trimPreferredDays,
   validateTrainingForm,
-  type TrainingFormErrors,
-} from "@/lib/training/formValidation";
+} from "@/lib/training/validators";
+import type { TrainingFormErrors, TrainingPlanOutput } from "@/lib/training/types";
 import type { FitnessLevel, ProfilePoint } from "@/lib/planGenerator";
 
 const DAY_LABELS = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
@@ -183,8 +182,12 @@ export function TrainingPlanBuilder({ hike, fitnessLevel }: TrainingPlanBuilderP
 
   useEffect(() => {
     if (anyDays) {
-      setPreferredDays([]);
-      setPreferredDayLimitNote(null);
+      if (preferredDays.length > 0) {
+        setPreferredDays([]);
+      }
+      if (preferredDayLimitNote) {
+        setPreferredDayLimitNote(null);
+      }
       return;
     }
     if (preferredDays.length > daysPerWeek) {
@@ -193,7 +196,7 @@ export function TrainingPlanBuilder({ hike, fitnessLevel }: TrainingPlanBuilderP
     } else {
       setPreferredDayLimitNote(null);
     }
-  }, [anyDays, daysPerWeek, preferredDays]);
+  }, [anyDays, daysPerWeek, preferredDays, preferredDayLimitNote]);
 
   useEffect(() => {
     if (treadmillSessions > daysPerWeek) {
@@ -969,14 +972,16 @@ function exportTrainingPlanCsv(hikeName: string, plan: TrainingPlanOutput) {
   const rows = [
     ["Date", "Workout Type", "Duration (min)", "Incline Target", "Notes", "Segments"],
     ...plan.weeks.flatMap((week) =>
-      week.days.map((day) => [
-        day.date,
-        day.workouts[0].type,
-        day.workouts[0].durationMinutes.toString(),
-        day.workouts[0].inclineTarget ? `${day.workouts[0].inclineTarget}%` : "",
-        day.workouts[0].notes ?? "",
-        day.workouts[0].segments ? JSON.stringify(day.workouts[0].segments) : "",
-      ])
+      week.days.flatMap((day) =>
+        day.workouts.map((workout) => [
+          day.date,
+          workout.type,
+          workout.durationMinutes.toString(),
+          workout.inclineTarget ? `${workout.inclineTarget}%` : "",
+          workout.notes ?? "",
+          workout.segments ? JSON.stringify(workout.segments) : "",
+        ])
+      )
     ),
   ];
 

@@ -5,9 +5,9 @@ import {
   sanitizeNumber,
   trimPreferredDays,
   validateTrainingForm,
-} from "./formValidation";
+} from "./validators";
 
-describe("formValidation", () => {
+describe("validators", () => {
   it("clamps numbers to range", () => {
     expect(clampNumber(12, 0, 10)).toBe(10);
   });

@@ -1,5 +1,10 @@
 import { describe, expect, it } from "vitest";
-import { buildTrainingPlan, buildWeeklyVolumes, getMinPrepWeeks, getNextMonday } from "./trainingPlan";
+import {
+  buildTrainingPlan,
+  buildWeeklyVolumes,
+  getMinPrepWeeks,
+  getNextMonday,
+} from "./buildTrainingPlan";
 
 const sampleInputs = {
   hike: {

@@ -1,22 +1,4 @@
-export type TrainingFormValues = {
-  trainingStartDate: string;
-  targetDate: string;
-  daysPerWeek: number;
-  preferredDays: number[];
-  anyDays: boolean;
-  baselineMinutes: number;
-  treadmillMaxInclinePercent: number;
-  maxSpeedMph: number;
-  treadmillSessionsPerWeek: number;
-  outdoorHikesPerWeek: number;
-  includeStrength: boolean;
-  strengthDaysPerWeek: number;
-  strengthOnCardioDays: boolean;
-};
-
-export type TrainingFormErrors = Partial<Record<keyof TrainingFormValues, string>> & {
-  preferredDaysLimit?: string;
-};
+import type { TrainingFormErrors, TrainingFormValues } from "@/lib/training/types";
 
 export function clampNumber(value: number, min: number, max: number) {
   if (Number.isNaN(value)) return min;

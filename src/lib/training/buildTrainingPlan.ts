@@ -4,83 +4,18 @@ import {
   generatePlan,
   type FitnessLevel,
   type PlanSegment,
-  type ProfilePoint,
 } from "@/lib/planGenerator";
+import type {
+  TrainingDay,
+  TrainingPlanInputs,
+  TrainingPlanOutput,
+  TrainingSegment,
+  TrainingWorkout,
+  TrainingWeek,
+  WorkoutType,
+} from "@/lib/training/types";
 
-export type TrainingPlanInputs = {
-  hike: {
-    distanceMiles: number;
-    elevationGainFt: number;
-    profilePoints: ProfilePoint[];
-  };
-  fitnessLevel: FitnessLevel;
-  targetDate: string;
-  trainingStartDate: string;
-  daysPerWeek: number;
-  preferredDays: number[];
-  anyDays: boolean;
-  baselineMinutes: number;
-  constraints: {
-    treadmillMaxInclinePercent: number;
-    treadmillSessionsPerWeek: number;
-    outdoorHikesPerWeek: number;
-    maxSpeedMph: number;
-  };
-  includeStrength: boolean;
-  strengthDaysPerWeek: number;
-  strengthOnCardioDays: boolean;
-};
-
-export type TrainingPlanOutput = {
-  totalWeeks: number;
-  warnings: string[];
-  summary: {
-    daysPerWeek: number;
-    preferredDays: number[];
-    averageWeeklyMinutes: number;
-  };
-  weeks: TrainingWeek[];
-};
-
-export type TrainingWeek = {
-  weekNumber: number;
-  startDate: string;
-  endDate: string;
-  totalMinutes: number;
-  notes: string;
-  focus: string;
-  days: TrainingDay[];
-};
-
-export type TrainingDay = {
-  date: string;
-  dayName: string;
-  workouts: TrainingWorkout[];
-};
-
-export type TrainingWorkout = {
-  id: string;
-  type: WorkoutType;
-  durationMinutes: number;
-  inclineTarget?: number;
-  notes?: string;
-  segments?: TrainingSegment[];
-};
-
-export type TrainingSegment = {
-  index: number;
-  minutes: number;
-  inclinePct: number;
-  speedMph: number;
-  note?: string;
-};
-
-export type WorkoutType =
-  | "Treadmill intervals"
-  | "Zone 2 incline walk"
-  | "Strength"
-  | "Outdoor long hike"
-  | "Recovery / mobility";
+// Build a week-by-week plan with hike-specific progression, including treadmill segments.
 
 const DAY_NAMES = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
 
