@@ -177,6 +177,7 @@ describe("buildTrainingPlan", () => {
 
   it("warns when preparation weeks are below minimum", () => {
     expect(getMinPrepWeeks(10, 4000)).toBe(8);
+    expect(getMinPrepWeeks(12, 5000)).toBe(12);
   });
 
   it("matches requested cardio counts per week", () => {
@@ -213,6 +214,56 @@ describe("buildTrainingPlan", () => {
     ).length;
     expect(strengthAddOns).toBeGreaterThan(0);
     expect(week1Days.length).toBe(3);
+  });
+
+  it("labels adaptation weeks for beginner baseline", () => {
+    const plan = buildTrainingPlan({
+      ...sampleInputs,
+      baselineMinutes: 0,
+    });
+    expect(plan.weeks[0].notes).toMatch(/Adaptation week/i);
+  });
+
+  it("hits peak-week long session target range", () => {
+    const plan = buildTrainingPlan({
+      ...sampleInputs,
+      trainingStartDate: "2025-06-07",
+      targetDate: "2025-09-13",
+      baselineMinutes: 120,
+    });
+    const peakWeek = plan.weeks[plan.weeks.length - 2];
+    const peakLongSession = Math.max(
+      ...peakWeek.days.flatMap((day) => day.workouts.map((workout) => workout.durationMinutes))
+    );
+    const expectedMinutes = Math.round((sampleInputs.hike.distanceMiles / 3 + (sampleInputs.hike.elevationGainFt / 1000) * 0.5) * 60);
+    expect(peakLongSession).toBeGreaterThanOrEqual(Math.round(expectedMinutes * 0.7));
+    expect(peakLongSession).toBeLessThanOrEqual(Math.round(expectedMinutes * 0.9));
+  });
+
+  it("ramps peak-week incline toward hike demand", () => {
+    const plan = buildTrainingPlan({
+      ...sampleInputs,
+      trainingStartDate: "2025-06-07",
+      targetDate: "2025-09-13",
+      baselineMinutes: 180,
+      constraints: {
+        treadmillMaxInclinePercent: 12,
+        treadmillSessionsPerWeek: 2,
+        outdoorHikesPerWeek: 0,
+        maxSpeedMph: 4.5,
+      },
+    });
+    const peakWeek = plan.weeks[plan.weeks.length - 2];
+    const treadmillSegments = peakWeek.days
+      .flatMap((day) => day.workouts)
+      .flatMap((workout) => workout.segments ?? []);
+    const avgGrade =
+      ((1600 - 1000) / ((2.5 - 0) * 5280) +
+        (2500 - 1600) / ((5 - 2.5) * 5280)) /
+      2 *
+      100;
+    const maxIncline = Math.max(...treadmillSegments.map((segment) => segment.inclinePct));
+    expect(maxIncline).toBeGreaterThanOrEqual(avgGrade * 0.6);
   });
 
   it("schedules strength on separate days when configured", () => {

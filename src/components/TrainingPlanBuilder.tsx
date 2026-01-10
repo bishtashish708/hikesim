@@ -64,9 +64,83 @@ export function TrainingPlanBuilder({ hike, fitnessLevel }: TrainingPlanBuilderP
   const planIntensity = getPlanIntensity(baselineMinutes, totalSessions);
   const isAggressive = planIntensity === "aggressive";
   const isModerate = planIntensity === "moderate";
+  const liveErrors = useMemo(
+    () =>
+      validateTrainingForm({
+        trainingStartDate,
+        targetDate,
+        daysPerWeek,
+        preferredDays,
+        anyDays,
+        baselineMinutes,
+        treadmillMaxInclinePercent: maxIncline,
+        maxSpeedMph: maxSpeed,
+        treadmillSessionsPerWeek: treadmillSessions,
+        outdoorHikesPerWeek: outdoorHikes,
+        includeStrength,
+        strengthDaysPerWeek: strengthDays,
+        strengthOnCardioDays,
+      }),
+    [
+      trainingStartDate,
+      targetDate,
+      daysPerWeek,
+      preferredDays,
+      anyDays,
+      baselineMinutes,
+      maxIncline,
+      maxSpeed,
+      treadmillSessions,
+      outdoorHikes,
+      includeStrength,
+      strengthDays,
+      strengthOnCardioDays,
+    ]
+  );
+  const isFormValid = Object.keys(liveErrors).length === 0;
 
-  const nextTreadmillWorkout = plan
-    ? plan.weeks
+  const previewPlan = useMemo(() => {
+    if (!trainingStartDate || !targetDate || !isFormValid) return null;
+    return buildTrainingPlan({
+      hike: {
+        distanceMiles: hike.distanceMiles,
+        elevationGainFt: hike.elevationGainFt,
+        profilePoints: hike.profilePoints,
+      },
+      fitnessLevel,
+      targetDate,
+      trainingStartDate,
+      daysPerWeek,
+      preferredDays,
+      anyDays,
+      baselineMinutes,
+      constraints: settingsPayload.constraints,
+      includeStrength,
+      strengthDaysPerWeek: strengthDays,
+      strengthOnCardioDays,
+    });
+  }, [
+    trainingStartDate,
+    targetDate,
+    isFormValid,
+    hike.distanceMiles,
+    hike.elevationGainFt,
+    hike.profilePoints,
+    fitnessLevel,
+    daysPerWeek,
+    preferredDays,
+    anyDays,
+    baselineMinutes,
+    settingsPayload.constraints,
+    includeStrength,
+    strengthDays,
+    strengthOnCardioDays,
+  ]);
+
+  const visiblePlan = plan ?? previewPlan;
+
+  const nextTreadmillWorkout = visiblePlan
+    ? visiblePlan.weeks
         .flatMap((week) => week.days)
         .flatMap((day) =>
           day.workouts.map((workout) => ({
@@ -241,21 +315,7 @@ export function TrainingPlanBuilder({ hike, fitnessLevel }: TrainingPlanBuilderP
       return;
     }
 
-    const validation = validateTrainingForm({
-      trainingStartDate,
-      targetDate,
-      daysPerWeek,
-      preferredDays,
-      anyDays,
-      baselineMinutes,
-      treadmillMaxInclinePercent: maxIncline,
-      maxSpeedMph: maxSpeed,
-      treadmillSessionsPerWeek: treadmillSessions,
-      outdoorHikesPerWeek: outdoorHikes,
-      includeStrength,
-      strengthDaysPerWeek: strengthDays,
-      strengthOnCardioDays,
-    });
+    const validation = liveErrors;
     if (Object.keys(validation).length > 0) {
       setFormErrors(validation);
       setError("Please fix the highlighted fields.");
@@ -288,6 +348,24 @@ export function TrainingPlanBuilder({ hike, fitnessLevel }: TrainingPlanBuilderP
     setPlan(output);
   };
 
+  useEffect(() => {
+    setPlan(null);
+  }, [
+    trainingStartDate,
+    targetDate,
+    daysPerWeek,
+    preferredDays,
+    anyDays,
+    baselineMinutes,
+    maxIncline,
+    maxSpeed,
+    treadmillSessions,
+    outdoorHikes,
+    includeStrength,
+    strengthDays,
+    strengthOnCardioDays,
+  ]);
+
   const weeksUntilHike = trainingStartDate && targetDate
     ? Math.ceil(
         (new Date(targetDate).getTime() - new Date(trainingStartDate).getTime() + 24 * 60 * 60 * 1000) /
@@ -313,6 +391,8 @@ export function TrainingPlanBuilder({ hike, fitnessLevel }: TrainingPlanBuilderP
     !trainingStartDate ||
     !targetDate ||
     new Date(trainingStartDate).getTime() > new Date(targetDate).getTime();
+
+  const isGenerateDisabled = hasDateError || (isAggressive && !frequencyAck) || !isFormValid;
 
   const handleSave = async () => {
     if (!plan) return;
@@ -358,12 +438,12 @@ export function TrainingPlanBuilder({ hike, fitnessLevel }: TrainingPlanBuilderP
       </div>
 
       <div className="mt-6 rounded-2xl border border-slate-200 bg-slate-50 p-4 text-sm text-slate-700">
-        {plan ? (
+        {visiblePlan ? (
           <div className="space-y-3">
             <div className="font-semibold">
-              {plan.totalWeeks} weeks starting {formatDate(trainingStartDate)} •{" "}
-              {plan.summary.daysPerWeek} days/week • ~
-              {plan.summary.averageWeeklyMinutes} min/week
+              {visiblePlan.totalWeeks} weeks starting {formatDate(trainingStartDate)} •{" "}
+              {visiblePlan.summary.daysPerWeek} days/week • ~
+              {visiblePlan.summary.averageWeeklyMinutes} min/week
             </div>
             {nextTreadmillWorkout ? (
               <div className="space-y-2">
@@ -422,8 +502,13 @@ export function TrainingPlanBuilder({ hike, fitnessLevel }: TrainingPlanBuilderP
             type="date"
             value={trainingStartDate}
             onChange={(event) => setTrainingStartDate(event.target.value)}
-            className="w-full rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm shadow-sm focus:border-emerald-400 focus:outline-none"
+            className={`w-full rounded-lg border bg-white px-3 py-2 text-sm shadow-sm focus:outline-none ${
+              liveErrors.trainingStartDate ? "border-rose-300 focus:border-rose-400" : "border-slate-200 focus:border-emerald-400"
+            }`}
           />
+          {liveErrors.trainingStartDate ? (
+            <p className="text-xs text-rose-700">{liveErrors.trainingStartDate}</p>
+          ) : null}
           <div className="flex flex-wrap gap-2 pt-1 text-xs">
             <button
               type="button"
@@ -454,8 +539,13 @@ export function TrainingPlanBuilder({ hike, fitnessLevel }: TrainingPlanBuilderP
             type="date"
             value={targetDate}
             onChange={(event) => setTargetDate(event.target.value)}
-            className="w-full rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm shadow-sm focus:border-emerald-400 focus:outline-none"
+            className={`w-full rounded-lg border bg-white px-3 py-2 text-sm shadow-sm focus:outline-none ${
+              liveErrors.targetDate ? "border-rose-300 focus:border-rose-400" : "border-slate-200 focus:border-emerald-400"
+            }`}
           />
+          {liveErrors.targetDate ? (
+            <p className="text-xs text-rose-700">{liveErrors.targetDate}</p>
+          ) : null}
         </label>
 
         <label className="space-y-2 text-sm font-medium text-slate-700">
@@ -463,7 +553,9 @@ export function TrainingPlanBuilder({ hike, fitnessLevel }: TrainingPlanBuilderP
           <select
             value={daysPerWeek}
             onChange={(event) => setDaysPerWeek(Number(event.target.value))}
-            className="w-full rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm shadow-sm focus:border-emerald-400 focus:outline-none"
+            className={`w-full rounded-lg border bg-white px-3 py-2 text-sm shadow-sm focus:outline-none ${
+              liveErrors.daysPerWeek ? "border-rose-300 focus:border-rose-400" : "border-slate-200 focus:border-emerald-400"
+            }`}
           >
             {[2, 3, 4, 5, 6].map((value) => (
               <option key={value} value={value}>
@@ -471,6 +563,9 @@ export function TrainingPlanBuilder({ hike, fitnessLevel }: TrainingPlanBuilderP
               </option>
             ))}
           </select>
+          {liveErrors.daysPerWeek ? (
+            <p className="text-xs text-rose-700">{liveErrors.daysPerWeek}</p>
+          ) : null}
           <p className="text-xs font-normal text-slate-500">
             How many days can you realistically train?
           </p>
@@ -541,8 +636,13 @@ export function TrainingPlanBuilder({ hike, fitnessLevel }: TrainingPlanBuilderP
             onChange={(event) =>
               setBaselineMinutes(sanitizeNumber(event.target.value, 0, 2000, 5))
             }
-            className="w-full rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm shadow-sm focus:border-emerald-400 focus:outline-none"
+            className={`w-full rounded-lg border bg-white px-3 py-2 text-sm shadow-sm focus:outline-none ${
+              liveErrors.baselineMinutes ? "border-rose-300 focus:border-rose-400" : "border-slate-200 focus:border-emerald-400"
+            }`}
           />
+          {liveErrors.baselineMinutes ? (
+            <p className="text-xs text-rose-700">{liveErrors.baselineMinutes}</p>
+          ) : null}
           <p className="text-xs font-normal text-slate-500">
             If you’re just starting out, enter 0 — we’ll ease you in.
           </p>
@@ -573,8 +673,13 @@ export function TrainingPlanBuilder({ hike, fitnessLevel }: TrainingPlanBuilderP
               onChange={(event) =>
                 setMaxIncline(sanitizeNumber(event.target.value, 0, 20, 0.5))
               }
-              className="w-full rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm shadow-sm focus:border-emerald-400 focus:outline-none"
+              className={`w-full rounded-lg border bg-white px-3 py-2 text-sm shadow-sm focus:outline-none ${
+                liveErrors.treadmillMaxInclinePercent ? "border-rose-300 focus:border-rose-400" : "border-slate-200 focus:border-emerald-400"
+              }`}
             />
+            {liveErrors.treadmillMaxInclinePercent ? (
+              <p className="text-xs text-rose-700">{liveErrors.treadmillMaxInclinePercent}</p>
+            ) : null}
           </label>
           <label className="space-y-2 text-sm font-medium text-slate-700">
             Max treadmill speed (mph)
@@ -588,8 +693,13 @@ export function TrainingPlanBuilder({ hike, fitnessLevel }: TrainingPlanBuilderP
               onChange={(event) =>
                 setMaxSpeed(sanitizeNumber(event.target.value, 1, 8, 0.1))
               }
-              className="w-full rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm shadow-sm focus:border-emerald-400 focus:outline-none"
+              className={`w-full rounded-lg border bg-white px-3 py-2 text-sm shadow-sm focus:outline-none ${
+                liveErrors.maxSpeedMph ? "border-rose-300 focus:border-rose-400" : "border-slate-200 focus:border-emerald-400"
+              }`}
             />
+            {liveErrors.maxSpeedMph ? (
+              <p className="text-xs text-rose-700">{liveErrors.maxSpeedMph}</p>
+            ) : null}
           </label>
         </div>
       </div>
@@ -613,7 +723,9 @@ export function TrainingPlanBuilder({ hike, fitnessLevel }: TrainingPlanBuilderP
               setSessionInvariantNote(null);
               setTreadmillSessions(nextValue);
             }}
-            className="w-full rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm shadow-sm focus:border-emerald-400 focus:outline-none"
+            className={`w-full rounded-lg border bg-white px-3 py-2 text-sm shadow-sm focus:outline-none ${
+              liveErrors.treadmillSessionsPerWeek ? "border-rose-300 focus:border-rose-400" : "border-slate-200 focus:border-emerald-400"
+            }`}
           >
             {treadmillOptions.map((value) => (
               <option key={value} value={value}>
@@ -621,6 +733,9 @@ export function TrainingPlanBuilder({ hike, fitnessLevel }: TrainingPlanBuilderP
               </option>
             ))}
           </select>
+          {liveErrors.treadmillSessionsPerWeek ? (
+            <p className="text-xs text-rose-700">{liveErrors.treadmillSessionsPerWeek}</p>
+          ) : null}
           {adjustedTreadmill ? (
             <p className="text-xs text-slate-500">Adjusted to match training days/week.</p>
           ) : null}
@@ -642,7 +757,9 @@ export function TrainingPlanBuilder({ hike, fitnessLevel }: TrainingPlanBuilderP
               setSessionInvariantNote(null);
               setOutdoorHikes(nextValue);
             }}
-            className="w-full rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm shadow-sm focus:border-emerald-400 focus:outline-none"
+            className={`w-full rounded-lg border bg-white px-3 py-2 text-sm shadow-sm focus:outline-none ${
+              liveErrors.outdoorHikesPerWeek ? "border-rose-300 focus:border-rose-400" : "border-slate-200 focus:border-emerald-400"
+            }`}
           >
             {outdoorOptions.map((value) => (
               <option key={value} value={value}>
@@ -650,6 +767,9 @@ export function TrainingPlanBuilder({ hike, fitnessLevel }: TrainingPlanBuilderP
               </option>
             ))}
           </select>
+          {liveErrors.outdoorHikesPerWeek ? (
+            <p className="text-xs text-rose-700">{liveErrors.outdoorHikesPerWeek}</p>
+          ) : null}
         </label>
       </div>
       <p className="mt-2 text-xs text-slate-500">
@@ -700,7 +820,9 @@ export function TrainingPlanBuilder({ hike, fitnessLevel }: TrainingPlanBuilderP
                   setSessionInvariantNote(null);
                   setStrengthDays(nextValue);
                 }}
-                className="w-full rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm shadow-sm focus:border-emerald-400 focus:outline-none"
+                className={`w-full rounded-lg border bg-white px-3 py-2 text-sm shadow-sm focus:outline-none ${
+                  liveErrors.strengthDaysPerWeek ? "border-rose-300 focus:border-rose-400" : "border-slate-200 focus:border-emerald-400"
+                }`}
               >
                 {strengthOptions.map((value) => (
                   <option key={value} value={value}>
@@ -708,6 +830,9 @@ export function TrainingPlanBuilder({ hike, fitnessLevel }: TrainingPlanBuilderP
                   </option>
                 ))}
               </select>
+              {liveErrors.strengthDaysPerWeek ? (
+                <p className="text-xs text-rose-700">{liveErrors.strengthDaysPerWeek}</p>
+              ) : null}
             </label>
             <label className="flex items-center gap-2 text-xs font-medium text-slate-600">
               <input
@@ -734,26 +859,8 @@ export function TrainingPlanBuilder({ hike, fitnessLevel }: TrainingPlanBuilderP
           {error}
         </div>
       ) : null}
-      {formErrors.baselineMinutes ? (
-        <div className="mt-2 text-xs text-rose-700">{formErrors.baselineMinutes}</div>
-      ) : null}
-      {formErrors.treadmillMaxInclinePercent ? (
-        <div className="mt-2 text-xs text-rose-700">{formErrors.treadmillMaxInclinePercent}</div>
-      ) : null}
-      {formErrors.maxSpeedMph ? (
-        <div className="mt-2 text-xs text-rose-700">{formErrors.maxSpeedMph}</div>
-      ) : null}
-      {formErrors.outdoorHikesPerWeek ? (
-        <div className="mt-2 text-xs text-rose-700">{formErrors.outdoorHikesPerWeek}</div>
-      ) : null}
-      {formErrors.treadmillSessionsPerWeek ? (
-        <div className="mt-2 text-xs text-rose-700">{formErrors.treadmillSessionsPerWeek}</div>
-      ) : null}
-      {formErrors.strengthDaysPerWeek ? (
-        <div className="mt-2 text-xs text-rose-700">{formErrors.strengthDaysPerWeek}</div>
-      ) : null}
-      {formErrors.preferredDaysLimit ? (
-        <div className="mt-2 text-xs text-rose-700">{formErrors.preferredDaysLimit}</div>
+      {liveErrors.preferredDaysLimit ? (
+        <div className="mt-2 text-xs text-rose-700">{liveErrors.preferredDaysLimit}</div>
       ) : null}
       {!error && baselineMinutes <= 30 ? (
         <div className="mt-4 rounded-lg border border-blue-200 bg-blue-50 px-4 py-3 text-sm text-blue-700">
@@ -809,7 +916,7 @@ export function TrainingPlanBuilder({ hike, fitnessLevel }: TrainingPlanBuilderP
         <button
           type="button"
           onClick={handleGenerate}
-          disabled={hasDateError || (isAggressive && !frequencyAck)}
+          disabled={isGenerateDisabled}
           className="rounded-full bg-emerald-600 px-4 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-emerald-500"
         >
           Generate training plan

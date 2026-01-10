@@ -11,6 +11,7 @@ export function sanitizeNumber(
   max: number,
   step?: number
 ): number {
+  // Parse and normalize numeric strings (including leading zeros) into bounded numbers.
   const parsed = Number(value);
   if (!Number.isFinite(parsed)) return min;
   const clamped = clampNumber(parsed, min, max);

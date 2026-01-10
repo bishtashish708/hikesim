@@ -1,10 +1,5 @@
 import { roundToStep } from "@/lib/formatters";
-import {
-  estimateDurationMinutes,
-  generatePlan,
-  type FitnessLevel,
-  type PlanSegment,
-} from "@/lib/planGenerator";
+import { generatePlan, type FitnessLevel, type PlanSegment } from "@/lib/planGenerator";
 import type {
   TrainingDay,
   TrainingPlanInputs,
@@ -30,6 +25,15 @@ export function buildTrainingPlan(inputs: TrainingPlanInputs): TrainingPlanOutpu
   }
 
   const hikeDemands = deriveHikeDemands(inputs.hike, inputs.fitnessLevel);
+  const minPrepWeeks = getMinPrepWeeks(inputs.hike.distanceMiles, inputs.hike.elevationGainFt);
+  if (totalWeeks < minPrepWeeks) {
+    warnings.push(
+      `This hike typically requires at least ${minPrepWeeks} weeks of preparation. Your plan may not fully prepare you.`
+    );
+  }
+  if (inputs.baselineMinutes <= 30 && inputs.constraints.treadmillSessionsPerWeek + inputs.constraints.outdoorHikesPerWeek >= inputs.daysPerWeek) {
+    warnings.push("Ambitious plan: recommended only if you already train consistently.");
+  }
   const peakTargets = buildPeakTargets(hikeDemands, totalWeeks);
   const weekVolumes = buildWeeklyVolumes(inputs.baselineMinutes, totalWeeks, peakTargets.weeklyVolumeTarget);
   const pickedDays = pickTrainingDays(inputs.daysPerWeek, inputs.preferredDays, inputs.anyDays);
@@ -257,12 +261,17 @@ function buildWeekWorkouts(input: {
   const isDeloadWeek = input.weekNumber % 4 === 0;
   const isTaperWeek = input.weekNumber === input.totalWeeks;
   const isEarlyWeek = input.weekNumber <= 2;
+  const requiresTreadmillLong = outdoorCount === 0 && treadmillCount > 0;
 
   for (let i = 0; i < outdoorCount; i += 1) {
     workouts.push("Outdoor long hike");
   }
 
   for (let i = 0; i < treadmillCount; i += 1) {
+    if (requiresTreadmillLong && i === 0) {
+      workouts.push("Zone 2 incline walk");
+      continue;
+    }
     if (isDeloadWeek || isTaperWeek || isEarlyWeek) {
       workouts.push("Zone 2 incline walk");
     } else if (i === 0) {
@@ -502,10 +511,9 @@ function getStrengthPhase(isAdaptation: boolean, weekNumber: number, totalWeeks:
 
 
 function deriveHikeDemands(hike: TrainingPlanInputs["hike"], fitnessLevel: FitnessLevel) {
-  const estimatedHikeDurationMinutes = estimateDurationMinutes(
-    hike.distanceMiles,
-    hike.elevationGainFt,
-    fitnessLevel
+  // Estimate duration using simple hike pace + elevation penalty (hours -> minutes).
+  const estimatedHikeDurationMinutes = Math.round(
+    (hike.distanceMiles / 3 + (hike.elevationGainFt / 1000) * 0.5) * 60
   );
   const { averageGradePct, maxSustainedGradePct } = computeGradeStats(hike.profilePoints);
   return {
@@ -742,6 +750,9 @@ export function getMinPrepWeeks(distanceMiles: number, elevationGainFt: number) 
   }
   if (distanceMiles <= 8 || elevationGainFt <= 3000) {
     return 6;
+  }
+  if (distanceMiles >= 12 || elevationGainFt >= 4500) {
+    return 12;
   }
   return 8;
 }
