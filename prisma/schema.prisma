@@ -1,0 +1,42 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Hike {
+  id              String   @id @default(cuid())
+  name            String
+  distanceMiles   Float
+  elevationGainFt Int
+  profilePoints   Json
+  isSeed          Boolean  @default(false)
+  createdAt       DateTime @default(now())
+  plans           GeneratedPlan[]
+  trainingPlans   TrainingPlan[]
+}
+
+model GeneratedPlan {
+  id        String   @id @default(cuid())
+  hikeId    String
+  settings  Json
+  segments  Json
+  createdAt DateTime @default(now())
+
+  hike Hike @relation(fields: [hikeId], references: [id])
+}
+
+model TrainingPlan {
+  id         String   @id @default(cuid())
+  hikeId     String
+  trainingStartDate DateTime
+  targetDate DateTime
+  settings   Json
+  weeks      Json
+  createdAt  DateTime @default(now())
+
+  hike Hike @relation(fields: [hikeId], references: [id])
+}
