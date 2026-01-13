@@ -1,10 +1,17 @@
 import Link from "next/link";
+import { getServerSession } from "next-auth";
+import { authOptions } from "@/lib/auth";
 import { prisma } from "@/lib/db";
 
 export default async function Home() {
+  const session = await getServerSession(authOptions);
+  const showDemoButton = process.env.NEXT_PUBLIC_ENABLE_DEMO_USERS === "true";
   const hikes = await prisma.hike.findMany({
     orderBy: { name: "asc" },
   });
+  const createCustomHref = session
+    ? "/hikes/new"
+    : `/auth/signup?callbackUrl=${encodeURIComponent("/hikes/new")}`;
 
   return (
     <div className="min-h-screen bg-slate-50 px-6 py-10 text-slate-900">
@@ -22,12 +29,66 @@ export default async function Home() {
                 Pick a hike, tune the treadmill constraints, and generate a time-based
                 incline + speed plan with warm-up and cool-down baked in.
               </p>
+              <p className="mt-2 max-w-2xl text-xs text-slate-500">
+                Create a free account to save your progress, personalize training, and sync plans.
+              </p>
+              <div className="mt-4 flex flex-wrap items-center gap-3">
+                {session ? (
+                  <>
+                    <Link
+                      href="/dashboard"
+                      className="rounded-full bg-emerald-600 px-4 py-2 text-xs font-semibold text-white shadow-sm transition hover:bg-emerald-500"
+                    >
+                      Go to dashboard
+                    </Link>
+                    <Link
+                      href="/profile"
+                      className="rounded-full border border-emerald-200 bg-white px-4 py-2 text-xs font-semibold text-emerald-700 hover:border-emerald-300"
+                    >
+                      Edit profile
+                    </Link>
+                  </>
+                ) : (
+                  <>
+                    <Link
+                      href={`/auth/signup?callbackUrl=${encodeURIComponent("/")}`}
+                      className="rounded-full bg-emerald-600 px-4 py-2 text-xs font-semibold text-white shadow-sm transition hover:bg-emerald-500"
+                    >
+                      Get started for free
+                    </Link>
+                    <Link
+                      href="/auth/signin"
+                      className="rounded-full border border-emerald-200 bg-white px-4 py-2 text-xs font-semibold text-emerald-700 hover:border-emerald-300"
+                    >
+                      Sign in
+                    </Link>
+                    {showDemoButton ? (
+                      <Link
+                        href={`/auth/signin?demo=1&callbackUrl=${encodeURIComponent("/")}`}
+                        className="rounded-full border border-emerald-200 bg-emerald-50 px-4 py-2 text-xs font-semibold text-emerald-700"
+                      >
+                        Log in as Demo User
+                      </Link>
+                    ) : null}
+                    <Link
+                      href="/preview"
+                      className="rounded-full border border-slate-200 bg-white px-4 py-2 text-xs font-semibold text-slate-600 hover:border-slate-300"
+                    >
+                      Preview plan
+                    </Link>
+                  </>
+                )}
+              </div>
             </div>
             <Link
-              href="/hikes/new"
-              className="rounded-full bg-emerald-600 px-5 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-emerald-500"
+              href={createCustomHref}
+              className={`rounded-full px-5 py-3 text-sm font-semibold shadow-sm transition ${
+                session
+                  ? "bg-emerald-600 text-white hover:bg-emerald-500"
+                  : "border border-emerald-200 bg-white text-emerald-700 hover:border-emerald-300"
+              }`}
             >
-              Create Custom Hike
+              {session ? "Create Custom Hike" : "Create Custom Hike (sign in required)"}
             </Link>
           </div>
         </header>
@@ -41,7 +102,11 @@ export default async function Home() {
             hikes.map((hike) => (
               <Link
                 key={hike.id}
-                href={`/hikes/${hike.id}`}
+                href={
+                  session
+                    ? `/hikes/${hike.id}`
+                    : `/auth/signin?callbackUrl=${encodeURIComponent(`/hikes/${hike.id}`)}&reason=auth_required`
+                }
                 className="group rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:border-emerald-200 hover:shadow-md"
               >
                 <h2 className="text-lg font-semibold text-slate-900 group-hover:text-emerald-700">

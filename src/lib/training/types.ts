@@ -23,6 +23,15 @@ export type TrainingPlanInputs = {
   includeStrength: boolean;
   strengthOnCardioDays: boolean;
   fillActiveRecoveryDays: boolean;
+  environment?: {
+    location?: string;
+    temperatureF?: number | null;
+    humidityPct?: number | null;
+    elevationFt?: number | null;
+  };
+  preferences?: {
+    crossTraining?: string[];
+  };
 };
 
 export type TrainingPlanOutput = {

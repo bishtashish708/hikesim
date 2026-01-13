@@ -1,6 +1,8 @@
 "use client";
 
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import type { DragEvent } from "react";
+import { useSession } from "next-auth/react";
 import { formatIncline, formatMinutes, formatSpeed } from "@/lib/formatters";
 import {
   buildTrainingPlan,
@@ -29,6 +31,20 @@ type TrainingPlanBuilderProps = {
   fitnessLevel: FitnessLevel;
 };
 
+type PlanChangeLogEntry = {
+  id: string;
+  action: string;
+  timestamp: string;
+  detail?: string;
+};
+
+type PlanSummarySource = {
+  settings?: {
+    daysPerWeek?: number;
+    preferredDays?: number[];
+  };
+};
+
 export function TrainingPlanBuilder({ hike, fitnessLevel }: TrainingPlanBuilderProps) {
   const initialStartDate = useMemo(() => {
     const now = new Date();
@@ -38,6 +54,8 @@ export function TrainingPlanBuilder({ hike, fitnessLevel }: TrainingPlanBuilderP
   }, []);
   const [trainingStartDate, setTrainingStartDate] = useState(initialStartDate);
   const [targetDate, setTargetDate] = useState(() => toInputDate(addDays(new Date(), 42)));
+  const [planMode, setPlanMode] = useState<"quick" | "custom" | null>(null);
+  const [selectedFitnessLevel, setSelectedFitnessLevel] = useState<FitnessLevel>(fitnessLevel);
   const [daysPerWeek, setDaysPerWeek] = useState(3);
   const [anyDays, setAnyDays] = useState(true);
   const [preferredDays, setPreferredDays] = useState<number[]>([1, 3, 5]);
@@ -52,6 +70,31 @@ export function TrainingPlanBuilder({ hike, fitnessLevel }: TrainingPlanBuilderP
   const [strengthOnCardioDays, setStrengthOnCardioDays] = useState(true);
   const [fillActiveRecoveryDays, setFillActiveRecoveryDays] = useState(true);
   const [plan, setPlan] = useState<TrainingPlanOutput | null>(null);
+  const [planId, setPlanId] = useState<string | null>(null);
+  const [isEditing, setIsEditing] = useState(false);
+  const [editHistory, setEditHistory] = useState<TrainingPlanOutput[]>([]);
+  const [editFuture, setEditFuture] = useState<TrainingPlanOutput[]>([]);
+  const [originalPlan, setOriginalPlan] = useState<TrainingPlanOutput | null>(null);
+  const [changeLog, setChangeLog] = useState<PlanChangeLogEntry[]>([]);
+  const [editWarnings, setEditWarnings] = useState<string[]>([]);
+  const [swapTarget, setSwapTarget] = useState<{
+    weekIndex: number;
+    dayIndex: number;
+    workoutIndex: number;
+  } | null>(null);
+  const [environment, setEnvironment] = useState<{
+    location?: string;
+    temperatureF?: number | null;
+    humidityPct?: number | null;
+    elevationFt?: number | null;
+  } | null>(null);
+  const [profileSummary, setProfileSummary] = useState<{
+    city?: string;
+    state?: string;
+    experience?: string;
+    crossTraining?: string[];
+  } | null>(null);
+  const { data: session } = useSession();
   const [error, setError] = useState<string | null>(null);
   const [preferredDayLimitNote, setPreferredDayLimitNote] = useState<string | null>(null);
   const [sessionInvariantNote, setSessionInvariantNote] = useState<string | null>(null);
@@ -64,8 +107,13 @@ export function TrainingPlanBuilder({ hike, fitnessLevel }: TrainingPlanBuilderP
     to: number;
     note: string;
   } | null>(null);
+  const [timelineWarningAcked, setTimelineWarningAcked] = useState(false);
+  const [compressedWarningAcked, setCompressedWarningAcked] = useState(false);
   const [isSaving, setIsSaving] = useState(false);
   const [saveStatus, setSaveStatus] = useState<string | null>(null);
+  const editStorageKey = `trainingPlanEdits:${hike.id}`;
+  const planIdStorageKey = `trainingPlanId:${hike.id}`;
+  const revisionSaveTimerRef = useRef<number | null>(null);
   const totalCardio = treadmillSessions + outdoorHikes;
   const totalStrength = includeStrength ? strengthSessions : 0;
   const requiredDays =
@@ -77,6 +125,20 @@ export function TrainingPlanBuilder({ hike, fitnessLevel }: TrainingPlanBuilderP
   const planIntensity = getPlanIntensity(baselineMinutes, totalCardio);
   const isAggressive = planIntensity === "aggressive";
   const isModerate = planIntensity === "moderate";
+
+  const hikeDifficulty = getHikeDifficulty(hike.distanceMiles, hike.elevationGainFt);
+  const recommendedDays = getRecommendedDaysByDifficulty(hikeDifficulty);
+  const summaryCounts = useMemo(() => {
+    if (plan) {
+      return getPlanCounts(plan);
+    }
+    return {
+      cardio: totalCardio,
+      strength: totalStrength,
+      activeRecovery: activeRecoveryDays,
+      rest: restDays,
+    };
+  }, [plan, totalCardio, totalStrength, activeRecoveryDays, restDays]);
   const liveErrors = useMemo(
     () =>
       validateTrainingForm({
@@ -134,6 +196,10 @@ export function TrainingPlanBuilder({ hike, fitnessLevel }: TrainingPlanBuilderP
         strengthOnCardioDays,
       },
       fillActiveRecoveryDays,
+      environment,
+      preferences: {
+        crossTraining: profileSummary?.crossTraining ?? [],
+      },
     }),
     [
       targetDate,
@@ -150,6 +216,8 @@ export function TrainingPlanBuilder({ hike, fitnessLevel }: TrainingPlanBuilderP
       strengthSessions,
       strengthOnCardioDays,
       fillActiveRecoveryDays,
+      environment,
+      profileSummary,
     ]
   );
 
@@ -161,7 +229,7 @@ export function TrainingPlanBuilder({ hike, fitnessLevel }: TrainingPlanBuilderP
         elevationGainFt: hike.elevationGainFt,
         profilePoints: hike.profilePoints,
       },
-      fitnessLevel,
+      fitnessLevel: selectedFitnessLevel,
       targetDate,
       trainingStartDate,
       daysPerWeek,
@@ -173,6 +241,10 @@ export function TrainingPlanBuilder({ hike, fitnessLevel }: TrainingPlanBuilderP
       includeStrength,
       strengthOnCardioDays,
       fillActiveRecoveryDays,
+      environment: environment ?? undefined,
+      preferences: {
+        crossTraining: profileSummary?.crossTraining ?? [],
+      },
     });
   }, [
     trainingStartDate,
@@ -181,7 +253,7 @@ export function TrainingPlanBuilder({ hike, fitnessLevel }: TrainingPlanBuilderP
     hike.distanceMiles,
     hike.elevationGainFt,
     hike.profilePoints,
-    fitnessLevel,
+    selectedFitnessLevel,
     daysPerWeek,
     preferredDays,
     anyDays,
@@ -191,6 +263,8 @@ export function TrainingPlanBuilder({ hike, fitnessLevel }: TrainingPlanBuilderP
     includeStrength,
     strengthOnCardioDays,
     fillActiveRecoveryDays,
+    environment,
+    profileSummary,
   ]);
 
   const visiblePlan = plan ?? previewPlan;
@@ -273,6 +347,121 @@ export function TrainingPlanBuilder({ hike, fitnessLevel }: TrainingPlanBuilderP
       setStrengthSessions(totalCardio);
     }
   }, [includeStrength, strengthOnCardioDays, strengthSessions, totalCardio]);
+
+  useEffect(() => {
+    setSelectedFitnessLevel(fitnessLevel);
+  }, [fitnessLevel]);
+
+  useEffect(() => {
+    if (!session?.user?.id) return;
+    fetch("/api/profile")
+      .then((response) => response.ok ? response.json() : null)
+      .then((data) => {
+        if (!data) return;
+        const nextProfile = {
+          city: data.profile?.city ?? undefined,
+          state: data.profile?.state ?? undefined,
+          experience: data.profile?.experience ?? undefined,
+          crossTraining: data.preferences?.crossTrainingPreferences ?? [],
+        };
+        setProfileSummary(nextProfile);
+        if (data.profile?.experience) {
+          const map = {
+            BEGINNER: "Beginner",
+            INTERMEDIATE: "Intermediate",
+            ADVANCED: "Advanced",
+          } as const;
+          const mapped = map[data.profile.experience as keyof typeof map];
+          if (mapped) setSelectedFitnessLevel(mapped);
+        }
+        if (data.profile?.city && data.profile?.state) {
+          fetch("/api/environment", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ city: data.profile.city, state: data.profile.state }),
+          })
+            .then((envResponse) => (envResponse.ok ? envResponse.json() : null))
+            .then((envData) => {
+              if (!envData) return;
+              setEnvironment(envData);
+            })
+            .catch(() => {
+              // Ignore environment fetch errors.
+            });
+        }
+      })
+      .catch(() => {
+        // Ignore profile fetch errors.
+      });
+  }, [session?.user?.id]);
+
+  useEffect(() => {
+    if (!planMode) return;
+    try {
+      window.localStorage.setItem(`planMode:${hike.id}`, planMode);
+    } catch {
+      // Ignore storage errors in restricted environments.
+    }
+  }, [planMode, hike.id]);
+
+  useEffect(() => {
+    if (planMode) return;
+    try {
+      const stored = window.localStorage.getItem(`planMode:${hike.id}`);
+      if (stored === "quick" || stored === "custom") {
+        setPlanMode(stored);
+      }
+    } catch {
+      // Ignore storage errors in restricted environments.
+    }
+  }, [planMode, hike.id]);
+
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    if (plan) return;
+    try {
+      const storedPlanId = window.localStorage.getItem(planIdStorageKey);
+      if (storedPlanId) {
+        setPlanId(storedPlanId);
+      }
+      const storedEdits = window.localStorage.getItem(editStorageKey);
+      if (storedEdits) {
+        const parsed = JSON.parse(storedEdits) as {
+          plan: TrainingPlanOutput;
+          originalPlan?: TrainingPlanOutput | null;
+          history?: TrainingPlanOutput[];
+          future?: TrainingPlanOutput[];
+          changeLog?: PlanChangeLogEntry[];
+        };
+        setPlan(parsed.plan);
+        setOriginalPlan(parsed.originalPlan ?? parsed.plan);
+        setEditHistory(parsed.history ?? []);
+        setEditFuture(parsed.future ?? []);
+        setChangeLog(parsed.changeLog ?? []);
+        setIsEditing(true);
+        return;
+      }
+      if (storedPlanId) {
+        fetch(`/api/training-plans/${storedPlanId}`)
+          .then((response) => response.ok ? response.json() : null)
+          .then((data) => {
+            if (!data?.plan) return;
+            const loaded = (data.revision?.weeks ?? data.plan.weeks) as TrainingPlanOutput["weeks"];
+            const loadedPlan: TrainingPlanOutput = {
+              ...planFromWeeks(data.plan, loaded),
+            };
+            setPlan(loadedPlan);
+            setOriginalPlan(planFromWeeks(data.plan, data.plan.weeks));
+            setIsEditing(false);
+          })
+          .catch(() => {
+            // Ignore load failures.
+          });
+      }
+    } catch {
+      // Ignore storage errors in restricted environments.
+    }
+  }, [plan, editStorageKey, planIdStorageKey]);
 
   useEffect(() => {
     if (daysPerWeek < 7 && ambitiousDismissed) {
@@ -358,7 +547,7 @@ export function TrainingPlanBuilder({ hike, fitnessLevel }: TrainingPlanBuilderP
         elevationGainFt: hike.elevationGainFt,
         profilePoints: hike.profilePoints,
       },
-      fitnessLevel,
+      fitnessLevel: selectedFitnessLevel,
       targetDate,
       trainingStartDate,
       daysPerWeek,
@@ -370,6 +559,10 @@ export function TrainingPlanBuilder({ hike, fitnessLevel }: TrainingPlanBuilderP
       includeStrength,
       strengthOnCardioDays,
       fillActiveRecoveryDays,
+      environment: environment ?? undefined,
+      preferences: {
+        crossTraining: profileSummary?.crossTraining ?? [],
+      },
     });
 
     if (trainingStartDate === toInputDate(new Date()) && new Date().getHours() >= 18) {
@@ -377,6 +570,9 @@ export function TrainingPlanBuilder({ hike, fitnessLevel }: TrainingPlanBuilderP
     }
 
     setPlan(output);
+    if (!originalPlan) {
+      setOriginalPlan(output);
+    }
   };
 
   useEffect(() => {
@@ -398,6 +594,47 @@ export function TrainingPlanBuilder({ hike, fitnessLevel }: TrainingPlanBuilderP
     fillActiveRecoveryDays,
   ]);
 
+  useEffect(() => {
+    if (!plan || !isEditing) return;
+    try {
+      const payload = JSON.stringify({
+        plan,
+        originalPlan,
+        history: editHistory,
+        future: editFuture,
+        changeLog,
+      });
+      window.localStorage.setItem(editStorageKey, payload);
+    } catch {
+      // Ignore storage errors in restricted environments.
+    }
+  }, [plan, isEditing, originalPlan, editHistory, editFuture, changeLog, editStorageKey]);
+
+  useEffect(() => {
+    if (!plan || !planId || !isEditing) return;
+    if (revisionSaveTimerRef.current) {
+      window.clearTimeout(revisionSaveTimerRef.current);
+    }
+    revisionSaveTimerRef.current = window.setTimeout(() => {
+      fetch(`/api/training-plans/${planId}/revisions`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          settings: settingsPayload,
+          weeks: plan.weeks,
+          changeLog,
+        }),
+      }).catch(() => {
+        // Ignore revision errors; local storage still keeps edits.
+      });
+    }, 800);
+  }, [plan, planId, isEditing, settingsPayload, changeLog]);
+
+  useEffect(() => {
+    setTimelineWarningAcked(false);
+    setCompressedWarningAcked(false);
+  }, [trainingStartDate, targetDate, daysPerWeek]);
+
   const weeksUntilHike = trainingStartDate && targetDate
     ? Math.ceil(
         (new Date(targetDate).getTime() - new Date(trainingStartDate).getTime() + 24 * 60 * 60 * 1000) /
@@ -405,9 +642,66 @@ export function TrainingPlanBuilder({ hike, fitnessLevel }: TrainingPlanBuilderP
       )
     : 0;
   const minPrepWeeks = getMinPrepWeeks(hike.distanceMiles, hike.elevationGainFt);
-  const showAdequacyWarning = weeksUntilHike > 0 && weeksUntilHike < minPrepWeeks;
+  const suggestedTargetDate = trainingStartDate
+    ? toInputDate(addDays(new Date(trainingStartDate), minPrepWeeks * 7))
+    : null;
+  const showAdequacyWarning = weeksUntilHike > 0 && weeksUntilHike < minPrepWeeks && !timelineWarningAcked;
   const showOvertrainingWarning = restDays < 1 || totalPlannedSessions > 5;
-  const showAmbitiousDaysWarning = daysPerWeek >= 7 && !ambitiousDismissed;
+  const showAmbitiousDaysWarning =
+    planMode === "custom" && daysPerWeek > 6 && !ambitiousDismissed;
+  const showCompressedWarning = weeksUntilHike > 0 && daysPerWeek > weeksUntilHike && !compressedWarningAcked;
+  const averageGradePct =
+    hike.distanceMiles > 0
+      ? (hike.elevationGainFt / (hike.distanceMiles * 5280)) * 100
+      : 0;
+  const showEquipmentLimitWarning =
+    planMode === "custom" && maxIncline > 0 && averageGradePct > maxIncline;
+
+  const warningTrackedRef = useRef<Record<string, boolean>>({});
+
+  const trackPlanModeSelection = useCallback((mode: "quick" | "custom") => {
+    if (typeof window === "undefined") return;
+    window.dispatchEvent(
+      new CustomEvent("planModeSelected", { detail: { mode, hikeId: hike.id } })
+    );
+    console.info(`[analytics] plan mode selected: ${mode}`, { hikeId: hike.id });
+  }, [hike.id]);
+
+  const trackWarningShown = useCallback((type: string, detail?: Record<string, unknown>) => {
+    if (typeof window === "undefined") return;
+    window.dispatchEvent(
+      new CustomEvent("planWarningShown", { detail: { type, hikeId: hike.id, ...detail } })
+    );
+    console.info(`[analytics] plan warning: ${type}`, { hikeId: hike.id, ...detail });
+  }, [hike.id]);
+
+  useEffect(() => {
+    if (showAdequacyWarning && !warningTrackedRef.current.adequacy) {
+      warningTrackedRef.current.adequacy = true;
+      trackWarningShown("timeline_misalignment", {
+        weeksUntilHike,
+        recommendedWeeks: minPrepWeeks,
+        difficulty: hikeDifficulty,
+      });
+    }
+  }, [showAdequacyWarning, weeksUntilHike, minPrepWeeks, hikeDifficulty, trackWarningShown]);
+
+  useEffect(() => {
+    if (showCompressedWarning && !warningTrackedRef.current.compressed) {
+      warningTrackedRef.current.compressed = true;
+      trackWarningShown("compressed_schedule", { weeksUntilHike, daysPerWeek });
+    }
+  }, [showCompressedWarning, weeksUntilHike, daysPerWeek, trackWarningShown]);
+
+  useEffect(() => {
+    if (showEquipmentLimitWarning && !warningTrackedRef.current.equipment) {
+      warningTrackedRef.current.equipment = true;
+      trackWarningShown("equipment_limit", {
+        averageGradePct: Number(averageGradePct.toFixed(1)),
+        maxIncline,
+      });
+    }
+  }, [showEquipmentLimitWarning, averageGradePct, maxIncline, trackWarningShown]);
 
   const handleAdjustSessions = () => {
     const recommendedTotal = baselineMinutes <= 30 ? 3 : baselineMinutes <= 90 ? 4 : 5;
@@ -423,6 +717,108 @@ export function TrainingPlanBuilder({ hike, fitnessLevel }: TrainingPlanBuilderP
     setFrequencyAck("adjusted");
     setSessionInvariantNote(null);
   };
+
+  const getQuickStartAllocation = useCallback((days: number) => {
+    let cardio = 1;
+    let strength = 0;
+    if (days >= 5) {
+      cardio = 3;
+      strength = 2;
+    } else if (days === 4) {
+      cardio = 3;
+      strength = 1;
+    } else if (days === 3) {
+      cardio = 2;
+      strength = 1;
+    } else if (days === 2) {
+      cardio = 2;
+      strength = 0;
+    }
+    const outdoor = cardio > 0 ? 1 : 0;
+    const treadmill = Math.max(cardio - outdoor, 0);
+    return { treadmill, outdoor, strength };
+  }, []);
+
+  const applyQuickStartDefaults = useCallback((nextDays: number) => {
+    const allocation = getQuickStartAllocation(nextDays);
+    setIncludeStrength(allocation.strength > 0);
+    setStrengthSessions(allocation.strength);
+    setStrengthOnCardioDays(false);
+    setTreadmillTouched(true);
+    setTreadmillSessions(allocation.treadmill);
+    setOutdoorHikes(allocation.outdoor);
+    setAnyDays(true);
+    setPreferredDays([]);
+    setBaselineMinutes(0);
+    setFillActiveRecoveryDays(true);
+    setSessionInvariantNote(null);
+  }, [getQuickStartAllocation]);
+
+  const handleSelectPlanMode = (mode: "quick" | "custom") => {
+    setPlanMode(mode);
+    trackPlanModeSelection(mode);
+    if (mode === "quick") {
+      const nextDays = Math.min(Math.max(recommendedDays, 1), 6);
+      setDaysPerWeek(nextDays);
+      applyQuickStartDefaults(nextDays);
+    }
+  };
+
+  useEffect(() => {
+    if (planMode === "quick") {
+      applyQuickStartDefaults(daysPerWeek);
+    }
+  }, [planMode, daysPerWeek, applyQuickStartDefaults]);
+
+  const handleChangePlanMode = () => {
+    setPlanMode(null);
+    try {
+      window.localStorage.removeItem(`planMode:${hike.id}`);
+    } catch {
+      // Ignore storage errors in restricted environments.
+    }
+  };
+
+  const modeSelector = !planMode ? (
+    <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+      <div className="flex flex-col gap-2">
+        <h2 className="text-lg font-semibold text-slate-900">How would you like to create your plan?</h2>
+        <p className="text-sm text-slate-600">Pick a quick-start flow or customize every detail.</p>
+      </div>
+      <div className="mt-6 grid gap-4 md:grid-cols-2">
+        <div className="rounded-2xl border border-slate-200 bg-slate-50 p-4">
+          <h3 className="text-sm font-semibold text-slate-800">Quick-Start (Beginner)</h3>
+          <p className="mt-2 text-xs text-slate-600">
+            Choose training days/week and experience level. We’ll auto-generate a balanced cardio + strength plan.
+          </p>
+          <button
+            type="button"
+            onClick={() => handleSelectPlanMode("quick")}
+            className="mt-4 rounded-full bg-emerald-600 px-3 py-2 text-xs font-semibold text-white"
+          >
+            Quick-Start
+          </button>
+        </div>
+        <div className="rounded-2xl border border-slate-200 bg-white p-4">
+          <h3 className="text-sm font-semibold text-slate-800">Custom Plan (Advanced)</h3>
+          <p className="mt-2 text-xs text-slate-600">
+            Configure treadmill sessions, outdoor hikes, strength, incline limits, and more.
+          </p>
+          <button
+            type="button"
+            onClick={() => handleSelectPlanMode("custom")}
+            className="mt-4 rounded-full border border-slate-200 bg-white px-3 py-2 text-xs font-semibold text-slate-700 hover:border-slate-300"
+          >
+            Customize
+          </button>
+        </div>
+      </div>
+    </div>
+  ) : null;
+
+  if (!planMode) {
+    return modeSelector;
+  }
 
   const handleAdjustTrainingDays = () => {
     const cardioSessions = totalCardio;
@@ -464,6 +860,235 @@ export function TrainingPlanBuilder({ hike, fitnessLevel }: TrainingPlanBuilderP
     setDaysPerWeek(autoAdjustedDays.from);
     setAutoAdjustedDays(null);
     setAmbitiousDismissed(false);
+  };
+
+  const pushEditState = (nextPlan: TrainingPlanOutput, action: string, detail?: string) => {
+    if (!plan) return;
+    setEditHistory((prev) => [plan, ...prev].slice(0, 50));
+    setEditFuture([]);
+    setPlan(nextPlan);
+    setIsEditing(true);
+    setEditWarnings(validateEditedPlan(nextPlan));
+    setChangeLog((prev) => [
+      { id: cryptoRandomId(), action, detail, timestamp: new Date().toISOString() },
+      ...prev,
+    ].slice(0, 50));
+  };
+
+  const handleUndoEdit = () => {
+    setEditHistory((prev) => {
+      if (prev.length === 0 || !plan) return prev;
+      const [next, ...rest] = prev;
+      setEditFuture((future) => [plan, ...future]);
+      setPlan(next);
+      setEditWarnings(validateEditedPlan(next));
+      return rest;
+    });
+  };
+
+  const handleRedoEdit = () => {
+    setEditFuture((prev) => {
+      if (prev.length === 0 || !plan) return prev;
+      const [next, ...rest] = prev;
+      setEditHistory((history) => [plan, ...history].slice(0, 50));
+      setPlan(next);
+      setEditWarnings(validateEditedPlan(next));
+      return rest;
+    });
+  };
+
+  const handleResetPlan = () => {
+    if (!originalPlan) return;
+    const confirmed = window.confirm("Reset plan to the original version?");
+    if (!confirmed) return;
+    setPlan(originalPlan);
+    setEditHistory([]);
+    setEditFuture([]);
+    setEditWarnings(validateEditedPlan(originalPlan));
+    setChangeLog((prev) => [
+      { id: cryptoRandomId(), action: "reset", timestamp: new Date().toISOString() },
+      ...prev,
+    ].slice(0, 50));
+  };
+
+  const handleDragStart = (
+    event: DragEvent<HTMLDivElement>,
+    weekIndex: number,
+    dayIndex: number,
+    workoutIndex: number
+  ) => {
+    if (!isEditing) return;
+    event.dataTransfer.setData(
+      "text/plain",
+      JSON.stringify({ weekIndex, dayIndex, workoutIndex })
+    );
+    event.dataTransfer.effectAllowed = "move";
+  };
+
+  const handleDropWorkout = (
+    event: DragEvent<HTMLDetailsElement>,
+    targetWeekIndex: number,
+    targetDayIndex: number
+  ) => {
+    if (!plan) return;
+    const payload = event.dataTransfer.getData("text/plain");
+    if (!payload) return;
+    const parsed = JSON.parse(payload) as {
+      weekIndex: number;
+      dayIndex: number;
+      workoutIndex: number;
+    };
+    if (Math.abs(targetWeekIndex - parsed.weekIndex) > 1) {
+      setError("You can only move a session within the same or adjacent week.");
+      return;
+    }
+    if (parsed.weekIndex === targetWeekIndex && parsed.dayIndex === targetDayIndex) {
+      return;
+    }
+    const nextPlan = clonePlan(plan);
+    const sourceDay = nextPlan.weeks[parsed.weekIndex]?.days[parsed.dayIndex];
+    const targetDay = nextPlan.weeks[targetWeekIndex]?.days[targetDayIndex];
+    if (!sourceDay || !targetDay) return;
+    const moved = sourceDay.workouts.splice(parsed.workoutIndex, 1)[0];
+    if (!moved) return;
+    const moveCategory = getWorkoutCategory(moved.type);
+    const targetCategories = targetDay.workouts.map((workout) => getWorkoutCategory(workout.type));
+
+    if (moveCategory === "cardio" && targetCategories.includes("cardio")) {
+      setError("Only one cardio session per day is allowed.");
+      sourceDay.workouts.splice(parsed.workoutIndex, 0, moved);
+      return;
+    }
+    if (moveCategory === "strength" && targetCategories.includes("strength")) {
+      setError("Only one strength session per day is allowed.");
+      sourceDay.workouts.splice(parsed.workoutIndex, 0, moved);
+      return;
+    }
+    if (moveCategory === "recovery" && targetCategories.length > 0) {
+      setError("Active recovery should replace a rest day, not stack with workouts.");
+      sourceDay.workouts.splice(parsed.workoutIndex, 0, moved);
+      return;
+    }
+    if (moveCategory === "rest" && targetCategories.length > 0) {
+      setError("Rest days should replace a workout day.");
+      sourceDay.workouts.splice(parsed.workoutIndex, 0, moved);
+      return;
+    }
+
+    if (targetCategories.length === 1 && (targetCategories[0] === "rest" || targetCategories[0] === "recovery")) {
+      targetDay.workouts = [];
+    }
+
+    if (moveCategory === "strength") {
+      targetDay.workouts.unshift(moved);
+    } else {
+      targetDay.workouts.push(moved);
+    }
+    targetDay.workouts = orderDayWorkouts(targetDay.workouts);
+
+    if (sourceDay.workouts.length === 0) {
+      sourceDay.workouts.push(createFallbackWorkout(fillActiveRecoveryDays));
+    }
+
+    const recalculated = recalculatePlan(nextPlan);
+    const hasConsecutive = hasConsecutiveStrengthDays(recalculated.weeks[parsed.weekIndex]) ||
+      hasConsecutiveStrengthDays(recalculated.weeks[targetWeekIndex]);
+    if (hasConsecutive) {
+      const confirmed = window.confirm(
+        "This move makes strength sessions consecutive. Proceed anyway?"
+      );
+      if (!confirmed) {
+        setError("Move canceled to avoid consecutive strength days.");
+        return;
+      }
+    }
+
+    pushEditState(recalculated, "move", "Moved a session via drag and drop.");
+  };
+
+  const handleSwapType = (nextType: "cardio" | "strength") => {
+    if (!swapTarget || !plan) return;
+    const nextPlan = clonePlan(plan);
+    const workout = nextPlan.weeks[swapTarget.weekIndex]?.days[swapTarget.dayIndex]?.workouts[
+      swapTarget.workoutIndex
+    ];
+    if (!workout) return;
+
+    const week = nextPlan.weeks[swapTarget.weekIndex];
+    const nextWorkout = swapWorkoutType(workout, nextType, week.totalMinutes, selectedFitnessLevel);
+    const { cardioCount, strengthCount } = getWeekCounts(week);
+    const adjustedCardio = nextType === "cardio" ? cardioCount + 1 - (getWorkoutCategory(workout.type) === "cardio" ? 1 : 0) : cardioCount - (getWorkoutCategory(workout.type) === "cardio" ? 1 : 0);
+    const adjustedStrength = nextType === "strength" ? strengthCount + 1 - (getWorkoutCategory(workout.type) === "strength" ? 1 : 0) : strengthCount - (getWorkoutCategory(workout.type) === "strength" ? 1 : 0);
+
+    if (planMode === "custom") {
+      if (adjustedCardio > totalCardio || adjustedStrength > totalStrength) {
+        const confirmed = window.confirm(
+          "This swap exceeds your weekly session targets. Proceed anyway?"
+        );
+        if (!confirmed) {
+          setSwapTarget(null);
+          return;
+        }
+      }
+    } else if (adjustedCardio === 0) {
+      const confirmed = window.confirm("This removes all cardio from the week. Proceed anyway?");
+      if (!confirmed) {
+        setSwapTarget(null);
+        return;
+      }
+    }
+
+    const day = nextPlan.weeks[swapTarget.weekIndex].days[swapTarget.dayIndex];
+    day.workouts[swapTarget.workoutIndex] = nextWorkout;
+    day.workouts = orderDayWorkouts(day.workouts);
+    const recalculated = recalculatePlan(nextPlan);
+    pushEditState(recalculated, "swap", `Swapped to ${nextType}.`);
+    setSwapTarget(null);
+  };
+
+  const handleDurationChange = (
+    weekIndex: number,
+    dayIndex: number,
+    workoutIndex: number,
+    nextMinutes: number
+  ) => {
+    if (!plan) return;
+    const nextPlan = clonePlan(plan);
+    const workout = nextPlan.weeks[weekIndex]?.days[dayIndex]?.workouts[workoutIndex];
+    if (!workout) return;
+    const bounds = getDurationBounds(workout.type, selectedFitnessLevel);
+    const clamped = Math.min(Math.max(nextMinutes, bounds.min), bounds.max);
+    const previous = workout.durationMinutes;
+    const delta = previous > 0 ? Math.abs(clamped - previous) / previous : 0;
+    if (delta > 0.25) {
+      const confirmed = window.confirm(
+        "This change exceeds 25% of the original duration. Proceed anyway?"
+      );
+      if (!confirmed) {
+        return;
+      }
+    }
+    workout.durationMinutes = clamped;
+    workout.notes = workout.notes ? `${workout.notes} (Edited duration)` : "Edited duration.";
+    applyDurationAdjustment(nextPlan, weekIndex, workout.type, previous, clamped, selectedFitnessLevel);
+    const recalculated = recalculatePlan(nextPlan);
+    pushEditState(recalculated, "duration", `Adjusted duration to ${clamped} min.`);
+  };
+
+  const handleConvertWorkout = (
+    weekIndex: number,
+    dayIndex: number,
+    workoutIndex: number,
+    target: "rest" | "recovery"
+  ) => {
+    if (!plan) return;
+    const nextPlan = clonePlan(plan);
+    const day = nextPlan.weeks[weekIndex]?.days[dayIndex];
+    if (!day) return;
+    day.workouts[workoutIndex] = createRecoveryOrRest(target);
+    day.workouts = orderDayWorkouts(day.workouts);
+    const recalculated = recalculatePlan(nextPlan);
+    pushEditState(recalculated, "convert", `Converted to ${target}.`);
   };
 
   const handleFocusChange = (nextFocus: "cardio" | "cardio-strength") => {
@@ -522,6 +1147,15 @@ export function TrainingPlanBuilder({ hike, fitnessLevel }: TrainingPlanBuilderP
         return;
       }
 
+      const data = (await response.json()) as { id?: string };
+      if (data?.id) {
+        setPlanId(data.id);
+        try {
+          window.localStorage.setItem(planIdStorageKey, data.id);
+        } catch {
+          // Ignore storage errors in restricted environments.
+        }
+      }
       setSaveStatus("Training plan saved.");
     } catch (saveError) {
       console.error(saveError);
@@ -540,16 +1174,30 @@ export function TrainingPlanBuilder({ hike, fitnessLevel }: TrainingPlanBuilderP
           days and treadmill availability to match your schedule.
         </p>
       </div>
+      <div className="mt-4 flex flex-wrap items-center justify-between gap-2 rounded-xl border border-slate-200 bg-slate-50 px-3 py-2 text-xs text-slate-600">
+        <span>
+          Plan mode: {planMode === "quick" ? "Quick-Start (Beginner)" : "Custom Plan (Advanced)"}
+        </span>
+        <button
+          type="button"
+          onClick={handleChangePlanMode}
+          className="rounded-full border border-slate-200 bg-white px-3 py-1 text-xs font-semibold text-slate-600 hover:border-slate-300"
+        >
+          Change mode
+        </button>
+      </div>
 
       <div className="mt-6 rounded-2xl border border-slate-200 bg-slate-50 p-4 text-sm text-slate-700">
         {visiblePlan ? (
           <div className="space-y-3">
             <div className="font-semibold">
               {visiblePlan.totalWeeks} weeks starting {formatDate(trainingStartDate)} •{" "}
-              {visiblePlan.summary.daysPerWeek} days/week • {totalCardio} cardio •{" "}
-              {includeStrength ? `${totalStrength} strength • ` : ""}{" "}
-              {activeRecoveryDays > 0 ? `${activeRecoveryDays} active recovery • ` : ""}
-              {restDays > 0 ? `${restDays} rest • ` : ""}~
+              {visiblePlan.summary.daysPerWeek} days/week • {summaryCounts.cardio} cardio •{" "}
+              {summaryCounts.strength > 0 ? `${summaryCounts.strength} strength • ` : ""}{" "}
+              {summaryCounts.activeRecovery > 0
+                ? `${summaryCounts.activeRecovery} active recovery • `
+                : ""}
+              {summaryCounts.rest > 0 ? `${summaryCounts.rest} rest • ` : ""}~
               {visiblePlan.summary.averageWeeklyMinutes} min/week
             </div>
             {nextTreadmillWorkout ? (
@@ -659,12 +1307,18 @@ export function TrainingPlanBuilder({ hike, fitnessLevel }: TrainingPlanBuilderP
           Training days per week
           <select
             value={daysPerWeek}
-            onChange={(event) => setDaysPerWeek(Number(event.target.value))}
+            onChange={(event) => {
+              const nextValue = Number(event.target.value);
+              setDaysPerWeek(nextValue);
+              if (planMode === "quick") {
+                applyQuickStartDefaults(nextValue);
+              }
+            }}
             className={`w-full rounded-lg border bg-white px-3 py-2 text-sm shadow-sm focus:outline-none ${
               liveErrors.daysPerWeek ? "border-rose-300 focus:border-rose-400" : "border-slate-200 focus:border-emerald-400"
             }`}
           >
-            {[1, 2, 3, 4, 5, 6, 7].map((value) => (
+            {(planMode === "quick" ? [1, 2, 3, 4, 5, 6] : [1, 2, 3, 4, 5, 6, 7]).map((value) => (
               <option key={value} value={value}>
                 {value} days
               </option>
@@ -673,12 +1327,37 @@ export function TrainingPlanBuilder({ hike, fitnessLevel }: TrainingPlanBuilderP
           {liveErrors.daysPerWeek ? (
             <p className="text-xs text-rose-700">{liveErrors.daysPerWeek}</p>
           ) : null}
-          <p className="text-xs font-normal text-slate-500">
-            How many days can you realistically train?
-          </p>
+          {planMode === "quick" ? (
+            <p className="text-xs font-normal text-slate-500">
+              Most hikers train 3–5 days per week; selecting more leaves little time for recovery.
+              Recommended: {recommendedDays} days for this hike.
+            </p>
+          ) : (
+            <p className="text-xs font-normal text-slate-500">
+              How many days can you realistically train?
+            </p>
+          )}
         </label>
+        {planMode === "quick" ? (
+          <label className="space-y-2 text-sm font-medium text-slate-700">
+            Experience level
+            <select
+              value={selectedFitnessLevel}
+              onChange={(event) => setSelectedFitnessLevel(event.target.value as FitnessLevel)}
+              className="w-full rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm shadow-sm focus:outline-none focus:border-emerald-400"
+            >
+              <option value="Beginner">Beginner</option>
+              <option value="Intermediate">Intermediate</option>
+              <option value="Advanced">Experienced</option>
+            </select>
+            <p className="text-xs font-normal text-slate-500">
+              We’ll tailor intensities to match your experience.
+            </p>
+          </label>
+        ) : null}
       </div>
 
+      {planMode === "custom" ? (
       <div className="mt-4 rounded-xl border border-slate-200 bg-slate-50 p-4">
         <div className="flex items-center justify-between text-sm font-semibold text-slate-700">
           <span>Preferred training days</span>
@@ -729,7 +1408,9 @@ export function TrainingPlanBuilder({ hike, fitnessLevel }: TrainingPlanBuilderP
           </p>
         ) : null}
       </div>
+      ) : null}
 
+      {planMode === "custom" ? (
       <div className="mt-4 grid gap-4 md:grid-cols-2">
         <label className="space-y-2 text-sm font-medium text-slate-700">
           Current weekly hiking or treadmill time (minutes)
@@ -810,7 +1491,10 @@ export function TrainingPlanBuilder({ hike, fitnessLevel }: TrainingPlanBuilderP
           </label>
         </div>
       </div>
+      ) : null}
 
+      {planMode === "custom" ? (
+      <>
       <div className="mt-4 grid gap-4 md:grid-cols-3">
         <label className="space-y-2 text-sm font-medium text-slate-700">
           Treadmill sessions/week
@@ -932,6 +1616,9 @@ export function TrainingPlanBuilder({ hike, fitnessLevel }: TrainingPlanBuilderP
             Cardio + strength
           </label>
         </div>
+        <p className="mt-2 text-xs text-slate-500">
+          We recommend 3 cardio + 2 strength sessions for hiking endurance and injury prevention.
+        </p>
 
         {includeStrength ? (
           <div className="mt-4 grid gap-3 md:grid-cols-2">
@@ -999,6 +1686,8 @@ export function TrainingPlanBuilder({ hike, fitnessLevel }: TrainingPlanBuilderP
           Unassigned days become {fillActiveRecoveryDays ? "active recovery" : "rest"} days.
         </p>
       </div>
+      </>
+      ) : null}
 
       {error ? (
         <div className="mt-4 rounded-lg border border-rose-200 bg-rose-50 px-4 py-3 text-sm text-rose-700">
@@ -1026,13 +1715,50 @@ export function TrainingPlanBuilder({ hike, fitnessLevel }: TrainingPlanBuilderP
       ) : null}
       {showAdequacyWarning ? (
         <div className="mt-4 rounded-lg border border-amber-200 bg-amber-50 px-4 py-3 text-sm text-amber-800">
-          This hike typically requires at least {minPrepWeeks} weeks of preparation. Your plan may not fully
-          prepare you.
+          There are only {weeksUntilHike} weeks until your hike. Most people need at least {minPrepWeeks} weeks to
+          prepare for a {hikeDifficulty} hike. Consider a later date (earliest suggested:{" "}
+          {suggestedTargetDate ?? "later"}) or an easier hike.
+          <div className="mt-3 flex flex-wrap gap-2">
+            <button
+              type="button"
+              onClick={() => {
+                setTimelineWarningAcked(true);
+                trackWarningShown("timeline_acknowledged", { weeksUntilHike, minPrepWeeks });
+              }}
+              className="rounded-full border border-amber-200 bg-white px-3 py-1 text-xs font-semibold text-amber-800"
+            >
+              Proceed anyway
+            </button>
+          </div>
+        </div>
+      ) : null}
+      {showCompressedWarning ? (
+        <div className="mt-4 rounded-lg border border-amber-200 bg-amber-50 px-4 py-3 text-sm text-amber-800">
+          Training {daysPerWeek} days/week with only {weeksUntilHike} weeks left is aggressive. Consider reducing
+          sessions or extending the training window.
+          <div className="mt-3 flex flex-wrap gap-2">
+            <button
+              type="button"
+              onClick={() => {
+                setCompressedWarningAcked(true);
+                trackWarningShown("compressed_acknowledged", { weeksUntilHike, daysPerWeek });
+              }}
+              className="rounded-full border border-amber-200 bg-white px-3 py-1 text-xs font-semibold text-amber-800"
+            >
+              Proceed anyway
+            </button>
+          </div>
+        </div>
+      ) : null}
+      {showEquipmentLimitWarning ? (
+        <div className="mt-4 rounded-lg border border-amber-200 bg-amber-50 px-4 py-3 text-sm text-amber-800">
+          This hike averages about {averageGradePct.toFixed(1)}% grade, which exceeds your treadmill limit of{" "}
+          {maxIncline}%. The plan will cap inclines to your max.
         </div>
       ) : null}
       {showAmbitiousDaysWarning ? (
         <div className="mt-4 rounded-lg border border-amber-200 bg-amber-50 px-4 py-3 text-sm text-amber-800">
-          7 training days/week is ambitious and leaves no rest days.
+          {daysPerWeek} training days/week is ambitious and leaves little recovery time.
           <div className="mt-3 flex flex-wrap gap-2">
             <button
               type="button"
@@ -1046,7 +1772,7 @@ export function TrainingPlanBuilder({ hike, fitnessLevel }: TrainingPlanBuilderP
               onClick={() => setAmbitiousDismissed(true)}
               className="rounded-full border border-amber-200 bg-white px-3 py-1 text-xs font-semibold text-amber-800"
             >
-              Keep 7 days
+              Keep {daysPerWeek} days
             </button>
           </div>
         </div>
@@ -1135,10 +1861,12 @@ export function TrainingPlanBuilder({ hike, fitnessLevel }: TrainingPlanBuilderP
         <div className="mt-8 space-y-6">
           <div className="rounded-2xl border border-emerald-100 bg-emerald-50 px-4 py-3 text-sm text-emerald-700">
             <div className="font-semibold">
-              {plan.totalWeeks} weeks • {plan.summary.daysPerWeek} days/week • {totalCardio} cardio •{" "}
-              {includeStrength ? `${totalStrength} strength • ` : ""}{" "}
-              {activeRecoveryDays > 0 ? `${activeRecoveryDays} active recovery • ` : ""}
-              {restDays > 0 ? `${restDays} rest • ` : ""}~
+              {plan.totalWeeks} weeks • {plan.summary.daysPerWeek} days/week • {summaryCounts.cardio} cardio •{" "}
+              {summaryCounts.strength > 0 ? `${summaryCounts.strength} strength • ` : ""}{" "}
+              {summaryCounts.activeRecovery > 0
+                ? `${summaryCounts.activeRecovery} active recovery • `
+                : ""}
+              {summaryCounts.rest > 0 ? `${summaryCounts.rest} rest • ` : ""}~
               {plan.summary.averageWeeklyMinutes} min/week
             </div>
             {plan.warnings.map((warning, index) => (
@@ -1146,7 +1874,68 @@ export function TrainingPlanBuilder({ hike, fitnessLevel }: TrainingPlanBuilderP
                 {warning}
               </p>
             ))}
+            {environment?.temperatureF ? (
+              <p className="mt-1 text-xs text-emerald-800">
+                Environment adjustment: {environment.temperatureF}°F /{" "}
+                {environment.humidityPct ?? "—"}% humidity in {environment.location ?? "your area"}.
+              </p>
+            ) : null}
           </div>
+          <div className="flex flex-wrap items-center gap-2 text-xs">
+            <button
+              type="button"
+              onClick={() => {
+                setIsEditing(true);
+                if (!originalPlan && plan) {
+                  setOriginalPlan(plan);
+                }
+              }}
+              className="rounded-full border border-slate-200 bg-white px-3 py-1 font-semibold text-slate-700 hover:border-slate-300"
+            >
+              {isEditing ? "Editing enabled" : "Edit plan"}
+            </button>
+            <button
+              type="button"
+              onClick={handleUndoEdit}
+              disabled={editHistory.length === 0}
+              className="rounded-full border border-slate-200 bg-white px-3 py-1 font-semibold text-slate-700 hover:border-slate-300 disabled:cursor-not-allowed disabled:text-slate-400"
+            >
+              Undo
+            </button>
+            <button
+              type="button"
+              onClick={handleRedoEdit}
+              disabled={editFuture.length === 0}
+              className="rounded-full border border-slate-200 bg-white px-3 py-1 font-semibold text-slate-700 hover:border-slate-300 disabled:cursor-not-allowed disabled:text-slate-400"
+            >
+              Redo
+            </button>
+            <button
+              type="button"
+              onClick={handleResetPlan}
+              disabled={!originalPlan}
+              className="rounded-full border border-slate-200 bg-white px-3 py-1 font-semibold text-slate-700 hover:border-slate-300 disabled:cursor-not-allowed disabled:text-slate-400"
+            >
+              Reset plan
+            </button>
+            <button
+              type="button"
+              onClick={() => plan && setEditWarnings(validateEditedPlan(plan))}
+              className="rounded-full border border-slate-200 bg-white px-3 py-1 font-semibold text-slate-700 hover:border-slate-300"
+            >
+              Check plan health
+            </button>
+          </div>
+          {editWarnings.length > 0 ? (
+            <div className="rounded-xl border border-amber-200 bg-amber-50 px-4 py-3 text-xs text-amber-800">
+              <p className="font-semibold">Plan checks</p>
+              <ul className="mt-2 list-disc space-y-1 pl-5">
+                {editWarnings.map((warning, index) => (
+                  <li key={`${index}-${warning}`}>{warning}</li>
+                ))}
+              </ul>
+            </div>
+          ) : null}
 
           <div
             id="training-plan-table"
@@ -1163,7 +1952,7 @@ export function TrainingPlanBuilder({ hike, fitnessLevel }: TrainingPlanBuilderP
                 </tr>
               </thead>
               <tbody>
-                {plan.weeks.map((week) => (
+                {plan.weeks.map((week, weekIndex) => (
                   <tr key={week.weekNumber} className="border-t border-slate-100 align-top">
                     <td className="px-4 py-3 font-semibold text-slate-700">Week {week.weekNumber}</td>
                     <td className="px-4 py-3 text-slate-600">
@@ -1171,8 +1960,20 @@ export function TrainingPlanBuilder({ hike, fitnessLevel }: TrainingPlanBuilderP
                     </td>
                     <td className="px-4 py-3">
                       <div className="space-y-2">
-                        {week.days.map((day) => (
-                          <details key={day.date} className="rounded-lg border border-slate-200 bg-white p-2">
+                        {week.days.map((day, dayIndex) => (
+                          <details
+                            key={day.date}
+                            className="rounded-lg border border-slate-200 bg-white p-2"
+                            onDragOver={(event) => {
+                              if (!isEditing) return;
+                              event.preventDefault();
+                            }}
+                            onDrop={(event) => {
+                              if (!isEditing) return;
+                              event.preventDefault();
+                              handleDropWorkout(event, weekIndex, dayIndex);
+                            }}
+                          >
                             <summary className="cursor-pointer text-sm font-semibold text-slate-700">
                               {day.dayName}: {day.workouts[0].type}
                               {day.workouts.length > 1 ? ` +${day.workouts.length - 1}` : ""} (
@@ -1182,11 +1983,77 @@ export function TrainingPlanBuilder({ hike, fitnessLevel }: TrainingPlanBuilderP
                               min)
                             </summary>
                             <div className="mt-2 space-y-2 text-xs text-slate-600">
-                              {day.workouts.map((workout) => (
-                                <div key={`${day.date}-${workout.id}`} className="space-y-1">
-                                  <p className="text-xs font-semibold text-slate-700">
-                                    {workout.type} ({formatMinutes(workout.durationMinutes)} min)
-                                  </p>
+                              {day.workouts.map((workout, workoutIndex) => (
+                                <div
+                                  key={`${day.date}-${workout.id}`}
+                                  className="space-y-1"
+                                  draggable={isEditing}
+                                  onDragStart={(event) =>
+                                    handleDragStart(event, weekIndex, dayIndex, workoutIndex)
+                                  }
+                                >
+                                  <div className="flex flex-wrap items-center justify-between gap-2">
+                                    <p className="text-xs font-semibold text-slate-700">
+                                      {workout.type} ({formatMinutes(workout.durationMinutes)} min)
+                                    </p>
+                                    {isEditing ? (
+                                      <div className="flex flex-wrap items-center gap-2 text-[11px] text-slate-500">
+                                        <button
+                                          type="button"
+                                          onClick={() =>
+                                            setSwapTarget({ weekIndex, dayIndex, workoutIndex })
+                                          }
+                                          className="rounded-full border border-slate-200 bg-white px-2 py-0.5 font-semibold text-slate-600 hover:border-slate-300"
+                                        >
+                                          Swap type
+                                        </button>
+                                        <button
+                                          type="button"
+                                          onClick={() =>
+                                            handleConvertWorkout(weekIndex, dayIndex, workoutIndex, "rest")
+                                          }
+                                          className="rounded-full border border-slate-200 bg-white px-2 py-0.5 font-semibold text-slate-600 hover:border-slate-300"
+                                        >
+                                          Convert to rest
+                                        </button>
+                                        <button
+                                          type="button"
+                                          onClick={() =>
+                                            handleConvertWorkout(
+                                              weekIndex,
+                                              dayIndex,
+                                              workoutIndex,
+                                              "recovery"
+                                            )
+                                          }
+                                          className="rounded-full border border-slate-200 bg-white px-2 py-0.5 font-semibold text-slate-600 hover:border-slate-300"
+                                        >
+                                          Convert to active recovery
+                                        </button>
+                                      </div>
+                                    ) : null}
+                                  </div>
+                                  {isEditing ? (
+                                    <label className="flex items-center gap-2 text-[11px] text-slate-500">
+                                      Duration
+                                      <input
+                                        type="number"
+                                        min={5}
+                                        max={180}
+                                        value={workout.durationMinutes}
+                                        onChange={(event) =>
+                                          handleDurationChange(
+                                            weekIndex,
+                                            dayIndex,
+                                            workoutIndex,
+                                            Number(event.target.value)
+                                          )
+                                        }
+                                        className="w-16 rounded border border-slate-200 px-2 py-0.5 text-[11px] text-slate-700"
+                                      />
+                                      min
+                                    </label>
+                                  ) : null}
                                   {workout.notes ? <p>{workout.notes}</p> : null}
                                   {workout.inclineTarget ? (
                                     <p>Target incline: {formatIncline(workout.inclineTarget)}</p>
@@ -1241,6 +2108,39 @@ export function TrainingPlanBuilder({ hike, fitnessLevel }: TrainingPlanBuilderP
               </tbody>
             </table>
           </div>
+          {swapTarget ? (
+            <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 p-4">
+              <div className="w-full max-w-sm rounded-2xl border border-slate-200 bg-white p-4 shadow-lg">
+                <h3 className="text-sm font-semibold text-slate-800">Swap session type</h3>
+                <p className="mt-2 text-xs text-slate-600">
+                  Replace this workout with another type. Weekly balance checks will apply.
+                </p>
+                <div className="mt-4 flex flex-wrap gap-2">
+                  <button
+                    type="button"
+                    onClick={() => handleSwapType("cardio")}
+                    className="rounded-full bg-emerald-600 px-3 py-1 text-xs font-semibold text-white"
+                  >
+                    Replace with Cardio
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => handleSwapType("strength")}
+                    className="rounded-full border border-slate-200 bg-white px-3 py-1 text-xs font-semibold text-slate-700 hover:border-slate-300"
+                  >
+                    Replace with Strength
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => setSwapTarget(null)}
+                    className="rounded-full border border-slate-200 bg-white px-3 py-1 text-xs font-semibold text-slate-500 hover:border-slate-300"
+                  >
+                    Cancel
+                  </button>
+                </div>
+              </div>
+            </div>
+          ) : null}
         </div>
       ) : null}
     </div>
@@ -1291,6 +2191,261 @@ function exportTrainingPlanCsv(hikeName: string, plan: TrainingPlanOutput) {
   anchor.download = `${slugify(hikeName)}-training-plan.csv`;
   anchor.click();
   URL.revokeObjectURL(url);
+}
+
+function getHikeDifficulty(distanceMiles: number, elevationGainFt: number) {
+  if (distanceMiles < 5 && elevationGainFt < 1000) return "easy";
+  if (distanceMiles <= 8 || elevationGainFt <= 2000) return "moderate";
+  return "strenuous";
+}
+
+function getRecommendedDaysByDifficulty(difficulty: string) {
+  if (difficulty === "easy") return 3;
+  if (difficulty === "moderate") return 4;
+  return 5;
+}
+
+function cryptoRandomId() {
+  if (typeof crypto !== "undefined" && "randomUUID" in crypto) {
+    return crypto.randomUUID();
+  }
+  return `id-${Math.random().toString(36).slice(2, 10)}`;
+}
+
+function clonePlan(plan: TrainingPlanOutput): TrainingPlanOutput {
+  return JSON.parse(JSON.stringify(plan)) as TrainingPlanOutput;
+}
+
+function planFromWeeks(planData: PlanSummarySource, weeks: TrainingPlanOutput["weeks"]) {
+  const daysPerWeek = planData.settings?.daysPerWeek ?? weeks[0]?.days?.length ?? 0;
+  const preferredDays = planData.settings?.preferredDays ?? [];
+  const totalMinutes = weeks.reduce((sum, week) => sum + week.totalMinutes, 0);
+  return {
+    totalWeeks: weeks.length,
+    warnings: [],
+    summary: {
+      daysPerWeek,
+      preferredDays,
+      averageWeeklyMinutes: Math.round(totalMinutes / Math.max(weeks.length, 1)),
+    },
+    weeks,
+  };
+}
+
+function getWorkoutCategory(type: string) {
+  if (type.includes("Treadmill") || type.includes("Zone 2") || type === "Outdoor long hike") {
+    return "cardio";
+  }
+  if (type === "Strength") return "strength";
+  if (type === "Recovery / mobility") return "recovery";
+  if (type === "Rest day") return "rest";
+  return "other";
+}
+
+function orderDayWorkouts(workouts: TrainingPlanOutput["weeks"][number]["days"][number]["workouts"]) {
+  const strength = workouts.filter((workout) => getWorkoutCategory(workout.type) === "strength");
+  const cardio = workouts.filter((workout) => getWorkoutCategory(workout.type) === "cardio");
+  const rest = workouts.filter((workout) => getWorkoutCategory(workout.type) === "rest");
+  const recovery = workouts.filter((workout) => getWorkoutCategory(workout.type) === "recovery");
+  const other = workouts.filter((workout) => getWorkoutCategory(workout.type) === "other");
+  return [...strength, ...cardio, ...recovery, ...rest, ...other];
+}
+
+function createFallbackWorkout(fillActiveRecoveryDays: boolean) {
+  return fillActiveRecoveryDays
+    ? createRecoveryOrRest("recovery")
+    : createRecoveryOrRest("rest");
+}
+
+function createRecoveryOrRest(type: "recovery" | "rest") {
+  if (type === "rest") {
+    return {
+      id: cryptoRandomId(),
+      type: "Rest day",
+      durationMinutes: 0,
+      notes: "Rest day.",
+    };
+  }
+  return {
+    id: cryptoRandomId(),
+    type: "Recovery / mobility",
+    durationMinutes: 25,
+    notes: "Active recovery: 30–60% max HR. Mobility, stretching, easy walk.",
+  };
+}
+
+function hasConsecutiveStrengthDays(week: TrainingPlanOutput["weeks"][number]) {
+  for (let i = 0; i < week.days.length - 1; i += 1) {
+    const current = week.days[i].workouts.some((workout) => workout.type === "Strength");
+    const next = week.days[i + 1].workouts.some((workout) => workout.type === "Strength");
+    if (current && next) return true;
+  }
+  return false;
+}
+
+function recalculatePlan(plan: TrainingPlanOutput): TrainingPlanOutput {
+  const weeks = plan.weeks.map((week) => {
+    const totalMinutes = week.days.reduce(
+      (sum, day) =>
+        sum + day.workouts.reduce((daySum, workout) => daySum + workout.durationMinutes, 0),
+      0
+    );
+    return { ...week, totalMinutes };
+  });
+  const totalMinutes = weeks.reduce((sum, week) => sum + week.totalMinutes, 0);
+  return {
+    ...plan,
+    weeks,
+    summary: {
+      ...plan.summary,
+      averageWeeklyMinutes: Math.round(totalMinutes / Math.max(weeks.length, 1)),
+    },
+  };
+}
+
+function getPlanCounts(plan: TrainingPlanOutput) {
+  let cardio = 0;
+  let strength = 0;
+  let activeRecovery = 0;
+  let rest = 0;
+  plan.weeks.forEach((week) => {
+    week.days.forEach((day) => {
+      const categories = day.workouts.map((workout) => getWorkoutCategory(workout.type));
+      if (categories.includes("cardio")) cardio += 1;
+      if (categories.includes("strength")) strength += 1;
+      if (categories.includes("recovery")) activeRecovery += 1;
+      if (categories.includes("rest")) rest += 1;
+    });
+  });
+  const divisor = Math.max(plan.weeks.length, 1);
+  return {
+    cardio: Math.round(cardio / divisor),
+    strength: Math.round(strength / divisor),
+    activeRecovery: Math.round(activeRecovery / divisor),
+    rest: Math.round(rest / divisor),
+  };
+}
+
+function getWeekCounts(week: TrainingPlanOutput["weeks"][number]) {
+  let cardioCount = 0;
+  let strengthCount = 0;
+  week.days.forEach((day) => {
+    if (day.workouts.some((workout) => getWorkoutCategory(workout.type) === "cardio")) {
+      cardioCount += 1;
+    }
+    if (day.workouts.some((workout) => getWorkoutCategory(workout.type) === "strength")) {
+      strengthCount += 1;
+    }
+  });
+  return { cardioCount, strengthCount };
+}
+
+function swapWorkoutType(
+  workout: TrainingPlanOutput["weeks"][number]["days"][number]["workouts"][number],
+  nextType: "cardio" | "strength",
+  weekMinutes: number,
+  fitnessLevel: FitnessLevel
+) {
+  if (nextType === "strength") {
+    return {
+      ...workout,
+      type: "Strength",
+      durationMinutes: getDefaultDuration("strength", weekMinutes, fitnessLevel),
+      notes: "Edited: swapped to strength. Intensity: moderate.",
+    };
+  }
+  return {
+    ...workout,
+    type: "Zone 2 incline walk",
+    durationMinutes: getDefaultDuration("cardio", weekMinutes, fitnessLevel),
+    notes: "Edited: swapped to cardio. Keep effort steady.",
+  };
+}
+
+function getDefaultDuration(
+  type: "cardio" | "strength",
+  weekMinutes: number,
+  fitnessLevel: FitnessLevel
+) {
+  const base = Math.max(20, Math.round(weekMinutes * (type === "cardio" ? 0.25 : 0.15)));
+  const max = {
+    Beginner: 60,
+    Intermediate: 75,
+    Advanced: 90,
+  }[fitnessLevel];
+  return Math.min(base, max);
+}
+
+function getDurationBounds(type: string, fitnessLevel: FitnessLevel) {
+  const isCardio = getWorkoutCategory(type) === "cardio";
+  const min = isCardio ? 15 : 20;
+  const max = {
+    Beginner: 90,
+    Intermediate: 120,
+    Advanced: 150,
+  }[fitnessLevel];
+  return { min, max };
+}
+
+function applyDurationAdjustment(
+  plan: TrainingPlanOutput,
+  weekIndex: number,
+  workoutType: string,
+  previous: number,
+  next: number,
+  fitnessLevel: FitnessLevel
+) {
+  if (previous <= 0) return;
+  const ratio = next / previous;
+  if (ratio === 1) return;
+  for (let i = weekIndex + 1; i < plan.weeks.length; i += 1) {
+    const week = plan.weeks[i];
+    const workout = week.days.flatMap((day) => day.workouts).find((entry) => entry.type === workoutType);
+    if (!workout) continue;
+    const bounds = getDurationBounds(workout.type, fitnessLevel);
+    const adjusted = Math.min(Math.max(Math.round(workout.durationMinutes * ratio), bounds.min), bounds.max);
+    workout.durationMinutes = adjusted;
+    workout.notes = workout.notes ? `${workout.notes} (Adjusted for progression)` : "Adjusted for progression.";
+  }
+}
+
+function validateEditedPlan(plan: TrainingPlanOutput) {
+  const warnings: string[] = [];
+  for (let i = 0; i < plan.weeks.length; i += 1) {
+    const week = plan.weeks[i];
+    const recoveryCount = week.days.filter((day) =>
+      day.workouts.some((workout) => {
+        const category = getWorkoutCategory(workout.type);
+        return category === "recovery" || category === "rest";
+      })
+    ).length;
+    if (hasConsecutiveStrengthDays(week)) {
+      warnings.push(`Week ${week.weekNumber}: strength sessions are consecutive.`);
+    }
+    const { cardioCount } = getWeekCounts(week);
+    if (cardioCount === 0) {
+      warnings.push(`Week ${week.weekNumber}: no cardio sessions scheduled.`);
+    }
+    if (recoveryCount > 2) {
+      warnings.push(`Week ${week.weekNumber}: more than two recovery/rest days may slow progress.`);
+    }
+    if (i > 0) {
+      const prev = plan.weeks[i - 1];
+      const prevMinutes = prev.totalMinutes || 1;
+      const change = (week.totalMinutes - prevMinutes) / prevMinutes;
+      if (change > 0.1) {
+        warnings.push(`Week ${week.weekNumber}: weekly volume increases more than 10%.`);
+      }
+    }
+  }
+  if (plan.weeks.length > 1) {
+    const last = plan.weeks[plan.weeks.length - 1];
+    const prev = plan.weeks[plan.weeks.length - 2];
+    if (last.totalMinutes >= prev.totalMinutes) {
+      warnings.push("Final week should taper with lower volume.");
+    }
+  }
+  return warnings;
 }
 
 function escapeCsv(value: string) {
