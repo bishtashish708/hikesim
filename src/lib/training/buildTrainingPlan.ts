@@ -50,21 +50,25 @@ export function buildTrainingPlan(inputs: TrainingPlanInputs): TrainingPlanOutpu
     const weekFocus = weekFocusLine(isAdaptationWeek, index + 1, totalWeeks);
     const effectiveDaysPerWeek = inputs.daysPerWeek;
 
-    const { treadmillSessionsPerWeek, outdoorHikesPerWeek, recoveryDaysPerWeek } =
+    const { treadmillSessionsPerWeek, outdoorHikesPerWeek, strengthSessionsPerWeek } =
       enforceSessionInvariant({
         daysPerWeek: effectiveDaysPerWeek,
         treadmillSessionsPerWeek: inputs.constraints.treadmillSessionsPerWeek,
         outdoorHikesPerWeek: inputs.constraints.outdoorHikesPerWeek,
-        recoveryDaysPerWeek: inputs.recoveryDaysPerWeek,
+        strengthSessionsPerWeek: inputs.includeStrength ? inputs.strengthSessionsPerWeek : 0,
+        strengthOnCardioDays: inputs.strengthOnCardioDays,
       });
     if (
       treadmillSessionsPerWeek !== inputs.constraints.treadmillSessionsPerWeek ||
       outdoorHikesPerWeek !== inputs.constraints.outdoorHikesPerWeek ||
-      recoveryDaysPerWeek !== inputs.recoveryDaysPerWeek
+      strengthSessionsPerWeek !== (inputs.includeStrength ? inputs.strengthSessionsPerWeek : 0)
     ) {
-      warnings.push("Treadmill + outdoor sessions + recovery days cannot exceed training days.");
+      warnings.push("Cardio + strength sessions cannot exceed training days.");
     }
 
+    const weeksUntilEvent = totalWeeks - (index + 1);
+    const isEventPrepWeek = weeksUntilEvent <= 1;
+    const strengthPhase = getStrengthPhase(isAdaptationWeek, index + 1, totalWeeks);
     const workoutsForWeek = buildWeekWorkouts({
       weekNumber: index + 1,
       totalWeeks,
@@ -72,9 +76,11 @@ export function buildTrainingPlan(inputs: TrainingPlanInputs): TrainingPlanOutpu
       daysPerWeek: effectiveDaysPerWeek,
       treadmillSessionsPerWeek,
       outdoorHikesPerWeek,
-      recoveryDaysPerWeek,
+      strengthSessionsPerWeek,
       includeStrength: inputs.includeStrength,
       strengthOnCardioDays: inputs.strengthOnCardioDays,
+      isEventPrepWeek,
+      fillActiveRecoveryDays: inputs.fillActiveRecoveryDays,
     });
 
     const longSessionTarget = buildLongSessionTarget({
@@ -92,7 +98,10 @@ export function buildTrainingPlan(inputs: TrainingPlanInputs): TrainingPlanOutpu
       maxIncline: inputs.constraints.treadmillMaxInclinePercent,
     });
 
-    const requiredSessions = treadmillSessionsPerWeek + outdoorHikesPerWeek + recoveryDaysPerWeek;
+    const requiredSessions =
+      treadmillSessionsPerWeek +
+      outdoorHikesPerWeek +
+      (inputs.includeStrength && !inputs.strengthOnCardioDays ? strengthSessionsPerWeek : 0);
     const scheduledDays = scheduleWeekDays({
       weekStart,
       weekEnd,
@@ -122,9 +131,11 @@ export function buildTrainingPlan(inputs: TrainingPlanInputs): TrainingPlanOutpu
         isTaperWeek: index + 1 === totalWeeks,
         isDeloadWeek: (index + 1) % 4 === 0,
         isAdaptationWeek,
+        strengthPhase,
         longSessionMinutes: longSessionTarget,
         inclineCap: weekInclineCap,
         isLongSession,
+        isEventPrepWeek,
       });
 
       if (workout.type === "Outdoor long hike") {
@@ -138,16 +149,29 @@ export function buildTrainingPlan(inputs: TrainingPlanInputs): TrainingPlanOutpu
       };
     });
 
-    if (inputs.includeStrength && inputs.strengthOnCardioDays) {
+    if (inputs.includeStrength && inputs.strengthOnCardioDays && strengthSessionsPerWeek > 0) {
       const cardioCount = treadmillSessionsPerWeek + outdoorHikesPerWeek;
       if (cardioCount > 0) {
-        const strengthCount = Math.min(2, Math.max(1, cardioCount));
+        const strengthCount = Math.min(strengthSessionsPerWeek, cardioCount);
         attachStrengthAddOns(days, {
           count: strengthCount,
-          phase: getStrengthPhase(isAdaptationWeek, index + 1, totalWeeks),
+          phase: strengthPhase,
           trainingDaysPerWeek: inputs.daysPerWeek,
+          weekVolume,
+          isEventPrepWeek,
         });
       }
+    }
+
+    if (
+      inputs.includeStrength &&
+      inputs.strengthOnCardioDays &&
+      strengthSessionsPerWeek > 0 &&
+      hasConsecutiveHighIntensityDays(days)
+    ) {
+      warnings.push(
+        "Stacked sessions create consecutive high-intensity days. Consider reducing sessions or extending your timeline."
+      );
     }
 
     const totalMinutes = days.reduce(
@@ -168,12 +192,18 @@ export function buildTrainingPlan(inputs: TrainingPlanInputs): TrainingPlanOutpu
       }
     }
 
+    if (index > 0) {
+      const previousVolume = weekVolumes[index - 1];
+      const delta = previousVolume > 0 ? Math.round(((weekVolume - previousVolume) / previousVolume) * 100) : 0;
+      if (delta > 0) {
+        finalWeekNotes = `${finalWeekNotes} Progression: +${delta}% volume vs last week.`;
+      } else if (delta < 0) {
+        finalWeekNotes = `${finalWeekNotes} Volume ${delta}% vs last week.`;
+      }
+    }
+
     if (inputs.includeStrength) {
-      finalWeekNotes = `${finalWeekNotes} Strength focus: ${getStrengthPhase(
-        isAdaptationWeek,
-        index + 1,
-        totalWeeks
-      )}.`;
+      finalWeekNotes = `${finalWeekNotes} Strength focus: ${strengthPhase}.`;
     }
 
     return {
@@ -227,7 +257,11 @@ export function buildWeeklyVolumes(
 
     const remainingWeeks = Math.max(peakWeekIndex - week + 1, 1);
     const targetStep = (weeklyTarget - lastBuild) / remainingWeeks;
-    const nextBuild = Math.min(lastBuild * 1.07, lastBuild * 1.1, lastBuild + targetStep);
+    const minGrowth = lastBuild * 1.05;
+    const maxGrowth = lastBuild * 1.1;
+    const stepTarget = lastBuild + targetStep;
+    const unclamped = Math.min(maxGrowth, Math.max(minGrowth, stepTarget));
+    const nextBuild = Math.min(unclamped, weeklyTarget);
     lastBuild = Math.round(nextBuild);
     volumes.push(lastBuild);
   }
@@ -249,46 +283,129 @@ function buildWeekWorkouts(input: {
   daysPerWeek: number;
   treadmillSessionsPerWeek: number;
   outdoorHikesPerWeek: number;
-  recoveryDaysPerWeek: number;
+  strengthSessionsPerWeek: number;
   includeStrength: boolean;
   strengthOnCardioDays: boolean;
+  isEventPrepWeek: boolean;
+  fillActiveRecoveryDays: boolean;
 }): WorkoutType[] {
-  const workouts: WorkoutType[] = [];
-  const dayCount = Math.max(2, input.daysPerWeek);
+  const dayCount = Math.max(1, input.daysPerWeek);
   const outdoorCount = Math.min(input.outdoorHikesPerWeek, dayCount);
   const treadmillCount = Math.min(input.treadmillSessionsPerWeek, dayCount);
-  const recoveryCount = Math.min(input.recoveryDaysPerWeek, dayCount);
-  const recoveryType: WorkoutType =
-    input.includeStrength && !input.strengthOnCardioDays ? "Strength" : "Recovery / mobility";
+  const strengthCount =
+    input.includeStrength && !input.strengthOnCardioDays
+      ? Math.min(input.strengthSessionsPerWeek, dayCount)
+      : 0;
 
   const isDeloadWeek = input.weekNumber % 4 === 0;
   const isTaperWeek = input.weekNumber === input.totalWeeks;
   const isEarlyWeek = input.weekNumber <= 2;
   const requiresTreadmillLong = outdoorCount === 0 && treadmillCount > 0;
+  const slots: Array<WorkoutType | null> = Array.from({ length: dayCount }, () => null);
+  const cardioWorkouts: WorkoutType[] = [];
 
   for (let i = 0; i < outdoorCount; i += 1) {
-    workouts.push("Outdoor long hike");
+    cardioWorkouts.push("Outdoor long hike");
   }
 
   for (let i = 0; i < treadmillCount; i += 1) {
+    if (input.isEventPrepWeek) {
+      cardioWorkouts.push("Outdoor long hike");
+      continue;
+    }
     if (requiresTreadmillLong && i === 0) {
-      workouts.push("Zone 2 incline walk");
+      cardioWorkouts.push("Zone 2 incline walk");
       continue;
     }
     if (isDeloadWeek || isTaperWeek || isEarlyWeek) {
-      workouts.push("Zone 2 incline walk");
+      cardioWorkouts.push("Zone 2 incline walk");
     } else if (i === 0) {
-      workouts.push("Treadmill intervals");
+      cardioWorkouts.push("Treadmill intervals");
     } else {
-      workouts.push("Zone 2 incline walk");
+      cardioWorkouts.push("Zone 2 incline walk");
     }
   }
 
-  for (let i = 0; i < recoveryCount; i += 1) {
-    workouts.push(recoveryType);
+  if (input.isEventPrepWeek && outdoorCount === 0 && treadmillCount > 0) {
+    cardioWorkouts.unshift("Outdoor long hike");
   }
 
-  return workouts.slice(0, dayCount);
+  placeWorkouts(slots, Array(strengthCount).fill("Strength"), (type) => type === "Strength");
+
+  const highVolume = cardioWorkouts.filter((type) => isHighVolumeCardio(type));
+  const lowVolume = cardioWorkouts.filter((type) => !isHighVolumeCardio(type));
+  placeWorkouts(slots, highVolume, (type) => isHighVolumeCardio(type));
+  placeWorkouts(slots, lowVolume, () => false);
+
+  const fallback: WorkoutType = input.fillActiveRecoveryDays ? "Recovery / mobility" : "Rest day";
+  return slots.map((workout) => workout ?? fallback);
+}
+
+function isHighVolumeCardio(type: WorkoutType) {
+  return type === "Outdoor long hike" || type === "Treadmill intervals";
+}
+
+function buildAlternatingOrder(length: number) {
+  const evens: number[] = [];
+  const odds: number[] = [];
+  for (let i = 0; i < length; i += 1) {
+    if (i % 2 === 0) {
+      evens.push(i);
+    } else {
+      odds.push(i);
+    }
+  }
+  return evens.concat(odds);
+}
+
+function hasAdjacentMatch(
+  index: number,
+  slots: Array<WorkoutType | null>,
+  shouldAvoid: (type: WorkoutType) => boolean
+) {
+  const prev = index > 0 ? slots[index - 1] : null;
+  const next = index < slots.length - 1 ? slots[index + 1] : null;
+  return (prev && shouldAvoid(prev)) || (next && shouldAvoid(next)) || false;
+}
+
+function placeWorkouts(
+  slots: Array<WorkoutType | null>,
+  workouts: WorkoutType[],
+  shouldAvoidAdjacent: (type: WorkoutType) => boolean
+) {
+  const order = buildAlternatingOrder(slots.length);
+  for (const workout of workouts) {
+    let placed = false;
+    for (const index of order) {
+      if (slots[index] !== null) continue;
+      if (hasAdjacentMatch(index, slots, shouldAvoidAdjacent)) continue;
+      slots[index] = workout;
+      placed = true;
+      break;
+    }
+    if (placed) continue;
+    for (const index of order) {
+      if (slots[index] === null) {
+        slots[index] = workout;
+        break;
+      }
+    }
+  }
+}
+
+function hasConsecutiveHighIntensityDays(days: TrainingDay[]) {
+  for (let i = 0; i < days.length - 1; i += 1) {
+    if (isHighIntensityDay(days[i]) && isHighIntensityDay(days[i + 1])) {
+      return true;
+    }
+  }
+  return false;
+}
+
+function isHighIntensityDay(day: TrainingDay) {
+  return day.workouts.some(
+    (workout) => workout.type === "Outdoor long hike" || workout.type === "Treadmill intervals"
+  );
 }
 
 function buildWorkout(input: {
@@ -302,9 +419,11 @@ function buildWorkout(input: {
   isTaperWeek: boolean;
   isDeloadWeek: boolean;
   isAdaptationWeek: boolean;
+  strengthPhase: string;
   longSessionMinutes: number;
   inclineCap: number;
   isLongSession: boolean;
+  isEventPrepWeek: boolean;
 }): TrainingWorkout {
   const allocations = allocateDurations(input.weekVolume, input.workoutType);
   const duration = input.isAdaptationWeek
@@ -372,22 +491,32 @@ function buildWorkout(input: {
   }
 
   if (input.workoutType === "Strength") {
+    const duration = strengthDurationForWeek(
+      input.weekVolume,
+      input.strengthPhase,
+      input.isEventPrepWeek
+    );
     return {
       id: workoutId(input.weekNumber, input.workoutType),
       type: input.workoutType,
-      durationMinutes: 25,
-      notes: "Bodyweight squats, lunges, step-ups, core.",
+      durationMinutes: duration,
+      notes: input.isEventPrepWeek
+        ? "Reduced strength load; focus on mobility and activation. Intensity: light."
+        : "Bodyweight squats, lunges, step-ups, core. Intensity: moderate.",
     };
   }
 
   if (input.workoutType === "Outdoor long hike") {
     const target = Math.max(input.longSessionMinutes, input.longHikeMinutes);
     const capped = Math.min(target, input.longHikeMinutes + 20);
+    const longHikeMinutes = input.isEventPrepWeek ? Math.max(capped, 60) : capped;
     return {
       id: workoutId(input.weekNumber, input.workoutType),
       type: input.workoutType,
-      durationMinutes: capped,
-      notes: `Focus on time-on-feet with ${Math.round(input.hike.elevationGainFt * 0.3)} ft of climbing.`,
+      durationMinutes: longHikeMinutes,
+      notes: input.isEventPrepWeek
+        ? "Long outdoor hike with a light weighted pack. Keep effort steady."
+        : `Focus on time-on-feet with ${Math.round(input.hike.elevationGainFt * 0.3)} ft of climbing.`,
     };
   }
 
@@ -397,6 +526,15 @@ function buildWorkout(input: {
       type: input.workoutType,
       durationMinutes: 0,
       notes: "Rest day.",
+    };
+  }
+
+  if (input.workoutType === "Recovery / mobility") {
+    return {
+      id: workoutId(input.weekNumber, input.workoutType),
+      type: input.workoutType,
+      durationMinutes: 25,
+      notes: "Active recovery: 30–60% max HR. Mobility, stretching, easy walk.",
     };
   }
 
@@ -715,7 +853,13 @@ function dedupeDates(dates: Date[]) {
 
 function attachStrengthAddOns(
   days: TrainingDay[],
-  input: { count: number; phase: string; trainingDaysPerWeek: number }
+  input: {
+    count: number;
+    phase: string;
+    trainingDaysPerWeek: number;
+    weekVolume: number;
+    isEventPrepWeek: boolean;
+  }
 ) {
   let remaining = input.count;
   const cardioDays = days.filter((day) =>
@@ -732,29 +876,40 @@ function attachStrengthAddOns(
 
   for (const day of cardioDays) {
     if (remaining <= 0) break;
-    day.workouts.push({
+    day.workouts.unshift({
       id: `${day.date}-strength-addon`,
       type: "Strength",
-      durationMinutes: strengthDurationForPhase(input.phase),
-      notes: strengthNotesForPhase(input.phase),
+      durationMinutes: strengthDurationForWeek(
+        input.weekVolume,
+        input.phase,
+        input.isEventPrepWeek
+      ),
+      notes: `${strengthNotesForPhase(input.phase)} Do strength first, then cardio 6+ hours later.`,
     });
     remaining -= 1;
   }
 }
 
-function strengthDurationForPhase(phase: string) {
-  if (phase.includes("mobility")) return 15;
-  if (phase.includes("maintenance")) return 18;
-  if (phase.includes("leg strength")) return 28;
-  if (phase.includes("recovery")) return 15;
-  return 20;
+function strengthDurationForWeek(weekVolume: number, phase: string, isEventPrepWeek: boolean) {
+  const base = allocateDurations(weekVolume, "Strength").durationMinutes;
+  let multiplier = 1;
+  if (phase.includes("mobility") || phase.includes("recovery")) {
+    multiplier = 0.7;
+  } else if (phase.includes("maintenance")) {
+    multiplier = 0.85;
+  }
+  if (isEventPrepWeek) {
+    multiplier = Math.min(multiplier, 0.7);
+  }
+  const duration = Math.max(12, Math.round(base * multiplier));
+  return isEventPrepWeek ? Math.min(duration, 15) : duration;
 }
 
 function strengthNotesForPhase(phase: string) {
-  if (phase.includes("mobility")) return "Movement prep & injury prevention.";
-  if (phase.includes("maintenance")) return "Maintain strength, avoid fatigue.";
-  if (phase.includes("recovery")) return "Strength reduced for recovery.";
-  return "Strength to support climbing endurance.";
+  if (phase.includes("mobility")) return "Movement prep & injury prevention. Intensity: light.";
+  if (phase.includes("maintenance")) return "Maintain strength, avoid fatigue. Intensity: moderate.";
+  if (phase.includes("recovery")) return "Strength reduced for recovery. Intensity: light.";
+  return "Strength to support climbing endurance. Intensity: moderate.";
 }
 
 export function getNextMonday(from: Date) {
@@ -781,24 +936,26 @@ function enforceSessionInvariant(input: {
   daysPerWeek: number;
   treadmillSessionsPerWeek: number;
   outdoorHikesPerWeek: number;
-  recoveryDaysPerWeek: number;
+  strengthSessionsPerWeek: number;
+  strengthOnCardioDays: boolean;
 }) {
   let treadmill = Math.max(input.treadmillSessionsPerWeek, 0);
   let outdoor = Math.max(input.outdoorHikesPerWeek, 0);
-  let recovery = Math.max(input.recoveryDaysPerWeek, 0);
+  const strengthAddOns = Math.max(input.strengthSessionsPerWeek, 0);
+  let strength = input.strengthOnCardioDays ? 0 : strengthAddOns;
   const maxSessions = Math.max(input.daysPerWeek, 0);
-  const total = treadmill + outdoor + recovery;
+  const total = treadmill + outdoor + strength;
   if (total <= maxSessions) {
     return {
       treadmillSessionsPerWeek: treadmill,
       outdoorHikesPerWeek: outdoor,
-      recoveryDaysPerWeek: recovery,
+      strengthSessionsPerWeek: strengthAddOns,
     };
   }
   let overage = total - maxSessions;
-  if (recovery > 0) {
-    const reduction = Math.min(recovery, overage);
-    recovery -= reduction;
+  if (strength > 0) {
+    const reduction = Math.min(strength, overage);
+    strength -= reduction;
     overage -= reduction;
   }
   if (outdoor > 0 && overage > 0) {
@@ -812,7 +969,7 @@ function enforceSessionInvariant(input: {
   return {
     treadmillSessionsPerWeek: treadmill,
     outdoorHikesPerWeek: outdoor,
-    recoveryDaysPerWeek: recovery,
+    strengthSessionsPerWeek: input.strengthOnCardioDays ? strengthAddOns : strength,
   };
 }
 

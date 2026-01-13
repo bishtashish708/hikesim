@@ -31,8 +31,8 @@ export function validateTrainingForm(values: TrainingFormValues): TrainingFormEr
   } else if (new Date(values.trainingStartDate) > new Date(values.targetDate)) {
     errors.trainingStartDate = "Training start date must be before the target hike date.";
   }
-  if (values.daysPerWeek < 2 || values.daysPerWeek > 6) {
-    errors.daysPerWeek = "Training days per week must be between 2 and 6.";
+  if (values.daysPerWeek < 1 || values.daysPerWeek > 7) {
+    errors.daysPerWeek = "Training days per week must be between 1 and 7.";
   }
   if (!values.anyDays && values.preferredDays.length > values.daysPerWeek) {
     errors.preferredDaysLimit = "You selected too many preferred days.";
@@ -43,14 +43,13 @@ export function validateTrainingForm(values: TrainingFormValues): TrainingFormEr
   if (values.treadmillSessionsPerWeek + values.outdoorHikesPerWeek === 0) {
     errors.treadmillSessionsPerWeek = "Choose at least 1 treadmill or outdoor session per week.";
   }
-  if (values.treadmillSessionsPerWeek + values.outdoorHikesPerWeek > values.daysPerWeek) {
-    errors.treadmillSessionsPerWeek = "Total sessions must fit within your training days.";
+  const totalCardio = values.treadmillSessionsPerWeek + values.outdoorHikesPerWeek;
+  const strengthSessions = values.includeStrength ? values.strengthSessionsPerWeek : 0;
+  if (totalCardio + strengthSessions > values.daysPerWeek) {
+    errors.treadmillSessionsPerWeek = "Cardio + strength sessions must fit within your training days.";
   }
-  const remainingSlots =
-    values.daysPerWeek - (values.treadmillSessionsPerWeek + values.outdoorHikesPerWeek);
-  if (values.recoveryDaysPerWeek < 0 || values.recoveryDaysPerWeek > remainingSlots) {
-    errors.recoveryDaysPerWeek =
-      "Treadmill + outdoor sessions + recovery days cannot exceed training days.";
+  if (values.includeStrength && values.strengthOnCardioDays && strengthSessions > totalCardio) {
+    errors.strengthSessionsPerWeek = "Strength sessions must fit within your cardio sessions.";
   }
   if (values.baselineMinutes < 0 || values.baselineMinutes > 2000) {
     errors.baselineMinutes = "Baseline minutes should be between 0 and 2000.";
@@ -64,15 +63,17 @@ export function validateTrainingForm(values: TrainingFormValues): TrainingFormEr
   if (values.outdoorHikesPerWeek < 0 || values.outdoorHikesPerWeek > 6) {
     errors.outdoorHikesPerWeek = "Outdoor hikes should be between 0 and 6 per week.";
   }
-  if (values.recoveryDaysPerWeek < 0) {
-    errors.recoveryDaysPerWeek = "Recovery days should be zero or more.";
+  if (values.includeStrength && values.strengthSessionsPerWeek < 0) {
+    errors.strengthSessionsPerWeek = "Strength sessions should be zero or more.";
+  }
+  if (!values.includeStrength && values.strengthSessionsPerWeek > 0) {
+    errors.strengthSessionsPerWeek = "Strength sessions require Cardio + Strength focus.";
   }
 
   if (!values.anyDays) {
-    const requiredDays =
-      values.treadmillSessionsPerWeek +
+    const requiredDays = values.treadmillSessionsPerWeek +
       values.outdoorHikesPerWeek +
-      values.recoveryDaysPerWeek;
+      (values.includeStrength && !values.strengthOnCardioDays ? strengthSessions : 0);
     if (values.preferredDays.length < requiredDays) {
       errors.preferredDaysLimit =
         "Preferred days must cover all required sessions or enable Any days.";

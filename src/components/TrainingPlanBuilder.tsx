@@ -47,9 +47,10 @@ export function TrainingPlanBuilder({ hike, fitnessLevel }: TrainingPlanBuilderP
   const [treadmillTouched, setTreadmillTouched] = useState(false);
   const [outdoorHikes, setOutdoorHikes] = useState(1);
   const [maxSpeed, setMaxSpeed] = useState(4.5);
-  const [includeStrength, setIncludeStrength] = useState(true);
-  const [recoveryDays, setRecoveryDays] = useState(0);
+  const [includeStrength, setIncludeStrength] = useState(false);
+  const [strengthSessions, setStrengthSessions] = useState(0);
   const [strengthOnCardioDays, setStrengthOnCardioDays] = useState(true);
+  const [fillActiveRecoveryDays, setFillActiveRecoveryDays] = useState(true);
   const [plan, setPlan] = useState<TrainingPlanOutput | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [preferredDayLimitNote, setPreferredDayLimitNote] = useState<string | null>(null);
@@ -57,10 +58,23 @@ export function TrainingPlanBuilder({ hike, fitnessLevel }: TrainingPlanBuilderP
   const [daysAdjustedNote, setDaysAdjustedNote] = useState<string | null>(null);
   const [frequencyAck, setFrequencyAck] = useState<"adjusted" | "kept" | null>(null);
   const [startDateNote, setStartDateNote] = useState<string | null>(null);
+  const [ambitiousDismissed, setAmbitiousDismissed] = useState(false);
+  const [autoAdjustedDays, setAutoAdjustedDays] = useState<{
+    from: number;
+    to: number;
+    note: string;
+  } | null>(null);
   const [isSaving, setIsSaving] = useState(false);
   const [saveStatus, setSaveStatus] = useState<string | null>(null);
-  const totalSessions = treadmillSessions + outdoorHikes;
-  const planIntensity = getPlanIntensity(baselineMinutes, totalSessions);
+  const totalCardio = treadmillSessions + outdoorHikes;
+  const totalStrength = includeStrength ? strengthSessions : 0;
+  const requiredDays =
+    totalCardio + (includeStrength && !strengthOnCardioDays ? totalStrength : 0);
+  const unusedDays = Math.max(daysPerWeek - requiredDays, 0);
+  const activeRecoveryDays = fillActiveRecoveryDays ? unusedDays : 0;
+  const restDays = fillActiveRecoveryDays ? 0 : unusedDays;
+  const totalPlannedSessions = totalCardio + totalStrength;
+  const planIntensity = getPlanIntensity(baselineMinutes, totalCardio);
   const isAggressive = planIntensity === "aggressive";
   const isModerate = planIntensity === "moderate";
   const liveErrors = useMemo(
@@ -76,9 +90,10 @@ export function TrainingPlanBuilder({ hike, fitnessLevel }: TrainingPlanBuilderP
         maxSpeedMph: maxSpeed,
         treadmillSessionsPerWeek: treadmillSessions,
         outdoorHikesPerWeek: outdoorHikes,
-        recoveryDaysPerWeek: recoveryDays,
+        strengthSessionsPerWeek: strengthSessions,
         includeStrength,
         strengthOnCardioDays,
+        fillActiveRecoveryDays,
       }),
     [
       trainingStartDate,
@@ -91,9 +106,10 @@ export function TrainingPlanBuilder({ hike, fitnessLevel }: TrainingPlanBuilderP
       maxSpeed,
       treadmillSessions,
       outdoorHikes,
-      recoveryDays,
+      strengthSessions,
       includeStrength,
       strengthOnCardioDays,
+      fillActiveRecoveryDays,
     ]
   );
   const isFormValid = Object.keys(liveErrors).length === 0;
@@ -112,11 +128,12 @@ export function TrainingPlanBuilder({ hike, fitnessLevel }: TrainingPlanBuilderP
         outdoorHikesPerWeek: outdoorHikes,
         maxSpeedMph: maxSpeed,
       },
-      recoveryDaysPerWeek: recoveryDays,
+      strengthSessionsPerWeek: strengthSessions,
       strength: {
         includeStrength,
         strengthOnCardioDays,
       },
+      fillActiveRecoveryDays,
     }),
     [
       targetDate,
@@ -130,8 +147,9 @@ export function TrainingPlanBuilder({ hike, fitnessLevel }: TrainingPlanBuilderP
       outdoorHikes,
       maxSpeed,
       includeStrength,
-      recoveryDays,
+      strengthSessions,
       strengthOnCardioDays,
+      fillActiveRecoveryDays,
     ]
   );
 
@@ -151,9 +169,10 @@ export function TrainingPlanBuilder({ hike, fitnessLevel }: TrainingPlanBuilderP
       anyDays,
       baselineMinutes,
       constraints: settingsPayload.constraints,
-      recoveryDaysPerWeek: recoveryDays,
+      strengthSessionsPerWeek: strengthSessions,
       includeStrength,
       strengthOnCardioDays,
+      fillActiveRecoveryDays,
     });
   }, [
     trainingStartDate,
@@ -168,9 +187,10 @@ export function TrainingPlanBuilder({ hike, fitnessLevel }: TrainingPlanBuilderP
     anyDays,
     baselineMinutes,
     settingsPayload.constraints,
-    recoveryDays,
+    strengthSessions,
     includeStrength,
     strengthOnCardioDays,
+    fillActiveRecoveryDays,
   ]);
 
   const visiblePlan = plan ?? previewPlan;
@@ -209,26 +229,25 @@ export function TrainingPlanBuilder({ hike, fitnessLevel }: TrainingPlanBuilderP
 
   const adjustedTreadmill = treadmillSessions > daysPerWeek;
   const outdoorOptions = treadmillOptions;
-  const recoveryOptions = useMemo(() => {
-    const remaining = Math.max(daysPerWeek - (treadmillSessions + outdoorHikes), 0);
-    return Array.from({ length: remaining + 1 }, (_, index) => index);
-  }, [daysPerWeek, treadmillSessions, outdoorHikes]);
+  const strengthOptions = useMemo(() => {
+    return Array.from({ length: daysPerWeek + 1 }, (_, index) => index);
+  }, [daysPerWeek]);
 
   const previousDaysRef = useRef(daysPerWeek);
   useEffect(() => {
     if (previousDaysRef.current === daysPerWeek) return;
     previousDaysRef.current = daysPerWeek;
-    const total = treadmillSessions + outdoorHikes + recoveryDays;
+    const total = treadmillSessions + outdoorHikes + (includeStrength ? strengthSessions : 0);
     if (total <= daysPerWeek) {
       setDaysAdjustedNote(null);
       return;
     }
     let nextTreadmill = treadmillSessions;
     let nextOutdoor = outdoorHikes;
-    let nextRecovery = recoveryDays;
-    while (nextTreadmill + nextOutdoor + nextRecovery > daysPerWeek) {
-      if (nextRecovery > 0) {
-        nextRecovery -= 1;
+    let nextStrength = includeStrength ? strengthSessions : 0;
+    while (nextTreadmill + nextOutdoor + nextStrength > daysPerWeek) {
+      if (nextStrength > 0) {
+        nextStrength -= 1;
       } else if (nextOutdoor > 0) {
         nextOutdoor -= 1;
       } else if (nextTreadmill > 0) {
@@ -239,17 +258,33 @@ export function TrainingPlanBuilder({ hike, fitnessLevel }: TrainingPlanBuilderP
     }
     setTreadmillSessions(nextTreadmill);
     setOutdoorHikes(nextOutdoor);
-    setRecoveryDays(nextRecovery);
+    setStrengthSessions(nextStrength);
     setDaysAdjustedNote(`Adjusted sessions to fit ${daysPerWeek} days/week.`);
-  }, [daysPerWeek, treadmillSessions, outdoorHikes, recoveryDays]);
+  }, [daysPerWeek, treadmillSessions, outdoorHikes, strengthSessions, includeStrength]);
 
   useEffect(() => {
-    const remaining = Math.max(daysPerWeek - (treadmillSessions + outdoorHikes), 0);
-    if (recoveryDays > remaining) {
-      setRecoveryDays(remaining);
-      setDaysAdjustedNote(`Adjusted sessions to fit ${daysPerWeek} days/week.`);
+    if (!includeStrength && strengthSessions !== 0) {
+      setStrengthSessions(0);
     }
-  }, [recoveryDays, treadmillSessions, outdoorHikes, daysPerWeek]);
+  }, [includeStrength, strengthSessions]);
+
+  useEffect(() => {
+    if (includeStrength && strengthOnCardioDays && strengthSessions > totalCardio) {
+      setStrengthSessions(totalCardio);
+    }
+  }, [includeStrength, strengthOnCardioDays, strengthSessions, totalCardio]);
+
+  useEffect(() => {
+    if (daysPerWeek < 7 && ambitiousDismissed) {
+      setAmbitiousDismissed(false);
+    }
+  }, [daysPerWeek, ambitiousDismissed]);
+
+  useEffect(() => {
+    if (autoAdjustedDays && daysPerWeek !== autoAdjustedDays.to) {
+      setAutoAdjustedDays(null);
+    }
+  }, [autoAdjustedDays, daysPerWeek]);
 
   useEffect(() => {
     if (anyDays) {
@@ -306,8 +341,8 @@ export function TrainingPlanBuilder({ hike, fitnessLevel }: TrainingPlanBuilderP
       setError("Training start date must be before the target hike date.");
       return;
     }
-    if (daysPerWeek < 2 || daysPerWeek > 6) {
-      setError("Training days per week should be between 2 and 6.");
+    if (daysPerWeek < 1 || daysPerWeek > 7) {
+      setError("Training days per week should be between 1 and 7.");
       return;
     }
 
@@ -331,9 +366,10 @@ export function TrainingPlanBuilder({ hike, fitnessLevel }: TrainingPlanBuilderP
       anyDays,
       baselineMinutes,
       constraints: settingsPayload.constraints,
-      recoveryDaysPerWeek: recoveryDays,
+      strengthSessionsPerWeek: strengthSessions,
       includeStrength,
       strengthOnCardioDays,
+      fillActiveRecoveryDays,
     });
 
     if (trainingStartDate === toInputDate(new Date()) && new Date().getHours() >= 18) {
@@ -356,9 +392,10 @@ export function TrainingPlanBuilder({ hike, fitnessLevel }: TrainingPlanBuilderP
     maxSpeed,
     treadmillSessions,
     outdoorHikes,
-    recoveryDays,
+    strengthSessions,
     includeStrength,
     strengthOnCardioDays,
+    fillActiveRecoveryDays,
   ]);
 
   const weeksUntilHike = trainingStartDate && targetDate
@@ -369,16 +406,88 @@ export function TrainingPlanBuilder({ hike, fitnessLevel }: TrainingPlanBuilderP
     : 0;
   const minPrepWeeks = getMinPrepWeeks(hike.distanceMiles, hike.elevationGainFt);
   const showAdequacyWarning = weeksUntilHike > 0 && weeksUntilHike < minPrepWeeks;
+  const showOvertrainingWarning = restDays < 1 || totalPlannedSessions > 5;
+  const showAmbitiousDaysWarning = daysPerWeek >= 7 && !ambitiousDismissed;
 
   const handleAdjustSessions = () => {
     const recommendedTotal = baselineMinutes <= 30 ? 3 : baselineMinutes <= 90 ? 4 : 5;
     const targetTotal = Math.min(recommendedTotal, daysPerWeek);
-    const ratio = totalSessions > 0 ? treadmillSessions / totalSessions : 1;
+    const ratio = totalCardio > 0 ? treadmillSessions / totalCardio : 1;
     const nextTreadmill = Math.min(targetTotal, Math.max(0, Math.round(targetTotal * ratio)));
     const nextOutdoor = Math.max(targetTotal - nextTreadmill, 0);
     setTreadmillSessions(nextTreadmill);
     setOutdoorHikes(nextOutdoor);
+    if (includeStrength && nextTreadmill + nextOutdoor + strengthSessions > daysPerWeek) {
+      setStrengthSessions(Math.max(daysPerWeek - (nextTreadmill + nextOutdoor), 0));
+    }
     setFrequencyAck("adjusted");
+    setSessionInvariantNote(null);
+  };
+
+  const handleAdjustTrainingDays = () => {
+    const cardioSessions = totalCardio;
+    const strengthSessionsTotal = includeStrength ? strengthSessions : 0;
+    const minRestDays = includeStrength ? 2 : 1;
+    let restDays = includeStrength ? 2 : 2;
+    let targetDays = cardioSessions + strengthSessionsTotal + restDays;
+
+    if (targetDays > 7) {
+      restDays = Math.max(minRestDays, 7 - (cardioSessions + strengthSessionsTotal));
+      targetDays = Math.min(7, cardioSessions + strengthSessionsTotal + restDays);
+    }
+
+    if (targetDays > daysPerWeek) {
+      const availableRest = daysPerWeek - (cardioSessions + strengthSessionsTotal);
+      restDays = Math.max(minRestDays, availableRest);
+      targetDays = Math.min(daysPerWeek, cardioSessions + strengthSessionsTotal + restDays);
+    }
+
+    if (targetDays === daysPerWeek) {
+      setAmbitiousDismissed(true);
+      setAutoAdjustedDays(null);
+      return;
+    }
+
+    const actualRestDays = Math.max(targetDays - (cardioSessions + strengthSessionsTotal), 0);
+    const note =
+      actualRestDays < minRestDays
+        ? "Rest days reduced to fit your selected capacity. This plan is aggressive."
+        : "Training days recalculated for sustainability.";
+
+    setAutoAdjustedDays({ from: daysPerWeek, to: targetDays, note });
+    setDaysPerWeek(targetDays);
+    setAmbitiousDismissed(true);
+  };
+
+  const handleUndoTrainingDays = () => {
+    if (!autoAdjustedDays) return;
+    setDaysPerWeek(autoAdjustedDays.from);
+    setAutoAdjustedDays(null);
+    setAmbitiousDismissed(false);
+  };
+
+  const handleFocusChange = (nextFocus: "cardio" | "cardio-strength") => {
+    const nextIncludeStrength = nextFocus === "cardio-strength";
+    setIncludeStrength(nextIncludeStrength);
+    if (!nextIncludeStrength) {
+      setStrengthSessions(0);
+      setStrengthOnCardioDays(true);
+      return;
+    }
+    if (strengthSessions === 0) {
+      const available = Math.max(daysPerWeek - totalCardio, 0);
+      setStrengthSessions(available > 0 ? Math.min(2, available) : 0);
+    }
+  };
+
+  const handleRecommendedSplit = () => {
+    setIncludeStrength(true);
+    setStrengthOnCardioDays(false);
+    setDaysPerWeek((current) => Math.max(current, 7));
+    setTreadmillTouched(true);
+    setTreadmillSessions(2);
+    setOutdoorHikes(1);
+    setStrengthSessions(2);
     setSessionInvariantNote(null);
   };
 
@@ -437,8 +546,11 @@ export function TrainingPlanBuilder({ hike, fitnessLevel }: TrainingPlanBuilderP
           <div className="space-y-3">
             <div className="font-semibold">
               {visiblePlan.totalWeeks} weeks starting {formatDate(trainingStartDate)} •{" "}
-              {visiblePlan.summary.daysPerWeek} days/week • {totalSessions} cardio •{" "}
-              {recoveryDays} recovery • ~{visiblePlan.summary.averageWeeklyMinutes} min/week
+              {visiblePlan.summary.daysPerWeek} days/week • {totalCardio} cardio •{" "}
+              {includeStrength ? `${totalStrength} strength • ` : ""}{" "}
+              {activeRecoveryDays > 0 ? `${activeRecoveryDays} active recovery • ` : ""}
+              {restDays > 0 ? `${restDays} rest • ` : ""}~
+              {visiblePlan.summary.averageWeeklyMinutes} min/week
             </div>
             {nextTreadmillWorkout ? (
               <div className="space-y-2">
@@ -552,7 +664,7 @@ export function TrainingPlanBuilder({ hike, fitnessLevel }: TrainingPlanBuilderP
               liveErrors.daysPerWeek ? "border-rose-300 focus:border-rose-400" : "border-slate-200 focus:border-emerald-400"
             }`}
           >
-            {[2, 3, 4, 5, 6].map((value) => (
+            {[1, 2, 3, 4, 5, 6, 7].map((value) => (
               <option key={value} value={value}>
                 {value} days
               </option>
@@ -707,9 +819,9 @@ export function TrainingPlanBuilder({ hike, fitnessLevel }: TrainingPlanBuilderP
             onChange={(event) => {
               setTreadmillTouched(true);
               const nextValue = Number(event.target.value);
-              if (nextValue + outdoorHikes + recoveryDays > daysPerWeek) {
+              if (nextValue + outdoorHikes + totalStrength > daysPerWeek) {
                 setSessionInvariantNote(
-                  "Treadmill + outdoor sessions + recovery days cannot exceed training days."
+                  "Cardio + strength sessions cannot exceed training days."
                 );
                 return;
               }
@@ -743,9 +855,9 @@ export function TrainingPlanBuilder({ hike, fitnessLevel }: TrainingPlanBuilderP
             value={outdoorHikes}
             onChange={(event) => {
               const nextValue = Number(event.target.value);
-              if (nextValue + treadmillSessions + recoveryDays > daysPerWeek) {
+              if (nextValue + treadmillSessions + totalStrength > daysPerWeek) {
                 setSessionInvariantNote(
-                  "Treadmill + outdoor sessions + recovery days cannot exceed training days."
+                  "Cardio + strength sessions cannot exceed training days."
                 );
                 return;
               }
@@ -782,55 +894,82 @@ export function TrainingPlanBuilder({ hike, fitnessLevel }: TrainingPlanBuilderP
       ) : null}
 
       <div className="mt-6 rounded-xl border border-slate-200 bg-slate-50 p-4">
-        <div className="flex items-center justify-between">
+        <div className="flex items-start justify-between gap-3">
           <div>
-            <p className="text-sm font-semibold text-slate-700">Strength/Recovery days per week</p>
+            <p className="text-sm font-semibold text-slate-700">Training focus</p>
             <p className="text-xs text-slate-500">
-              Unused days will be rest days unless you add strength or mobility.
+              Pick cardio-only or a blend with strength sessions.
             </p>
           </div>
-          <label className="flex items-center gap-2 text-xs font-medium text-slate-600">
-            <input
-              type="checkbox"
-              checked={includeStrength}
-              onChange={(event) => setIncludeStrength(event.target.checked)}
-              className="h-4 w-4 rounded border-slate-300 text-emerald-600"
-            />
-            Include strength/mobility
-          </label>
+          <button
+            type="button"
+            onClick={handleRecommendedSplit}
+            className="rounded-full border border-slate-200 bg-white px-3 py-1 text-xs font-semibold text-slate-600 hover:border-slate-300"
+          >
+            Use recommended split
+          </button>
         </div>
 
         <div className="mt-3 grid gap-3 md:grid-cols-2">
-          <label className="space-y-2 text-sm font-medium text-slate-700">
-            Recovery days/week
-            <select
-              value={recoveryDays}
-              onChange={(event) => {
-                const nextValue = Number(event.target.value);
-                if (nextValue + totalSessions > daysPerWeek) {
-                  setSessionInvariantNote(
-                    "Treadmill + outdoor sessions + recovery days cannot exceed training days."
-                  );
-                  return;
-                }
-                setSessionInvariantNote(null);
-                setRecoveryDays(nextValue);
-              }}
-              className={`w-full rounded-lg border bg-white px-3 py-2 text-sm shadow-sm focus:outline-none ${
-                liveErrors.recoveryDaysPerWeek ? "border-rose-300 focus:border-rose-400" : "border-slate-200 focus:border-emerald-400"
-              }`}
-            >
-              {recoveryOptions.map((value) => (
-                <option key={value} value={value}>
-                  {value}
-                </option>
-              ))}
-            </select>
-            {liveErrors.recoveryDaysPerWeek ? (
-              <p className="text-xs text-rose-700">{liveErrors.recoveryDaysPerWeek}</p>
-            ) : null}
+          <label className="flex items-center gap-2 rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm font-medium text-slate-700">
+            <input
+              type="radio"
+              name="training-focus"
+              checked={!includeStrength}
+              onChange={() => handleFocusChange("cardio")}
+              className="h-4 w-4 border-slate-300 text-emerald-600"
+            />
+            Cardio only
           </label>
-          {includeStrength ? (
+          <label className="flex items-center gap-2 rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm font-medium text-slate-700">
+            <input
+              type="radio"
+              name="training-focus"
+              checked={includeStrength}
+              onChange={() => handleFocusChange("cardio-strength")}
+              className="h-4 w-4 border-slate-300 text-emerald-600"
+            />
+            Cardio + strength
+          </label>
+        </div>
+
+        {includeStrength ? (
+          <div className="mt-4 grid gap-3 md:grid-cols-2">
+            <label className="space-y-2 text-sm font-medium text-slate-700">
+              Strength sessions/week
+              <select
+                value={strengthSessions}
+                onChange={(event) => {
+                  const nextValue = Number(event.target.value);
+                  if (nextValue + totalCardio > daysPerWeek) {
+                    setSessionInvariantNote(
+                      "Cardio + strength sessions cannot exceed training days."
+                    );
+                    return;
+                  }
+                  if (strengthOnCardioDays && nextValue > totalCardio) {
+                    setSessionInvariantNote(
+                      "Strength sessions must fit within your cardio sessions."
+                    );
+                    return;
+                  }
+                  setSessionInvariantNote(null);
+                  setStrengthSessions(nextValue);
+                }}
+                className={`w-full rounded-lg border bg-white px-3 py-2 text-sm shadow-sm focus:outline-none ${
+                  liveErrors.strengthSessionsPerWeek ? "border-rose-300 focus:border-rose-400" : "border-slate-200 focus:border-emerald-400"
+                }`}
+              >
+                {strengthOptions.map((value) => (
+                  <option key={value} value={value}>
+                    {value}
+                  </option>
+                ))}
+              </select>
+              {liveErrors.strengthSessionsPerWeek ? (
+                <p className="text-xs text-rose-700">{liveErrors.strengthSessionsPerWeek}</p>
+              ) : null}
+            </label>
             <label className="flex items-center gap-2 text-xs font-medium text-slate-600">
               <input
                 type="checkbox"
@@ -838,10 +977,27 @@ export function TrainingPlanBuilder({ hike, fitnessLevel }: TrainingPlanBuilderP
                 onChange={(event) => setStrengthOnCardioDays(event.target.checked)}
                 className="h-4 w-4 rounded border-slate-300 text-emerald-600"
               />
-              Do strength on cardio days
+              Mix sessions on same day
             </label>
-          ) : null}
-        </div>
+          </div>
+        ) : null}
+        {includeStrength ? (
+          <p className="mt-2 text-xs text-slate-500">
+            When stacking, do strength first and cardio 6+ hours later.
+          </p>
+        ) : null}
+        <label className="mt-2 flex items-center gap-2 text-xs font-medium text-slate-600">
+          <input
+            type="checkbox"
+            checked={fillActiveRecoveryDays}
+            onChange={(event) => setFillActiveRecoveryDays(event.target.checked)}
+            className="h-4 w-4 rounded border-slate-300 text-emerald-600"
+          />
+          Fill unused days with active recovery
+        </label>
+        <p className="mt-2 text-xs text-slate-500">
+          Unassigned days become {fillActiveRecoveryDays ? "active recovery" : "rest"} days.
+        </p>
       </div>
 
       {error ? (
@@ -874,6 +1030,47 @@ export function TrainingPlanBuilder({ hike, fitnessLevel }: TrainingPlanBuilderP
           prepare you.
         </div>
       ) : null}
+      {showAmbitiousDaysWarning ? (
+        <div className="mt-4 rounded-lg border border-amber-200 bg-amber-50 px-4 py-3 text-sm text-amber-800">
+          7 training days/week is ambitious and leaves no rest days.
+          <div className="mt-3 flex flex-wrap gap-2">
+            <button
+              type="button"
+              onClick={handleAdjustTrainingDays}
+              className="rounded-full bg-amber-600 px-3 py-1 text-xs font-semibold text-white"
+            >
+              Adjust automatically (recommended)
+            </button>
+            <button
+              type="button"
+              onClick={() => setAmbitiousDismissed(true)}
+              className="rounded-full border border-amber-200 bg-white px-3 py-1 text-xs font-semibold text-amber-800"
+            >
+              Keep 7 days
+            </button>
+          </div>
+        </div>
+      ) : null}
+      {autoAdjustedDays ? (
+        <div className="mt-4 rounded-lg border border-emerald-200 bg-emerald-50 px-4 py-3 text-sm text-emerald-700">
+          Adjusted training days from {autoAdjustedDays.from} to {autoAdjustedDays.to}. {autoAdjustedDays.note}
+          <button
+            type="button"
+            onClick={handleUndoTrainingDays}
+            className="ml-3 rounded-full border border-emerald-200 bg-white px-3 py-1 text-xs font-semibold text-emerald-700"
+          >
+            Undo
+          </button>
+        </div>
+      ) : null}
+      {showOvertrainingWarning ? (
+        <div className="mt-4 rounded-lg border border-amber-200 bg-amber-50 px-4 py-3 text-sm text-amber-800">
+          Overtraining risk: training every day or stacking too many intense sessions can increase injury risk.
+          {fillActiveRecoveryDays
+            ? " Consider at least one full rest day per week."
+            : " Aim for at least one rest day per week."}
+        </div>
+      ) : null}
       {isAggressive ? (
         <div className="mt-4 rounded-lg border border-amber-200 bg-amber-50 px-4 py-3 text-sm text-amber-800">
           Ambitious plan: recommended only if you already train consistently.
@@ -897,7 +1094,7 @@ export function TrainingPlanBuilder({ hike, fitnessLevel }: TrainingPlanBuilderP
       ) : null}
       {isModerate ? (
         <div className="mt-4 rounded-lg border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-600">
-          Starting with {totalSessions} sessions/week is ambitious. Consider 3–4 sessions while you build
+          Starting with {totalPlannedSessions} sessions/week is ambitious. Consider 3–4 sessions while you build
           consistency.
         </div>
       ) : null}
@@ -938,11 +1135,14 @@ export function TrainingPlanBuilder({ hike, fitnessLevel }: TrainingPlanBuilderP
         <div className="mt-8 space-y-6">
           <div className="rounded-2xl border border-emerald-100 bg-emerald-50 px-4 py-3 text-sm text-emerald-700">
             <div className="font-semibold">
-              {plan.totalWeeks} weeks • {plan.summary.daysPerWeek} days/week • {totalSessions} cardio •{" "}
-              {recoveryDays} recovery • ~{plan.summary.averageWeeklyMinutes} min/week
+              {plan.totalWeeks} weeks • {plan.summary.daysPerWeek} days/week • {totalCardio} cardio •{" "}
+              {includeStrength ? `${totalStrength} strength • ` : ""}{" "}
+              {activeRecoveryDays > 0 ? `${activeRecoveryDays} active recovery • ` : ""}
+              {restDays > 0 ? `${restDays} rest • ` : ""}~
+              {plan.summary.averageWeeklyMinutes} min/week
             </div>
-            {plan.warnings.map((warning) => (
-              <p key={warning} className="mt-1 text-xs text-emerald-800">
+            {plan.warnings.map((warning, index) => (
+              <p key={`${index}-${warning}`} className="mt-1 text-xs text-emerald-800">
                 {warning}
               </p>
             ))}

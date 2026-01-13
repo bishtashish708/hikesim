@@ -34,9 +34,10 @@ describe("validators", () => {
       maxSpeedMph: 4,
       treadmillSessionsPerWeek: 4,
       outdoorHikesPerWeek: 1,
-      recoveryDaysPerWeek: 0,
+      strengthSessionsPerWeek: 0,
       includeStrength: false,
       strengthOnCardioDays: true,
+      fillActiveRecoveryDays: true,
     });
     expect(errors.treadmillSessionsPerWeek).toBeDefined();
   });
@@ -53,9 +54,10 @@ describe("validators", () => {
       maxSpeedMph: 4,
       treadmillSessionsPerWeek: 3,
       outdoorHikesPerWeek: 2,
-      recoveryDaysPerWeek: 0,
-      includeStrength: false,
+      strengthSessionsPerWeek: 1,
+      includeStrength: true,
       strengthOnCardioDays: true,
+      fillActiveRecoveryDays: true,
     });
     expect(errors.treadmillSessionsPerWeek).toBeDefined();
   });
@@ -76,14 +78,15 @@ describe("validators", () => {
       maxSpeedMph: 4,
       treadmillSessionsPerWeek: 0,
       outdoorHikesPerWeek: 0,
-      recoveryDaysPerWeek: 1,
+      strengthSessionsPerWeek: 1,
       includeStrength: true,
       strengthOnCardioDays: true,
+      fillActiveRecoveryDays: true,
     });
     expect(errors.treadmillSessionsPerWeek).toBeDefined();
   });
 
-  it("prevents recovery days overflow", () => {
+  it("prevents strength sessions overflow", () => {
     const errors = validateTrainingForm({
       trainingStartDate: "2026-01-01",
       targetDate: "2026-02-01",
@@ -95,11 +98,12 @@ describe("validators", () => {
       maxSpeedMph: 4,
       treadmillSessionsPerWeek: 2,
       outdoorHikesPerWeek: 1,
-      recoveryDaysPerWeek: 2,
+      strengthSessionsPerWeek: 2,
       includeStrength: true,
       strengthOnCardioDays: false,
+      fillActiveRecoveryDays: true,
     });
-    expect(errors.recoveryDaysPerWeek).toBeDefined();
+    expect(errors.treadmillSessionsPerWeek).toBeDefined();
   });
 
   it("requires preferred days to cover required sessions", () => {
@@ -114,14 +118,15 @@ describe("validators", () => {
       maxSpeedMph: 4,
       treadmillSessionsPerWeek: 2,
       outdoorHikesPerWeek: 1,
-      recoveryDaysPerWeek: 1,
+      strengthSessionsPerWeek: 1,
       includeStrength: true,
       strengthOnCardioDays: false,
+      fillActiveRecoveryDays: true,
     });
     expect(errors.preferredDaysLimit).toBeDefined();
   });
 
-  it("requires recovery days to fit within remaining slots", () => {
+  it("rejects strength sessions when cardio-only", () => {
     const errors = validateTrainingForm({
       trainingStartDate: "2026-01-01",
       targetDate: "2026-02-01",
@@ -133,10 +138,31 @@ describe("validators", () => {
       maxSpeedMph: 4,
       treadmillSessionsPerWeek: 2,
       outdoorHikesPerWeek: 1,
-      recoveryDaysPerWeek: 2,
+      strengthSessionsPerWeek: 2,
       includeStrength: false,
       strengthOnCardioDays: true,
+      fillActiveRecoveryDays: true,
     });
-    expect(errors.recoveryDaysPerWeek).toBeDefined();
+    expect(errors.strengthSessionsPerWeek).toBeDefined();
+  });
+
+  it("requires stacked strength to fit within cardio sessions", () => {
+    const errors = validateTrainingForm({
+      trainingStartDate: "2026-01-01",
+      targetDate: "2026-02-01",
+      daysPerWeek: 4,
+      preferredDays: [],
+      anyDays: true,
+      baselineMinutes: 0,
+      treadmillMaxInclinePercent: 10,
+      maxSpeedMph: 4,
+      treadmillSessionsPerWeek: 1,
+      outdoorHikesPerWeek: 0,
+      strengthSessionsPerWeek: 2,
+      includeStrength: true,
+      strengthOnCardioDays: true,
+      fillActiveRecoveryDays: true,
+    });
+    expect(errors.strengthSessionsPerWeek).toBeDefined();
   });
 });

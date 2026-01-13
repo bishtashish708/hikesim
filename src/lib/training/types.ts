@@ -19,9 +19,10 @@ export type TrainingPlanInputs = {
     outdoorHikesPerWeek: number;
     maxSpeedMph: number;
   };
-  recoveryDaysPerWeek: number;
+  strengthSessionsPerWeek: number;
   includeStrength: boolean;
   strengthOnCardioDays: boolean;
+  fillActiveRecoveryDays: boolean;
 };
 
 export type TrainingPlanOutput = {
@@ -92,9 +93,10 @@ export type TrainingFormValues = {
   maxSpeedMph: number;
   treadmillSessionsPerWeek: number;
   outdoorHikesPerWeek: number;
-  recoveryDaysPerWeek: number;
+  strengthSessionsPerWeek: number;
   includeStrength: boolean;
   strengthOnCardioDays: boolean;
+  fillActiveRecoveryDays: boolean;
 };
 
 export type TrainingFormErrors = Partial<Record<keyof TrainingFormValues, string>> & {

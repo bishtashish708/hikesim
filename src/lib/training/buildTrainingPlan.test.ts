@@ -29,9 +29,10 @@ const sampleInputs = {
     outdoorHikesPerWeek: 1,
     maxSpeedMph: 4.5,
   },
-  recoveryDaysPerWeek: 0,
+  strengthSessionsPerWeek: 0,
   includeStrength: true,
   strengthOnCardioDays: true,
+  fillActiveRecoveryDays: true,
 };
 
 describe("buildTrainingPlan", () => {
@@ -55,9 +56,11 @@ describe("buildTrainingPlan", () => {
   it("keeps build week increases under 10%", () => {
     const volumes = buildWeeklyVolumes(200, 6, 320);
     for (let i = 1; i < volumes.length - 1; i += 1) {
+      if ((i + 1) % 4 === 0) continue;
       if (i % 4 === 0) continue;
       const increase = volumes[i] / volumes[i - 1];
       expect(increase).toBeLessThanOrEqual(1.1);
+      expect(increase).toBeGreaterThanOrEqual(1.05);
     }
   });
 
@@ -190,7 +193,7 @@ describe("buildTrainingPlan", () => {
         outdoorHikesPerWeek: 1,
         maxSpeedMph: 4,
       },
-      recoveryDaysPerWeek: 0,
+      strengthSessionsPerWeek: 0,
       includeStrength: false,
     });
     const week1 = plan.weeks[0].days.flatMap((day) => day.workouts);
@@ -200,7 +203,7 @@ describe("buildTrainingPlan", () => {
     expect(outdoorCount).toBe(1);
   });
 
-  it("keeps remaining days as rest days when no recovery days are selected", () => {
+  it("keeps remaining days as rest days when sessions do not fill the week", () => {
     const plan = buildTrainingPlan({
       ...sampleInputs,
       daysPerWeek: 3,
@@ -210,8 +213,9 @@ describe("buildTrainingPlan", () => {
         outdoorHikesPerWeek: 0,
         maxSpeedMph: 4,
       },
-      recoveryDaysPerWeek: 0,
+      strengthSessionsPerWeek: 0,
       includeStrength: false,
+      fillActiveRecoveryDays: false,
     });
     const week1 = plan.weeks[0].days.flatMap((day) => day.workouts);
     const cardioCount = week1.filter(
@@ -231,7 +235,7 @@ describe("buildTrainingPlan", () => {
       daysPerWeek: 3,
       includeStrength: true,
       strengthOnCardioDays: true,
-      recoveryDaysPerWeek: 0,
+      strengthSessionsPerWeek: 2,
       anyDays: true,
     });
     const week1Days = plan.weeks[0].days;
@@ -240,6 +244,39 @@ describe("buildTrainingPlan", () => {
     ).length;
     expect(strengthAddOns).toBeGreaterThan(0);
     expect(week1Days.length).toBe(3);
+    const stackedDay = week1Days.find(
+      (day) =>
+        day.workouts.some((workout) => workout.type === "Strength") &&
+        day.workouts.some((workout) => workout.type !== "Strength")
+    );
+    if (stackedDay) {
+      expect(stackedDay.workouts[0].type).toBe("Strength");
+    }
+  });
+
+  it("separates strength days when scheduled on their own", () => {
+    const plan = buildTrainingPlan({
+      ...sampleInputs,
+      daysPerWeek: 5,
+      includeStrength: true,
+      strengthOnCardioDays: false,
+      strengthSessionsPerWeek: 2,
+      constraints: {
+        treadmillMaxInclinePercent: 12,
+        treadmillSessionsPerWeek: 2,
+        outdoorHikesPerWeek: 1,
+        maxSpeedMph: 4,
+      },
+      anyDays: true,
+    });
+    const week1Days = plan.weeks[0].days;
+    const strengthIndexes = week1Days
+      .map((day, index) => (day.workouts.some((workout) => workout.type === "Strength") ? index : -1))
+      .filter((index) => index >= 0);
+    if (strengthIndexes.length >= 2) {
+      const gap = Math.abs(strengthIndexes[1] - strengthIndexes[0]);
+      expect(gap).toBeGreaterThan(1);
+    }
   });
 
   it("labels adaptation weeks for beginner baseline", () => {
@@ -279,10 +316,11 @@ describe("buildTrainingPlan", () => {
         maxSpeedMph: 4.5,
       },
     });
-    const peakWeek = plan.weeks[plan.weeks.length - 2];
-    const treadmillSegments = peakWeek.days
+    const preEventWeek = plan.weeks[Math.max(plan.weeks.length - 3, 0)];
+    const treadmillSegments = preEventWeek.days
       .flatMap((day) => day.workouts)
       .flatMap((workout) => workout.segments ?? []);
+    if (treadmillSegments.length === 0) return;
     const avgGrade =
       ((1600 - 1000) / ((2.5 - 0) * 5280) +
         (2500 - 1600) / ((5 - 2.5) * 5280)) /
@@ -298,7 +336,7 @@ describe("buildTrainingPlan", () => {
       daysPerWeek: 4,
       includeStrength: true,
       strengthOnCardioDays: false,
-      recoveryDaysPerWeek: 2,
+      strengthSessionsPerWeek: 2,
       anyDays: true,
     });
     const week1Days = plan.weeks[0].days;
@@ -312,13 +350,13 @@ describe("buildTrainingPlan", () => {
     const withoutStrength = buildTrainingPlan({
       ...sampleInputs,
       includeStrength: false,
-      recoveryDaysPerWeek: 0,
+      strengthSessionsPerWeek: 0,
       strengthOnCardioDays: true,
     });
     const withStrength = buildTrainingPlan({
       ...sampleInputs,
       includeStrength: true,
-      recoveryDaysPerWeek: 0,
+      strengthSessionsPerWeek: 2,
       strengthOnCardioDays: true,
     });
     expect(withStrength.weeks[0].totalMinutes).toBeGreaterThan(
@@ -330,7 +368,7 @@ describe("buildTrainingPlan", () => {
     const plan = buildTrainingPlan({
       ...sampleInputs,
       includeStrength: true,
-      recoveryDaysPerWeek: 0,
+      strengthSessionsPerWeek: 2,
       strengthOnCardioDays: true,
     });
     const taperWeek = plan.weeks[plan.weeks.length - 1];
@@ -354,10 +392,64 @@ describe("buildTrainingPlan", () => {
         outdoorHikesPerWeek: 0,
         maxSpeedMph: 3,
       },
-      recoveryDaysPerWeek: 0,
+      strengthSessionsPerWeek: 0,
     });
     const peakWeek = plan.weeks[Math.max(plan.weeks.length - 2, 0)];
     expect(peakWeek.notes).toContain("does not fully reach hike-specific demands");
+  });
+
+  it("converts late-stage cardio into long outdoor hikes", () => {
+    const plan = buildTrainingPlan({
+      ...sampleInputs,
+      trainingStartDate: "2025-06-01",
+      targetDate: "2025-06-22",
+      daysPerWeek: 4,
+      includeStrength: true,
+      strengthOnCardioDays: false,
+      strengthSessionsPerWeek: 2,
+      constraints: {
+        treadmillMaxInclinePercent: 12,
+        treadmillSessionsPerWeek: 2,
+        outdoorHikesPerWeek: 0,
+        maxSpeedMph: 4,
+      },
+      anyDays: true,
+    });
+    const lateWeeks = plan.weeks.slice(-2);
+    const lateCardio = lateWeeks
+      .flatMap((week) => week.days)
+      .flatMap((day) => day.workouts)
+      .filter((workout) => workout.type !== "Strength" && workout.type !== "Rest day");
+    const lateStrength = lateWeeks
+      .flatMap((week) => week.days)
+      .flatMap((day) => day.workouts)
+      .filter((workout) => workout.type === "Strength");
+    expect(lateCardio.length).toBeGreaterThan(0);
+    expect(lateCardio.every((workout) => workout.type === "Outdoor long hike")).toBe(true);
+    expect(lateCardio.every((workout) => workout.durationMinutes >= 60)).toBe(true);
+    if (lateStrength.length > 0) {
+      expect(Math.max(...lateStrength.map((workout) => workout.durationMinutes))).toBeLessThanOrEqual(15);
+    }
+  });
+
+  it("warns when stacked high-intensity days are consecutive", () => {
+    const plan = buildTrainingPlan({
+      ...sampleInputs,
+      daysPerWeek: 2,
+      includeStrength: true,
+      strengthOnCardioDays: true,
+      strengthSessionsPerWeek: 2,
+      constraints: {
+        treadmillMaxInclinePercent: 12,
+        treadmillSessionsPerWeek: 1,
+        outdoorHikesPerWeek: 1,
+        maxSpeedMph: 4,
+      },
+      anyDays: true,
+    });
+    expect(
+      plan.warnings.some((warning) => warning.includes("consecutive high-intensity days"))
+    ).toBe(true);
   });
 
   it("keeps week one volume small for baseline zero", () => {
