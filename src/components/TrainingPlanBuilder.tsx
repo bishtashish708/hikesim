@@ -2,7 +2,6 @@
 
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import type { DragEvent } from "react";
-import { useSession } from "next-auth/react";
 import { formatIncline, formatMinutes, formatSpeed } from "@/lib/formatters";
 import {
   buildTrainingPlan,
@@ -82,19 +81,6 @@ export function TrainingPlanBuilder({ hike, fitnessLevel }: TrainingPlanBuilderP
     dayIndex: number;
     workoutIndex: number;
   } | null>(null);
-  const [environment, setEnvironment] = useState<{
-    location?: string;
-    temperatureF?: number | null;
-    humidityPct?: number | null;
-    elevationFt?: number | null;
-  } | null>(null);
-  const [profileSummary, setProfileSummary] = useState<{
-    city?: string;
-    state?: string;
-    experience?: string;
-    crossTraining?: string[];
-  } | null>(null);
-  const { data: session } = useSession();
   const [error, setError] = useState<string | null>(null);
   const [preferredDayLimitNote, setPreferredDayLimitNote] = useState<string | null>(null);
   const [sessionInvariantNote, setSessionInvariantNote] = useState<string | null>(null);
@@ -196,10 +182,6 @@ export function TrainingPlanBuilder({ hike, fitnessLevel }: TrainingPlanBuilderP
         strengthOnCardioDays,
       },
       fillActiveRecoveryDays,
-      environment,
-      preferences: {
-        crossTraining: profileSummary?.crossTraining ?? [],
-      },
     }),
     [
       targetDate,
@@ -216,8 +198,6 @@ export function TrainingPlanBuilder({ hike, fitnessLevel }: TrainingPlanBuilderP
       strengthSessions,
       strengthOnCardioDays,
       fillActiveRecoveryDays,
-      environment,
-      profileSummary,
     ]
   );
 
@@ -241,10 +221,6 @@ export function TrainingPlanBuilder({ hike, fitnessLevel }: TrainingPlanBuilderP
       includeStrength,
       strengthOnCardioDays,
       fillActiveRecoveryDays,
-      environment: environment ?? undefined,
-      preferences: {
-        crossTraining: profileSummary?.crossTraining ?? [],
-      },
     });
   }, [
     trainingStartDate,
@@ -263,8 +239,6 @@ export function TrainingPlanBuilder({ hike, fitnessLevel }: TrainingPlanBuilderP
     includeStrength,
     strengthOnCardioDays,
     fillActiveRecoveryDays,
-    environment,
-    profileSummary,
   ]);
 
   const visiblePlan = plan ?? previewPlan;
@@ -351,49 +325,6 @@ export function TrainingPlanBuilder({ hike, fitnessLevel }: TrainingPlanBuilderP
   useEffect(() => {
     setSelectedFitnessLevel(fitnessLevel);
   }, [fitnessLevel]);
-
-  useEffect(() => {
-    if (!session?.user?.id) return;
-    fetch("/api/profile")
-      .then((response) => response.ok ? response.json() : null)
-      .then((data) => {
-        if (!data) return;
-        const nextProfile = {
-          city: data.profile?.city ?? undefined,
-          state: data.profile?.state ?? undefined,
-          experience: data.profile?.experience ?? undefined,
-          crossTraining: data.preferences?.crossTrainingPreferences ?? [],
-        };
-        setProfileSummary(nextProfile);
-        if (data.profile?.experience) {
-          const map = {
-            BEGINNER: "Beginner",
-            INTERMEDIATE: "Intermediate",
-            ADVANCED: "Advanced",
-          } as const;
-          const mapped = map[data.profile.experience as keyof typeof map];
-          if (mapped) setSelectedFitnessLevel(mapped);
-        }
-        if (data.profile?.city && data.profile?.state) {
-          fetch("/api/environment", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ city: data.profile.city, state: data.profile.state }),
-          })
-            .then((envResponse) => (envResponse.ok ? envResponse.json() : null))
-            .then((envData) => {
-              if (!envData) return;
-              setEnvironment(envData);
-            })
-            .catch(() => {
-              // Ignore environment fetch errors.
-            });
-        }
-      })
-      .catch(() => {
-        // Ignore profile fetch errors.
-      });
-  }, [session?.user?.id]);
 
   useEffect(() => {
     if (!planMode) return;
@@ -559,10 +490,6 @@ export function TrainingPlanBuilder({ hike, fitnessLevel }: TrainingPlanBuilderP
       includeStrength,
       strengthOnCardioDays,
       fillActiveRecoveryDays,
-      environment: environment ?? undefined,
-      preferences: {
-        crossTraining: profileSummary?.crossTraining ?? [],
-      },
     });
 
     if (trainingStartDate === toInputDate(new Date()) && new Date().getHours() >= 18) {
@@ -1874,12 +1801,6 @@ export function TrainingPlanBuilder({ hike, fitnessLevel }: TrainingPlanBuilderP
                 {warning}
               </p>
             ))}
-            {environment?.temperatureF ? (
-              <p className="mt-1 text-xs text-emerald-800">
-                Environment adjustment: {environment.temperatureF}°F /{" "}
-                {environment.humidityPct ?? "—"}% humidity in {environment.location ?? "your area"}.
-              </p>
-            ) : null}
           </div>
           <div className="flex flex-wrap items-center gap-2 text-xs">
             <button

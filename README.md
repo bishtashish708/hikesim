@@ -21,31 +21,6 @@ npm run dev
 
 Open [http://localhost:3000](http://localhost:3000) to view the app.
 
-## Local Development
-
-Seed demo users (local only):
-
-```bash
-npm run db:seed
-```
-
-Demo credentials (local only):
-
-- testuser@example.com / Password123
-- intermediate@example.com / Password123
-- advanced@example.com / Password123
-
-Enable demo login buttons with:
-
-```
-NEXT_PUBLIC_ENABLE_DEMO_USERS=true
-NEXT_PUBLIC_DEMO_USER_EMAIL=testuser@example.com
-NEXT_PUBLIC_DEMO_USER_PASSWORD=Password123
-ENABLE_CREDENTIALS_AUTH=true
-```
-
-Never use these credentials in production.
-
 ## Seed Data
 
 - Seed hikes live in `prisma/seed.ts` and include 8–10 popular hikes (including

@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { prisma } from "@/lib/db";
 import { buildTrainingPlan } from "@/lib/training/buildTrainingPlan";
 import type { ProfilePoint } from "@/lib/planGenerator";
@@ -53,27 +52,12 @@ export default async function PreviewPlanPage() {
         <header className="rounded-3xl border border-emerald-100 bg-white p-6 shadow-sm">
           <h1 className="text-2xl font-semibold text-slate-900">Preview training plan</h1>
           <p className="mt-2 text-sm text-slate-600">
-            Explore a sample week-by-week plan. Sign up to personalize and save your own.
+            Explore a sample week-by-week plan before generating your own.
           </p>
-          <div className="mt-4 flex flex-wrap gap-3">
-            <Link
-              href="/auth/signup"
-              className="rounded-full bg-emerald-600 px-4 py-2 text-xs font-semibold text-white shadow-sm transition hover:bg-emerald-500"
-            >
-              Create free account
-            </Link>
-            <Link
-              href="/auth/signin"
-              className="rounded-full border border-slate-200 bg-white px-4 py-2 text-xs font-semibold text-slate-600 hover:border-slate-300"
-            >
-              Sign in
-            </Link>
-          </div>
         </header>
 
         <section className="rounded-2xl border border-emerald-100 bg-emerald-50 px-4 py-3 text-xs text-emerald-800">
-          Preview mode: saving, exporting, and editing are disabled. Create an account to build a
-          personalized plan.
+          Preview mode: saving, exporting, and editing are disabled.
         </section>
 
         <section className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">

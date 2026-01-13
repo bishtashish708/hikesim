@@ -35,12 +35,8 @@ export function buildTrainingPlan(inputs: TrainingPlanInputs): TrainingPlanOutpu
     warnings.push("Ambitious plan: recommended only if you already train consistently.");
   }
   const peakTargets = buildPeakTargets(hikeDemands, totalWeeks);
-  const environmentFactor = getEnvironmentAdjustment(inputs.environment);
-  const adjustedBaseline = Math.round(inputs.baselineMinutes * environmentFactor);
-  const adjustedWeeklyTarget = Math.round(peakTargets.weeklyVolumeTarget * environmentFactor);
-  if (environmentFactor < 1) {
-    warnings.push("Plan adjusted for environmental conditions (heat, humidity, or elevation).");
-  }
+  const adjustedBaseline = Math.round(inputs.baselineMinutes);
+  const adjustedWeeklyTarget = Math.round(peakTargets.weeklyVolumeTarget);
   const weekVolumes = buildWeeklyVolumes(adjustedBaseline, totalWeeks, adjustedWeeklyTarget);
   const pickedDays = pickTrainingDays(inputs.daysPerWeek, inputs.preferredDays, inputs.anyDays);
   const averageWeeklyMinutes =
@@ -54,11 +50,11 @@ export function buildTrainingPlan(inputs: TrainingPlanInputs): TrainingPlanOutpu
     const isAdaptationWeek = inputs.baselineMinutes <= 30 && index < 2;
     const weekNoteText = weekNotes(isAdaptationWeek, index + 1, totalWeeks);
     const weekFocus = weekFocusLine(isAdaptationWeek, index + 1, totalWeeks);
-    const effectiveDaysPerWeek = inputs.daysPerWeek;
+    const effectiveDaysPerWeekForWeek = inputs.daysPerWeek;
 
     const { treadmillSessionsPerWeek, outdoorHikesPerWeek, strengthSessionsPerWeek } =
       enforceSessionInvariant({
-        daysPerWeek: effectiveDaysPerWeek,
+        daysPerWeek: effectiveDaysPerWeekForWeek,
         treadmillSessionsPerWeek: inputs.constraints.treadmillSessionsPerWeek,
         outdoorHikesPerWeek: inputs.constraints.outdoorHikesPerWeek,
         strengthSessionsPerWeek: inputs.includeStrength ? inputs.strengthSessionsPerWeek : 0,
@@ -79,7 +75,7 @@ export function buildTrainingPlan(inputs: TrainingPlanInputs): TrainingPlanOutpu
       weekNumber: index + 1,
       totalWeeks,
       weekVolume,
-      daysPerWeek: effectiveDaysPerWeek,
+      daysPerWeek: inputs.daysPerWeek,
       treadmillSessionsPerWeek,
       outdoorHikesPerWeek,
       strengthSessionsPerWeek,
@@ -103,6 +99,11 @@ export function buildTrainingPlan(inputs: TrainingPlanInputs): TrainingPlanOutpu
       isAdaptationWeek,
       maxIncline: inputs.constraints.treadmillMaxInclinePercent,
     });
+    const adjustedInclineCap = clamp(
+      weekInclineCap,
+      0,
+      inputs.constraints.treadmillMaxInclinePercent
+    );
 
     const requiredSessions =
       treadmillSessionsPerWeek +
@@ -111,7 +112,7 @@ export function buildTrainingPlan(inputs: TrainingPlanInputs): TrainingPlanOutpu
     const scheduledDays = scheduleWeekDays({
       weekStart,
       weekEnd,
-      daysPerWeek: effectiveDaysPerWeek,
+      daysPerWeek: effectiveDaysPerWeekForWeek,
       preferredDays: inputs.preferredDays,
       anyDays: inputs.anyDays,
       requiredSessions,
@@ -139,11 +140,9 @@ export function buildTrainingPlan(inputs: TrainingPlanInputs): TrainingPlanOutpu
         isAdaptationWeek,
         strengthPhase,
         longSessionMinutes: longSessionTarget,
-        inclineCap: weekInclineCap,
+        inclineCap: adjustedInclineCap,
         isLongSession,
         isEventPrepWeek,
-        environment: inputs.environment,
-        preferences: inputs.preferences,
       });
 
       if (workout.type === "Outdoor long hike") {
@@ -152,10 +151,10 @@ export function buildTrainingPlan(inputs: TrainingPlanInputs): TrainingPlanOutpu
 
       return {
         date: toIsoDate(dayDate),
-        dayName: DAY_NAMES[dayDate.getDay() === 0 ? 6 : dayDate.getDay() - 1],
-        workouts: [workout],
-      };
-    });
+      dayName: DAY_NAMES[dayDate.getDay() === 0 ? 6 : dayDate.getDay() - 1],
+      workouts: [workout],
+    };
+  });
 
     if (inputs.includeStrength && inputs.strengthOnCardioDays && strengthSessionsPerWeek > 0) {
       const cardioCount = treadmillSessionsPerWeek + outdoorHikesPerWeek;
@@ -164,7 +163,7 @@ export function buildTrainingPlan(inputs: TrainingPlanInputs): TrainingPlanOutpu
         attachStrengthAddOns(days, {
           count: strengthCount,
           phase: strengthPhase,
-          trainingDaysPerWeek: inputs.daysPerWeek,
+          trainingDaysPerWeek: effectiveDaysPerWeekForWeek,
           weekVolume,
           isEventPrepWeek,
         });
@@ -432,8 +431,6 @@ function buildWorkout(input: {
   inclineCap: number;
   isLongSession: boolean;
   isEventPrepWeek: boolean;
-  environment?: TrainingPlanInputs["environment"];
-  preferences?: TrainingPlanInputs["preferences"];
 }): TrainingWorkout {
   const allocations = allocateDurations(input.weekVolume, input.workoutType);
   const duration = input.isAdaptationWeek
@@ -506,19 +503,13 @@ function buildWorkout(input: {
       input.strengthPhase,
       input.isEventPrepWeek
     );
-    const flatlandNote =
-      input.environment?.elevationFt !== null &&
-      input.environment?.elevationFt !== undefined &&
-      input.environment.elevationFt < 500
-        ? " Add step-ups or stair repeats for climbing strength."
-        : "";
     return {
       id: workoutId(input.weekNumber, input.workoutType),
       type: input.workoutType,
       durationMinutes: duration,
       notes: input.isEventPrepWeek
-        ? `Reduced strength load; focus on mobility and activation. Intensity: light.${flatlandNote}`
-        : `Bodyweight squats, lunges, step-ups, core. Intensity: moderate.${flatlandNote}`,
+        ? "Reduced strength load; focus on mobility and activation. Intensity: light."
+        : "Bodyweight squats, lunges, step-ups, core. Intensity: moderate.",
     };
   }
 
@@ -546,14 +537,11 @@ function buildWorkout(input: {
   }
 
   if (input.workoutType === "Recovery / mobility") {
-    const crossTraining = input.preferences?.crossTraining?.length
-      ? ` Optional cross-training: ${input.preferences.crossTraining.join(", ")}.`
-      : "";
     return {
       id: workoutId(input.weekNumber, input.workoutType),
       type: input.workoutType,
       durationMinutes: 25,
-      notes: `Active recovery: 30–60% max HR. Mobility, stretching, easy walk.${crossTraining}`,
+      notes: "Active recovery: 30–60% max HR. Mobility, stretching, easy walk.",
     };
   }
 
@@ -764,21 +752,6 @@ function computeGradeStats(points: ProfilePoint[]) {
     maxSustainedGradePct = Math.max(maxSustainedGradePct, avg);
   }
   return { averageGradePct, maxSustainedGradePct };
-}
-
-function getEnvironmentAdjustment(env?: TrainingPlanInputs["environment"]) {
-  if (!env) return 1;
-  let factor = 1;
-  if (env.temperatureF && env.temperatureF >= 85) {
-    factor -= 0.08;
-  }
-  if (env.humidityPct && env.humidityPct >= 70) {
-    factor -= 0.05;
-  }
-  if (env.elevationFt && env.elevationFt >= 5000) {
-    factor -= 0.08;
-  }
-  return Math.max(0.8, factor);
 }
 
 function addDays(date: Date, days: number) {

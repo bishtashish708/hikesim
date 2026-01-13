@@ -1,6 +1,4 @@
-import bcrypt from "bcryptjs";
 import { PrismaClient } from "@prisma/client";
-import { seedUsers } from "./seed-data.ts";
 
 const prisma = new PrismaClient();
 
@@ -50,15 +48,9 @@ async function main() {
   await prisma.generatedPlan.deleteMany();
   await prisma.trainingPlanRevision.deleteMany();
   await prisma.trainingPlan.deleteMany();
-  await prisma.userProfile.deleteMany();
-  await prisma.trainingPreferences.deleteMany();
-  await prisma.passwordResetToken.deleteMany();
-  await prisma.session.deleteMany();
-  await prisma.account.deleteMany();
-  await prisma.user.deleteMany();
   await prisma.hike.deleteMany({ where: { isSeed: true } });
 
-  const createdHikes = await Promise.all(
+  await Promise.all(
     seedHikes.map((hike) =>
       prisma.hike.create({
         data: {
@@ -70,41 +62,6 @@ async function main() {
         },
       })
     )
-  );
-
-  const goalHike = createdHikes[0];
-  await Promise.all(
-    seedUsers.map(async (seedUser) => {
-      const passwordHash = await bcrypt.hash(seedUser.password, 10);
-      const user = await prisma.user.create({
-        data: {
-          name: seedUser.name,
-          email: seedUser.email.toLowerCase(),
-          passwordHash,
-          emailVerified: new Date(),
-        },
-      });
-      await prisma.userProfile.create({
-        data: {
-          userId: user.id,
-          birthDate: new Date(seedUser.profile.birthDate),
-          city: seedUser.profile.city,
-          state: seedUser.profile.state,
-          experience: seedUser.profile.experience,
-          weeklyAvailability: seedUser.profile.weeklyAvailability,
-          goalHikeId: goalHike?.id ?? null,
-        },
-      });
-      await prisma.trainingPreferences.create({
-        data: {
-          userId: user.id,
-          preferredVolumeMinutes: seedUser.preferences.preferredVolumeMinutes,
-          preferredDifficulty: seedUser.preferences.preferredDifficulty,
-          trainingVolumeLabel: seedUser.preferences.trainingVolumeLabel,
-          crossTrainingPreferences: seedUser.preferences.crossTrainingPreferences,
-        },
-      });
-    })
   );
 }
 
