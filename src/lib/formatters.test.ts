@@ -37,5 +37,6 @@ describe("formatters", () => {
   it("formats speed and minutes", () => {
     expect(formatSpeed(3.444)).toBe("3.4 mph");
     expect(formatMinutes(22.25)).toBe("22.5");
+    expect(formatMinutes(0)).toBe("0");
   });
 });

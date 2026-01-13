@@ -29,6 +29,7 @@ export function formatSpeed(value: number): string {
 
 export function formatMinutes(value: number): string {
   const rounded = roundToStep(value, 0.5);
+  if (rounded === 0) return "0";
   return trimTrailingZeros(rounded.toFixed(1));
 }
 

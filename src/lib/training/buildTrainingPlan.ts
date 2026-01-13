@@ -50,21 +50,19 @@ export function buildTrainingPlan(inputs: TrainingPlanInputs): TrainingPlanOutpu
     const weekFocus = weekFocusLine(isAdaptationWeek, index + 1, totalWeeks);
     const effectiveDaysPerWeek = inputs.daysPerWeek;
 
-    const { treadmillSessionsPerWeek, outdoorHikesPerWeek, strengthDaysPerWeek } =
+    const { treadmillSessionsPerWeek, outdoorHikesPerWeek, recoveryDaysPerWeek } =
       enforceSessionInvariant({
-      daysPerWeek: effectiveDaysPerWeek,
-      treadmillSessionsPerWeek: inputs.constraints.treadmillSessionsPerWeek,
-      outdoorHikesPerWeek: inputs.constraints.outdoorHikesPerWeek,
-      strengthDaysPerWeek: inputs.strengthDaysPerWeek,
-      includeStrength: inputs.includeStrength,
-      strengthOnCardioDays: inputs.strengthOnCardioDays,
-    });
+        daysPerWeek: effectiveDaysPerWeek,
+        treadmillSessionsPerWeek: inputs.constraints.treadmillSessionsPerWeek,
+        outdoorHikesPerWeek: inputs.constraints.outdoorHikesPerWeek,
+        recoveryDaysPerWeek: inputs.recoveryDaysPerWeek,
+      });
     if (
       treadmillSessionsPerWeek !== inputs.constraints.treadmillSessionsPerWeek ||
       outdoorHikesPerWeek !== inputs.constraints.outdoorHikesPerWeek ||
-      strengthDaysPerWeek !== inputs.strengthDaysPerWeek
+      recoveryDaysPerWeek !== inputs.recoveryDaysPerWeek
     ) {
-      warnings.push("Total sessions must fit within your training days.");
+      warnings.push("Treadmill + outdoor sessions + recovery days cannot exceed training days.");
     }
 
     const workoutsForWeek = buildWeekWorkouts({
@@ -74,8 +72,8 @@ export function buildTrainingPlan(inputs: TrainingPlanInputs): TrainingPlanOutpu
       daysPerWeek: effectiveDaysPerWeek,
       treadmillSessionsPerWeek,
       outdoorHikesPerWeek,
+      recoveryDaysPerWeek,
       includeStrength: inputs.includeStrength,
-      strengthDaysPerWeek,
       strengthOnCardioDays: inputs.strengthOnCardioDays,
     });
 
@@ -94,12 +92,14 @@ export function buildTrainingPlan(inputs: TrainingPlanInputs): TrainingPlanOutpu
       maxIncline: inputs.constraints.treadmillMaxInclinePercent,
     });
 
+    const requiredSessions = treadmillSessionsPerWeek + outdoorHikesPerWeek + recoveryDaysPerWeek;
     const scheduledDays = scheduleWeekDays({
       weekStart,
       weekEnd,
       daysPerWeek: effectiveDaysPerWeek,
       preferredDays: inputs.preferredDays,
       anyDays: inputs.anyDays,
+      requiredSessions,
     });
 
     if (scheduledDays.warning) {
@@ -107,7 +107,7 @@ export function buildTrainingPlan(inputs: TrainingPlanInputs): TrainingPlanOutpu
     }
 
     const days: TrainingDay[] = scheduledDays.days.map((dayDate, position) => {
-      const workoutType = workoutsForWeek[position] ?? "Recovery / mobility";
+      const workoutType = workoutsForWeek[position] ?? "Rest day";
       const isLongSession =
         workoutType === "Outdoor long hike" ||
         (workoutType === "Zone 2 incline walk" && outdoorHikesPerWeek === 0 && position === 0);
@@ -138,12 +138,16 @@ export function buildTrainingPlan(inputs: TrainingPlanInputs): TrainingPlanOutpu
       };
     });
 
-    if (inputs.includeStrength && inputs.strengthOnCardioDays && strengthDaysPerWeek > 0) {
-      attachStrengthAddOns(days, {
-        count: strengthDaysPerWeek,
-        phase: getStrengthPhase(isAdaptationWeek, index + 1, totalWeeks),
-        trainingDaysPerWeek: inputs.daysPerWeek,
-      });
+    if (inputs.includeStrength && inputs.strengthOnCardioDays) {
+      const cardioCount = treadmillSessionsPerWeek + outdoorHikesPerWeek;
+      if (cardioCount > 0) {
+        const strengthCount = Math.min(2, Math.max(1, cardioCount));
+        attachStrengthAddOns(days, {
+          count: strengthCount,
+          phase: getStrengthPhase(isAdaptationWeek, index + 1, totalWeeks),
+          trainingDaysPerWeek: inputs.daysPerWeek,
+        });
+      }
     }
 
     const totalMinutes = days.reduce(
@@ -245,18 +249,17 @@ function buildWeekWorkouts(input: {
   daysPerWeek: number;
   treadmillSessionsPerWeek: number;
   outdoorHikesPerWeek: number;
+  recoveryDaysPerWeek: number;
   includeStrength: boolean;
-  strengthDaysPerWeek: number;
   strengthOnCardioDays: boolean;
 }): WorkoutType[] {
   const workouts: WorkoutType[] = [];
   const dayCount = Math.max(2, input.daysPerWeek);
   const outdoorCount = Math.min(input.outdoorHikesPerWeek, dayCount);
   const treadmillCount = Math.min(input.treadmillSessionsPerWeek, dayCount);
-  const strengthCount =
-    input.includeStrength && !input.strengthOnCardioDays
-      ? Math.min(input.strengthDaysPerWeek, dayCount)
-      : 0;
+  const recoveryCount = Math.min(input.recoveryDaysPerWeek, dayCount);
+  const recoveryType: WorkoutType =
+    input.includeStrength && !input.strengthOnCardioDays ? "Strength" : "Recovery / mobility";
 
   const isDeloadWeek = input.weekNumber % 4 === 0;
   const isTaperWeek = input.weekNumber === input.totalWeeks;
@@ -281,12 +284,8 @@ function buildWeekWorkouts(input: {
     }
   }
 
-  for (let i = 0; i < strengthCount; i += 1) {
-    workouts.push("Strength");
-  }
-
-  while (workouts.length < dayCount) {
-    workouts.push("Recovery / mobility");
+  for (let i = 0; i < recoveryCount; i += 1) {
+    workouts.push(recoveryType);
   }
 
   return workouts.slice(0, dayCount);
@@ -392,6 +391,15 @@ function buildWorkout(input: {
     };
   }
 
+  if (input.workoutType === "Rest day") {
+    return {
+      id: workoutId(input.weekNumber, input.workoutType),
+      type: input.workoutType,
+      durationMinutes: 0,
+      notes: "Rest day.",
+    };
+  }
+
   return {
     id: workoutId(input.weekNumber, input.workoutType),
     type: input.workoutType,
@@ -407,6 +415,7 @@ function allocateDurations(weekVolume: number, workoutType: WorkoutType) {
     "Zone 2 incline walk": 0.25,
     Strength: 0.15,
     "Recovery / mobility": 0.1,
+    "Rest day": 0,
   };
 
   const duration = Math.max(20, Math.round(weekVolume * weightMap[workoutType]));
@@ -643,6 +652,7 @@ function scheduleWeekDays(input: {
   daysPerWeek: number;
   preferredDays: number[];
   anyDays: boolean;
+  requiredSessions: number;
 }): ScheduledWeek {
   const days: Date[] = [];
   const preferred = input.preferredDays.filter((day) => day >= 0 && day <= 6);
@@ -665,9 +675,19 @@ function scheduleWeekDays(input: {
     if (days.length >= input.daysPerWeek) break;
   }
 
-  if (days.length < input.daysPerWeek) {
+  if (days.length < input.requiredSessions) {
     const warning = "Not enough preferred days this week; some sessions may be skipped.";
     return { days, warning };
+  }
+
+  if (days.length < input.daysPerWeek) {
+    for (const date of weekDates) {
+      if (days.length >= input.daysPerWeek) break;
+      const weekday = (date.getDay() + 6) % 7;
+      if (!preferred.includes(weekday)) {
+        days.push(date);
+      }
+    }
   }
 
   return { days };
@@ -761,28 +781,24 @@ function enforceSessionInvariant(input: {
   daysPerWeek: number;
   treadmillSessionsPerWeek: number;
   outdoorHikesPerWeek: number;
-  strengthDaysPerWeek: number;
-  includeStrength: boolean;
-  strengthOnCardioDays: boolean;
+  recoveryDaysPerWeek: number;
 }) {
   let treadmill = Math.max(input.treadmillSessionsPerWeek, 0);
   let outdoor = Math.max(input.outdoorHikesPerWeek, 0);
-  const strengthAddOns = input.includeStrength ? Math.max(input.strengthDaysPerWeek, 0) : 0;
-  let strength =
-    input.includeStrength && !input.strengthOnCardioDays ? strengthAddOns : 0;
+  let recovery = Math.max(input.recoveryDaysPerWeek, 0);
   const maxSessions = Math.max(input.daysPerWeek, 0);
-  const total = treadmill + outdoor + strength;
+  const total = treadmill + outdoor + recovery;
   if (total <= maxSessions) {
     return {
       treadmillSessionsPerWeek: treadmill,
       outdoorHikesPerWeek: outdoor,
-      strengthDaysPerWeek: strengthAddOns,
+      recoveryDaysPerWeek: recovery,
     };
   }
   let overage = total - maxSessions;
-  if (strength > 0) {
-    const reduction = Math.min(strength, overage);
-    strength -= reduction;
+  if (recovery > 0) {
+    const reduction = Math.min(recovery, overage);
+    recovery -= reduction;
     overage -= reduction;
   }
   if (outdoor > 0 && overage > 0) {
@@ -796,7 +812,7 @@ function enforceSessionInvariant(input: {
   return {
     treadmillSessionsPerWeek: treadmill,
     outdoorHikesPerWeek: outdoor,
-    strengthDaysPerWeek: input.strengthOnCardioDays ? strengthAddOns : strength,
+    recoveryDaysPerWeek: recovery,
   };
 }
 

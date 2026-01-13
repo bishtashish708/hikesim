@@ -13,7 +13,7 @@ import {
   trimPreferredDays,
   validateTrainingForm,
 } from "@/lib/training/validators";
-import type { TrainingFormErrors, TrainingPlanOutput } from "@/lib/training/types";
+import type { TrainingPlanOutput } from "@/lib/training/types";
 import type { FitnessLevel, ProfilePoint } from "@/lib/planGenerator";
 
 const DAY_LABELS = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
@@ -48,11 +48,10 @@ export function TrainingPlanBuilder({ hike, fitnessLevel }: TrainingPlanBuilderP
   const [outdoorHikes, setOutdoorHikes] = useState(1);
   const [maxSpeed, setMaxSpeed] = useState(4.5);
   const [includeStrength, setIncludeStrength] = useState(true);
-  const [strengthDays, setStrengthDays] = useState(1);
+  const [recoveryDays, setRecoveryDays] = useState(0);
   const [strengthOnCardioDays, setStrengthOnCardioDays] = useState(true);
   const [plan, setPlan] = useState<TrainingPlanOutput | null>(null);
   const [error, setError] = useState<string | null>(null);
-  const [formErrors, setFormErrors] = useState<TrainingFormErrors>({});
   const [preferredDayLimitNote, setPreferredDayLimitNote] = useState<string | null>(null);
   const [sessionInvariantNote, setSessionInvariantNote] = useState<string | null>(null);
   const [daysAdjustedNote, setDaysAdjustedNote] = useState<string | null>(null);
@@ -77,8 +76,8 @@ export function TrainingPlanBuilder({ hike, fitnessLevel }: TrainingPlanBuilderP
         maxSpeedMph: maxSpeed,
         treadmillSessionsPerWeek: treadmillSessions,
         outdoorHikesPerWeek: outdoorHikes,
+        recoveryDaysPerWeek: recoveryDays,
         includeStrength,
-        strengthDaysPerWeek: strengthDays,
         strengthOnCardioDays,
       }),
     [
@@ -92,12 +91,49 @@ export function TrainingPlanBuilder({ hike, fitnessLevel }: TrainingPlanBuilderP
       maxSpeed,
       treadmillSessions,
       outdoorHikes,
+      recoveryDays,
       includeStrength,
-      strengthDays,
       strengthOnCardioDays,
     ]
   );
   const isFormValid = Object.keys(liveErrors).length === 0;
+
+  const settingsPayload = useMemo(
+    () => ({
+      targetDate,
+      trainingStartDate,
+      daysPerWeek,
+      anyDays,
+      preferredDays,
+      baselineMinutes,
+      constraints: {
+        treadmillMaxInclinePercent: maxIncline,
+        treadmillSessionsPerWeek: treadmillSessions,
+        outdoorHikesPerWeek: outdoorHikes,
+        maxSpeedMph: maxSpeed,
+      },
+      recoveryDaysPerWeek: recoveryDays,
+      strength: {
+        includeStrength,
+        strengthOnCardioDays,
+      },
+    }),
+    [
+      targetDate,
+      trainingStartDate,
+      daysPerWeek,
+      anyDays,
+      preferredDays,
+      baselineMinutes,
+      maxIncline,
+      treadmillSessions,
+      outdoorHikes,
+      maxSpeed,
+      includeStrength,
+      recoveryDays,
+      strengthOnCardioDays,
+    ]
+  );
 
   const previewPlan = useMemo(() => {
     if (!trainingStartDate || !targetDate || !isFormValid) return null;
@@ -115,8 +151,8 @@ export function TrainingPlanBuilder({ hike, fitnessLevel }: TrainingPlanBuilderP
       anyDays,
       baselineMinutes,
       constraints: settingsPayload.constraints,
+      recoveryDaysPerWeek: recoveryDays,
       includeStrength,
-      strengthDaysPerWeek: strengthDays,
       strengthOnCardioDays,
     });
   }, [
@@ -132,8 +168,8 @@ export function TrainingPlanBuilder({ hike, fitnessLevel }: TrainingPlanBuilderP
     anyDays,
     baselineMinutes,
     settingsPayload.constraints,
+    recoveryDays,
     includeStrength,
-    strengthDays,
     strengthOnCardioDays,
   ]);
 
@@ -165,42 +201,6 @@ export function TrainingPlanBuilder({ hike, fitnessLevel }: TrainingPlanBuilderP
       ? mainSegments.reduce((sum, segment) => sum + segment.inclinePct, 0) / mainSegments.length
       : 0;
 
-  const settingsPayload = useMemo(
-    () => ({
-      targetDate,
-      trainingStartDate,
-      daysPerWeek,
-      anyDays,
-      preferredDays,
-      baselineMinutes,
-      constraints: {
-        treadmillMaxInclinePercent: maxIncline,
-        treadmillSessionsPerWeek: treadmillSessions,
-        outdoorHikesPerWeek: outdoorHikes,
-        maxSpeedMph: maxSpeed,
-      },
-      strength: {
-        includeStrength,
-        strengthDaysPerWeek: strengthDays,
-        strengthOnCardioDays,
-      },
-    }),
-    [
-      targetDate,
-      trainingStartDate,
-      daysPerWeek,
-      anyDays,
-      preferredDays,
-      baselineMinutes,
-      maxIncline,
-      treadmillSessions,
-      outdoorHikes,
-      maxSpeed,
-      includeStrength,
-      strengthDays,
-      strengthOnCardioDays,
-    ]
-  );
 
   const treadmillOptions = useMemo(() => {
     const maxSessions = Math.min(daysPerWeek, 6);
@@ -209,21 +209,27 @@ export function TrainingPlanBuilder({ hike, fitnessLevel }: TrainingPlanBuilderP
 
   const adjustedTreadmill = treadmillSessions > daysPerWeek;
   const outdoorOptions = treadmillOptions;
-  const strengthOptions = [0, 1, 2];
+  const recoveryOptions = useMemo(() => {
+    const remaining = Math.max(daysPerWeek - (treadmillSessions + outdoorHikes), 0);
+    return Array.from({ length: remaining + 1 }, (_, index) => index);
+  }, [daysPerWeek, treadmillSessions, outdoorHikes]);
 
   const previousDaysRef = useRef(daysPerWeek);
   useEffect(() => {
     if (previousDaysRef.current === daysPerWeek) return;
     previousDaysRef.current = daysPerWeek;
-    const total = treadmillSessions + outdoorHikes;
+    const total = treadmillSessions + outdoorHikes + recoveryDays;
     if (total <= daysPerWeek) {
       setDaysAdjustedNote(null);
       return;
     }
     let nextTreadmill = treadmillSessions;
     let nextOutdoor = outdoorHikes;
-    while (nextTreadmill + nextOutdoor > daysPerWeek) {
-      if (nextOutdoor > 0) {
+    let nextRecovery = recoveryDays;
+    while (nextTreadmill + nextOutdoor + nextRecovery > daysPerWeek) {
+      if (nextRecovery > 0) {
+        nextRecovery -= 1;
+      } else if (nextOutdoor > 0) {
         nextOutdoor -= 1;
       } else if (nextTreadmill > 0) {
         nextTreadmill -= 1;
@@ -233,26 +239,17 @@ export function TrainingPlanBuilder({ hike, fitnessLevel }: TrainingPlanBuilderP
     }
     setTreadmillSessions(nextTreadmill);
     setOutdoorHikes(nextOutdoor);
+    setRecoveryDays(nextRecovery);
     setDaysAdjustedNote(`Adjusted sessions to fit ${daysPerWeek} days/week.`);
-  }, [daysPerWeek, treadmillSessions, outdoorHikes]);
+  }, [daysPerWeek, treadmillSessions, outdoorHikes, recoveryDays]);
 
   useEffect(() => {
-    if (!includeStrength) {
-      setStrengthDays(0);
-      setStrengthOnCardioDays(true);
-      return;
+    const remaining = Math.max(daysPerWeek - (treadmillSessions + outdoorHikes), 0);
+    if (recoveryDays > remaining) {
+      setRecoveryDays(remaining);
+      setDaysAdjustedNote(`Adjusted sessions to fit ${daysPerWeek} days/week.`);
     }
-    if (strengthOnCardioDays) {
-      return;
-    }
-    if (treadmillSessions + outdoorHikes + strengthDays > daysPerWeek) {
-      const allowed = Math.max(daysPerWeek - (treadmillSessions + outdoorHikes), 0);
-      if (allowed !== strengthDays) {
-        setStrengthDays(Math.min(allowed, 2));
-        setDaysAdjustedNote(`Adjusted sessions to fit ${daysPerWeek} days/week.`);
-      }
-    }
-  }, [includeStrength, strengthOnCardioDays, strengthDays, treadmillSessions, outdoorHikes, daysPerWeek]);
+  }, [recoveryDays, treadmillSessions, outdoorHikes, daysPerWeek]);
 
   useEffect(() => {
     if (anyDays) {
@@ -296,7 +293,6 @@ export function TrainingPlanBuilder({ hike, fitnessLevel }: TrainingPlanBuilderP
     setError(null);
     setSaveStatus(null);
     setStartDateNote(null);
-    setFormErrors({});
 
     if (!targetDate) {
       setError("Please select a target date.");
@@ -317,7 +313,6 @@ export function TrainingPlanBuilder({ hike, fitnessLevel }: TrainingPlanBuilderP
 
     const validation = liveErrors;
     if (Object.keys(validation).length > 0) {
-      setFormErrors(validation);
       setError("Please fix the highlighted fields.");
       return;
     }
@@ -336,8 +331,8 @@ export function TrainingPlanBuilder({ hike, fitnessLevel }: TrainingPlanBuilderP
       anyDays,
       baselineMinutes,
       constraints: settingsPayload.constraints,
+      recoveryDaysPerWeek: recoveryDays,
       includeStrength,
-      strengthDaysPerWeek: strengthDays,
       strengthOnCardioDays,
     });
 
@@ -361,8 +356,8 @@ export function TrainingPlanBuilder({ hike, fitnessLevel }: TrainingPlanBuilderP
     maxSpeed,
     treadmillSessions,
     outdoorHikes,
+    recoveryDays,
     includeStrength,
-    strengthDays,
     strengthOnCardioDays,
   ]);
 
@@ -442,8 +437,8 @@ export function TrainingPlanBuilder({ hike, fitnessLevel }: TrainingPlanBuilderP
           <div className="space-y-3">
             <div className="font-semibold">
               {visiblePlan.totalWeeks} weeks starting {formatDate(trainingStartDate)} •{" "}
-              {visiblePlan.summary.daysPerWeek} days/week • ~
-              {visiblePlan.summary.averageWeeklyMinutes} min/week
+              {visiblePlan.summary.daysPerWeek} days/week • {totalSessions} cardio •{" "}
+              {recoveryDays} recovery • ~{visiblePlan.summary.averageWeeklyMinutes} min/week
             </div>
             {nextTreadmillWorkout ? (
               <div className="space-y-2">
@@ -712,8 +707,10 @@ export function TrainingPlanBuilder({ hike, fitnessLevel }: TrainingPlanBuilderP
             onChange={(event) => {
               setTreadmillTouched(true);
               const nextValue = Number(event.target.value);
-              if (nextValue + outdoorHikes > daysPerWeek) {
-                setSessionInvariantNote("Total sessions must fit within your training days.");
+              if (nextValue + outdoorHikes + recoveryDays > daysPerWeek) {
+                setSessionInvariantNote(
+                  "Treadmill + outdoor sessions + recovery days cannot exceed training days."
+                );
                 return;
               }
               if (nextValue + outdoorHikes === 0) {
@@ -746,8 +743,10 @@ export function TrainingPlanBuilder({ hike, fitnessLevel }: TrainingPlanBuilderP
             value={outdoorHikes}
             onChange={(event) => {
               const nextValue = Number(event.target.value);
-              if (nextValue + treadmillSessions > daysPerWeek) {
-                setSessionInvariantNote("Total sessions must fit within your training days.");
+              if (nextValue + treadmillSessions + recoveryDays > daysPerWeek) {
+                setSessionInvariantNote(
+                  "Treadmill + outdoor sessions + recovery days cannot exceed training days."
+                );
                 return;
               }
               if (nextValue + treadmillSessions === 0) {
@@ -785,8 +784,10 @@ export function TrainingPlanBuilder({ hike, fitnessLevel }: TrainingPlanBuilderP
       <div className="mt-6 rounded-xl border border-slate-200 bg-slate-50 p-4">
         <div className="flex items-center justify-between">
           <div>
-            <p className="text-sm font-semibold text-slate-700">Strength & mobility</p>
-            <p className="text-xs text-slate-500">Optional support work (legs/core/mobility).</p>
+            <p className="text-sm font-semibold text-slate-700">Strength/Recovery days per week</p>
+            <p className="text-xs text-slate-500">
+              Unused days will be rest days unless you add strength or mobility.
+            </p>
           </div>
           <label className="flex items-center gap-2 text-xs font-medium text-slate-600">
             <input
@@ -799,59 +800,48 @@ export function TrainingPlanBuilder({ hike, fitnessLevel }: TrainingPlanBuilderP
           </label>
         </div>
 
-        {includeStrength ? (
-          <div className="mt-3 grid gap-3 md:grid-cols-2">
-            <label className="space-y-2 text-sm font-medium text-slate-700">
-              Strength days/week
-              <select
-                value={strengthDays}
-                onChange={(event) => {
-                  const nextValue = Number(event.target.value);
-                  if (strengthOnCardioDays && nextValue > totalSessions) {
-                    setSessionInvariantNote(
-                      "Strength days must fit within your cardio sessions."
-                    );
-                    return;
-                  }
-                  if (!strengthOnCardioDays && nextValue + totalSessions > daysPerWeek) {
-                    setSessionInvariantNote("Cardio + strength days must fit within your training days.");
-                    return;
-                  }
-                  setSessionInvariantNote(null);
-                  setStrengthDays(nextValue);
-                }}
-                className={`w-full rounded-lg border bg-white px-3 py-2 text-sm shadow-sm focus:outline-none ${
-                  liveErrors.strengthDaysPerWeek ? "border-rose-300 focus:border-rose-400" : "border-slate-200 focus:border-emerald-400"
-                }`}
-              >
-                {strengthOptions.map((value) => (
-                  <option key={value} value={value}>
-                    {value}
-                  </option>
-                ))}
-              </select>
-              {liveErrors.strengthDaysPerWeek ? (
-                <p className="text-xs text-rose-700">{liveErrors.strengthDaysPerWeek}</p>
-              ) : null}
-            </label>
+        <div className="mt-3 grid gap-3 md:grid-cols-2">
+          <label className="space-y-2 text-sm font-medium text-slate-700">
+            Recovery days/week
+            <select
+              value={recoveryDays}
+              onChange={(event) => {
+                const nextValue = Number(event.target.value);
+                if (nextValue + totalSessions > daysPerWeek) {
+                  setSessionInvariantNote(
+                    "Treadmill + outdoor sessions + recovery days cannot exceed training days."
+                  );
+                  return;
+                }
+                setSessionInvariantNote(null);
+                setRecoveryDays(nextValue);
+              }}
+              className={`w-full rounded-lg border bg-white px-3 py-2 text-sm shadow-sm focus:outline-none ${
+                liveErrors.recoveryDaysPerWeek ? "border-rose-300 focus:border-rose-400" : "border-slate-200 focus:border-emerald-400"
+              }`}
+            >
+              {recoveryOptions.map((value) => (
+                <option key={value} value={value}>
+                  {value}
+                </option>
+              ))}
+            </select>
+            {liveErrors.recoveryDaysPerWeek ? (
+              <p className="text-xs text-rose-700">{liveErrors.recoveryDaysPerWeek}</p>
+            ) : null}
+          </label>
+          {includeStrength ? (
             <label className="flex items-center gap-2 text-xs font-medium text-slate-600">
               <input
                 type="checkbox"
                 checked={strengthOnCardioDays}
-                onChange={(event) => {
-                  if (!event.target.checked && totalSessions + strengthDays > daysPerWeek) {
-                    setSessionInvariantNote("Cardio + strength days must fit within your training days.");
-                    return;
-                  }
-                  setSessionInvariantNote(null);
-                  setStrengthOnCardioDays(event.target.checked);
-                }}
+                onChange={(event) => setStrengthOnCardioDays(event.target.checked)}
                 className="h-4 w-4 rounded border-slate-300 text-emerald-600"
               />
               Do strength on cardio days
             </label>
-          </div>
-        ) : null}
+          ) : null}
+        </div>
       </div>
 
       {error ? (
@@ -948,8 +938,8 @@ export function TrainingPlanBuilder({ hike, fitnessLevel }: TrainingPlanBuilderP
         <div className="mt-8 space-y-6">
           <div className="rounded-2xl border border-emerald-100 bg-emerald-50 px-4 py-3 text-sm text-emerald-700">
             <div className="font-semibold">
-              {plan.totalWeeks} weeks • {plan.summary.daysPerWeek} days/week • ~
-              {plan.summary.averageWeeklyMinutes} min/week
+              {plan.totalWeeks} weeks • {plan.summary.daysPerWeek} days/week • {totalSessions} cardio •{" "}
+              {recoveryDays} recovery • ~{plan.summary.averageWeeklyMinutes} min/week
             </div>
             {plan.warnings.map((warning) => (
               <p key={warning} className="mt-1 text-xs text-emerald-800">

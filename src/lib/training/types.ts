@@ -19,8 +19,8 @@ export type TrainingPlanInputs = {
     outdoorHikesPerWeek: number;
     maxSpeedMph: number;
   };
+  recoveryDaysPerWeek: number;
   includeStrength: boolean;
-  strengthDaysPerWeek: number;
   strengthOnCardioDays: boolean;
 };
 
@@ -73,7 +73,8 @@ export type WorkoutType =
   | "Zone 2 incline walk"
   | "Strength"
   | "Outdoor long hike"
-  | "Recovery / mobility";
+  | "Recovery / mobility"
+  | "Rest day";
 
 export type StrengthBlock = {
   durationMinutes: number;
@@ -91,8 +92,8 @@ export type TrainingFormValues = {
   maxSpeedMph: number;
   treadmillSessionsPerWeek: number;
   outdoorHikesPerWeek: number;
+  recoveryDaysPerWeek: number;
   includeStrength: boolean;
-  strengthDaysPerWeek: number;
   strengthOnCardioDays: boolean;
 };
 
