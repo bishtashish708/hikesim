@@ -10,9 +10,9 @@ export async function POST(req: Request) {
   const email = typeof body?.email === "string" ? body.email.trim().toLowerCase() : "";
   const password = typeof body?.password === "string" ? body.password : "";
 
-  if (!name || !email || !password) {
+  if (!email || !password) {
     return NextResponse.json(
-      { error: "Name, email, and password are required." },
+      { error: "Email and password are required." },
       { status: 400 }
     );
   }
@@ -37,7 +37,7 @@ export async function POST(req: Request) {
 
   await prisma.user.create({
     data: {
-      name,
+      name: name || null,
       email,
       passwordHash,
     },
