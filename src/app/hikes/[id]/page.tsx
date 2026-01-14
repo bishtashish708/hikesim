@@ -27,7 +27,7 @@ export default async function HikeDetailPage({ params }: HikeDetailPageProps) {
   return (
     <div className="min-h-screen bg-slate-50 px-6 py-10 text-slate-900">
       <main className="mx-auto flex w-full max-w-6xl flex-col gap-8">
-        <Link href="/" className="text-sm font-semibold text-emerald-700 hover:underline">
+        <Link href="/hikes" className="text-sm font-semibold text-emerald-700 hover:underline">
           ← Back to hikes
         </Link>
 

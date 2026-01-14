@@ -1,4 +1,5 @@
 import { PrismaClient } from "@prisma/client";
+import bcrypt from "bcryptjs";
 
 const prisma = new PrismaClient();
 
@@ -46,7 +47,6 @@ async function main() {
   }
 
   await prisma.generatedPlan.deleteMany();
-  await prisma.trainingPlanRevision.deleteMany();
   await prisma.trainingPlan.deleteMany();
   await prisma.hike.deleteMany({ where: { isSeed: true } });
 
@@ -63,6 +63,23 @@ async function main() {
       })
     )
   );
+
+  const demoEmail = "demo@hikesim.com";
+  const demoPassword = "password123";
+  const demoPasswordHash = await bcrypt.hash(demoPassword, 10);
+
+  await prisma.user.upsert({
+    where: { email: demoEmail },
+    update: {
+      name: "Demo User",
+      passwordHash: demoPasswordHash,
+    },
+    create: {
+      name: "Demo User",
+      email: demoEmail,
+      passwordHash: demoPasswordHash,
+    },
+  });
 }
 
 main()

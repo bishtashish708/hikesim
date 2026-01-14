@@ -1,5 +1,7 @@
 import { NextResponse } from "next/server";
+import { getServerSession } from "next-auth";
 import { prisma } from "@/lib/db";
+import { authOptions } from "@/lib/auth";
 
 type TrainingPlanPayload = {
   hikeId?: string;
@@ -10,6 +12,11 @@ type TrainingPlanPayload = {
 };
 
 export async function POST(request: Request) {
+  const session = await getServerSession(authOptions);
+  if (!session?.user?.email) {
+    return NextResponse.json({ error: "Unauthorized." }, { status: 401 });
+  }
+
   const body = (await request.json()) as TrainingPlanPayload;
   if (!body.hikeId) {
     return NextResponse.json({ error: "Hike is required." }, { status: 400 });

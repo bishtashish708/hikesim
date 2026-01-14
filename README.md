@@ -28,6 +28,15 @@ Open [http://localhost:3000](http://localhost:3000) to view the app.
 - Each seed hike gets a synthetic elevation profile of ~20 points.
 - Run `npm run db:seed` anytime you want to reset the seed hikes.
 
+## Development Login
+
+When running locally, the seed script creates a demo user you can use to sign in:
+
+- Email: `demo@hikesim.com`
+- Password: `password123`
+
+Do not use these credentials in production.
+
 ## Plan Generation (High-Level)
 
 - Hikes are represented as profile points: `{ distanceMiles, elevationFt }`.
