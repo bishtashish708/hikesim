@@ -91,6 +91,8 @@ model Hike {
   distanceMiles   Float
   elevationGainFt Int
   profilePoints   Json
+  countryCode     String   @default("US")
+  stateCode       String?
   isSeed          Boolean  @default(false)
   createdAt       DateTime @default(now())
   plans           GeneratedPlan[]

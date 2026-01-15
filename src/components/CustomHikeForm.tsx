@@ -1,15 +1,49 @@
 "use client";
 
 import { useRouter } from "next/navigation";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+
+type Option = { code: string; name: string };
 
 export function CustomHikeForm() {
   const router = useRouter();
   const [name, setName] = useState("");
   const [distanceMiles, setDistanceMiles] = useState(4);
   const [elevationGainFt, setElevationGainFt] = useState(800);
+  const [countries, setCountries] = useState<Option[]>([]);
+  const [states, setStates] = useState<Option[]>([]);
+  const [countryCode, setCountryCode] = useState("US");
+  const [stateCode, setStateCode] = useState("");
   const [error, setError] = useState<string | null>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
+
+  useEffect(() => {
+    const loadCountries = async () => {
+      const response = await fetch("/api/geo/countries");
+      if (!response.ok) return;
+      const data = await response.json();
+      setCountries(data.countries ?? []);
+    };
+    loadCountries();
+  }, []);
+
+  useEffect(() => {
+    const loadStates = async () => {
+      if (!countryCode) {
+        setStates([]);
+        return;
+      }
+      const response = await fetch(`/api/geo/states?country=${countryCode}`);
+      if (!response.ok) {
+        setStates([]);
+        return;
+      }
+      const data = await response.json();
+      setStates(data.states ?? []);
+      setStateCode("");
+    };
+    loadStates();
+  }, [countryCode]);
 
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -34,7 +68,13 @@ export function CustomHikeForm() {
       const response = await fetch("/api/hikes", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ name, distanceMiles, elevationGainFt }),
+        body: JSON.stringify({
+          name,
+          distanceMiles,
+          elevationGainFt,
+          countryCode,
+          stateCode: stateCode || null,
+        }),
       });
 
       if (!response.ok) {
@@ -66,6 +106,39 @@ export function CustomHikeForm() {
       </label>
 
       <div className="grid gap-4 md:grid-cols-2">
+        <label className="space-y-2 text-sm font-medium text-slate-700">
+          Country
+          <select
+            value={countryCode}
+            onChange={(event) => setCountryCode(event.target.value)}
+            className="w-full rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm shadow-sm focus:border-emerald-400 focus:outline-none"
+          >
+            {countries.length === 0 ? (
+              <option value="US">United States</option>
+            ) : (
+              countries.map((country) => (
+                <option key={country.code} value={country.code}>
+                  {country.name}
+                </option>
+              ))
+            )}
+          </select>
+        </label>
+        <label className="space-y-2 text-sm font-medium text-slate-700">
+          State/Region
+          <select
+            value={stateCode}
+            onChange={(event) => setStateCode(event.target.value)}
+            className="w-full rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm shadow-sm focus:border-emerald-400 focus:outline-none"
+          >
+            <option value="">All</option>
+            {states.map((state) => (
+              <option key={state.code} value={state.code}>
+                {state.name}
+              </option>
+            ))}
+          </select>
+        </label>
         <label className="space-y-2 text-sm font-medium text-slate-700">
           Distance (miles)
           <input
