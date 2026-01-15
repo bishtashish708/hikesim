@@ -19,7 +19,7 @@ Start the development server:
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) to view the app.
+
 
 ## Trail Data
 
@@ -46,8 +46,7 @@ Data file: `data/trails/preloaded.json`.
 
 When running locally, the seed script creates a demo user you can use to sign in:
 
-- Email: `demo@hikesim.com`
-- Password: `password123`
+
 
 Do not use these credentials in production.
 
