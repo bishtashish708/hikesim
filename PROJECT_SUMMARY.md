@@ -1,6 +1,6 @@
 # 🏔️ HikeSim Project Summary
 
-**Current Status:** 40% Complete (4 of 10 steps)
+**Current Status:** 50% Complete (5 of 10 steps)
 
 A hiking training app that converts real trails into personalized treadmill workouts with AI-powered plan generation.
 
@@ -20,6 +20,9 @@ Connected OpenRouter.ai (GPT-4o Mini) to generate personalized training plans in
 ### 🎨 Step 4: Complete User Experience
 Built the full user journey from sign-up to training. Created Dashboard (central hub), My Plans (plan management), and Plan Detail (week-by-week breakdown) pages. Users now choose between Quick AI Plan (30 seconds) or Custom Plan (full control). Mobile responsive throughout.
 
+### 📝 Step 5: Onboarding Flow
+Implemented interactive 4-step wizard that guides new users through fitness level selection, training availability setup, personalized hike recommendations, and first plan confirmation. New users now have a smooth activation experience with skip option for power users. Profile data persists for personalized recommendations.
+
 ---
 
 ## 📊 Key Metrics
@@ -29,8 +32,8 @@ Built the full user journey from sign-up to training. Created Dashboard (central
 - **AI Cost:** $0.002 per plan generation
 - **Monthly Operating Cost:** <$1 for 100 users
 - **Tech Stack:** Next.js 16, React 19, TypeScript, PostgreSQL, OpenRouter AI
-- **Code Size:** ~15,000 lines across ~50 files
-- **Pages Built:** 7+ pages including auth, dashboard, hikes, plans
+- **Code Size:** ~16,000 lines across ~55 files
+- **Pages Built:** 8+ pages including auth, onboarding, dashboard, hikes, plans
 
 ---
 
@@ -38,28 +41,28 @@ Built the full user journey from sign-up to training. Created Dashboard (central
 
 ### Complete Journey
 1. **Sign Up/Sign In** - Secure authentication with email/password
-2. **Browse 64 Hikes** - Search and filter trails with elevation charts
-3. **Generate Training Plans** - Two modes:
+2. **Interactive Onboarding** - 4-step wizard for new users (optional, can skip)
+3. **Browse 64 Hikes** - Search and filter trails with elevation charts
+4. **Generate Training Plans** - Two modes:
    - **Quick AI:** Answer 3 questions, get plan in 30 seconds
    - **Custom:** 15-step wizard with full control
-4. **Manage Plans** - View all plans with progress tracking
-5. **Track Progress** - Week-by-week breakdown with workout details
-6. **Mobile Access** - Fully responsive on all devices
+5. **Manage Plans** - View all plans with progress tracking
+6. **Track Progress** - Week-by-week breakdown with workout details
+7. **Mobile Access** - Fully responsive on all devices
 
 ### Key Features
+- Interactive onboarding with personalized recommendations
 - AI-generated plans with cost transparency
 - Custom plan builder for advanced users
 - Dashboard showing all plans and upcoming workouts
 - Progress bars and week tracking
 - AI generation metadata (model, tokens, cost)
 - Plan revision history
+- User profiles with fitness level and training preferences
 
 ---
 
 ## ⏳ What's Still Coming (Remaining)
-
-### 📝 Step 5: Onboarding Flow
-Guide new users through their first training plan with an interactive tutorial. Collect baseline fitness level, suggest starter hikes, and help them generate their first plan (AI or custom) with contextual tips.
 
 ### 🔧 Step 6: Plan Adjustment UI
 Enable users to adjust their training plans with AI assistance. API already exists - need to build the UI modal where users can request changes like "make it easier" or "add more strength training" and see a preview before saving.
@@ -137,14 +140,14 @@ Backend (Next.js API Routes)
 - ✅ **Step 2** (Trail Enrichment) - Complete
 - ✅ **Step 3** (AI Integration) - Complete
 - ✅ **Step 4** (Enhanced UX) - Complete
-- ⏸️ **Step 5** (Onboarding) - Not started
+- ✅ **Step 5** (Onboarding Flow) - Complete
 - ⏸️ **Step 6** (Plan Adjuster) - API ready, UI pending
 - ⏸️ **Step 7** (Workout Detail) - Not started
 - ⏸️ **Step 8** (Progress Tracking) - Not started
 - ⏸️ **Step 9** (Analytics) - Not started
 - ⏸️ **Step 10** (Deployment) - Not started
 
-**Completion:** 4/10 steps (40%)
+**Completion:** 5/10 steps (50%)
 
 ---
 
@@ -180,6 +183,7 @@ For detailed technical documentation, see:
 - **[STEP_2_SUCCESS.md](./docs/STEP_2_SUCCESS.md)** - Trail enrichment
 - **[STEP_3_SUCCESS.md](./docs/STEP_3_SUCCESS.md)** - AI integration
 - **[STEP_4_SUCCESS.md](./docs/STEP_4_SUCCESS.md)** - UX enhancements
+- **[STEP_5_SUCCESS.md](./docs/STEP_5_SUCCESS.md)** - Onboarding flow
 - **[VERIFICATION_GUIDE.md](./docs/VERIFICATION_GUIDE.md)** - Testing checklist
 - **[AI_SETUP_GUIDE.md](./docs/AI_SETUP_GUIDE.md)** - AI configuration
 
@@ -209,12 +213,12 @@ Visit [http://localhost:3000](http://localhost:3000) and start training!
 
 ## 🎯 Next Milestone
 
-**Step 5: Onboarding Flow** - Help new users get started with their first training plan through an interactive, guided experience.
+**Step 6: Plan Adjustment UI** - Enable users to adjust their training plans with AI assistance through an interactive modal interface.
 
 ---
 
 **Last Updated:** 2026-01-22
-**Version:** 1.0.0 (40% Complete)
+**Version:** 1.0.0 (50% Complete)
 **Repository:** github.com/bishtashish708/hikesim
 
 🏔️ **Ready to train for your next hike!**
