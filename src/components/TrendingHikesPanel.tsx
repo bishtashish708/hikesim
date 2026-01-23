@@ -3,12 +3,11 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
+import { getApiBase } from "@/lib/apiBase";
 
 type TrendingHike = {
-  id: string;
+  id: number;
   name: string;
-  country: string;
-  state: string | null;
   countryCode: string;
   stateCode: string | null;
   difficulty: string;
@@ -44,6 +43,8 @@ export default function TrendingHikesPanel() {
     message: string;
     progress: number;
   } | null>(null);
+  const apiBase = getApiBase();
+  const useBackend = Boolean(apiBase);
   const router = useRouter();
   const searchParams = useSearchParams();
 
@@ -53,16 +54,30 @@ export default function TrendingHikesPanel() {
     try {
       setIsLoading(true);
       setError(null);
-      const response = await fetch(`/api/hikes/trending?${params.toString()}`);
+      const endpointBase = apiBase ? apiBase : "";
+      const response = await fetch(`${endpointBase}/trails/trending?${params.toString()}`);
       if (!response.ok) {
         setError("Unable to load trending hikes.");
         setIsLoading(false);
         return;
       }
       const data = await response.json();
-      setItems((prev) => (append ? [...prev, ...(data.items ?? [])] : data.items ?? []));
+      const nextItems = (data.items ?? []).map((item: TrendingHike) => ({
+        id: item.id,
+        name: item.name,
+        countryCode: item.countryCode ?? "",
+        stateCode: item.stateCode ?? null,
+        difficulty: item.difficulty,
+        distanceMiles: item.distanceMiles ?? 0,
+        elevationGainFt: item.elevationGainFt ?? 0,
+        rating: item.rating ?? 0,
+        reviews: item.reviews ?? 0,
+        popularityScore: item.popularityScore ?? 0,
+        rank: item.rank ?? 0,
+      }));
+      setItems((prev) => (append ? [...prev, ...nextItems] : nextItems));
       setHasMore(Boolean(data.hasMore));
-      setCountry(data.countryCode ?? DEFAULT_COUNTRY);
+      setCountry(data.countryCode ?? data.country_code ?? DEFAULT_COUNTRY);
       setStateCode(Array.isArray(data.states) ? data.states[0] ?? "" : "");
       setIsInitialFetchDone(true);
       setIsLoading(false);
@@ -70,7 +85,7 @@ export default function TrendingHikesPanel() {
       setError("Unable to load trending hikes.");
       setIsLoading(false);
     }
-  }, []);
+  }, [apiBase]);
 
   useEffect(() => {
     const loadCountries = async () => {
@@ -140,7 +155,7 @@ export default function TrendingHikesPanel() {
   }, [fetchTrending, isInitialFetchDone]);
 
   useEffect(() => {
-    if (isLoading || items.length > 0) {
+    if (useBackend || isLoading || items.length > 0) {
       return;
     }
     const preloadKey = `${preloadStoragePrefix}${selectedCountry}`;
@@ -193,7 +208,16 @@ export default function TrendingHikesPanel() {
       setTimeout(() => setImportStatus(null), 2500);
     };
     runImport();
-  }, [country, error, fetchTrending, isLoading, items.length, selectedCountry, stateCode]);
+  }, [
+    country,
+    error,
+    fetchTrending,
+    isLoading,
+    items.length,
+    selectedCountry,
+    stateCode,
+    useBackend,
+  ]);
 
   const handleCountryChange = (value: string) => {
     setCountry(value);
@@ -218,19 +242,14 @@ export default function TrendingHikesPanel() {
     } else {
       window.localStorage.removeItem(statesStorageKey);
     }
-    const params = new URLSearchParams({ page: "1" });
-    if (country) {
-      params.set("country", country);
-    }
+    const params = new URLSearchParams({ page: "1", country: selectedCountry });
     if (selected) {
       params.set("states", selected);
     }
     setPage(1);
     fetchTrending(params);
     const urlParams = new URLSearchParams(searchParams.toString());
-    if (country) {
-      urlParams.set("country", country);
-    }
+    urlParams.set("country", selectedCountry);
     if (selected) {
       urlParams.set("state", selected);
     } else {
@@ -268,10 +287,10 @@ export default function TrendingHikesPanel() {
           }
           setCountry(nextCountry);
           setStateCode(nextState);
-          const params = new URLSearchParams({ country: nextCountry, page: "1" });
-          if (nextState) {
-            params.set("states", nextState);
-          }
+        const params = new URLSearchParams({ country: nextCountry, page: "1" });
+        if (nextState) {
+          params.set("states", nextState);
+        }
           setPage(1);
           setShowLocationPrompt(false);
           fetchTrending(params);
@@ -287,16 +306,8 @@ export default function TrendingHikesPanel() {
           return;
         }
 
-        const params = new URLSearchParams({
-          lat: String(lat),
-          lon: String(lon),
-          page: "1",
-        });
-        window.localStorage.removeItem(storageKey);
-        window.localStorage.removeItem(statesStorageKey);
-        setPage(1);
+        setError("We could not infer your region. Choose a country instead.");
         setShowLocationPrompt(false);
-        fetchTrending(params);
       },
       () => {
         setError("We could not access your location. Choose a region instead.");
@@ -314,12 +325,23 @@ export default function TrendingHikesPanel() {
     return countryName ? `Trending in ${countryName}${stateLabel}` : "Trending hikes";
   }, [availableStates, countries, selectedCountry, stateCode]);
 
+  const resolveCountryName = useCallback(
+    (code: string) => countries.find((item) => item.code === code)?.name ?? code,
+    [countries]
+  );
+
+  const resolveStateName = useCallback(
+    (code: string | null) =>
+      code ? availableStates.find((item) => item.code === code)?.name ?? code : "",
+    [availableStates]
+  );
+
   const loadMore = () => {
     const nextPage = page + 1;
-    const params = new URLSearchParams({ page: String(nextPage) });
-    if (country) {
-      params.set("country", country);
-    }
+    const params = new URLSearchParams({
+      page: String(nextPage),
+      country: selectedCountry,
+    });
     if (stateCode) {
       params.set("states", stateCode);
     }
@@ -383,16 +405,11 @@ export default function TrendingHikesPanel() {
               onClick={() => {
                 setStateCode("");
                 window.localStorage.removeItem(statesStorageKey);
-                const params = new URLSearchParams({ page: "1" });
-                if (country) {
-                  params.set("country", country);
-                }
+                const params = new URLSearchParams({ page: "1", country: selectedCountry });
                 setPage(1);
                 fetchTrending(params);
                 const urlParams = new URLSearchParams(searchParams.toString());
-                if (country) {
-                  urlParams.set("country", country);
-                }
+                urlParams.set("country", selectedCountry);
                 urlParams.delete("state");
                 router.replace(`/hikes?${urlParams.toString()}`);
                 router.refresh();
@@ -466,8 +483,10 @@ export default function TrendingHikesPanel() {
                 <div>
                   <h3 className="text-sm font-semibold text-slate-900">{hike.name}</h3>
                   <p className="mt-1 text-xs text-slate-500">
-                    {hike.state ? `${hike.state}, ` : ""}
-                    {hike.country}
+                    {resolveStateName(hike.stateCode)
+                      ? `${resolveStateName(hike.stateCode)}, `
+                      : ""}
+                    {resolveCountryName(hike.countryCode)}
                   </p>
                 </div>
                 <div className="text-right text-xs text-slate-500">

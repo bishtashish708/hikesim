@@ -271,7 +271,7 @@ export async function importProtectedTrails({
 
   const namePattern = PROTECTED_NAME_BY_COUNTRY[upperCountry] ?? "National Park";
 
-  let query = buildProtectedAreasQuery(upperCountry, stateName, upperState, namePattern, limit);
+  let query = buildProtectedAreasQuery(upperCountry, stateName ?? null, upperState ?? null, namePattern, limit);
   let fallbackNote: string | null = null;
 
   let elements: OverpassElement[] = [];
@@ -435,7 +435,7 @@ export async function debugProtectedTrails({
     : null;
   const namePattern = PROTECTED_NAME_BY_COUNTRY[upperCountry] ?? "National Park";
 
-  let query = buildProtectedAreasQuery(upperCountry, stateName, upperState, namePattern, limit);
+  let query = buildProtectedAreasQuery(upperCountry, stateName ?? null, upperState ?? null, namePattern, limit);
   let fallbackNote: string | null = null;
 
   let elements: OverpassElement[] = [];

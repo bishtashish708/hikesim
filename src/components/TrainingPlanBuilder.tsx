@@ -14,10 +14,37 @@ import {
   trimPreferredDays,
   validateTrainingForm,
 } from "@/lib/training/validators";
-import type { TrainingPlanOutput } from "@/lib/training/types";
+import type { TrainingPlanOutput, TrainingWorkout } from "@/lib/training/types";
 import type { FitnessLevel, ProfilePoint } from "@/lib/planGenerator";
+import { getApiBase } from "@/lib/apiBase";
 
 const DAY_LABELS = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
+const DAY_ALIASES = ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"];
+
+type WizardStepId =
+  | "trainingStartDate"
+  | "targetDate"
+  | "daysPerWeek"
+  | "fitnessLevel"
+  | "baselineMinutes"
+  | "maxIncline"
+  | "maxSpeed"
+  | "treadmillSessions"
+  | "outdoorHikes"
+  | "trainingFocus"
+  | "strengthSessions"
+  | "strengthOnCardioDays"
+  | "fillActiveRecoveryDays"
+  | "preferredDays"
+  | "review";
+
+type WizardStep = {
+  id: WizardStepId;
+  title: string;
+  helper?: string;
+  placeholder?: string;
+  presets?: string[];
+};
 
 type TrainingPlanBuilderProps = {
   hike: {
@@ -51,8 +78,8 @@ export function TrainingPlanBuilder({ hike, fitnessLevel }: TrainingPlanBuilderP
     const base = hours >= 18 ? addDays(now, 1) : now;
     return toInputDate(base);
   }, []);
-  const [trainingStartDate, setTrainingStartDate] = useState(initialStartDate);
-  const [targetDate, setTargetDate] = useState(() => toInputDate(addDays(new Date(), 42)));
+  const [trainingStartDate, setTrainingStartDate] = useState<string>(initialStartDate);
+  const [targetDate, setTargetDate] = useState<string>(() => toInputDate(addDays(new Date(), 42)));
   const [planMode, setPlanMode] = useState<"quick" | "custom" | null>(null);
   const [selectedFitnessLevel, setSelectedFitnessLevel] = useState<FitnessLevel>(fitnessLevel);
   const [daysPerWeek, setDaysPerWeek] = useState(3);
@@ -97,6 +124,12 @@ export function TrainingPlanBuilder({ hike, fitnessLevel }: TrainingPlanBuilderP
   const [compressedWarningAcked, setCompressedWarningAcked] = useState(false);
   const [isSaving, setIsSaving] = useState(false);
   const [saveStatus, setSaveStatus] = useState<string | null>(null);
+  const [wizardStep, setWizardStep] = useState(0);
+  const [wizardInput, setWizardInput] = useState("");
+  const [wizardError, setWizardError] = useState<string | null>(null);
+  const [wizardTouched, setWizardTouched] = useState(false);
+  const apiBase = getApiBase();
+  const useBackend = Boolean(apiBase);
   const editStorageKey = `trainingPlanEdits:${hike.id}`;
   const planIdStorageKey = `trainingPlanId:${hike.id}`;
   const revisionSaveTimerRef = useRef<number | null>(null);
@@ -111,6 +144,117 @@ export function TrainingPlanBuilder({ hike, fitnessLevel }: TrainingPlanBuilderP
   const planIntensity = getPlanIntensity(baselineMinutes, totalCardio);
   const isAggressive = planIntensity === "aggressive";
   const isModerate = planIntensity === "moderate";
+
+  const wizardSteps: WizardStep[] = useMemo(
+    () => [
+      {
+        id: "trainingStartDate",
+        title: "When do you want to start training?",
+        helper: "Type a date (YYYY-MM-DD) or say “today”, “tomorrow”, or “next Monday”.",
+        placeholder: "e.g., 2026-02-01 or next monday",
+        presets: ["today", "tomorrow", "next monday"],
+      },
+      {
+        id: "targetDate",
+        title: "What is your target hike date?",
+        helper: "We use this to calculate weeks available for training.",
+        placeholder: "e.g., 2026-04-15",
+      },
+      {
+        id: "daysPerWeek",
+        title: "How many days per week can you train?",
+        helper: planMode === "quick"
+          ? "Quick-start recommends 3–5 days. Max 6 in this mode."
+          : "Enter a number between 1 and 7.",
+        placeholder: "e.g., 4",
+        presets: ["3", "4", "5"],
+      },
+      {
+        id: "fitnessLevel",
+        title: "What is your experience level?",
+        helper: "Choose Beginner, Intermediate, or Advanced.",
+        placeholder: "e.g., Intermediate",
+        presets: ["Beginner", "Intermediate", "Advanced"],
+      },
+      {
+        id: "baselineMinutes",
+        title: "How many minutes do you currently train per week?",
+        helper: "If you are starting out, enter 0. Range: 0–2000 minutes.",
+        placeholder: "e.g., 120",
+        presets: ["0", "60", "120", "180"],
+      },
+      {
+        id: "maxIncline",
+        title: "What is your treadmill max incline (%)?",
+        helper: "We’ll cap incline in the plan to this. Range: 0–20.",
+        placeholder: "e.g., 12",
+        presets: ["8", "12", "15"],
+      },
+      {
+        id: "maxSpeed",
+        title: "What is your max treadmill speed (mph)?",
+        helper: "Range: 1–8 mph.",
+        placeholder: "e.g., 4.5",
+        presets: ["3.5", "4.5", "5.5"],
+      },
+      {
+        id: "treadmillSessions",
+        title: "How many treadmill sessions per week?",
+        helper: "Treadmill + outdoor sessions should be at least 1.",
+        placeholder: "e.g., 2",
+        presets: ["1", "2", "3"],
+      },
+      {
+        id: "outdoorHikes",
+        title: "How many outdoor hikes per week?",
+        helper: "Treadmill + outdoor sessions should be at least 1.",
+        placeholder: "e.g., 1",
+        presets: ["0", "1", "2"],
+      },
+      {
+        id: "trainingFocus",
+        title: "Do you want cardio only, or cardio + strength?",
+        helper: "Choose one.",
+        placeholder: "e.g., cardio + strength",
+        presets: ["cardio only", "cardio + strength"],
+      },
+      {
+        id: "strengthSessions",
+        title: "How many strength sessions per week?",
+        helper: includeStrength
+          ? "Must fit within your total training days."
+          : "You chose cardio only. Enter 0 or switch focus.",
+        placeholder: "e.g., 2",
+        presets: ["0", "1", "2"],
+      },
+      {
+        id: "strengthOnCardioDays",
+        title: "Mix strength on cardio days?",
+        helper: "Answer yes or no. If yes, we’ll stack sessions on the same day.",
+        placeholder: "e.g., yes",
+        presets: ["yes", "no"],
+      },
+      {
+        id: "fillActiveRecoveryDays",
+        title: "Fill unused days with active recovery?",
+        helper: "Answer yes or no.",
+        placeholder: "e.g., yes",
+        presets: ["yes", "no"],
+      },
+      {
+        id: "preferredDays",
+        title: "Any preferred training days?",
+        helper: "Type “any” or list days like Mon, Wed, Fri.",
+        placeholder: "e.g., any or Mon, Wed, Fri",
+        presets: ["any", "Mon, Wed, Fri"],
+      },
+      {
+        id: "review",
+        title: "Review your plan settings",
+      },
+    ],
+    [includeStrength, planMode]
+  );
 
   const hikeDifficulty = getHikeDifficulty(hike.distanceMiles, hike.elevationGainFt);
   const recommendedDays = getRecommendedDaysByDifficulty(hikeDifficulty);
@@ -444,7 +588,7 @@ export function TrainingPlanBuilder({ hike, fitnessLevel }: TrainingPlanBuilderP
     }
   }, [isAggressive]);
 
-  const handleGenerate = () => {
+  const handleGenerate = async () => {
     setError(null);
     setSaveStatus(null);
     setStartDateNote(null);
@@ -472,33 +616,81 @@ export function TrainingPlanBuilder({ hike, fitnessLevel }: TrainingPlanBuilderP
       return;
     }
 
-    const output = buildTrainingPlan({
+    const payload = {
+      hike_id: Number(hike.id),
       hike: {
-        distanceMiles: hike.distanceMiles,
-        elevationGainFt: hike.elevationGainFt,
-        profilePoints: hike.profilePoints,
+        distance_miles: hike.distanceMiles,
+        elevation_gain_ft: hike.elevationGainFt,
+        profile_points: hike.profilePoints.map((point) => ({
+          distanceMiles: point.distanceMiles,
+          elevationFt: point.elevationFt,
+        })),
       },
-      fitnessLevel: selectedFitnessLevel,
-      targetDate,
-      trainingStartDate,
-      daysPerWeek,
-      preferredDays,
-      anyDays,
-      baselineMinutes,
-      constraints: settingsPayload.constraints,
-      strengthSessionsPerWeek: strengthSessions,
-      includeStrength,
-      strengthOnCardioDays,
-      fillActiveRecoveryDays,
-    });
+      training_start_date: trainingStartDate,
+      target_date: targetDate,
+      days_per_week: daysPerWeek,
+      fitness_level: selectedFitnessLevel,
+      treadmill_sessions_per_week: treadmillSessions,
+      outdoor_hikes_per_week: outdoorHikes,
+      strength_sessions_per_week: strengthSessions,
+      treadmill_max_incline_percent: maxIncline,
+      max_speed_mph: maxSpeed,
+      include_strength: includeStrength,
+      strength_on_cardio_days: strengthOnCardioDays,
+      baseline_minutes: baselineMinutes,
+      fill_active_recovery_days: fillActiveRecoveryDays,
+      preferred_days: preferredDays,
+      any_days: anyDays,
+    };
+
+    let output = null;
+    if (useBackend) {
+      try {
+        const response = await fetch(`${apiBase}/plans/generate`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(payload),
+        });
+        if (!response.ok) {
+          throw new Error("Unable to generate plan.");
+        }
+        const data = await response.json();
+        output = data.plan ?? null;
+      } catch (err) {
+        setError("Unable to generate plan from the backend.");
+        return;
+      }
+    } else {
+      output = buildTrainingPlan({
+        hike: {
+          distanceMiles: hike.distanceMiles,
+          elevationGainFt: hike.elevationGainFt,
+          profilePoints: hike.profilePoints,
+        },
+        fitnessLevel: selectedFitnessLevel,
+        targetDate,
+        trainingStartDate,
+        daysPerWeek,
+        preferredDays,
+        anyDays,
+        baselineMinutes,
+        constraints: settingsPayload.constraints,
+        strengthSessionsPerWeek: strengthSessions,
+        includeStrength,
+        strengthOnCardioDays,
+        fillActiveRecoveryDays,
+      });
+    }
 
     if (trainingStartDate === toInputDate(new Date()) && new Date().getHours() >= 18) {
       setStartDateNote("Starting today schedules workouts immediately; consider “Start tomorrow”.");
     }
 
-    setPlan(output);
-    if (!originalPlan) {
-      setOriginalPlan(output);
+    if (output) {
+      setPlan(output);
+      if (!originalPlan) {
+        setOriginalPlan(output);
+      }
     }
   };
 
@@ -681,6 +873,314 @@ export function TrainingPlanBuilder({ hike, fitnessLevel }: TrainingPlanBuilderP
     setSessionInvariantNote(null);
   }, [getQuickStartAllocation]);
 
+  const normalizeInput = (value: string) => value.trim().toLowerCase();
+
+  const parseDateInput = (value: string) => {
+    const normalized = normalizeInput(value);
+    if (!normalized) {
+      return { ok: false, error: "Please enter a date." };
+    }
+    if (normalized === "today") {
+      return { ok: true, value: toInputDate(new Date()) };
+    }
+    if (normalized === "tomorrow") {
+      return { ok: true, value: toInputDate(addDays(new Date(), 1)) };
+    }
+    if (normalized === "next monday") {
+      return { ok: true, value: toInputDate(getNextMonday(new Date())) };
+    }
+    if (!/^\d{4}-\d{2}-\d{2}$/.test(normalized)) {
+      return { ok: false, error: "Use YYYY-MM-DD or a shortcut like “next Monday”." };
+    }
+    const dateValue = new Date(`${normalized}T00:00:00`);
+    if (Number.isNaN(dateValue.getTime())) {
+      return { ok: false, error: "That date looks invalid." };
+    }
+    return { ok: true, value: normalized };
+  };
+
+  const parseNumberInput = (value: string, min: number, max: number) => {
+    const numeric = Number(value);
+    if (!Number.isFinite(numeric)) {
+      return { ok: false, error: "Please enter a number." };
+    }
+    if (numeric < min || numeric > max) {
+      return { ok: false, error: `Enter a value between ${min} and ${max}.` };
+    }
+    return { ok: true, value: numeric };
+  };
+
+  const parseYesNo = (value: string) => {
+    const normalized = normalizeInput(value);
+    if (["yes", "y", "true"].includes(normalized)) {
+      return { ok: true, value: true };
+    }
+    if (["no", "n", "false"].includes(normalized)) {
+      return { ok: true, value: false };
+    }
+    return { ok: false, error: "Please answer yes or no." };
+  };
+
+  const parseFitnessLevel = (value: string) => {
+    const normalized = normalizeInput(value);
+    if (normalized.startsWith("begin")) return { ok: true, value: "Beginner" as FitnessLevel };
+    if (normalized.startsWith("inter")) return { ok: true, value: "Intermediate" as FitnessLevel };
+    if (normalized.startsWith("adv") || normalized.startsWith("exp")) {
+      return { ok: true, value: "Advanced" as FitnessLevel };
+    }
+    return { ok: false, error: "Choose Beginner, Intermediate, or Advanced." };
+  };
+
+  const parseTrainingFocus = (value: string) => {
+    const normalized = normalizeInput(value);
+    if (normalized.includes("cardio") && normalized.includes("strength")) {
+      return { ok: true, value: true };
+    }
+    if (normalized.includes("cardio")) {
+      return { ok: true, value: false };
+    }
+    return { ok: false, error: "Type “cardio only” or “cardio + strength”." };
+  };
+
+  const parsePreferredDaysInput = (value: string) => {
+    const normalized = normalizeInput(value);
+    if (!normalized || normalized === "any") {
+      return { ok: true, anyDays: true, days: [] };
+    }
+    const tokens = normalized
+      .split(/[,\s]+/)
+      .map((token) => token.trim())
+      .filter(Boolean);
+    const selected = new Set<number>();
+    tokens.forEach((token) => {
+      const dayIndex = DAY_ALIASES.findIndex((alias) => alias.startsWith(token));
+      if (dayIndex >= 0) {
+        selected.add(dayIndex);
+      }
+    });
+    if (selected.size === 0) {
+      return { ok: false, error: "List days like Mon, Wed, Fri or type “any”." };
+    }
+    return { ok: true, anyDays: false, days: Array.from(selected).sort((a, b) => a - b) };
+  };
+
+  const getWizardPrefill = (id: WizardStepId) => {
+    switch (id) {
+      case "trainingStartDate":
+        return trainingStartDate;
+      case "targetDate":
+        return targetDate;
+      case "daysPerWeek":
+        return String(daysPerWeek);
+      case "fitnessLevel":
+        return selectedFitnessLevel;
+      case "baselineMinutes":
+        return String(baselineMinutes);
+      case "maxIncline":
+        return String(maxIncline);
+      case "maxSpeed":
+        return String(maxSpeed);
+      case "treadmillSessions":
+        return String(treadmillSessions);
+      case "outdoorHikes":
+        return String(outdoorHikes);
+      case "trainingFocus":
+        return includeStrength ? "cardio + strength" : "cardio only";
+      case "strengthSessions":
+        return String(strengthSessions);
+      case "strengthOnCardioDays":
+        return strengthOnCardioDays ? "yes" : "no";
+      case "fillActiveRecoveryDays":
+        return fillActiveRecoveryDays ? "yes" : "no";
+      case "preferredDays":
+        return anyDays ? "any" : preferredDays.map((index) => DAY_LABELS[index]).join(", ");
+      default:
+        return "";
+    }
+  };
+
+  const applyWizardAnswer = (id: WizardStepId, rawValue: string) => {
+    switch (id) {
+      case "trainingStartDate": {
+        const parsed = parseDateInput(rawValue);
+        if (!parsed.ok) return parsed;
+        const parsedValue = parsed.value as string;
+        if (targetDate) {
+          const targetDateValue = targetDate as string;
+          if (new Date(parsedValue) > new Date(targetDateValue)) {
+            return { ok: false, error: "Start date must be before the target date." };
+          }
+        }
+        setTrainingStartDate(parsedValue);
+        return { ok: true };
+      }
+      case "targetDate": {
+        const parsed = parseDateInput(rawValue);
+        if (!parsed.ok) return parsed;
+        const parsedValue = parsed.value as string;
+        if (trainingStartDate) {
+          const startDateValue = trainingStartDate as string;
+          if (new Date(parsedValue) < new Date(startDateValue)) {
+            return { ok: false, error: "Target date must be after the start date." };
+          }
+        }
+        setTargetDate(parsedValue);
+        return { ok: true };
+      }
+      case "daysPerWeek": {
+        const maxDays = planMode === "quick" ? 6 : 7;
+        const parsed = parseNumberInput(rawValue, 1, maxDays);
+        if (!parsed.ok) return parsed;
+        setDaysPerWeek(Math.round(parsed.value as number));
+        return { ok: true };
+      }
+      case "fitnessLevel": {
+        const parsed = parseFitnessLevel(rawValue);
+        if (!parsed.ok) return parsed;
+        setSelectedFitnessLevel(parsed.value as FitnessLevel);
+        return { ok: true };
+      }
+      case "baselineMinutes": {
+        const parsed = parseNumberInput(rawValue, 0, 2000);
+        if (!parsed.ok) return parsed;
+        setBaselineMinutes(Math.round(parsed.value as number));
+        return { ok: true };
+      }
+      case "maxIncline": {
+        const parsed = parseNumberInput(rawValue, 0, 20);
+        if (!parsed.ok) return parsed;
+        setMaxIncline(parsed.value as number);
+        return { ok: true };
+      }
+      case "maxSpeed": {
+        const parsed = parseNumberInput(rawValue, 1, 8);
+        if (!parsed.ok) return parsed;
+        setMaxSpeed(parsed.value as number);
+        return { ok: true };
+      }
+      case "treadmillSessions": {
+        const parsed = parseNumberInput(rawValue, 0, 7);
+        if (!parsed.ok) return parsed;
+        const nextValue = Math.round(parsed.value as number);
+        const strengthLoad = includeStrength && !strengthOnCardioDays ? strengthSessions : 0;
+        if (nextValue + outdoorHikes + strengthLoad > daysPerWeek) {
+          return {
+            ok: false,
+            error: "Cardio + strength sessions cannot exceed training days.",
+          };
+        }
+        if (nextValue + outdoorHikes === 0) {
+          return { ok: false, error: "Choose at least 1 treadmill or outdoor session." };
+        }
+        setTreadmillTouched(true);
+        setTreadmillSessions(nextValue);
+        setSessionInvariantNote(null);
+        return { ok: true };
+      }
+      case "outdoorHikes": {
+        const parsed = parseNumberInput(rawValue, 0, 7);
+        if (!parsed.ok) return parsed;
+        const nextValue = Math.round(parsed.value as number);
+        const strengthLoad = includeStrength && !strengthOnCardioDays ? strengthSessions : 0;
+        if (nextValue + treadmillSessions + strengthLoad > daysPerWeek) {
+          return {
+            ok: false,
+            error: "Cardio + strength sessions cannot exceed training days.",
+          };
+        }
+        if (nextValue + treadmillSessions === 0) {
+          return { ok: false, error: "Choose at least 1 treadmill or outdoor session." };
+        }
+        setOutdoorHikes(nextValue);
+        setSessionInvariantNote(null);
+        return { ok: true };
+      }
+      case "trainingFocus": {
+        const parsed = parseTrainingFocus(rawValue);
+        if (!parsed.ok) return parsed;
+        setIncludeStrength(parsed.value as boolean);
+        if (!parsed.value) {
+          setStrengthSessions(0);
+          setStrengthOnCardioDays(false);
+        }
+        return { ok: true };
+      }
+      case "strengthSessions": {
+        const parsed = parseNumberInput(rawValue, 0, 7);
+        if (!parsed.ok) return parsed;
+        const nextValue = Math.round(parsed.value as number);
+        if (!includeStrength && nextValue > 0) {
+          return { ok: false, error: "Switch to cardio + strength to add strength sessions." };
+        }
+        const cardioLoad = treadmillSessions + outdoorHikes;
+        const totalLoad = strengthOnCardioDays ? cardioLoad : cardioLoad + nextValue;
+        if (totalLoad > daysPerWeek) {
+          return { ok: false, error: "Sessions exceed your training days per week." };
+        }
+        if (strengthOnCardioDays && nextValue > cardioLoad) {
+          return { ok: false, error: "Strength sessions must fit within cardio days." };
+        }
+        setStrengthSessions(nextValue);
+        setSessionInvariantNote(null);
+        return { ok: true };
+      }
+      case "strengthOnCardioDays": {
+        const parsed = parseYesNo(rawValue);
+        if (!parsed.ok) return parsed;
+        const nextValue = parsed.value as boolean;
+        setStrengthOnCardioDays(nextValue);
+        return { ok: true };
+      }
+      case "fillActiveRecoveryDays": {
+        const parsed = parseYesNo(rawValue);
+        if (!parsed.ok) return parsed;
+        setFillActiveRecoveryDays(parsed.value as boolean);
+        return { ok: true };
+      }
+      case "preferredDays": {
+        const parsed = parsePreferredDaysInput(rawValue);
+        if (!parsed.ok) return parsed;
+        const anyDays = parsed.anyDays as boolean;
+        const days = (parsed.days || []) as number[];
+        if (!anyDays && days.length > daysPerWeek) {
+          return { ok: false, error: `Pick up to ${daysPerWeek} days.` };
+        }
+        setAnyDays(anyDays);
+        setPreferredDays(days);
+        setPreferredDayLimitNote(null);
+        return { ok: true };
+      }
+      default:
+        return { ok: true };
+    }
+  };
+
+  useEffect(() => {
+    const current = wizardSteps[wizardStep];
+    if (!current) return;
+    setWizardInput(getWizardPrefill(current.id));
+    setWizardError(null);
+    setWizardTouched(false);
+  }, [
+    wizardStep,
+    wizardSteps,
+    trainingStartDate,
+    targetDate,
+    daysPerWeek,
+    selectedFitnessLevel,
+    baselineMinutes,
+    maxIncline,
+    maxSpeed,
+    treadmillSessions,
+    outdoorHikes,
+    includeStrength,
+    strengthSessions,
+    strengthOnCardioDays,
+    fillActiveRecoveryDays,
+    preferredDays,
+    anyDays,
+  ]);
+
   const handleSelectPlanMode = (mode: "quick" | "custom") => {
     setPlanMode(mode);
     trackPlanModeSelection(mode);
@@ -696,6 +1196,12 @@ export function TrainingPlanBuilder({ hike, fitnessLevel }: TrainingPlanBuilderP
       applyQuickStartDefaults(daysPerWeek);
     }
   }, [planMode, daysPerWeek, applyQuickStartDefaults]);
+
+  useEffect(() => {
+    if (planMode) {
+      setWizardStep(0);
+    }
+  }, [planMode]);
 
   const handleChangePlanMode = () => {
     setPlanMode(null);
@@ -781,6 +1287,106 @@ export function TrainingPlanBuilder({ hike, fitnessLevel }: TrainingPlanBuilderP
     setDaysPerWeek(targetDays);
     setAmbitiousDismissed(true);
   };
+
+  const currentWizardStep = wizardSteps[wizardStep];
+  const isReviewStep = currentWizardStep?.id === "review";
+
+  const handleWizardNext = () => {
+    if (!currentWizardStep || isReviewStep) return;
+    const result = applyWizardAnswer(currentWizardStep.id, wizardInput);
+    if (!result.ok) {
+      setWizardError((result as { error?: string }).error ?? "Please check your answer.");
+      setWizardTouched(true);
+      return;
+    }
+    setWizardError(null);
+    setWizardTouched(false);
+    setWizardStep(Math.min(wizardStep + 1, wizardSteps.length - 1));
+  };
+
+  const handleWizardBack = () => {
+    setWizardStep(Math.max(wizardStep - 1, 0));
+  };
+
+  const handleWizardJump = (stepId: WizardStepId) => {
+    const index = wizardSteps.findIndex((step) => step.id === stepId);
+    if (index >= 0) {
+      setWizardStep(index);
+    }
+  };
+
+  const reviewRows: { id: WizardStepId; label: string; value: string }[] = [
+    {
+      id: "trainingStartDate",
+      label: "Start date",
+      value: trainingStartDate,
+    },
+    {
+      id: "targetDate",
+      label: "Target date",
+      value: targetDate,
+    },
+    {
+      id: "daysPerWeek",
+      label: "Training days/week",
+      value: `${daysPerWeek} days`,
+    },
+    {
+      id: "fitnessLevel",
+      label: "Experience level",
+      value: selectedFitnessLevel,
+    },
+    {
+      id: "baselineMinutes",
+      label: "Baseline minutes/week",
+      value: `${baselineMinutes} min`,
+    },
+    {
+      id: "maxIncline",
+      label: "Max incline",
+      value: `${maxIncline}%`,
+    },
+    {
+      id: "maxSpeed",
+      label: "Max speed",
+      value: `${maxSpeed} mph`,
+    },
+    {
+      id: "treadmillSessions",
+      label: "Treadmill sessions",
+      value: `${treadmillSessions}/week`,
+    },
+    {
+      id: "outdoorHikes",
+      label: "Outdoor hikes",
+      value: `${outdoorHikes}/week`,
+    },
+    {
+      id: "trainingFocus",
+      label: "Training focus",
+      value: includeStrength ? "Cardio + strength" : "Cardio only",
+    },
+    {
+      id: "strengthSessions",
+      label: "Strength sessions",
+      value: includeStrength ? `${strengthSessions}/week` : "None",
+    },
+    {
+      id: "strengthOnCardioDays",
+      label: "Mix sessions",
+      value: strengthOnCardioDays ? "Yes" : "No",
+    },
+    {
+      id: "fillActiveRecoveryDays",
+      label: "Fill unused days",
+      value: fillActiveRecoveryDays ? "Active recovery" : "Rest days",
+    },
+    {
+      id: "preferredDays",
+      label: "Preferred days",
+      value: anyDays ? "Any days" : preferredDays.map((index) => DAY_LABELS[index]).join(", "),
+    },
+  ];
 
   const handleUndoTrainingDays = () => {
     if (!autoAdjustedDays) return;
@@ -1177,444 +1783,130 @@ export function TrainingPlanBuilder({ hike, fitnessLevel }: TrainingPlanBuilderP
         {startDateNote ? <p className="mt-2 text-xs text-amber-700">{startDateNote}</p> : null}
       </div>
 
-      <div className="mt-6 grid gap-4 md:grid-cols-2">
-        <label className="space-y-2 text-sm font-medium text-slate-700">
-          Training start date
-          <input
-            type="date"
-            value={trainingStartDate}
-            onChange={(event) => setTrainingStartDate(event.target.value)}
-            className={`w-full rounded-lg border bg-white px-3 py-2 text-sm shadow-sm focus:outline-none ${
-              liveErrors.trainingStartDate ? "border-rose-300 focus:border-rose-400" : "border-slate-200 focus:border-emerald-400"
-            }`}
-          />
-          {liveErrors.trainingStartDate ? (
-            <p className="text-xs text-rose-700">{liveErrors.trainingStartDate}</p>
-          ) : null}
-          <div className="flex flex-wrap gap-2 pt-1 text-xs">
-            <button
-              type="button"
-              onClick={() => setTrainingStartDate(toInputDate(new Date()))}
-              className="rounded-full border border-slate-200 bg-white px-3 py-1 font-semibold text-slate-600 hover:border-slate-300"
-            >
-              Start today
-            </button>
-            <button
-              type="button"
-              onClick={() => setTrainingStartDate(toInputDate(addDays(new Date(), 1)))}
-              className="rounded-full border border-slate-200 bg-white px-3 py-1 font-semibold text-slate-600 hover:border-slate-300"
-            >
-              Start tomorrow
-            </button>
-            <button
-              type="button"
-              onClick={() => setTrainingStartDate(toInputDate(getNextMonday(new Date())))}
-              className="rounded-full border border-slate-200 bg-white px-3 py-1 font-semibold text-slate-600 hover:border-slate-300"
-            >
-              Start next Monday
-            </button>
-          </div>
-        </label>
-        <label className="space-y-2 text-sm font-medium text-slate-700">
-          Target hike date
-          <input
-            type="date"
-            value={targetDate}
-            onChange={(event) => setTargetDate(event.target.value)}
-            className={`w-full rounded-lg border bg-white px-3 py-2 text-sm shadow-sm focus:outline-none ${
-              liveErrors.targetDate ? "border-rose-300 focus:border-rose-400" : "border-slate-200 focus:border-emerald-400"
-            }`}
-          />
-          {liveErrors.targetDate ? (
-            <p className="text-xs text-rose-700">{liveErrors.targetDate}</p>
-          ) : null}
-        </label>
-
-        <label className="space-y-2 text-sm font-medium text-slate-700">
-          Training days per week
-          <select
-            value={daysPerWeek}
-            onChange={(event) => {
-              const nextValue = Number(event.target.value);
-              setDaysPerWeek(nextValue);
-              if (planMode === "quick") {
-                applyQuickStartDefaults(nextValue);
-              }
-            }}
-            className={`w-full rounded-lg border bg-white px-3 py-2 text-sm shadow-sm focus:outline-none ${
-              liveErrors.daysPerWeek ? "border-rose-300 focus:border-rose-400" : "border-slate-200 focus:border-emerald-400"
-            }`}
-          >
-            {(planMode === "quick" ? [1, 2, 3, 4, 5, 6] : [1, 2, 3, 4, 5, 6, 7]).map((value) => (
-              <option key={value} value={value}>
-                {value} days
-              </option>
-            ))}
-          </select>
-          {liveErrors.daysPerWeek ? (
-            <p className="text-xs text-rose-700">{liveErrors.daysPerWeek}</p>
-          ) : null}
-          {planMode === "quick" ? (
-            <p className="text-xs font-normal text-slate-500">
-              Most hikers train 3–5 days per week; selecting more leaves little time for recovery.
-              Recommended: {recommendedDays} days for this hike.
-            </p>
-          ) : (
-            <p className="text-xs font-normal text-slate-500">
-              How many days can you realistically train?
-            </p>
-          )}
-        </label>
-        {planMode === "quick" ? (
-          <label className="space-y-2 text-sm font-medium text-slate-700">
-            Experience level
-            <select
-              value={selectedFitnessLevel}
-              onChange={(event) => setSelectedFitnessLevel(event.target.value as FitnessLevel)}
-              className="w-full rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm shadow-sm focus:outline-none focus:border-emerald-400"
-            >
-              <option value="Beginner">Beginner</option>
-              <option value="Intermediate">Intermediate</option>
-              <option value="Advanced">Experienced</option>
-            </select>
-            <p className="text-xs font-normal text-slate-500">
-              We’ll tailor intensities to match your experience.
-            </p>
-          </label>
-        ) : null}
-      </div>
-
-      {planMode === "custom" ? (
-      <div className="mt-4 rounded-xl border border-slate-200 bg-slate-50 p-4">
-        <div className="flex items-center justify-between text-sm font-semibold text-slate-700">
-          <span>Preferred training days</span>
-          <label className="flex items-center gap-2 text-xs font-medium text-slate-600">
-            <input
-              type="checkbox"
-              checked={anyDays}
-              onChange={(event) => setAnyDays(event.target.checked)}
-              className="h-4 w-4 rounded border-slate-300 text-emerald-600"
-            />
-            Any days
-          </label>
-        </div>
-        <div className="mt-3 flex flex-wrap gap-2">
-          {DAY_LABELS.map((day, index) => {
-            const atLimit = !anyDays && preferredDays.length >= daysPerWeek;
-            const isSelected = preferredDays.includes(index);
-            return (
-            <label
-              key={day}
-              className={`flex items-center gap-2 rounded-full border px-3 py-1 text-xs font-medium ${
-                anyDays
-                  ? "border-slate-200 bg-slate-100 text-slate-400"
-                  : isSelected
-                    ? "border-emerald-300 bg-emerald-50 text-emerald-700"
-                    : "border-slate-200 bg-white text-slate-600"
-              }`}
-            >
-              <input
-                type="checkbox"
-                disabled={anyDays || (!isSelected && atLimit)}
-                checked={isSelected}
-                onChange={() => toggleDay(index, preferredDays, setPreferredDays)}
-                className="h-4 w-4 rounded border-slate-300 text-emerald-600"
-              />
-              {day}
-            </label>
-            );
-          })}
-        </div>
-        <p className="mt-2 text-xs text-slate-500">Select up to {daysPerWeek} days.</p>
-        {preferredDayLimitNote ? (
-          <p className="mt-1 text-xs text-slate-500">{preferredDayLimitNote}</p>
-        ) : null}
-        {!anyDays && preferredDays.length >= daysPerWeek ? (
-          <p className="mt-1 text-xs text-amber-700">
-            You selected {daysPerWeek} days/week — unselect a day to choose another.
-          </p>
-        ) : null}
-      </div>
-      ) : null}
-
-      {planMode === "custom" ? (
-      <div className="mt-4 grid gap-4 md:grid-cols-2">
-        <label className="space-y-2 text-sm font-medium text-slate-700">
-          Current weekly hiking or treadmill time (minutes)
-          <input
-            type="number"
-            min={0}
-            max={2000}
-            step={5}
-            value={baselineMinutes}
-            inputMode="numeric"
-            onChange={(event) =>
-              setBaselineMinutes(sanitizeNumber(event.target.value, 0, 2000, 5))
-            }
-            className={`w-full rounded-lg border bg-white px-3 py-2 text-sm shadow-sm focus:outline-none ${
-              liveErrors.baselineMinutes ? "border-rose-300 focus:border-rose-400" : "border-slate-200 focus:border-emerald-400"
-            }`}
-          />
-          {liveErrors.baselineMinutes ? (
-            <p className="text-xs text-rose-700">{liveErrors.baselineMinutes}</p>
-          ) : null}
-          <p className="text-xs font-normal text-slate-500">
-            If you’re just starting out, enter 0 — we’ll ease you in.
-          </p>
-          <div className="flex flex-wrap gap-2 text-xs">
-            {[0, 30, 60, 120].map((preset) => (
-              <button
-                key={preset}
-                type="button"
-                onClick={() => setBaselineMinutes(preset)}
-                className="rounded-full border border-slate-200 bg-white px-3 py-1 font-semibold text-slate-600 hover:border-slate-300"
-              >
-                {preset}
-              </button>
-            ))}
-          </div>
-        </label>
-
-        <div className="grid gap-3">
-          <label className="space-y-2 text-sm font-medium text-slate-700">
-            Treadmill max incline (%)
-            <input
-              type="number"
-              min={0}
-              max={20}
-              step={0.5}
-              value={maxIncline}
-              inputMode="decimal"
-              onChange={(event) =>
-                setMaxIncline(sanitizeNumber(event.target.value, 0, 20, 0.5))
-              }
-              className={`w-full rounded-lg border bg-white px-3 py-2 text-sm shadow-sm focus:outline-none ${
-                liveErrors.treadmillMaxInclinePercent ? "border-rose-300 focus:border-rose-400" : "border-slate-200 focus:border-emerald-400"
-              }`}
-            />
-            {liveErrors.treadmillMaxInclinePercent ? (
-              <p className="text-xs text-rose-700">{liveErrors.treadmillMaxInclinePercent}</p>
-            ) : null}
-          </label>
-          <label className="space-y-2 text-sm font-medium text-slate-700">
-            Max treadmill speed (mph)
-            <input
-              type="number"
-              min={1}
-              max={8}
-              step={0.1}
-              value={maxSpeed}
-              inputMode="decimal"
-              onChange={(event) =>
-                setMaxSpeed(sanitizeNumber(event.target.value, 1, 8, 0.1))
-              }
-              className={`w-full rounded-lg border bg-white px-3 py-2 text-sm shadow-sm focus:outline-none ${
-                liveErrors.maxSpeedMph ? "border-rose-300 focus:border-rose-400" : "border-slate-200 focus:border-emerald-400"
-              }`}
-            />
-            {liveErrors.maxSpeedMph ? (
-              <p className="text-xs text-rose-700">{liveErrors.maxSpeedMph}</p>
-            ) : null}
-          </label>
-        </div>
-      </div>
-      ) : null}
-
-      {planMode === "custom" ? (
-      <>
-      <div className="mt-4 grid gap-4 md:grid-cols-3">
-        <label className="space-y-2 text-sm font-medium text-slate-700">
-          Treadmill sessions/week
-          <select
-            value={treadmillSessions}
-            onChange={(event) => {
-              setTreadmillTouched(true);
-              const nextValue = Number(event.target.value);
-              if (nextValue + outdoorHikes + totalStrength > daysPerWeek) {
-                setSessionInvariantNote(
-                  "Cardio + strength sessions cannot exceed training days."
-                );
-                return;
-              }
-              if (nextValue + outdoorHikes === 0) {
-                setSessionInvariantNote("Choose at least 1 treadmill or outdoor session per week.");
-                return;
-              }
-              setSessionInvariantNote(null);
-              setTreadmillSessions(nextValue);
-            }}
-            className={`w-full rounded-lg border bg-white px-3 py-2 text-sm shadow-sm focus:outline-none ${
-              liveErrors.treadmillSessionsPerWeek ? "border-rose-300 focus:border-rose-400" : "border-slate-200 focus:border-emerald-400"
-            }`}
-          >
-            {treadmillOptions.map((value) => (
-              <option key={value} value={value}>
-                {value}
-              </option>
-            ))}
-          </select>
-          {liveErrors.treadmillSessionsPerWeek ? (
-            <p className="text-xs text-rose-700">{liveErrors.treadmillSessionsPerWeek}</p>
-          ) : null}
-          {adjustedTreadmill ? (
-            <p className="text-xs text-slate-500">Adjusted to match training days/week.</p>
-          ) : null}
-        </label>
-        <label className="space-y-2 text-sm font-medium text-slate-700">
-          Outdoor hikes/week
-          <select
-            value={outdoorHikes}
-            onChange={(event) => {
-              const nextValue = Number(event.target.value);
-              if (nextValue + treadmillSessions + totalStrength > daysPerWeek) {
-                setSessionInvariantNote(
-                  "Cardio + strength sessions cannot exceed training days."
-                );
-                return;
-              }
-              if (nextValue + treadmillSessions === 0) {
-                setSessionInvariantNote("Choose at least 1 treadmill or outdoor session per week.");
-                return;
-              }
-              setSessionInvariantNote(null);
-              setOutdoorHikes(nextValue);
-            }}
-            className={`w-full rounded-lg border bg-white px-3 py-2 text-sm shadow-sm focus:outline-none ${
-              liveErrors.outdoorHikesPerWeek ? "border-rose-300 focus:border-rose-400" : "border-slate-200 focus:border-emerald-400"
-            }`}
-          >
-            {outdoorOptions.map((value) => (
-              <option key={value} value={value}>
-                {value}
-              </option>
-            ))}
-          </select>
-          {liveErrors.outdoorHikesPerWeek ? (
-            <p className="text-xs text-rose-700">{liveErrors.outdoorHikesPerWeek}</p>
-          ) : null}
-        </label>
-      </div>
-      <p className="mt-2 text-xs text-slate-500">
-        Cardio helper: Treadmill + outdoor sessions are your main hike conditioning.
-      </p>
-      {sessionInvariantNote ? (
-        <div className="mt-2 text-xs text-amber-700">{sessionInvariantNote}</div>
-      ) : null}
-      {daysAdjustedNote ? (
-        <div className="mt-2 text-xs text-slate-500">{daysAdjustedNote}</div>
-      ) : null}
-
-      <div className="mt-6 rounded-xl border border-slate-200 bg-slate-50 p-4">
-        <div className="flex items-start justify-between gap-3">
+      <div className="mt-6 rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+        <div className="flex flex-wrap items-center justify-between gap-3">
           <div>
-            <p className="text-sm font-semibold text-slate-700">Training focus</p>
-            <p className="text-xs text-slate-500">
-              Pick cardio-only or a blend with strength sessions.
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-emerald-500">
+              Guided setup
             </p>
+            <h3 className="mt-2 text-base font-semibold text-slate-900">
+              Step {wizardStep + 1} of {wizardSteps.length}
+            </h3>
           </div>
+          <div className="rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-xs font-semibold text-slate-600">
+            {currentWizardStep?.title ?? "Plan setup"}
+          </div>
+        </div>
+
+        {!isReviewStep && currentWizardStep ? (
+          <div className="mt-5 space-y-4">
+            <div>
+              <p className="text-sm font-semibold text-slate-800">{currentWizardStep.title}</p>
+              {currentWizardStep.helper ? (
+                <p className="mt-1 text-xs text-slate-500">{currentWizardStep.helper}</p>
+              ) : null}
+            </div>
+            <input
+              type="text"
+              value={wizardInput}
+              onChange={(event) => {
+                setWizardInput(event.target.value);
+                setWizardTouched(true);
+              }}
+              onKeyDown={(event) => {
+                if (event.key === "Enter") {
+                  handleWizardNext();
+                }
+              }}
+              placeholder={currentWizardStep.placeholder}
+              className={`w-full rounded-xl border px-4 py-3 text-sm shadow-sm focus:outline-none ${
+                wizardError && wizardTouched
+                  ? "border-rose-300 focus:border-rose-400"
+                  : "border-slate-200 focus:border-emerald-400"
+              }`}
+            />
+            {currentWizardStep.presets ? (
+              <div className="flex flex-wrap gap-2 text-xs">
+                {currentWizardStep.presets.map((preset) => (
+                  <button
+                    key={preset}
+                    type="button"
+                    onClick={() => {
+                      setWizardInput(preset);
+                      setWizardTouched(true);
+                    }}
+                    className="rounded-full border border-slate-200 bg-white px-3 py-1 font-semibold text-slate-600 hover:border-slate-300"
+                  >
+                    {preset}
+                  </button>
+                ))}
+              </div>
+            ) : null}
+            {wizardError && wizardTouched ? (
+              <p className="text-xs text-rose-700">{wizardError}</p>
+            ) : null}
+          </div>
+        ) : (
+          <div className="mt-5 space-y-3">
+            <p className="text-sm font-semibold text-slate-800">Confirm your inputs</p>
+            <div className="grid gap-3 md:grid-cols-2">
+              {reviewRows.map((row) => (
+                <div
+                  key={row.id}
+                  className="flex items-start justify-between rounded-xl border border-slate-200 bg-slate-50 px-3 py-2 text-xs"
+                >
+                  <div>
+                    <p className="font-semibold text-slate-700">{row.label}</p>
+                    <p className="text-slate-600">{row.value || "Not set"}</p>
+                  </div>
+                  <button
+                    type="button"
+                    onClick={() => handleWizardJump(row.id)}
+                    className="rounded-full border border-slate-200 bg-white px-2 py-1 font-semibold text-slate-600 hover:border-slate-300"
+                  >
+                    Edit
+                  </button>
+                </div>
+              ))}
+            </div>
+            {Object.keys(liveErrors).length > 0 ? (
+              <div className="rounded-lg border border-rose-200 bg-rose-50 px-4 py-3 text-xs text-rose-700">
+                Some inputs still need attention. Review the highlighted fields before generating.
+              </div>
+            ) : null}
+          </div>
+        )}
+
+        <div className="mt-6 flex flex-wrap items-center justify-between gap-3">
           <button
             type="button"
-            onClick={handleRecommendedSplit}
-            className="rounded-full border border-slate-200 bg-white px-3 py-1 text-xs font-semibold text-slate-600 hover:border-slate-300"
+            onClick={handleWizardBack}
+            disabled={wizardStep === 0}
+            className="rounded-full border border-slate-200 px-4 py-2 text-xs font-semibold text-slate-600 disabled:cursor-not-allowed disabled:opacity-40"
           >
-            Use recommended split
+            Back
           </button>
-        </div>
-
-        <div className="mt-3 grid gap-3 md:grid-cols-2">
-          <label className="flex items-center gap-2 rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm font-medium text-slate-700">
-            <input
-              type="radio"
-              name="training-focus"
-              checked={!includeStrength}
-              onChange={() => handleFocusChange("cardio")}
-              className="h-4 w-4 border-slate-300 text-emerald-600"
-            />
-            Cardio only
-          </label>
-          <label className="flex items-center gap-2 rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm font-medium text-slate-700">
-            <input
-              type="radio"
-              name="training-focus"
-              checked={includeStrength}
-              onChange={() => handleFocusChange("cardio-strength")}
-              className="h-4 w-4 border-slate-300 text-emerald-600"
-            />
-            Cardio + strength
-          </label>
-        </div>
-        <p className="mt-2 text-xs text-slate-500">
-          We recommend 3 cardio + 2 strength sessions for hiking endurance and injury prevention.
-        </p>
-
-        {includeStrength ? (
-          <div className="mt-4 grid gap-3 md:grid-cols-2">
-            <label className="space-y-2 text-sm font-medium text-slate-700">
-              Strength sessions/week
-              <select
-                value={strengthSessions}
-                onChange={(event) => {
-                  const nextValue = Number(event.target.value);
-                  if (nextValue + totalCardio > daysPerWeek) {
-                    setSessionInvariantNote(
-                      "Cardio + strength sessions cannot exceed training days."
-                    );
-                    return;
-                  }
-                  if (strengthOnCardioDays && nextValue > totalCardio) {
-                    setSessionInvariantNote(
-                      "Strength sessions must fit within your cardio sessions."
-                    );
-                    return;
-                  }
-                  setSessionInvariantNote(null);
-                  setStrengthSessions(nextValue);
-                }}
-                className={`w-full rounded-lg border bg-white px-3 py-2 text-sm shadow-sm focus:outline-none ${
-                  liveErrors.strengthSessionsPerWeek ? "border-rose-300 focus:border-rose-400" : "border-slate-200 focus:border-emerald-400"
-                }`}
+          <div className="flex flex-wrap gap-2">
+            {!isReviewStep ? (
+              <button
+                type="button"
+                onClick={handleWizardNext}
+                className="rounded-full bg-emerald-600 px-5 py-2 text-xs font-semibold text-white"
               >
-                {strengthOptions.map((value) => (
-                  <option key={value} value={value}>
-                    {value}
-                  </option>
-                ))}
-              </select>
-              {liveErrors.strengthSessionsPerWeek ? (
-                <p className="text-xs text-rose-700">{liveErrors.strengthSessionsPerWeek}</p>
-              ) : null}
-            </label>
-            <label className="flex items-center gap-2 text-xs font-medium text-slate-600">
-              <input
-                type="checkbox"
-                checked={strengthOnCardioDays}
-                onChange={(event) => setStrengthOnCardioDays(event.target.checked)}
-                className="h-4 w-4 rounded border-slate-300 text-emerald-600"
-              />
-              Mix sessions on same day
-            </label>
+                {wizardStep === wizardSteps.length - 2 ? "Review" : "Next"}
+              </button>
+            ) : (
+              <button
+                type="button"
+                onClick={() => handleGenerate()}
+                className="rounded-full bg-emerald-600 px-5 py-2 text-xs font-semibold text-white"
+              >
+                Generate plan
+              </button>
+            )}
           </div>
-        ) : null}
-        {includeStrength ? (
-          <p className="mt-2 text-xs text-slate-500">
-            When stacking, do strength first and cardio 6+ hours later.
-          </p>
-        ) : null}
-        <label className="mt-2 flex items-center gap-2 text-xs font-medium text-slate-600">
-          <input
-            type="checkbox"
-            checked={fillActiveRecoveryDays}
-            onChange={(event) => setFillActiveRecoveryDays(event.target.checked)}
-            className="h-4 w-4 rounded border-slate-300 text-emerald-600"
-          />
-          Fill unused days with active recovery
-        </label>
-        <p className="mt-2 text-xs text-slate-500">
-          Unassigned days become {fillActiveRecoveryDays ? "active recovery" : "rest"} days.
-        </p>
+        </div>
       </div>
-      </>
-      ) : null}
 
       {error ? (
         <div className="mt-4 rounded-lg border border-rose-200 bg-rose-50 px-4 py-3 text-sm text-rose-700">
@@ -2178,18 +2470,18 @@ function createFallbackWorkout(fillActiveRecoveryDays: boolean) {
     : createRecoveryOrRest("rest");
 }
 
-function createRecoveryOrRest(type: "recovery" | "rest") {
+function createRecoveryOrRest(type: "recovery" | "rest"): TrainingWorkout {
   if (type === "rest") {
     return {
       id: cryptoRandomId(),
-      type: "Rest day",
+      type: "Rest day" as const,
       durationMinutes: 0,
       notes: "Rest day.",
     };
   }
   return {
     id: cryptoRandomId(),
-    type: "Recovery / mobility",
+    type: "Recovery / mobility" as const,
     durationMinutes: 25,
     notes: "Active recovery: 30–60% max HR. Mobility, stretching, easy walk.",
   };
@@ -2266,18 +2558,18 @@ function swapWorkoutType(
   nextType: "cardio" | "strength",
   weekMinutes: number,
   fitnessLevel: FitnessLevel
-) {
+): TrainingWorkout {
   if (nextType === "strength") {
     return {
       ...workout,
-      type: "Strength",
+      type: "Strength" as const,
       durationMinutes: getDefaultDuration("strength", weekMinutes, fitnessLevel),
       notes: "Edited: swapped to strength. Intensity: moderate.",
     };
   }
   return {
     ...workout,
-    type: "Zone 2 incline walk",
+    type: "Zone 2 incline walk" as const,
     durationMinutes: getDefaultDuration("cardio", weekMinutes, fitnessLevel),
     notes: "Edited: swapped to cardio. Keep effort steady.",
   };

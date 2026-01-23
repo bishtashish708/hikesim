@@ -24,10 +24,10 @@ export default function WelcomePage() {
             <li>3. Generate your weekly training schedule.</li>
           </ul>
           <Link
-            href="/hikes"
+            href="/dashboard"
             className="mt-5 inline-flex rounded-full bg-emerald-600 px-4 py-2 text-xs font-semibold text-white shadow-sm transition hover:bg-emerald-500"
           >
-            Pick a hike
+            Go to Dashboard
           </Link>
         </section>
       </main>

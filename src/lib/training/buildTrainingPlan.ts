@@ -1,5 +1,5 @@
 import { roundToStep } from "@/lib/formatters";
-import { generatePlan, type FitnessLevel, type PlanSegment } from "@/lib/planGenerator";
+import { generatePlan, type FitnessLevel, type PlanSegment, type ProfilePoint } from "@/lib/planGenerator";
 import type {
   TrainingDay,
   TrainingPlanInputs,

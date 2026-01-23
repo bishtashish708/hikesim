@@ -3,9 +3,10 @@
 import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
+import { getApiBase } from "@/lib/apiBase";
 
 type HikeListItem = {
-  id: string;
+  id: number;
   name: string;
   distanceMiles: number;
   elevationGainFt: number;
@@ -14,21 +15,28 @@ type HikeListItem = {
   stateName: string | null;
 };
 
+type Option = { code: string; name: string };
+
 export default function HikesList() {
   const searchParams = useSearchParams();
   const [items, setItems] = useState<HikeListItem[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const [countries, setCountries] = useState<Option[]>([]);
+  const [states, setStates] = useState<Option[]>([]);
+  const apiBase = getApiBase();
+  const useBackend = Boolean(apiBase);
 
   const countryParam = searchParams.get("country") ?? "";
   const stateParam = searchParams.get("state") ?? "";
+  const selectedCountry = countryParam || "US";
 
   const query = useMemo(() => {
     const params = new URLSearchParams();
-    if (countryParam) params.set("country", countryParam);
+    if (selectedCountry) params.set("country", selectedCountry);
     if (stateParam) params.set("state", stateParam);
     return params.toString();
-  }, [countryParam, stateParam]);
+  }, [selectedCountry, stateParam]);
 
   useEffect(() => {
     let isMounted = true;
@@ -36,13 +44,33 @@ export default function HikesList() {
       setIsLoading(true);
       setError(null);
       try {
-        const response = await fetch(`/api/hikes/list?${query}`);
+        const endpointBase = apiBase ? apiBase : "";
+        const endpoint = useBackend ? `${endpointBase}/trails?${query}` : `/api/hikes/list?${query}`;
+        const response = await fetch(endpoint);
         if (!response.ok) {
           throw new Error("Unable to load hikes.");
         }
         const data = await response.json();
         if (isMounted) {
-          setItems(data.items ?? []);
+          const nextItems = (data.items ?? []).map((item: any) => {
+            const countryCode = item.countryCode ?? item.country_code ?? "";
+            const stateCode = item.stateCode ?? item.state_code ?? "";
+            const countryName =
+              countries.find((country) => country.code === countryCode)?.name ?? countryCode;
+            const stateName = stateCode
+              ? states.find((state) => state.code === stateCode)?.name ?? stateCode
+              : null;
+            return {
+              id: item.id,
+              name: item.name,
+              distanceMiles: item.distanceMiles ?? item.distance_miles ?? 0,
+              elevationGainFt: item.elevationGainFt ?? item.elevation_gain_ft ?? 0,
+              isSeed: item.isSeed ?? item.is_seed ?? false,
+              countryName,
+              stateName,
+            };
+          });
+          setItems(nextItems);
         }
       } catch (err) {
         if (isMounted) {
@@ -59,7 +87,37 @@ export default function HikesList() {
     return () => {
       isMounted = false;
     };
-  }, [query]);
+  }, [apiBase, countries, countryParam, query, selectedCountry, states, useBackend]);
+
+  useEffect(() => {
+    const loadCountries = async () => {
+      const response = await fetch("/api/geo/countries");
+      if (!response.ok) {
+        setCountries([]);
+        return;
+      }
+      const data = await response.json();
+      setCountries(data.countries ?? []);
+    };
+    loadCountries();
+  }, []);
+
+  useEffect(() => {
+    const loadStates = async () => {
+      if (!selectedCountry) {
+        setStates([]);
+        return;
+      }
+      const response = await fetch(`/api/geo/states?country=${selectedCountry}`);
+      if (!response.ok) {
+        setStates([]);
+        return;
+      }
+      const data = await response.json();
+      setStates(data.states ?? []);
+    };
+    loadStates();
+  }, [selectedCountry]);
 
   if (isLoading) {
     return (

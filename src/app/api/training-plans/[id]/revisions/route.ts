@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 import { prisma } from "@/lib/db";
 
 type Params = {
-  params: { id: string };
+  params: Promise<{ id: string }>;
 };
 
 type RevisionPayload = {
@@ -12,7 +12,7 @@ type RevisionPayload = {
 };
 
 export async function POST(request: Request, { params }: Params) {
-  const id = params.id;
+  const { id } = await params;
   if (!id) {
     return NextResponse.json({ error: "Training plan id is required." }, { status: 400 });
   }

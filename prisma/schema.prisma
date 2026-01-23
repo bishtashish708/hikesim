@@ -3,7 +3,7 @@ generator client {
 }
 
 datasource db {
-  provider = "sqlite"
+  provider = "postgresql"
   url      = env("DATABASE_URL")
 }
 
@@ -45,12 +45,12 @@ model Account {
   type               String
   provider           String
   providerAccountId  String
-  refresh_token      String?
-  access_token       String?
+  refresh_token      String? @db.Text
+  access_token       String? @db.Text
   expires_at         Int?
   token_type         String?
   scope              String?
-  id_token           String?
+  id_token           String? @db.Text
   session_state      String?
 
   user User @relation(fields: [userId], references: [id], onDelete: Cascade)
@@ -95,6 +95,21 @@ model Hike {
   stateCode       String?
   isSeed          Boolean  @default(false)
   createdAt       DateTime @default(now())
+
+  // Enrichment fields (Step 2)
+  latitude        Float?    // Trailhead coordinates
+  longitude       Float?
+  coordinates     Json?     // Full GPS path [[lat, lon], ...]
+  difficulty      String?   // Easy, Moderate, Hard, Very Hard
+  trailType       String?   // Loop, Out & Back, Point to Point
+  surface         String?   // Paved, Gravel, Dirt, Rocky
+  city            String?   // Nearest city
+  parkName        String?   // National/State Park name
+  region          String?   // For India: Himalayas, Western Ghats, etc.
+  sourceUrl       String?   // OSM way/relation ID or source
+  lastEnriched    DateTime? // When data was last updated
+  description     String?   // Trail description
+
   plans           GeneratedPlan[]
   trainingPlans   TrainingPlan[]
   userProfiles    UserProfile[]
@@ -121,6 +136,12 @@ model TrainingPlan {
   weeks      Json
   createdAt  DateTime @default(now())
   userId     String?
+
+  // AI Generation metadata (Step 3)
+  aiGenerated         Boolean   @default(false)
+  aiModel            String?   // e.g., "openai/gpt-4o-mini"
+  generationPrompt   String?   @db.Text
+  generationMetadata Json?     // {cost, tokens, timestamp, model}
 
   hike Hike @relation(fields: [hikeId], references: [id])
   revisions TrainingPlanRevision[]
