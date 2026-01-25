@@ -2,79 +2,73 @@
 
 import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
-import { useSearchParams } from "next/navigation";
-import { getApiBase } from "@/lib/apiBase";
+import { useSearchParams, useRouter } from "next/navigation";
 
 type HikeListItem = {
-  id: number;
+  id: string;
   name: string;
   distanceMiles: number;
   elevationGainFt: number;
-  isSeed: boolean;
-  countryName: string;
-  stateName: string | null;
+  parkName: string | null;
+  difficulty?: string;
+  trailType?: string;
 };
-
-type Option = { code: string; name: string };
 
 export default function HikesList() {
   const searchParams = useSearchParams();
+  const router = useRouter();
   const [items, setItems] = useState<HikeListItem[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-  const [countries, setCountries] = useState<Option[]>([]);
-  const [states, setStates] = useState<Option[]>([]);
-  const apiBase = getApiBase();
-  const useBackend = Boolean(apiBase);
+  const [parks, setParks] = useState<string[]>([]);
+  const [selectedPark, setSelectedPark] = useState<string>("");
 
-  const countryParam = searchParams.get("country") ?? "";
-  const stateParam = searchParams.get("state") ?? "";
-  const selectedCountry = countryParam || "US";
+  const parkParam = searchParams.get("park") ?? "";
 
   const query = useMemo(() => {
     const params = new URLSearchParams();
-    if (selectedCountry) params.set("country", selectedCountry);
-    if (stateParam) params.set("state", stateParam);
+    if (parkParam) params.set("park", parkParam);
     return params.toString();
-  }, [selectedCountry, stateParam]);
+  }, [parkParam]);
 
+  // Load parks list
+  useEffect(() => {
+    const loadParks = async () => {
+      try {
+        const response = await fetch("/api/geo/parks");
+        if (!response.ok) {
+          setParks([]);
+          return;
+        }
+        const data = await response.json();
+        setParks(data.parks ?? []);
+      } catch (err) {
+        console.error("Failed to load parks:", err);
+        setParks([]);
+      }
+    };
+    loadParks();
+  }, []);
+
+  // Load hikes
   useEffect(() => {
     let isMounted = true;
     const fetchHikes = async () => {
       setIsLoading(true);
       setError(null);
       try {
-        const endpointBase = apiBase ? apiBase : "";
-        const endpoint = useBackend ? `${endpointBase}/trails?${query}` : `/api/hikes/list?${query}`;
+        const endpoint = `/api/hikes/by-park?${query}`;
         const response = await fetch(endpoint);
         if (!response.ok) {
           throw new Error("Unable to load hikes.");
         }
         const data = await response.json();
         if (isMounted) {
-          const nextItems = (data.items ?? []).map((item: any) => {
-            const countryCode = item.countryCode ?? item.country_code ?? "";
-            const stateCode = item.stateCode ?? item.state_code ?? "";
-            const countryName =
-              countries.find((country) => country.code === countryCode)?.name ?? countryCode;
-            const stateName = stateCode
-              ? states.find((state) => state.code === stateCode)?.name ?? stateCode
-              : null;
-            return {
-              id: item.id,
-              name: item.name,
-              distanceMiles: item.distanceMiles ?? item.distance_miles ?? 0,
-              elevationGainFt: item.elevationGainFt ?? item.elevation_gain_ft ?? 0,
-              isSeed: item.isSeed ?? item.is_seed ?? false,
-              countryName,
-              stateName,
-            };
-          });
-          setItems(nextItems);
+          setItems(data.items ?? []);
         }
       } catch (err) {
         if (isMounted) {
-          setError("Unable to load hikes for this region.");
+          setError("Unable to load hikes for this park.");
           setItems([]);
         }
       } finally {
@@ -87,47 +81,33 @@ export default function HikesList() {
     return () => {
       isMounted = false;
     };
-  }, [apiBase, countries, countryParam, query, selectedCountry, states, useBackend]);
+  }, [query]);
 
-  useEffect(() => {
-    const loadCountries = async () => {
-      const response = await fetch("/api/geo/countries");
-      if (!response.ok) {
-        setCountries([]);
-        return;
-      }
-      const data = await response.json();
-      setCountries(data.countries ?? []);
-    };
-    loadCountries();
-  }, []);
-
-  useEffect(() => {
-    const loadStates = async () => {
-      if (!selectedCountry) {
-        setStates([]);
-        return;
-      }
-      const response = await fetch(`/api/geo/states?country=${selectedCountry}`);
-      if (!response.ok) {
-        setStates([]);
-        return;
-      }
-      const data = await response.json();
-      setStates(data.states ?? []);
-    };
-    loadStates();
-  }, [selectedCountry]);
+  // Handle park selection
+  const handleParkChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    const park = e.target.value;
+    setSelectedPark(park);
+    if (park) {
+      router.push(`/hikes?park=${encodeURIComponent(park)}`);
+    } else {
+      router.push("/hikes");
+    }
+  };
 
   if (isLoading) {
     return (
-      <section className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
-        {Array.from({ length: 6 }).map((_, index) => (
-          <div
-            key={`hike-skeleton-${index}`}
-            className="h-28 rounded-2xl border border-slate-200 bg-slate-50"
-          />
-        ))}
+      <section className="space-y-6">
+        <div className="flex gap-4">
+          <div className="h-10 w-64 animate-pulse rounded-lg bg-slate-200" />
+        </div>
+        <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+          {Array.from({ length: 6 }).map((_, index) => (
+            <div
+              key={`hike-skeleton-${index}`}
+              className="h-40 animate-pulse rounded-2xl border border-slate-200 bg-slate-50"
+            />
+          ))}
+        </div>
       </section>
     );
   }
@@ -141,43 +121,68 @@ export default function HikesList() {
   }
 
   return (
-    <section className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
-      {items.length === 0 ? (
-        <div className="col-span-full rounded-2xl border border-dashed border-slate-300 bg-white p-8 text-sm text-slate-600">
-          No hikes found for this region yet. Try another state or import trails.
-        </div>
-      ) : (
-        items.map((hike) => (
-          <Link
-            key={hike.id}
-            href={`/hikes/${hike.id}`}
-            className="group rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:border-emerald-200 hover:shadow-md"
-          >
-            <h2 className="text-lg font-semibold text-slate-900 group-hover:text-emerald-700">
-              {hike.name}
-            </h2>
-            <p className="mt-1 text-xs text-slate-500">
-              {hike.stateName ? `${hike.stateName}, ` : ""}
-              {hike.countryName}
-            </p>
-            <div className="mt-4 flex items-center justify-between text-sm text-slate-600">
-              <span>
-                {hike.distanceMiles > 0
-                  ? `${hike.distanceMiles.toFixed(1)} mi`
-                  : "Distance TBD"}
-              </span>
-              <span>
-                {hike.elevationGainFt > 0
-                  ? `${hike.elevationGainFt.toLocaleString()} ft gain`
-                  : "Elevation TBD"}
-              </span>
-            </div>
-            <p className="mt-3 text-xs text-slate-500">
-              {hike.isSeed ? "Seeded trail profile" : "Imported trail profile"}
-            </p>
-          </Link>
-        ))
-      )}
+    <section className="space-y-6">
+      {/* Park Filter */}
+      <div className="flex gap-4 items-center">
+        <label htmlFor="park-filter" className="text-sm font-medium text-slate-700">
+          Filter by National Park:
+        </label>
+        <select
+          id="park-filter"
+          value={selectedPark || parkParam}
+          onChange={handleParkChange}
+          className="rounded-lg border border-slate-300 px-4 py-2 text-sm focus:border-emerald-500 focus:outline-none focus:ring-2 focus:ring-emerald-200"
+        >
+          <option value="">All National Parks ({items.length} trails)</option>
+          {parks.map((park) => (
+            <option key={park} value={park}>
+              {park}
+            </option>
+          ))}
+        </select>
+      </div>
+
+      {/* Hikes Grid */}
+      <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+        {items.length === 0 ? (
+          <div className="col-span-full rounded-2xl border border-dashed border-slate-300 bg-white p-8 text-center text-sm text-slate-600">
+            No hikes found for this park. Try selecting a different park or view all trails.
+          </div>
+        ) : (
+          items.map((hike) => (
+            <Link
+              key={hike.id}
+              href={`/hikes/${hike.id}`}
+              className="group rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:border-emerald-200 hover:shadow-md"
+            >
+              <h2 className="text-lg font-semibold text-slate-900 group-hover:text-emerald-700">
+                {hike.name}
+              </h2>
+              <p className="mt-1 text-xs text-slate-500">
+                {hike.parkName || "US National Parks"}
+              </p>
+              <div className="mt-4 flex items-center gap-4 text-sm text-slate-600">
+                <span>{hike.distanceMiles.toFixed(1)} mi</span>
+                <span>•</span>
+                <span>{hike.elevationGainFt.toLocaleString()} ft</span>
+                {hike.difficulty && (
+                  <>
+                    <span>•</span>
+                    <span className="rounded-full bg-emerald-100 px-2 py-0.5 text-xs font-medium text-emerald-700">
+                      {hike.difficulty}
+                    </span>
+                  </>
+                )}
+              </div>
+              {hike.trailType && (
+                <p className="mt-2 text-xs text-slate-500">
+                  {hike.trailType}
+                </p>
+              )}
+            </Link>
+          ))
+        )}
+      </div>
     </section>
   );
 }

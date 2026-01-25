@@ -1,5 +1,4 @@
 import Link from "next/link";
-import TrendingHikesPanel from "@/components/TrendingHikesPanel";
 import HikesList from "@/components/HikesList";
 
 export default function HikesPage() {
@@ -42,8 +41,6 @@ export default function HikesPage() {
             </Link>
           </div>
         </header>
-
-        <TrendingHikesPanel />
 
         <HikesList />
       </main>
