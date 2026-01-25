@@ -29,7 +29,12 @@
     "collect:nps:yosemite": "tsx scripts/collect-nps-trails.ts --park=yose",
     "collect:improved": "tsx scripts/collect-improved.ts",
     "collect:improved:live": "tsx scripts/collect-improved.ts --live",
-    "collect:improved:yosemite": "tsx scripts/collect-improved.ts --park=yose --live"
+    "collect:improved:yosemite": "tsx scripts/collect-improved.ts --park=yose --live",
+    "collect:india": "tsx scripts/collect-india-trails.ts",
+    "collect:india:live": "tsx scripts/collect-india-trails.ts --live",
+    "collect:india:high": "tsx scripts/collect-india-trails.ts --priority=high --live",
+    "cleanup:db": "tsx scripts/cleanup-database.ts",
+    "cleanup:db:live": "tsx scripts/cleanup-database.ts --live"
   },
   "dependencies": {
     "@prisma/client": "^6.16.1",

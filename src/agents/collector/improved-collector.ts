@@ -229,6 +229,71 @@ Required JSON format (NO extra text):
     return element;
   }
 
+  /**
+   * Collect trails with custom OSM query (for Indian trails)
+   */
+  async collectWithCustomQuery(
+    osmQuery: string,
+    regionName: string,
+    onProgress?: ProgressCallback
+  ): Promise<CollectionResult> {
+    const startTime = Date.now();
+    const errors: string[] = [];
+
+    try {
+      // Step 1: Fetch from OSM with custom query
+      onProgress?.({ phase: 'fetch', current: 0, total: 1, message: `Querying OSM for trails in ${regionName}...` });
+
+      const osmData = await this.osm.fetchWithCustomQuery(osmQuery);
+
+      onProgress?.({ phase: 'fetch', current: 1, total: 1, message: `✓ Found ${osmData.elements.length} trail elements from OSM` });
+
+      if (!osmData || osmData.elements.length === 0) {
+        return {
+          trailsFound: 0,
+          trails: [],
+          errors: ['No OSM data found for this region'],
+          durationSeconds: (Date.now() - startTime) / 1000,
+        };
+      }
+
+      // Step 2: Parse OSM elements into trail objects with AI
+      const trails = await this.parseOSMDataWithAI(
+        osmData.elements,
+        regionName,
+        'india', // Use 'india' as park code for Indian trails
+        onProgress
+      );
+
+      // Save results
+      const result: CollectionResult = {
+        trailsFound: trails.length,
+        trails,
+        errors,
+        durationSeconds: (Date.now() - startTime) / 1000,
+      };
+
+      await saveToFile(result, `raw/${regionName.toLowerCase().replace(/\s+/g, '-')}-${Date.now()}.json`);
+
+      onProgress?.({
+        phase: 'complete',
+        current: trails.length,
+        total: trails.length,
+        message: `Completed in ${result.durationSeconds.toFixed(1)}s`,
+      });
+
+      return result;
+    } catch (error: any) {
+      errors.push(error.message);
+      return {
+        trailsFound: 0,
+        trails: [],
+        errors,
+        durationSeconds: (Date.now() - startTime) / 1000,
+      };
+    }
+  }
+
   private getStateCode(parkCode: string): string {
     const mapping: Record<string, string> = {
       yose: 'CA',

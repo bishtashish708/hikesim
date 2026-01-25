@@ -61,6 +61,26 @@ export class OSMClient {
   }
 
   /**
+   * Fetch trails with a custom Overpass QL query (for Indian trails)
+   */
+  async fetchWithCustomQuery(query: string): Promise<OSMResponse> {
+    const response = await fetch(this.overpassUrl, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded',
+      },
+      body: `data=${encodeURIComponent(query)}`,
+    });
+
+    if (!response.ok) {
+      throw new Error(`OSM API error: ${response.status} - ${await response.text()}`);
+    }
+
+    const data = await response.json();
+    return data;
+  }
+
+  /**
    * Build Overpass QL query for trails
    */
   private buildOverpassQuery(
