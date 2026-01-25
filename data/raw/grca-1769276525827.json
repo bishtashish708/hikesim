@@ -1,0 +1,9 @@
+{
+  "parkName": "Grand Canyon National Park",
+  "parkCode": "grca",
+  "trailsFound": 0,
+  "trails": [],
+  "source": "osm",
+  "timestamp": "2026-01-24T17:42:05.827Z",
+  "errors": []
+}

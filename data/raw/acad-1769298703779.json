@@ -1,0 +1,8426 @@
+{
+  "parkName": "Acadia National Park",
+  "parkCode": "acad",
+  "trailsFound": 166,
+  "trails": [
+    {
+      "name": "Wonderland Trail",
+      "distanceMiles": 0.8,
+      "elevationGainFt": 0,
+      "latitude": 44.2311004,
+      "longitude": -68.3136978,
+      "coordinates": [
+        [
+          44.2287323,
+          -68.3121912
+        ],
+        [
+          44.2338112,
+          -68.3201613
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Out and Back",
+      "surface": "Ground",
+      "description": "A scenic trail leading through beautiful landscapes.",
+      "parkName": "Acadia National Park",
+      "stateCode": "ME",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/11425815",
+      "source": "osm"
+    },
+    {
+      "name": "Bar Island Trail",
+      "distanceMiles": 0.6,
+      "elevationGainFt": 0,
+      "latitude": 44.394488,
+      "longitude": -68.210835,
+      "coordinates": [
+        [
+          44.3920266,
+          -68.2100928
+        ],
+        [
+          44.3967196,
+          -68.2117089
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Out and Back",
+      "surface": "Gravel",
+      "description": "A trail that connects to Bar Island, offering stunning views.",
+      "parkName": "Acadia National Park",
+      "stateCode": "ME",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/11425815",
+      "source": "osm"
+    },
+    {
+      "name": "Ship Harbor",
+      "distanceMiles": 0.5,
+      "elevationGainFt": 0,
+      "latitude": 44.2280146,
+      "longitude": -68.3201908,
+      "coordinates": [
+        [
+          44.2280146,
+          -68.3201908
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Footway",
+      "surface": "Ground",
+      "description": "A scenic footway leading through the Ship Harbor area.",
+      "parkName": "Acadia National Park",
+      "stateCode": "ME",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/74407800",
+      "source": "osm"
+    },
+    {
+      "name": "The Precipice Trail",
+      "distanceMiles": 1.5,
+      "elevationGainFt": 1000,
+      "latitude": 44.3506869,
+      "longitude": -68.1939682,
+      "coordinates": [
+        [
+          44.3506869,
+          -68.1939682
+        ]
+      ],
+      "difficulty": "Hard",
+      "trailType": "Path",
+      "surface": "Rock",
+      "description": "A challenging trail with stunning views, suitable for experienced hikers.",
+      "parkName": "Acadia National Park",
+      "stateCode": "ME",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/74407800",
+      "source": "osm"
+    },
+    {
+      "name": "Bubble & Jordan Ponds Path",
+      "distanceMiles": 1.5,
+      "elevationGainFt": 200,
+      "latitude": 44.3289399,
+      "longitude": -68.2365246,
+      "coordinates": [
+        [
+          44.3265389,
+          -68.2402305
+        ],
+        [
+          44.3294902,
+          -68.2357025
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Path",
+      "surface": "Ground",
+      "description": "A scenic path connecting Bubble and Jordan Ponds.",
+      "parkName": "Acadia National Park",
+      "stateCode": "ME",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/149981839",
+      "source": "osm"
+    },
+    {
+      "name": "Canon Brook Trail",
+      "distanceMiles": 2.5,
+      "elevationGainFt": 800,
+      "latitude": 44.3358653,
+      "longitude": -68.2299754,
+      "coordinates": [
+        [
+          44.3294902,
+          -68.2357025
+        ],
+        [
+          44.3384791,
+          -68.2269015
+        ]
+      ],
+      "difficulty": "Hard",
+      "trailType": "Path",
+      "surface": "Rock",
+      "description": "A demanding mountain hiking trail along Canon Brook.",
+      "parkName": "Acadia National Park",
+      "stateCode": "ME",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/149981839",
+      "source": "osm"
+    },
+    {
+      "name": "Jordan Pond House Trail",
+      "distanceMiles": 0.5,
+      "elevationGainFt": 0,
+      "latitude": 44.321189,
+      "longitude": -68.2541718,
+      "coordinates": [
+        [
+          44.321189,
+          -68.2541718
+        ],
+        [
+          44.3212552,
+          -68.2541785
+        ],
+        [
+          44.3213325,
+          -68.2541769
+        ],
+        [
+          44.3214336,
+          -68.2541937
+        ],
+        [
+          44.3214818,
+          -68.2542095
+        ],
+        [
+          44.3215468,
+          -68.2542602
+        ],
+        [
+          44.3215779,
+          -68.2542899
+        ],
+        [
+          44.3216237,
+          -68.2543041
+        ],
+        [
+          44.3216946,
+          -68.2542984
+        ],
+        [
+          44.3218511,
+          -68.2543286
+        ],
+        [
+          44.321937,
+          -68.2543425
+        ],
+        [
+          44.3220096,
+          -68.2543662
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Loop",
+      "surface": "Asphalt",
+      "description": "A scenic trail around Jordan Pond.",
+      "parkName": "Acadia National Park",
+      "stateCode": "ME",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/150152230",
+      "source": "osm"
+    },
+    {
+      "name": "Jordan Pond House Trail",
+      "distanceMiles": 0.5,
+      "elevationGainFt": 0,
+      "latitude": 44.3216541,
+      "longitude": -68.2521219,
+      "coordinates": [
+        [
+          44.3216541,
+          -68.2521219
+        ],
+        [
+          44.3211698,
+          -68.2520068
+        ],
+        [
+          44.3208898,
+          -68.2524154
+        ],
+        [
+          44.3207373,
+          -68.2527962
+        ],
+        [
+          44.3206396,
+          -68.252862
+        ],
+        [
+          44.3206656,
+          -68.2529776
+        ],
+        [
+          44.3206687,
+          -68.2530203
+        ],
+        [
+          44.3206654,
+          -68.2530459
+        ],
+        [
+          44.3206336,
+          -68.2531199
+        ],
+        [
+          44.3205431,
+          -68.2531744
+        ],
+        [
+          44.3204917,
+          -68.2532092
+        ],
+        [
+          44.3204739,
+          -68.2532083
+        ],
+        [
+          44.3204569,
+          -68.2531993
+        ],
+        [
+          44.3204426,
+          -68.2532
+        ],
+        [
+          44.320405,
+          -68.2532248
+        ],
+        [
+          44.3203811,
+          -68.2532508
+        ],
+        [
+          44.3203685,
+          -68.2532798
+        ],
+        [
+          44.3203612,
+          -68.2532911
+        ],
+        [
+          44.3203552,
+          -68.2533004
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Loop",
+      "surface": "Dirt",
+      "description": "A scenic trail around Jordan Pond.",
+      "parkName": "Acadia National Park",
+      "stateCode": "ME",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/150152230",
+      "source": "osm"
+    },
+    {
+      "name": "Jordan Pond House Trail",
+      "distanceMiles": 0.5,
+      "elevationGainFt": 0,
+      "latitude": 44.3204624,
+      "longitude": -68.2541646,
+      "coordinates": [
+        [
+          44.3204624,
+          -68.2541646
+        ],
+        [
+          44.3205304,
+          -68.2542089
+        ],
+        [
+          44.3209266,
+          -68.2542104
+        ],
+        [
+          44.3211618,
+          -68.2541775
+        ],
+        [
+          44.3211915,
+          -68.2540048
+        ],
+        [
+          44.321174,
+          -68.253807
+        ],
+        [
+          44.3211733,
+          -68.2536573
+        ],
+        [
+          44.3210772,
+          -68.2533941
+        ],
+        [
+          44.320924,
+          -68.2530682
+        ],
+        [
+          44.3207924,
+          -68.2528377
+        ],
+        [
+          44.3207373,
+          -68.2527962
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Loop",
+      "surface": "Asphalt",
+      "description": "A scenic trail around Jordan Pond.",
+      "parkName": "Acadia National Park",
+      "stateCode": "ME",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/150152230",
+      "source": "osm"
+    },
+    {
+      "name": "Jordan Pond House Trail",
+      "distanceMiles": 0.5,
+      "elevationGainFt": 0,
+      "latitude": 44.3216541,
+      "longitude": -68.2523976,
+      "coordinates": [
+        [
+          44.3221656,
+          -68.2523976
+        ],
+        [
+          44.322096,
+          -68.2523689
+        ],
+        [
+          44.3220239,
+          -68.2523566
+        ],
+        [
+          44.3220123,
+          -68.2523182
+        ],
+        [
+          44.3219534,
+          -68.2522623
+        ],
+        [
+          44.3219246,
+          -68.2522045
+        ],
+        [
+          44.3218929,
+          -68.2521365
+        ],
+        [
+          44.3218601,
+          -68.2520715
+        ],
+        [
+          44.3218005,
+          -68.2519721
+        ],
+        [
+          44.3217366,
+          -68.2521389
+        ],
+        [
+          44.3216541,
+          -68.2521219
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Path",
+      "surface": "Dirt",
+      "description": "A scenic trail leading to the Jordan Pond House.",
+      "parkName": "Acadia National Park",
+      "stateCode": "ME",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/150152233",
+      "source": "osm"
+    },
+    {
+      "name": "Bubbles Divide",
+      "distanceMiles": 0.6,
+      "elevationGainFt": 0,
+      "latitude": 44.3412085,
+      "longitude": -68.2517964,
+      "coordinates": [
+        [
+          44.3412085,
+          -68.2517964
+        ],
+        [
+          44.3414579,
+          -68.2519497
+        ],
+        [
+          44.3416513,
+          -68.2521613
+        ],
+        [
+          44.3418583,
+          -68.2525132
+        ],
+        [
+          44.3421238,
+          -68.2527311
+        ],
+        [
+          44.3423081,
+          -68.2529496
+        ],
+        [
+          44.3424067,
+          -68.2531656
+        ],
+        [
+          44.342443,
+          -68.2532948
+        ],
+        [
+          44.3424228,
+          -68.2533748
+        ],
+        [
+          44.3422465,
+          -68.2534673
+        ],
+        [
+          44.3422456,
+          -68.2535761
+        ],
+        [
+          44.34232,
+          -68.253719
+        ],
+        [
+          44.3426691,
+          -68.2541069
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Path",
+      "surface": "Compacted",
+      "description": "A hiking trail offering views of the surrounding area.",
+      "parkName": "Acadia National Park",
+      "stateCode": "ME",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/150152233",
+      "source": "osm"
+    },
+    {
+      "name": "Bubbles Trail",
+      "distanceMiles": 0.7,
+      "elevationGainFt": 0,
+      "latitude": 44.33932,
+      "longitude": -68.253619,
+      "coordinates": [
+        [
+          44.33932,
+          -68.253619
+        ],
+        [
+          44.33892,
+          -68.253614
+        ],
+        [
+          44.338511,
+          -68.25356
+        ],
+        [
+          44.338222,
+          -68.253426
+        ],
+        [
+          44.337917,
+          -68.253572
+        ],
+        [
+          44.337623,
+          -68.253876
+        ],
+        [
+          44.337435,
+          -68.254034
+        ],
+        [
+          44.337144,
+          -68.253985
+        ],
+        [
+          44.336887,
+          -68.253937
+        ],
+        [
+          44.336669,
+          -68.254228
+        ],
+        [
+          44.336557,
+          -68.254244
+        ],
+        [
+          44.336161,
+          -68.253939
+        ],
+        [
+          44.335997,
+          -68.253741
+        ],
+        [
+          44.335816,
+          -68.253639
+        ],
+        [
+          44.33576,
+          -68.253524
+        ]
+      ],
+      "difficulty": "Hard",
+      "trailType": "Path",
+      "surface": "Rock",
+      "description": "A challenging trail with rocky terrain.",
+      "parkName": "Acadia National Park",
+      "stateCode": "ME",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/150152233",
+      "source": "osm"
+    },
+    {
+      "name": "Eagle Lake Trail",
+      "distanceMiles": 1.5,
+      "elevationGainFt": 300,
+      "latitude": 44.3513987,
+      "longitude": -68.2480972,
+      "coordinates": [
+        [
+          44.3494865,
+          -68.2520309
+        ],
+        [
+          44.3535127,
+          -68.2454349
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Out and Back",
+      "surface": "Ground",
+      "description": "A scenic trail leading to Eagle Lake.",
+      "parkName": "Acadia National Park",
+      "stateCode": "ME",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/150154098",
+      "source": "osm"
+    },
+    {
+      "name": "Pemetic South Ridge Trail",
+      "distanceMiles": 1.2,
+      "elevationGainFt": 600,
+      "latitude": 44.332528,
+      "longitude": -68.24481,
+      "coordinates": [
+        [
+          44.335789,
+          -68.245591
+        ],
+        [
+          44.329263,
+          -68.24311
+        ]
+      ],
+      "difficulty": "Hard",
+      "trailType": "Out and Back",
+      "surface": "Rock",
+      "description": "Challenging trail with stunning views from the ridge.",
+      "parkName": "Acadia National Park",
+      "stateCode": "ME",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/150154098",
+      "source": "osm"
+    },
+    {
+      "name": "Bubbles Divide",
+      "distanceMiles": 0.5,
+      "elevationGainFt": 0,
+      "latitude": 44.341112,
+      "longitude": -68.2502369,
+      "coordinates": [
+        [
+          44.341112,
+          -68.2502369
+        ],
+        [
+          44.3411302,
+          -68.250352
+        ],
+        [
+          44.3411361,
+          -68.2504547
+        ],
+        [
+          44.3411268,
+          -68.2505486
+        ],
+        [
+          44.3411281,
+          -68.2508092
+        ],
+        [
+          44.3410712,
+          -68.250944
+        ],
+        [
+          44.340914,
+          -68.251208
+        ],
+        [
+          44.3408825,
+          -68.2513523
+        ],
+        [
+          44.3408879,
+          -68.2514758
+        ],
+        [
+          44.3409519,
+          -68.2516006
+        ],
+        [
+          44.341177,
+          -68.251802
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Path",
+      "surface": "Dirt",
+      "description": "A scenic trail with dirt surface.",
+      "parkName": "Acadia National Park",
+      "stateCode": "ME",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/150154757",
+      "source": "osm"
+    },
+    {
+      "name": "Pemetic Mountain Northwest Trail",
+      "distanceMiles": 0.7,
+      "elevationGainFt": 0,
+      "latitude": 44.3373945,
+      "longitude": -68.2458063,
+      "coordinates": [
+        [
+          44.341112,
+          -68.2502369
+        ],
+        [
+          44.3412557,
+          -68.249139
+        ],
+        [
+          44.3412913,
+          -68.2486597
+        ],
+        [
+          44.3412243,
+          -68.2482611
+        ],
+        [
+          44.340941,
+          -68.2480645
+        ],
+        [
+          44.3408555,
+          -68.2476088
+        ],
+        [
+          44.3404819,
+          -68.2471488
+        ],
+        [
+          44.3397068,
+          -68.2469422
+        ],
+        [
+          44.3392744,
+          -68.2464774
+        ],
+        [
+          44.3386685,
+          -68.2460836
+        ],
+        [
+          44.3381512,
+          -68.2456928
+        ],
+        [
+          44.3377377,
+          -68.2457467
+        ],
+        [
+          44.3373945,
+          -68.2458063
+        ]
+      ],
+      "difficulty": "Hard",
+      "trailType": "Path",
+      "surface": "Rock",
+      "description": "Challenging trail with rocky terrain.",
+      "parkName": "Acadia National Park",
+      "stateCode": "ME",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/150154757",
+      "source": "osm"
+    },
+    {
+      "name": "Pemetic Mountain North Ridge Trail",
+      "distanceMiles": 0.8,
+      "elevationGainFt": 0,
+      "latitude": 44.348636,
+      "longitude": -68.2417294,
+      "coordinates": [
+        [
+          44.348636,
+          -68.2417294
+        ],
+        [
+          44.3477595,
+          -68.2427373
+        ],
+        [
+          44.3463705,
+          -68.2435319
+        ],
+        [
+          44.3449703,
+          -68.242904
+        ],
+        [
+          44.3441642,
+          -68.2435831
+        ],
+        [
+          44.3430573,
+          -68.243702
+        ],
+        [
+          44.3417717,
+          -68.2436122
+        ],
+        [
+          44.3405667,
+          -68.2438813
+        ],
+        [
+          44.3396295,
+          -68.2443048
+        ],
+        [
+          44.3390296,
+          -68.2446465
+        ],
+        [
+          44.3378116,
+          -68.2451326
+        ],
+        [
+          44.3373945,
+          -68.2458063
+        ]
+      ],
+      "difficulty": "Hard",
+      "trailType": "Path",
+      "surface": "Ground",
+      "description": "Intermediate trail with varied terrain.",
+      "parkName": "Acadia National Park",
+      "stateCode": "ME",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/150154757",
+      "source": "osm"
+    },
+    {
+      "name": "Pemetic East Cliff Trail",
+      "distanceMiles": 0.5,
+      "elevationGainFt": 300,
+      "latitude": 44.327872,
+      "longitude": -68.241561,
+      "coordinates": [
+        [
+          44.3265389,
+          -68.2402305
+        ],
+        [
+          44.329263,
+          -68.24311
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Path",
+      "surface": "Ground",
+      "description": "A scenic trail offering views of the cliffs.",
+      "parkName": "Acadia National Park",
+      "stateCode": "ME",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/150154780",
+      "source": "osm"
+    },
+    {
+      "name": "Triad Trail",
+      "distanceMiles": 0.6,
+      "elevationGainFt": 400,
+      "latitude": 44.3217819,
+      "longitude": -68.2368211,
+      "coordinates": [
+        [
+          44.3265389,
+          -68.2402305
+        ],
+        [
+          44.31597,
+          -68.2344083
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Path",
+      "surface": "Ground",
+      "description": "A hiking trail that leads to the summit of Triad.",
+      "parkName": "Acadia National Park",
+      "stateCode": "ME",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/150154780",
+      "source": "osm"
+    },
+    {
+      "name": "Day Mountain Trail",
+      "distanceMiles": 0.3,
+      "elevationGainFt": 200,
+      "latitude": 44.2995613,
+      "longitude": -68.2274564,
+      "coordinates": [
+        [
+          44.2994402,
+          -68.2277718
+        ],
+        [
+          44.2997212,
+          -68.2273395
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Footway",
+      "surface": "Ground",
+      "description": "A gentle trail suitable for all skill levels.",
+      "parkName": "Acadia National Park",
+      "stateCode": "ME",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/150154780",
+      "source": "osm"
+    },
+    {
+      "name": "Cadillac South Ridge Trail",
+      "distanceMiles": 1.2,
+      "elevationGainFt": 300,
+      "latitude": 44.342695,
+      "longitude": -68.229562,
+      "coordinates": [
+        [
+          44.3469467,
+          -68.2293885
+        ],
+        [
+          44.3456619,
+          -68.2294332
+        ],
+        [
+          44.343852,
+          -68.2298086
+        ],
+        [
+          44.3431626,
+          -68.2298545
+        ],
+        [
+          44.342695,
+          -68.229562
+        ],
+        [
+          44.3417904,
+          -68.2291133
+        ],
+        [
+          44.3408092,
+          -68.2287829
+        ],
+        [
+          44.340032,
+          -68.228652
+        ],
+        [
+          44.3392729,
+          -68.227479
+        ],
+        [
+          44.3390674,
+          -68.2267237
+        ],
+        [
+          44.3385759,
+          -68.2269131
+        ],
+        [
+          44.3384791,
+          -68.2269015
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Path",
+      "surface": "Rock",
+      "description": "A scenic trail offering views and a moderate challenge.",
+      "parkName": "Acadia National Park",
+      "stateCode": "ME",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/150155538",
+      "source": "osm"
+    },
+    {
+      "name": "Cadillac Summit Loop",
+      "distanceMiles": 0.5,
+      "elevationGainFt": 100,
+      "latitude": 44.3527248,
+      "longitude": -68.2242963,
+      "coordinates": [
+        [
+          44.3527248,
+          -68.2242963
+        ],
+        [
+          44.3529307,
+          -68.2239844
+        ],
+        [
+          44.3531947,
+          -68.2238031
+        ],
+        [
+          44.3531368,
+          -68.2234636
+        ],
+        [
+          44.3529703,
+          -68.2233799
+        ],
+        [
+          44.3526463,
+          -68.223244
+        ],
+        [
+          44.3526914,
+          -68.2228548
+        ],
+        [
+          44.3522185,
+          -68.2228778
+        ],
+        [
+          44.3519552,
+          -68.2227543
+        ],
+        [
+          44.3515468,
+          -68.2230903
+        ],
+        [
+          44.3516669,
+          -68.2234984
+        ],
+        [
+          44.3519816,
+          -68.2237709
+        ],
+        [
+          44.352245,
+          -68.2241558
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Loop",
+      "surface": "Concrete",
+      "description": "A leisurely loop around the summit with beautiful views.",
+      "parkName": "Acadia National Park",
+      "stateCode": "ME",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/150155538",
+      "source": "osm"
+    },
+    {
+      "name": "Cadillac Summit Loop",
+      "distanceMiles": 0.5,
+      "elevationGainFt": 100,
+      "latitude": 44.3525971,
+      "longitude": -68.2242831,
+      "coordinates": [
+        [
+          44.3525971,
+          -68.2242831
+        ],
+        [
+          44.3528354,
+          -68.2244711
+        ],
+        [
+          44.3523842,
+          -68.2241976
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Loop",
+      "surface": "Concrete",
+      "description": "A scenic loop trail offering stunning views from Cadillac Summit.",
+      "parkName": "Acadia National Park",
+      "stateCode": "ME",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/150155544",
+      "source": "osm"
+    },
+    {
+      "name": "Cadillac West Face Trail",
+      "distanceMiles": 0.5,
+      "elevationGainFt": 0,
+      "latitude": 44.3484415,
+      "longitude": -68.235748,
+      "coordinates": [
+        [
+          44.3469467,
+          -68.2293885
+        ],
+        [
+          44.3467205,
+          -68.2307514
+        ],
+        [
+          44.3467745,
+          -68.231771
+        ],
+        [
+          44.3476145,
+          -68.2324731
+        ],
+        [
+          44.3488935,
+          -68.2337077
+        ],
+        [
+          44.3483987,
+          -68.2347002
+        ],
+        [
+          44.3489963,
+          -68.235748
+        ],
+        [
+          44.3492811,
+          -68.237013
+        ],
+        [
+          44.3494108,
+          -68.2379295
+        ],
+        [
+          44.3491492,
+          -68.2389726
+        ],
+        [
+          44.3496135,
+          -68.2403395
+        ],
+        [
+          44.3494415,
+          -68.240844
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Path",
+      "surface": "Rock",
+      "description": "Trail with horrible visibility.",
+      "parkName": "Acadia National Park",
+      "stateCode": "ME",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/150155548",
+      "source": "osm"
+    },
+    {
+      "name": "Canon Brook Trail",
+      "distanceMiles": 0.4,
+      "elevationGainFt": 0,
+      "latitude": 44.3395391,
+      "longitude": -68.2176205,
+      "coordinates": [
+        [
+          44.3384791,
+          -68.2269015
+        ],
+        [
+          44.3386469,
+          -68.225548
+        ],
+        [
+          44.3389129,
+          -68.2240826
+        ],
+        [
+          44.3392849,
+          -68.2221681
+        ],
+        [
+          44.3395839,
+          -68.2209466
+        ],
+        [
+          44.3394875,
+          -68.2199743
+        ],
+        [
+          44.3393065,
+          -68.2186296
+        ],
+        [
+          44.3395391,
+          -68.2176205
+        ],
+        [
+          44.3398022,
+          -68.2165948
+        ],
+        [
+          44.3401453,
+          -68.2158349
+        ],
+        [
+          44.3401946,
+          -68.2146666
+        ],
+        [
+          44.3400891,
+          -68.2137265
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Path",
+      "surface": "Rock",
+      "description": "Mountain hiking trail.",
+      "parkName": "Acadia National Park",
+      "stateCode": "ME",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/150155548",
+      "source": "osm"
+    },
+    {
+      "name": "Canon Brook Trail",
+      "distanceMiles": 0.3,
+      "elevationGainFt": 0,
+      "latitude": 44.3472857,
+      "longitude": -68.2051005,
+      "coordinates": [
+        [
+          44.3482386,
+          -68.2020312
+        ],
+        [
+          44.3482569,
+          -68.2023475
+        ],
+        [
+          44.3480322,
+          -68.2030586
+        ],
+        [
+          44.3478628,
+          -68.2032883
+        ],
+        [
+          44.3478739,
+          -68.2035979
+        ],
+        [
+          44.3479253,
+          -68.2038638
+        ],
+        [
+          44.3479002,
+          -68.2041339
+        ],
+        [
+          44.3479212,
+          -68.2045689
+        ],
+        [
+          44.3476379,
+          -68.2046025
+        ],
+        [
+          44.347442,
+          -68.2049125
+        ],
+        [
+          44.3472857,
+          -68.2051005
+        ],
+        [
+          44.347311,
+          -68.2054993
+        ],
+        [
+          44.3473196,
+          -68.2057278
+        ],
+        [
+          44.3473527,
+          -68.206026
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Path",
+      "surface": "Dirt",
+      "description": "Hiking trail.",
+      "parkName": "Acadia National Park",
+      "stateCode": "ME",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/150155548",
+      "source": "osm"
+    },
+    {
+      "name": "Canon Brook Trail",
+      "distanceMiles": 0.4,
+      "elevationGainFt": 0,
+      "latitude": 44.3390852,
+      "longitude": -68.2111454,
+      "coordinates": [
+        [
+          44.3390852,
+          -68.2111454
+        ],
+        [
+          44.3400891,
+          -68.2137265
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Path",
+      "surface": "Dirt",
+      "description": "A scenic trail along Canon Brook.",
+      "parkName": "Acadia National Park",
+      "stateCode": "ME",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/150156456",
+      "source": "osm"
+    },
+    {
+      "name": "Dorr Mountain South Ridge Trail",
+      "distanceMiles": 1.5,
+      "elevationGainFt": 800,
+      "latitude": 44.3390852,
+      "longitude": -68.2111454,
+      "coordinates": [
+        [
+          44.3390852,
+          -68.2111454
+        ],
+        [
+          44.354708,
+          -68.216088
+        ]
+      ],
+      "difficulty": "Hard",
+      "trailType": "Path",
+      "surface": "Ground",
+      "description": "A challenging trail with stunning views from the ridge.",
+      "parkName": "Acadia National Park",
+      "stateCode": "ME",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/150156456",
+      "source": "osm"
+    },
+    {
+      "name": "Emery Path",
+      "distanceMiles": 0.3,
+      "elevationGainFt": 0,
+      "latitude": 44.3616566,
+      "longitude": -68.2084895,
+      "coordinates": [
+        [
+          44.3616566,
+          -68.2084895
+        ],
+        [
+          44.362049,
+          -68.2116196
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Path",
+      "surface": "Rock",
+      "description": "A short and easy path suitable for all hikers.",
+      "parkName": "Acadia National Park",
+      "stateCode": "ME",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/150156456",
+      "source": "osm"
+    },
+    {
+      "name": "Kane Path",
+      "distanceMiles": 1.2,
+      "elevationGainFt": 200,
+      "latitude": 44.3517552,
+      "longitude": -68.205071,
+      "coordinates": [
+        [
+          44.3585278,
+          -68.2071819
+        ],
+        [
+          44.3517552,
+          -68.205071
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Path",
+      "surface": "Rock",
+      "description": "A scenic path suitable for hiking.",
+      "parkName": "Acadia National Park",
+      "stateCode": "ME",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/150156468",
+      "source": "osm"
+    },
+    {
+      "name": "Canon Brook Trail",
+      "distanceMiles": 1.5,
+      "elevationGainFt": 300,
+      "latitude": 44.3390852,
+      "longitude": -68.2111454,
+      "coordinates": [
+        [
+          44.3473527,
+          -68.206026
+        ],
+        [
+          44.3390852,
+          -68.2111454
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Path",
+      "surface": "Dirt",
+      "description": "A beautiful trail following the brook.",
+      "parkName": "Acadia National Park",
+      "stateCode": "ME",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/150156468",
+      "source": "osm"
+    },
+    {
+      "name": "Schiff Path",
+      "distanceMiles": 0.8,
+      "elevationGainFt": 0,
+      "latitude": 44.3568349,
+      "longitude": -68.2108447,
+      "coordinates": [
+        [
+          44.3598717,
+          -68.2106939
+        ],
+        [
+          44.353458,
+          -68.209844
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Path",
+      "surface": "Rock",
+      "description": "A scenic path with rocky terrain.",
+      "parkName": "Acadia National Park",
+      "stateCode": "ME",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/150156665",
+      "source": "osm"
+    },
+    {
+      "name": "Kebo Mountain Trail",
+      "distanceMiles": 1.5,
+      "elevationGainFt": 500,
+      "latitude": 44.3723384,
+      "longitude": -68.2188718,
+      "coordinates": [
+        [
+          44.3770654,
+          -68.2189331
+        ],
+        [
+          44.3669719,
+          -68.216097
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Mountain Hiking",
+      "surface": "Ground",
+      "description": "A challenging trail leading to Kebo Mountain.",
+      "parkName": "Acadia National Park",
+      "stateCode": "ME",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/150156665",
+      "source": "osm"
+    },
+    {
+      "name": "Dorr Mountain North Ridge Trail",
+      "distanceMiles": 1.2,
+      "elevationGainFt": 600,
+      "latitude": 44.3619446,
+      "longitude": -68.2176092,
+      "coordinates": [
+        [
+          44.3669719,
+          -68.216097
+        ],
+        [
+          44.3559739,
+          -68.2165302
+        ]
+      ],
+      "difficulty": "Hard",
+      "trailType": "Mountain Hiking",
+      "surface": "Ground",
+      "description": "A steep trail with beautiful views.",
+      "parkName": "Acadia National Park",
+      "stateCode": "ME",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/150156665",
+      "source": "osm"
+    },
+    {
+      "name": "Emery Path",
+      "distanceMiles": 0.8,
+      "elevationGainFt": 0,
+      "latitude": 44.3616788,
+      "longitude": -68.2113302,
+      "coordinates": [
+        [
+          44.362049,
+          -68.2116196
+        ],
+        [
+          44.3620115,
+          -68.2116639
+        ],
+        [
+          44.3619439,
+          -68.2116679
+        ],
+        [
+          44.3618355,
+          -68.2115905
+        ],
+        [
+          44.3616788,
+          -68.2113302
+        ],
+        [
+          44.361581,
+          -68.2112224
+        ],
+        [
+          44.3613128,
+          -68.210987
+        ],
+        [
+          44.3610885,
+          -68.210783
+        ],
+        [
+          44.3609892,
+          -68.2107693
+        ],
+        [
+          44.3609963,
+          -68.2108548
+        ],
+        [
+          44.3610813,
+          -68.2109068
+        ],
+        [
+          44.3610762,
+          -68.2109931
+        ],
+        [
+          44.3609891,
+          -68.2110064
+        ],
+        [
+          44.3606446,
+          -68.2108584
+        ],
+        [
+          44.3603857,
+          -68.2108771
+        ],
+        [
+          44.3600884,
+          -68.2109388
+        ],
+        [
+          44.3598717,
+          -68.2106939
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Path",
+      "surface": "Rock",
+      "description": "A scenic path with rocky terrain.",
+      "parkName": "Acadia National Park",
+      "stateCode": "ME",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/150156678",
+      "source": "osm"
+    },
+    {
+      "name": "Cadillac North Ridge Trail",
+      "distanceMiles": 2.5,
+      "elevationGainFt": 800,
+      "latitude": 44.3737206,
+      "longitude": -68.229172,
+      "coordinates": [
+        [
+          44.3785489,
+          -68.2295537
+        ],
+        [
+          44.3762043,
+          -68.2292266
+        ],
+        [
+          44.3737206,
+          -68.229172
+        ],
+        [
+          44.3707336,
+          -68.2289375
+        ],
+        [
+          44.3679444,
+          -68.2304415
+        ],
+        [
+          44.3649652,
+          -68.2314741
+        ],
+        [
+          44.3625665,
+          -68.2302405
+        ],
+        [
+          44.3613476,
+          -68.2298745
+        ],
+        [
+          44.3594643,
+          -68.227927
+        ],
+        [
+          44.3560979,
+          -68.2258391
+        ],
+        [
+          44.3536102,
+          -68.2255503
+        ],
+        [
+          44.3530356,
+          -68.2253
+        ]
+      ],
+      "difficulty": "Hard",
+      "trailType": "Path",
+      "surface": "Ground",
+      "description": "A challenging trail with beautiful views.",
+      "parkName": "Acadia National Park",
+      "stateCode": "ME",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/150156678",
+      "source": "osm"
+    },
+    {
+      "name": "Schooner Head Path",
+      "distanceMiles": 0.5,
+      "elevationGainFt": 0,
+      "latitude": 44.3631785,
+      "longitude": -68.1886752,
+      "coordinates": [
+        [
+          44.3644167,
+          -68.1906347
+        ],
+        [
+          44.3643368,
+          -68.190495
+        ],
+        [
+          44.3639223,
+          -68.1894349
+        ],
+        [
+          44.3634136,
+          -68.1888434
+        ],
+        [
+          44.3631785,
+          -68.1886752
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Path",
+      "surface": "Ground",
+      "description": "A gentle path suitable for all hikers.",
+      "parkName": "Acadia National Park",
+      "stateCode": "ME",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/150156678",
+      "source": "osm"
+    },
+    {
+      "name": "Schooner Head Path",
+      "distanceMiles": 0.5,
+      "elevationGainFt": 50,
+      "latitude": 44.3686549,
+      "longitude": -68.1946264,
+      "coordinates": [
+        [
+          44.3691615,
+          -68.1944723
+        ],
+        [
+          44.3686549,
+          -68.1946264
+        ],
+        [
+          44.3677813,
+          -68.1945234
+        ],
+        [
+          44.367346,
+          -68.1942061
+        ],
+        [
+          44.3669092,
+          -68.194098
+        ],
+        [
+          44.366735,
+          -68.1937535
+        ],
+        [
+          44.3666829,
+          -68.1937668
+        ],
+        [
+          44.3666287,
+          -68.1939134
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Out and Back",
+      "surface": "Dirt",
+      "description": "A scenic path with views of the coastline.",
+      "parkName": "Acadia National Park",
+      "stateCode": "ME",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/150201811",
+      "source": "osm"
+    },
+    {
+      "name": "Gorham Mountain Trail",
+      "distanceMiles": 1.5,
+      "elevationGainFt": 600,
+      "latitude": 44.328222,
+      "longitude": -68.191963,
+      "coordinates": [
+        [
+          44.326918,
+          -68.193209
+        ],
+        [
+          44.32734,
+          -68.193236
+        ],
+        [
+          44.327792,
+          -68.192712
+        ],
+        [
+          44.327998,
+          -68.192181
+        ],
+        [
+          44.328222,
+          -68.191963
+        ],
+        [
+          44.328516,
+          -68.191519
+        ],
+        [
+          44.329177,
+          -68.191406
+        ],
+        [
+          44.329633,
+          -68.191633
+        ],
+        [
+          44.330143,
+          -68.191887
+        ],
+        [
+          44.330472,
+          -68.191517
+        ],
+        [
+          44.331119,
+          -68.191463
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Loop",
+      "surface": "Dirt",
+      "description": "A challenging hike with rewarding views from the summit.",
+      "parkName": "Acadia National Park",
+      "stateCode": "ME",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/150201811",
+      "source": "osm"
+    },
+    {
+      "name": "Ocean Path",
+      "distanceMiles": 0.5,
+      "elevationGainFt": 0,
+      "latitude": 44.307539,
+      "longitude": -68.193397,
+      "coordinates": [
+        [
+          44.3075364,
+          -68.1933666
+        ],
+        [
+          44.307537,
+          -68.1934481
+        ],
+        [
+          44.3075418,
+          -68.1934989
+        ],
+        [
+          44.307542,
+          -68.1935287
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Path",
+      "surface": "Dirt",
+      "description": "A scenic path along the ocean.",
+      "parkName": "Acadia National Park",
+      "stateCode": "ME",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/150350856",
+      "source": "osm"
+    },
+    {
+      "name": "Champlain South Ridge Trail",
+      "distanceMiles": 1.5,
+      "elevationGainFt": 500,
+      "latitude": 44.348034,
+      "longitude": -68.193094,
+      "coordinates": [
+        [
+          44.336981,
+          -68.197265
+        ],
+        [
+          44.337857,
+          -68.196451
+        ],
+        [
+          44.339039,
+          -68.195988
+        ],
+        [
+          44.340852,
+          -68.19565
+        ],
+        [
+          44.341827,
+          -68.194628
+        ],
+        [
+          44.342709,
+          -68.194227
+        ],
+        [
+          44.343683,
+          -68.193692
+        ],
+        [
+          44.345396,
+          -68.193325
+        ],
+        [
+          44.346424,
+          -68.193231
+        ],
+        [
+          44.348034,
+          -68.193094
+        ],
+        [
+          44.349364,
+          -68.193523
+        ],
+        [
+          44.350845,
+          -68.194037
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Path",
+      "surface": "Rock",
+      "description": "A challenging trail with beautiful views.",
+      "parkName": "Acadia National Park",
+      "stateCode": "ME",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/150350856",
+      "source": "osm"
+    },
+    {
+      "name": "Bowl Trail",
+      "distanceMiles": 0.5,
+      "elevationGainFt": 200,
+      "latitude": 44.3345,
+      "longitude": -68.1913,
+      "coordinates": [
+        [
+          44.3356559,
+          -68.192482
+        ],
+        [
+          44.335513,
+          -68.192536
+        ],
+        [
+          44.335443,
+          -68.192526
+        ],
+        [
+          44.335099,
+          -68.192255
+        ],
+        [
+          44.334825,
+          -68.192106
+        ],
+        [
+          44.3345688,
+          -68.1919071
+        ],
+        [
+          44.3344732,
+          -68.1918417
+        ],
+        [
+          44.3343247,
+          -68.1918065
+        ],
+        [
+          44.3342028,
+          -68.1917996
+        ],
+        [
+          44.3341005,
+          -68.1916885
+        ],
+        [
+          44.3340397,
+          -68.1916943
+        ],
+        [
+          44.3339789,
+          -68.1916276
+        ],
+        [
+          44.3339402,
+          -68.1913783
+        ],
+        [
+          44.333837,
+          -68.191225
+        ],
+        [
+          44.3337075,
+          -68.191026
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Path",
+      "surface": "Dirt",
+      "description": "A scenic trail offering views of the surrounding area.",
+      "parkName": "Acadia National Park",
+      "stateCode": "ME",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/150351727",
+      "source": "osm"
+    },
+    {
+      "name": "Gorham Mountain Trail",
+      "distanceMiles": 0.6,
+      "elevationGainFt": 300,
+      "latitude": 44.3316,
+      "longitude": -68.1913,
+      "coordinates": [
+        [
+          44.332023,
+          -68.190978
+        ],
+        [
+          44.331688,
+          -68.191254
+        ],
+        [
+          44.331565,
+          -68.191328
+        ],
+        [
+          44.331245,
+          -68.191456
+        ],
+        [
+          44.331119,
+          -68.191463
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Path",
+      "surface": "Dirt",
+      "description": "A popular trail leading to the summit of Gorham Mountain.",
+      "parkName": "Acadia National Park",
+      "stateCode": "ME",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/150351727",
+      "source": "osm"
+    },
+    {
+      "name": "Gorham Mountain Trail",
+      "distanceMiles": 1.2,
+      "elevationGainFt": 400,
+      "latitude": 44.323,
+      "longitude": -68.1925,
+      "coordinates": [
+        [
+          44.3190217,
+          -68.1926458
+        ],
+        [
+          44.319671,
+          -68.19286
+        ],
+        [
+          44.32,
+          -68.192554
+        ],
+        [
+          44.320398,
+          -68.192626
+        ],
+        [
+          44.321084,
+          -68.193045
+        ],
+        [
+          44.321669,
+          -68.193137
+        ],
+        [
+          44.3222,
+          -68.1929
+        ],
+        [
+          44.32314,
+          -68.192055
+        ],
+        [
+          44.32412,
+          -68.191943
+        ],
+        [
+          44.324805,
+          -68.192062
+        ],
+        [
+          44.325913,
+          -68.192675
+        ],
+        [
+          44.326292,
+          -68.192958
+        ],
+        [
+          44.326918,
+          -68.193209
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Path",
+      "surface": "Dirt",
+      "description": "A longer section of the Gorham Mountain Trail with beautiful views.",
+      "parkName": "Acadia National Park",
+      "stateCode": "ME",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/150351727",
+      "source": "osm"
+    },
+    {
+      "name": "Gorham Mountain Trail",
+      "distanceMiles": 0.6,
+      "elevationGainFt": 300,
+      "latitude": 44.317146,
+      "longitude": -68.19299,
+      "coordinates": [
+        [
+          44.3165902,
+          -68.1916689
+        ],
+        [
+          44.3190217,
+          -68.1926458
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Out and Back",
+      "surface": "Dirt",
+      "description": "A scenic trail leading to the summit of Gorham Mountain with stunning views.",
+      "parkName": "Acadia National Park",
+      "stateCode": "ME",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/150351826",
+      "source": "osm"
+    },
+    {
+      "name": "Ocean Path",
+      "distanceMiles": 0.1,
+      "elevationGainFt": 0,
+      "latitude": 44.307496,
+      "longitude": -68.193435,
+      "coordinates": [
+        [
+          44.3074557,
+          -68.1934202
+        ],
+        [
+          44.3074783,
+          -68.1934363
+        ],
+        [
+          44.307501,
+          -68.1934501
+        ],
+        [
+          44.307537,
+          -68.1934481
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Path",
+      "surface": "Dirt",
+      "description": "A scenic path along the ocean.",
+      "parkName": "Acadia National Park",
+      "stateCode": "ME",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/150352073",
+      "source": "osm"
+    },
+    {
+      "name": "Sea Path",
+      "distanceMiles": 0.1,
+      "elevationGainFt": 0,
+      "latitude": 44.3170675,
+      "longitude": -68.1910826,
+      "coordinates": [
+        [
+          44.3170805,
+          -68.1910336
+        ],
+        [
+          44.3170696,
+          -68.1910717
+        ],
+        [
+          44.3170544,
+          -68.1911327
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Path",
+      "surface": "Gravel",
+      "description": "A well-maintained path with excellent visibility.",
+      "parkName": "Acadia National Park",
+      "stateCode": "ME",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/150352073",
+      "source": "osm"
+    },
+    {
+      "name": "Satterlee Trail",
+      "distanceMiles": 0.5,
+      "elevationGainFt": 0,
+      "latitude": 44.3318121,
+      "longitude": -68.1849488,
+      "coordinates": [
+        [
+          44.3323295,
+          -68.1849687
+        ],
+        [
+          44.3322891,
+          -68.1849865
+        ],
+        [
+          44.3322258,
+          -68.1849458
+        ],
+        [
+          44.3318121,
+          -68.1849488
+        ],
+        [
+          44.331258,
+          -68.1849529
+        ],
+        [
+          44.3311044,
+          -68.184879
+        ],
+        [
+          44.3309811,
+          -68.1846307
+        ],
+        [
+          44.330543,
+          -68.1844251
+        ],
+        [
+          44.3305141,
+          -68.1843791
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Footway",
+      "surface": "Unknown",
+      "description": "A trail with scenic views.",
+      "parkName": "Acadia National Park",
+      "stateCode": "ME",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/150352073",
+      "source": "osm"
+    },
+    {
+      "name": "A Murray Young Path",
+      "distanceMiles": 1.5,
+      "elevationGainFt": 300,
+      "latitude": 44.3400891,
+      "longitude": -68.2137265,
+      "coordinates": [
+        [
+          44.3557792,
+          -68.2191103
+        ],
+        [
+          44.3400891,
+          -68.2137265
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Path",
+      "surface": "Rock",
+      "description": "A scenic path suitable for mountain hiking.",
+      "parkName": "Acadia National Park",
+      "stateCode": "ME",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/162932439",
+      "source": "osm"
+    },
+    {
+      "name": "Beachcroft Path",
+      "distanceMiles": 1.2,
+      "elevationGainFt": 250,
+      "latitude": 44.350845,
+      "longitude": -68.194037,
+      "coordinates": [
+        [
+          44.358385,
+          -68.2055097
+        ],
+        [
+          44.350845,
+          -68.194037
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Path",
+      "surface": "Rock",
+      "description": "A beautiful path for mountain hiking along the coast.",
+      "parkName": "Acadia National Park",
+      "stateCode": "ME",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/162932439",
+      "source": "osm"
+    },
+    {
+      "name": "Schiff Path",
+      "distanceMiles": 0.5,
+      "elevationGainFt": 500,
+      "latitude": 44.354458,
+      "longitude": -68.212856,
+      "coordinates": [
+        [
+          44.3559739,
+          -68.2165302
+        ],
+        [
+          44.353458,
+          -68.209844
+        ]
+      ],
+      "difficulty": "Hard",
+      "trailType": "Path",
+      "surface": "Rock",
+      "description": "A demanding mountain hiking path.",
+      "parkName": "Acadia National Park",
+      "stateCode": "ME",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/162933139",
+      "source": "osm"
+    },
+    {
+      "name": "Cadillac-Dorr Connector",
+      "distanceMiles": 0.5,
+      "elevationGainFt": 300,
+      "latitude": 44.354462,
+      "longitude": -68.221233,
+      "coordinates": [
+        [
+          44.3557792,
+          -68.2191103
+        ],
+        [
+          44.3531458,
+          -68.2235582
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Path",
+      "surface": "Rock",
+      "description": "An alpine hiking connector trail.",
+      "parkName": "Acadia National Park",
+      "stateCode": "ME",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/162933139",
+      "source": "osm"
+    },
+    {
+      "name": "Dorr Mountain North Ridge Trail",
+      "distanceMiles": 0.3,
+      "elevationGainFt": 400,
+      "latitude": 44.355,
+      "longitude": -68.2163,
+      "coordinates": [
+        [
+          44.3559739,
+          -68.2165302
+        ],
+        [
+          44.354708,
+          -68.216088
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Path",
+      "surface": "Ground",
+      "description": "A mountain hiking trail with scenic views.",
+      "parkName": "Acadia National Park",
+      "stateCode": "ME",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/162933139",
+      "source": "osm"
+    },
+    {
+      "name": "Shore Path",
+      "distanceMiles": 1.5,
+      "elevationGainFt": 50,
+      "latitude": 44.391334,
+      "longitude": -68.2040425,
+      "coordinates": [
+        [
+          44.3848555,
+          -68.1993947
+        ],
+        [
+          44.3854628,
+          -68.1969533
+        ],
+        [
+          44.3867371,
+          -68.1974495
+        ],
+        [
+          44.3875996,
+          -68.1986272
+        ],
+        [
+          44.3887175,
+          -68.2002604
+        ],
+        [
+          44.3893443,
+          -68.2005206
+        ],
+        [
+          44.3896721,
+          -68.2008988
+        ],
+        [
+          44.3905422,
+          -68.2014755
+        ],
+        [
+          44.39087,
+          -68.2025886
+        ],
+        [
+          44.3908149,
+          -68.2033589
+        ],
+        [
+          44.391334,
+          -68.2040425
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Linear",
+      "surface": "Fine Gravel",
+      "description": "A scenic path along the shore with beautiful views.",
+      "parkName": "Acadia National Park",
+      "stateCode": "ME",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/162934171",
+      "source": "osm"
+    },
+    {
+      "name": "Cadillac South Ridge Trail",
+      "distanceMiles": 1.5,
+      "elevationGainFt": 600,
+      "latitude": 44.3512531,
+      "longitude": -68.2263386,
+      "coordinates": [
+        [
+          44.3512531,
+          -68.2263386
+        ],
+        [
+          44.3508348,
+          -68.226924
+        ],
+        [
+          44.3502172,
+          -68.2277344
+        ],
+        [
+          44.3500099,
+          -68.228034
+        ],
+        [
+          44.3499229,
+          -68.2285175
+        ],
+        [
+          44.3497197,
+          -68.228631
+        ],
+        [
+          44.349389,
+          -68.228484
+        ],
+        [
+          44.3489389,
+          -68.2286922
+        ],
+        [
+          44.3482453,
+          -68.2286957
+        ],
+        [
+          44.3478232,
+          -68.2288
+        ],
+        [
+          44.3474667,
+          -68.2289897
+        ],
+        [
+          44.3471826,
+          -68.2292765
+        ],
+        [
+          44.3469467,
+          -68.2293885
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Path",
+      "surface": "Rock",
+      "description": "A scenic trail offering views of the surrounding area.",
+      "parkName": "Acadia National Park",
+      "stateCode": "ME",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/164556055",
+      "source": "osm"
+    },
+    {
+      "name": "Middle Peak Road",
+      "distanceMiles": 0.5,
+      "elevationGainFt": 200,
+      "latitude": 44.3512531,
+      "longitude": -68.2263386,
+      "coordinates": [
+        [
+          44.3522954,
+          -68.2254606
+        ],
+        [
+          44.3522743,
+          -68.2254916
+        ],
+        [
+          44.3520878,
+          -68.2258258
+        ],
+        [
+          44.3518232,
+          -68.2261233
+        ],
+        [
+          44.3515998,
+          -68.2262324
+        ],
+        [
+          44.3513703,
+          -68.2262654
+        ],
+        [
+          44.3512531,
+          -68.2263386
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Path",
+      "surface": "Pebblestone",
+      "description": "A scenic path leading to Middle Peak.",
+      "parkName": "Acadia National Park",
+      "stateCode": "ME",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/164557803",
+      "source": "osm"
+    },
+    {
+      "name": "Flying Mountain Trail",
+      "distanceMiles": 0.5,
+      "elevationGainFt": 100,
+      "latitude": 44.3071585,
+      "longitude": -68.3168431,
+      "coordinates": [
+        [
+          44.3071585,
+          -68.3168431
+        ],
+        [
+          44.3071263,
+          -68.316844
+        ],
+        [
+          44.3071039,
+          -68.3168367
+        ],
+        [
+          44.3070619,
+          -68.3168448
+        ],
+        [
+          44.3070232,
+          -68.316864
+        ],
+        [
+          44.3069806,
+          -68.3168771
+        ],
+        [
+          44.3069368,
+          -68.3169208
+        ],
+        [
+          44.3069066,
+          -68.3169464
+        ],
+        [
+          44.3068603,
+          -68.3169747
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Out and Back",
+      "surface": "Rock",
+      "description": "A scenic trail leading to the summit with rocky terrain.",
+      "parkName": "Acadia National Park",
+      "stateCode": "ME",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/164558961",
+      "source": "osm"
+    },
+    {
+      "name": "Gilley Trail",
+      "distanceMiles": 0.2,
+      "elevationGainFt": 0,
+      "latitude": 44.2969995,
+      "longitude": -68.3631942,
+      "coordinates": [
+        [
+          44.2968517,
+          -68.3634069
+        ],
+        [
+          44.2971474,
+          -68.3628815
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Footpath",
+      "surface": "Dirt",
+      "description": "A scenic footpath trail.",
+      "parkName": "Acadia National Park",
+      "stateCode": "ME",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/170693034",
+      "source": "osm"
+    },
+    {
+      "name": "Bernard Mountain Trail",
+      "distanceMiles": 0.3,
+      "elevationGainFt": 0,
+      "latitude": 44.3047583,
+      "longitude": -68.3693721,
+      "coordinates": [
+        [
+          44.3048242,
+          -68.3694354
+        ],
+        [
+          44.3046924,
+          -68.3693089
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Footpath",
+      "surface": "Dirt",
+      "description": "A trail leading to the summit of Bernard Mountain.",
+      "parkName": "Acadia National Park",
+      "stateCode": "ME",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/170693034",
+      "source": "osm"
+    },
+    {
+      "name": "Shore Path Access Trail",
+      "distanceMiles": 0.3,
+      "elevationGainFt": 0,
+      "latitude": 44.3865,
+      "longitude": -68.198,
+      "coordinates": [
+        [
+          44.3862772,
+          -68.1994911
+        ],
+        [
+          44.3862991,
+          -68.1993657
+        ],
+        [
+          44.3863605,
+          -68.1991753
+        ],
+        [
+          44.3864352,
+          -68.198789
+        ],
+        [
+          44.3864832,
+          -68.1984055
+        ],
+        [
+          44.3865407,
+          -68.1979924
+        ],
+        [
+          44.3865828,
+          -68.1976679
+        ],
+        [
+          44.3866135,
+          -68.1975391
+        ],
+        [
+          44.3866442,
+          -68.1974243
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Access",
+      "surface": "Fine Gravel",
+      "description": "A scenic access trail along the shore.",
+      "parkName": "Acadia National Park",
+      "stateCode": "ME",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/295041266",
+      "source": "osm"
+    },
+    {
+      "name": "Bass Harbor Head Lighthouse Trail",
+      "distanceMiles": 0.3,
+      "elevationGainFt": 0,
+      "latitude": 44.2221916,
+      "longitude": -68.3363544,
+      "coordinates": [
+        [
+          44.2221648,
+          -68.3363132
+        ],
+        [
+          44.2221916,
+          -68.3363544
+        ],
+        [
+          44.2223162,
+          -68.3363904
+        ],
+        [
+          44.2223562,
+          -68.3365085
+        ],
+        [
+          44.222371,
+          -68.336586
+        ],
+        [
+          44.2223749,
+          -68.3366066
+        ],
+        [
+          44.2223985,
+          -68.3367298
+        ],
+        [
+          44.2224073,
+          -68.3368216
+        ],
+        [
+          44.2224161,
+          -68.3369135
+        ],
+        [
+          44.2224666,
+          -68.3369971
+        ],
+        [
+          44.2225183,
+          -68.3369907
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Out and Back",
+      "surface": "Ground",
+      "description": "A scenic trail leading to the Bass Harbor Head Lighthouse.",
+      "parkName": "Acadia National Park",
+      "stateCode": "ME",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/357523760",
+      "source": "osm"
+    },
+    {
+      "name": "Ship Harbor",
+      "distanceMiles": 0.5,
+      "elevationGainFt": 0,
+      "latitude": 44.2302074,
+      "longitude": -68.3219436,
+      "coordinates": [
+        [
+          44.2317584,
+          -68.3256289
+        ],
+        [
+          44.2289654,
+          -68.3209956
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Loop",
+      "surface": "Ground",
+      "description": "A scenic loop trail through the Ship Harbor area.",
+      "parkName": "Acadia National Park",
+      "stateCode": "ME",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/413749408",
+      "source": "osm"
+    },
+    {
+      "name": "Wonderland Trail",
+      "distanceMiles": 0.5,
+      "elevationGainFt": 0,
+      "latitude": 44.2287323,
+      "longitude": -68.3121912,
+      "coordinates": [
+        [
+          44.2287323,
+          -68.3121912
+        ],
+        [
+          44.2285291,
+          -68.3120072
+        ],
+        [
+          44.2283184,
+          -68.3114863
+        ],
+        [
+          44.2282923,
+          -68.3112858
+        ],
+        [
+          44.2283297,
+          -68.3111195
+        ],
+        [
+          44.228426,
+          -68.3110628
+        ],
+        [
+          44.2286417,
+          -68.3110786
+        ],
+        [
+          44.2287472,
+          -68.3111312
+        ],
+        [
+          44.2289068,
+          -68.3113311
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Loop",
+      "surface": "Ground",
+      "description": "A scenic trail through beautiful landscapes.",
+      "parkName": "Acadia National Park",
+      "stateCode": "ME",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/414024088",
+      "source": "osm"
+    },
+    {
+      "name": "Cadillac South Ridge Trail Access",
+      "distanceMiles": 0.4,
+      "elevationGainFt": 0,
+      "latitude": 44.312055,
+      "longitude": -68.2091213,
+      "coordinates": [
+        [
+          44.312253,
+          -68.2094447
+        ],
+        [
+          44.312055,
+          -68.2091213
+        ],
+        [
+          44.3119582,
+          -68.2088253
+        ],
+        [
+          44.3118502,
+          -68.2084957
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Access",
+      "surface": "Gravel",
+      "description": "Access trail to Cadillac South Ridge",
+      "parkName": "Acadia National Park",
+      "stateCode": "ME",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/424593193",
+      "source": "osm"
+    },
+    {
+      "name": "Llewelyn Trail",
+      "distanceMiles": 1.5,
+      "elevationGainFt": 0,
+      "latitude": 44.365,
+      "longitude": -68.32,
+      "coordinates": [
+        [
+          44.3630407,
+          -68.3205942
+        ],
+        [
+          44.3630334,
+          -68.3201712
+        ],
+        [
+          44.3631608,
+          -68.3199784
+        ],
+        [
+          44.3633272,
+          -68.319972
+        ],
+        [
+          44.3635404,
+          -68.3201264
+        ],
+        [
+          44.3636667,
+          -68.3201216
+        ],
+        [
+          44.3641467,
+          -68.3198125
+        ],
+        [
+          44.3642674,
+          -68.3197924
+        ],
+        [
+          44.3646032,
+          -68.3199286
+        ],
+        [
+          44.3650583,
+          -68.3198118
+        ],
+        [
+          44.3653236,
+          -68.3195783
+        ],
+        [
+          44.365517,
+          -68.3195633
+        ],
+        [
+          44.3659327,
+          -68.3198333
+        ],
+        [
+          44.3663392,
+          -68.3199942
+        ],
+        [
+          44.3668032,
+          -68.3199835
+        ],
+        [
+          44.366972,
+          -68.3199835
+        ],
+        [
+          44.3671633,
+          -68.320071
+        ],
+        [
+          44.3674202,
+          -68.3203992
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Linear",
+      "surface": "Ground",
+      "description": "A scenic trail suitable for all skill levels.",
+      "parkName": "Acadia National Park",
+      "stateCode": "ME",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/553594336",
+      "source": "osm"
+    },
+    {
+      "name": "Unnamed Trail 1",
+      "distanceMiles": 0.5,
+      "elevationGainFt": 0,
+      "latitude": 44.3813519,
+      "longitude": -68.30736,
+      "coordinates": [
+        [
+          44.3807841,
+          -68.3071811
+        ],
+        [
+          44.3813519,
+          -68.30736
+        ],
+        [
+          44.38149,
+          -68.3078896
+        ],
+        [
+          44.3822164,
+          -68.3078252
+        ],
+        [
+          44.3835003,
+          -68.3073528
+        ],
+        [
+          44.3833417,
+          -68.3071596
+        ],
+        [
+          44.3832036,
+          -68.3066013
+        ],
+        [
+          44.3824261,
+          -68.3065655
+        ],
+        [
+          44.3820527,
+          -68.3063651
+        ],
+        [
+          44.381889,
+          -68.3057066
+        ],
+        [
+          44.3815668,
+          -68.3063651
+        ],
+        [
+          44.381311,
+          -68.3067946
+        ],
+        [
+          44.3809478,
+          -68.3068948
+        ],
+        [
+          44.3807841,
+          -68.3071811
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Loop",
+      "surface": "Dirt",
+      "description": "Brief description of Unnamed Trail 1",
+      "parkName": "Acadia National Park",
+      "stateCode": "ME",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/750252822",
+      "source": "osm"
+    },
+    {
+      "name": "Unnamed Trail 2",
+      "distanceMiles": 0.3,
+      "elevationGainFt": 0,
+      "latitude": 44.3802828,
+      "longitude": -68.3067015,
+      "coordinates": [
+        [
+          44.3796152,
+          -68.3068266
+        ],
+        [
+          44.379981,
+          -68.306587
+        ],
+        [
+          44.3802828,
+          -68.3067015
+        ],
+        [
+          44.3805897,
+          -68.3068375
+        ],
+        [
+          44.3807841,
+          -68.3071811
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Loop",
+      "surface": "Dirt",
+      "description": "Brief description of Unnamed Trail 2",
+      "parkName": "Acadia National Park",
+      "stateCode": "ME",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/750252822",
+      "source": "osm"
+    },
+    {
+      "name": "Unnamed Trail 3",
+      "distanceMiles": 0.6,
+      "elevationGainFt": 0,
+      "latitude": 44.3797618,
+      "longitude": -68.3079364,
+      "coordinates": [
+        [
+          44.3803257,
+          -68.3081012
+        ],
+        [
+          44.3797618,
+          -68.3079364
+        ],
+        [
+          44.3795639,
+          -68.3076189
+        ],
+        [
+          44.3792458,
+          -68.3073554
+        ],
+        [
+          44.3784223,
+          -68.3072265
+        ],
+        [
+          44.3775851,
+          -68.3073417
+        ],
+        [
+          44.3770911,
+          -68.3074054
+        ],
+        [
+          44.3764556,
+          -68.3070613
+        ],
+        [
+          44.3761108,
+          -68.3066742
+        ],
+        [
+          44.3760101,
+          -68.3058053
+        ],
+        [
+          44.3759436,
+          -68.3051729
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Loop",
+      "surface": "Dirt",
+      "description": "Brief description of Unnamed Trail 3",
+      "parkName": "Acadia National Park",
+      "stateCode": "ME",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/750252822",
+      "source": "osm"
+    },
+    {
+      "name": "Bass Harbor Head Lighthouse Trail",
+      "distanceMiles": 0.1,
+      "elevationGainFt": 0,
+      "latitude": 44.22188525,
+      "longitude": -68.3365256,
+      "coordinates": [
+        [
+          44.2218681,
+          -68.3365738
+        ],
+        [
+          44.2219024,
+          -68.3364774
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Out and Back",
+      "surface": "Ground",
+      "description": "A short trail leading to the Bass Harbor Head Lighthouse.",
+      "parkName": "Acadia National Park",
+      "stateCode": "ME",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/1158070283",
+      "source": "osm"
+    },
+    {
+      "name": "Ship Harbor",
+      "distanceMiles": 0.2,
+      "elevationGainFt": 0,
+      "latitude": 44.2271233,
+      "longitude": -68.3209853,
+      "coordinates": [
+        [
+          44.2272307,
+          -68.3210589
+        ],
+        [
+          44.2272076,
+          -68.3210302
+        ],
+        [
+          44.2271233,
+          -68.3209853
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Out and Back",
+      "surface": "Wood",
+      "description": "A scenic footpath through the Ship Harbor area.",
+      "parkName": "Acadia National Park",
+      "stateCode": "ME",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/1168835913",
+      "source": "osm"
+    },
+    {
+      "name": "Ship Harbor",
+      "distanceMiles": 0.1,
+      "elevationGainFt": 0,
+      "latitude": 44.2266936,
+      "longitude": -68.32067,
+      "coordinates": [
+        [
+          44.2271233,
+          -68.3209853
+        ],
+        [
+          44.2268313,
+          -68.3208299
+        ],
+        [
+          44.2266936,
+          -68.32067
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Out and Back",
+      "surface": "Ground",
+      "description": "A short footpath leading to the Ship Harbor area.",
+      "parkName": "Acadia National Park",
+      "stateCode": "ME",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/1168835913",
+      "source": "osm"
+    },
+    {
+      "name": "Ship Harbor",
+      "distanceMiles": 0.1,
+      "elevationGainFt": 0,
+      "latitude": 44.2266936,
+      "longitude": -68.32067,
+      "coordinates": [
+        [
+          44.2266936,
+          -68.32067
+        ],
+        [
+          44.2265828,
+          -68.3205413
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Out and Back",
+      "surface": "Wood",
+      "description": "A brief footpath through the Ship Harbor area.",
+      "parkName": "Acadia National Park",
+      "stateCode": "ME",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/1168835913",
+      "source": "osm"
+    },
+    {
+      "name": "Ship Harbor",
+      "distanceMiles": 0.5,
+      "elevationGainFt": 0,
+      "latitude": 44.2265828,
+      "longitude": -68.3205413,
+      "coordinates": [
+        [
+          44.2265828,
+          -68.3205413
+        ],
+        [
+          44.2256341,
+          -68.318549
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Out and Back",
+      "surface": "Ground",
+      "description": "A scenic trail through Ship Harbor.",
+      "parkName": "Acadia National Park",
+      "stateCode": "ME",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/1168835916",
+      "source": "osm"
+    },
+    {
+      "name": "Ship Harbor",
+      "distanceMiles": 0.2,
+      "elevationGainFt": 0,
+      "latitude": 44.2257282,
+      "longitude": -68.3184181,
+      "coordinates": [
+        [
+          44.2257282,
+          -68.3184181
+        ],
+        [
+          44.2256053,
+          -68.3184312
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Out and Back",
+      "surface": "Wood",
+      "description": "A short wooden path in Ship Harbor.",
+      "parkName": "Acadia National Park",
+      "stateCode": "ME",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/1168835916",
+      "source": "osm"
+    },
+    {
+      "name": "Ship Harbor",
+      "distanceMiles": 0.3,
+      "elevationGainFt": 0,
+      "latitude": 44.2269622,
+      "longitude": -68.3194175,
+      "coordinates": [
+        [
+          44.2257282,
+          -68.3184181
+        ],
+        [
+          44.2269622,
+          -68.3194175
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Out and Back",
+      "surface": "Ground",
+      "description": "A ground trail leading through Ship Harbor.",
+      "parkName": "Acadia National Park",
+      "stateCode": "ME",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/1168835916",
+      "source": "osm"
+    },
+    {
+      "name": "Ship Harbor",
+      "distanceMiles": 0.3,
+      "elevationGainFt": 0,
+      "latitude": 44.2271119,
+      "longitude": -68.3194628,
+      "coordinates": [
+        [
+          44.2269622,
+          -68.3194175
+        ],
+        [
+          44.2270365,
+          -68.3194179
+        ],
+        [
+          44.2271119,
+          -68.3194628
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Loop",
+      "surface": "Wood",
+      "description": "A scenic footpath through the Ship Harbor area.",
+      "parkName": "Acadia National Park",
+      "stateCode": "ME",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/1168835919",
+      "source": "osm"
+    },
+    {
+      "name": "Ship Harbor",
+      "distanceMiles": 0.2,
+      "elevationGainFt": 0,
+      "latitude": 44.2276057,
+      "longitude": -68.3196943,
+      "coordinates": [
+        [
+          44.2271119,
+          -68.3194628
+        ],
+        [
+          44.227139,
+          -68.3195089
+        ],
+        [
+          44.2271967,
+          -68.3195483
+        ],
+        [
+          44.2274675,
+          -68.319666
+        ],
+        [
+          44.2275319,
+          -68.3197062
+        ],
+        [
+          44.2276057,
+          -68.3196943
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Loop",
+      "surface": "Ground",
+      "description": "A well-maintained path leading through the Ship Harbor area.",
+      "parkName": "Acadia National Park",
+      "stateCode": "ME",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/1168835919",
+      "source": "osm"
+    },
+    {
+      "name": "Ship Harbor",
+      "distanceMiles": 0.2,
+      "elevationGainFt": 0,
+      "latitude": 44.2278,
+      "longitude": -68.32,
+      "coordinates": [
+        [
+          44.2277216,
+          -68.3198788
+        ],
+        [
+          44.2277377,
+          -68.319939
+        ],
+        [
+          44.2278368,
+          -68.320036
+        ],
+        [
+          44.2279557,
+          -68.3201026
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Path",
+      "surface": "Ground",
+      "description": "A scenic footpath through the Ship Harbor area.",
+      "parkName": "Acadia National Park",
+      "stateCode": "ME",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/1168836134",
+      "source": "osm"
+    },
+    {
+      "name": "Ship Harbor",
+      "distanceMiles": 0.1,
+      "elevationGainFt": 0,
+      "latitude": 44.228,
+      "longitude": -68.3201,
+      "coordinates": [
+        [
+          44.2279557,
+          -68.3201026
+        ],
+        [
+          44.2279926,
+          -68.3201281
+        ],
+        [
+          44.2280146,
+          -68.3201908
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Path",
+      "surface": "Wood",
+      "description": "A wooden footpath leading through the Ship Harbor area.",
+      "parkName": "Acadia National Park",
+      "stateCode": "ME",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/1168836134",
+      "source": "osm"
+    },
+    {
+      "name": "Jordan Pond House Trail",
+      "distanceMiles": 0.5,
+      "elevationGainFt": 0,
+      "latitude": 44.3202008,
+      "longitude": -68.2536839,
+      "coordinates": [
+        [
+          44.3203961,
+          -68.2534238
+        ],
+        [
+          44.3203982,
+          -68.2534726
+        ],
+        [
+          44.3203898,
+          -68.2535305
+        ],
+        [
+          44.3203771,
+          -68.2535673
+        ],
+        [
+          44.3203565,
+          -68.2535975
+        ],
+        [
+          44.3202008,
+          -68.2536839
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Loop",
+      "surface": "Asphalt",
+      "description": "A scenic trail around Jordan Pond with beautiful views.",
+      "parkName": "Acadia National Park",
+      "stateCode": "ME",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/1242412300",
+      "source": "osm"
+    },
+    {
+      "name": "The Precipice Trail",
+      "distanceMiles": 0.5,
+      "elevationGainFt": 300,
+      "latitude": 44.349657,
+      "longitude": -68.189896,
+      "coordinates": [
+        [
+          44.349657,
+          -68.189896
+        ],
+        [
+          44.3496676,
+          -68.1897028
+        ],
+        [
+          44.349707,
+          -68.189485
+        ],
+        [
+          44.349622,
+          -68.189329
+        ],
+        [
+          44.349461,
+          -68.189273
+        ],
+        [
+          44.349221,
+          -68.189368
+        ],
+        [
+          44.349103,
+          -68.189246
+        ],
+        [
+          44.349094,
+          -68.189067
+        ],
+        [
+          44.349346,
+          -68.188833
+        ],
+        [
+          44.349528,
+          -68.188553
+        ],
+        [
+          44.349541,
+          -68.188376
+        ],
+        [
+          44.349482,
+          -68.188136
+        ],
+        [
+          44.3495114,
+          -68.1879225
+        ]
+      ],
+      "difficulty": "Hard",
+      "trailType": "Loop",
+      "surface": "Rock",
+      "description": "A challenging trail with stunning views and steep sections.",
+      "parkName": "Acadia National Park",
+      "stateCode": "ME",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/1316039176",
+      "source": "osm"
+    },
+    {
+      "name": "Simon Trail",
+      "distanceMiles": 1.5,
+      "elevationGainFt": 100,
+      "latitude": 44.4927923,
+      "longitude": -68.3090772,
+      "coordinates": [
+        [
+          44.4927923,
+          -68.3090772
+        ],
+        [
+          44.4931109,
+          -68.3106818
+        ],
+        [
+          44.4936372,
+          -68.3119773
+        ],
+        [
+          44.4930403,
+          -68.3138667
+        ],
+        [
+          44.49279,
+          -68.3154501
+        ],
+        [
+          44.492867,
+          -68.3171595
+        ],
+        [
+          44.4918273,
+          -68.3167547
+        ],
+        [
+          44.4907684,
+          -68.3165747
+        ],
+        [
+          44.490486,
+          -68.3142895
+        ],
+        [
+          44.4918081,
+          -68.3124632
+        ],
+        [
+          44.4925525,
+          -68.3113116
+        ],
+        [
+          44.4927515,
+          -68.3103579
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Loop",
+      "surface": "Dirt",
+      "description": "A scenic trail through the woods.",
+      "parkName": "Acadia National Park",
+      "stateCode": "ME",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/1322307091",
+      "source": "osm"
+    },
+    {
+      "name": "Simon Trail",
+      "distanceMiles": 0.3,
+      "elevationGainFt": 0,
+      "latitude": 44.4918273,
+      "longitude": -68.316754,
+      "coordinates": [
+        [
+          44.4905437,
+          -68.3155941
+        ],
+        [
+          44.4906099,
+          -68.315564
+        ],
+        [
+          44.4909066,
+          -68.3156724
+        ],
+        [
+          44.4909981,
+          -68.3157498
+        ],
+        [
+          44.4912932,
+          -68.316232
+        ],
+        [
+          44.4915709,
+          -68.3163891
+        ],
+        [
+          44.4918273,
+          -68.3167547
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Footpath",
+      "surface": "Dirt",
+      "description": "A scenic footpath trail.",
+      "parkName": "Acadia National Park",
+      "stateCode": "ME",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/1342584912",
+      "source": "osm"
+    },
+    {
+      "name": "Salt Pond trail",
+      "distanceMiles": 0.5,
+      "elevationGainFt": 0,
+      "latitude": 44.4790306,
+      "longitude": -68.2312478,
+      "coordinates": [
+        [
+          44.4773244,
+          -68.2382592
+        ],
+        [
+          44.4777185,
+          -68.2376422
+        ],
+        [
+          44.4778951,
+          -68.2368304
+        ],
+        [
+          44.4779075,
+          -68.2359495
+        ],
+        [
+          44.4781242,
+          -68.2355846
+        ],
+        [
+          44.4785771,
+          -68.2353162
+        ],
+        [
+          44.4790002,
+          -68.2350456
+        ],
+        [
+          44.4790741,
+          -68.2345332
+        ],
+        [
+          44.4791645,
+          -68.233566
+        ],
+        [
+          44.4789838,
+          -68.2328578
+        ],
+        [
+          44.4791809,
+          -68.2321899
+        ],
+        [
+          44.479222,
+          -68.2313897
+        ],
+        [
+          44.4790306,
+          -68.2312478
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Footpath",
+      "surface": "Dirt",
+      "description": "A pleasant trail leading to Salt Pond.",
+      "parkName": "Acadia National Park",
+      "stateCode": "ME",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/1342584912",
+      "source": "osm"
+    },
+    {
+      "name": "Salt Pond trail",
+      "distanceMiles": 0.2,
+      "elevationGainFt": 0,
+      "latitude": 44.4776856,
+      "longitude": -68.2377286,
+      "coordinates": [
+        [
+          44.4781242,
+          -68.2355846
+        ],
+        [
+          44.4781004,
+          -68.2357189
+        ],
+        [
+          44.4781384,
+          -68.2359111
+        ],
+        [
+          44.478113,
+          -68.2360214
+        ],
+        [
+          44.4782578,
+          -68.2361887
+        ],
+        [
+          44.4782654,
+          -68.2363346
+        ],
+        [
+          44.4782324,
+          -68.2364947
+        ],
+        [
+          44.478108,
+          -68.2367581
+        ],
+        [
+          44.4780648,
+          -68.236961
+        ],
+        [
+          44.4781588,
+          -68.2373489
+        ],
+        [
+          44.4781461,
+          -68.2374414
+        ],
+        [
+          44.4780572,
+          -68.237509
+        ],
+        [
+          44.4778769,
+          -68.2375517
+        ],
+        [
+          44.4777982,
+          -68.2376621
+        ],
+        [
+          44.4776856,
+          -68.2377286
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Footpath",
+      "surface": "Dirt",
+      "description": "A short segment of the Salt Pond trail.",
+      "parkName": "Acadia National Park",
+      "stateCode": "ME",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/1342584912",
+      "source": "osm"
+    },
+    {
+      "name": "Flander's Bay Trail",
+      "distanceMiles": 0.7,
+      "elevationGainFt": 0,
+      "latitude": 44.4654159,
+      "longitude": -68.1103339,
+      "coordinates": [
+        [
+          44.4654159,
+          -68.1103339
+        ],
+        [
+          44.4641908,
+          -68.1104916
+        ],
+        [
+          44.4636576,
+          -68.1107324
+        ],
+        [
+          44.4631421,
+          -68.1119071
+        ],
+        [
+          44.4633732,
+          -68.1126625
+        ],
+        [
+          44.4636339,
+          -68.1130195
+        ],
+        [
+          44.4636427,
+          -68.1140531
+        ],
+        [
+          44.4636072,
+          -68.1151987
+        ],
+        [
+          44.4649462,
+          -68.1150119
+        ],
+        [
+          44.4650114,
+          -68.1141154
+        ],
+        [
+          44.4647477,
+          -68.1130444
+        ],
+        [
+          44.4645878,
+          -68.1116995
+        ],
+        [
+          44.4650943,
+          -68.1105414
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Loop",
+      "surface": "Dirt",
+      "description": "A scenic trail along Flander's Bay.",
+      "parkName": "Acadia National Park",
+      "stateCode": "ME",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/1342702190",
+      "source": "osm"
+    },
+    {
+      "name": "Taft Point Trail",
+      "distanceMiles": 0.6,
+      "elevationGainFt": 0,
+      "latitude": 44.4654159,
+      "longitude": -68.1103339,
+      "coordinates": [
+        [
+          44.4654159,
+          -68.1103339
+        ],
+        [
+          44.4656633,
+          -68.1102512
+        ],
+        [
+          44.4666597,
+          -68.1100634
+        ],
+        [
+          44.4672715,
+          -68.1099082
+        ],
+        [
+          44.467592,
+          -68.1104798
+        ],
+        [
+          44.4674755,
+          -68.1110758
+        ],
+        [
+          44.4677493,
+          -68.1119005
+        ],
+        [
+          44.4677477,
+          -68.112413
+        ],
+        [
+          44.4670032,
+          -68.1124493
+        ],
+        [
+          44.4666568,
+          -68.112057
+        ],
+        [
+          44.4664869,
+          -68.1116147
+        ],
+        [
+          44.4657115,
+          -68.1106395
+        ],
+        [
+          44.4656084,
+          -68.1102695
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Out and Back",
+      "surface": "Dirt",
+      "description": "A beautiful trail leading to Taft Point.",
+      "parkName": "Acadia National Park",
+      "stateCode": "ME",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/1342702190",
+      "source": "osm"
+    },
+    {
+      "name": "Cranberry Shores Trail",
+      "distanceMiles": 0.5,
+      "elevationGainFt": 0,
+      "latitude": 44.2372695,
+      "longitude": -68.2533112,
+      "coordinates": [
+        [
+          44.2394827,
+          -68.2545453
+        ],
+        [
+          44.2391258,
+          -68.2545419
+        ],
+        [
+          44.2385503,
+          -68.2544383
+        ],
+        [
+          44.2384018,
+          -68.2541403
+        ],
+        [
+          44.2380677,
+          -68.253946
+        ],
+        [
+          44.2377057,
+          -68.2535962
+        ],
+        [
+          44.2375108,
+          -68.2535444
+        ],
+        [
+          44.2372695,
+          -68.2533112
+        ],
+        [
+          44.2364898,
+          -68.2532983
+        ],
+        [
+          44.2361093,
+          -68.2531428
+        ],
+        [
+          44.2359329,
+          -68.2527671
+        ],
+        [
+          44.2353485,
+          -68.2526926
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Footpath",
+      "surface": "Dirt",
+      "description": "A scenic trail along the shores.",
+      "parkName": "Acadia National Park",
+      "stateCode": "ME",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/1345266707",
+      "source": "osm"
+    },
+    {
+      "name": "Kelley Farm Trail",
+      "distanceMiles": 0.5,
+      "elevationGainFt": 0,
+      "latitude": 44.248716,
+      "longitude": -68.3577963,
+      "coordinates": [
+        [
+          44.248716,
+          -68.3577963
+        ],
+        [
+          44.248672,
+          -68.3575811
+        ],
+        [
+          44.2486005,
+          -68.3574563
+        ],
+        [
+          44.2484992,
+          -68.3573371
+        ],
+        [
+          44.2484038,
+          -68.3571735
+        ],
+        [
+          44.2480741,
+          -68.3573537
+        ],
+        [
+          44.2479787,
+          -68.3574535
+        ],
+        [
+          44.2478854,
+          -68.3575811
+        ],
+        [
+          44.2478337,
+          -68.357839
+        ],
+        [
+          44.2478555,
+          -68.3580233
+        ],
+        [
+          44.2479209,
+          -68.358202
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Loop",
+      "surface": "Dirt",
+      "description": "A scenic trail through Kelley Farm.",
+      "parkName": "Acadia National Park",
+      "stateCode": "ME",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/1345269304",
+      "source": "osm"
+    },
+    {
+      "name": "Kelley Farm Trail",
+      "distanceMiles": 0.5,
+      "elevationGainFt": 0,
+      "latitude": 44.2478854,
+      "longitude": -68.3575811,
+      "coordinates": [
+        [
+          44.2478854,
+          -68.3575811
+        ],
+        [
+          44.2481198,
+          -68.3563665
+        ],
+        [
+          44.248041,
+          -68.3556325
+        ],
+        [
+          44.2478139,
+          -68.3554043
+        ],
+        [
+          44.2475139,
+          -68.3552879
+        ],
+        [
+          44.2473749,
+          -68.3558092
+        ],
+        [
+          44.2471104,
+          -68.3559877
+        ],
+        [
+          44.246824,
+          -68.3558665
+        ],
+        [
+          44.2468986,
+          -68.3560945
+        ],
+        [
+          44.246977,
+          -68.3564058
+        ],
+        [
+          44.2472709,
+          -68.3566533
+        ],
+        [
+          44.2476214,
+          -68.3572927
+        ],
+        [
+          44.2479553,
+          -68.3571836
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Loop",
+      "surface": "Dirt",
+      "description": "A scenic loop trail through Kelley Farm.",
+      "parkName": "Acadia National Park",
+      "stateCode": "ME",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/1345282263",
+      "source": "osm"
+    },
+    {
+      "name": "South Wall approach",
+      "distanceMiles": 0.5,
+      "elevationGainFt": 0,
+      "latitude": 44.3470463,
+      "longitude": -68.1885257,
+      "coordinates": [
+        [
+          44.3475463,
+          -68.1875257
+        ],
+        [
+          44.3465941,
+          -68.1903922
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Out and Back",
+      "surface": "Dirt",
+      "description": "Approach trail to the South Wall.",
+      "parkName": "Acadia National Park",
+      "stateCode": "ME",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/1374448504",
+      "source": "osm"
+    },
+    {
+      "name": "Cadillac-Dorr Connector",
+      "distanceMiles": 0.5,
+      "elevationGainFt": 200,
+      "latitude": 44.3561102,
+      "longitude": -68.2189673,
+      "coordinates": [
+        [
+          44.3561102,
+          -68.2189673
+        ],
+        [
+          44.3559939,
+          -68.2189802
+        ],
+        [
+          44.3558803,
+          -68.2190296
+        ],
+        [
+          44.3557792,
+          -68.2191103
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Connector",
+      "surface": "Rock",
+      "description": "A scenic connector trail with rocky terrain.",
+      "parkName": "Acadia National Park",
+      "stateCode": "ME",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/1393561727",
+      "source": "osm"
+    },
+    {
+      "name": "Cadillac Summit Loop",
+      "distanceMiles": 0.2,
+      "elevationGainFt": 0,
+      "latitude": 44.3527703,
+      "longitude": -68.2244315,
+      "coordinates": [
+        [
+          44.3527703,
+          -68.2244315
+        ],
+        [
+          44.3527526,
+          -68.2243894
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Loop",
+      "surface": "Concrete",
+      "description": "A scenic loop around Cadillac Summit.",
+      "parkName": "Acadia National Park",
+      "stateCode": "ME",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/1395771544",
+      "source": "osm"
+    },
+    {
+      "name": "Cadillac Summit Loop",
+      "distanceMiles": 0.1,
+      "elevationGainFt": 0,
+      "latitude": 44.352245,
+      "longitude": -68.2241558,
+      "coordinates": [
+        [
+          44.352245,
+          -68.2241558
+        ],
+        [
+          44.3522561,
+          -68.224189
+        ],
+        [
+          44.352291,
+          -68.2243396
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Loop",
+      "surface": "Concrete",
+      "description": "A short loop trail with scenic views.",
+      "parkName": "Acadia National Park",
+      "stateCode": "ME",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/1395771549",
+      "source": "osm"
+    },
+    {
+      "name": "Cadillac Summit Loop",
+      "distanceMiles": 0.5,
+      "elevationGainFt": 0,
+      "latitude": 44.3525366,
+      "longitude": -68.2242107,
+      "coordinates": [
+        [
+          44.3525366,
+          -68.2242107
+        ],
+        [
+          44.3525109,
+          -68.2241876
+        ],
+        [
+          44.3524812,
+          -68.2241671
+        ],
+        [
+          44.3524549,
+          -68.2241517
+        ],
+        [
+          44.3524267,
+          -68.2241168
+        ],
+        [
+          44.352381,
+          -68.2241008
+        ],
+        [
+          44.3523272,
+          -68.2240674
+        ],
+        [
+          44.3522832,
+          -68.2240153
+        ],
+        [
+          44.3522388,
+          -68.223963
+        ],
+        [
+          44.3521904,
+          -68.223909
+        ],
+        [
+          44.3521744,
+          -68.2239279
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Loop",
+      "surface": "Concrete",
+      "description": "A scenic loop trail at Cadillac Summit.",
+      "parkName": "Acadia National Park",
+      "stateCode": "ME",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/1395771553",
+      "source": "osm"
+    },
+    {
+      "name": "Cadillac Summit Loop",
+      "distanceMiles": 0.01,
+      "elevationGainFt": 0,
+      "latitude": 44.352577,
+      "longitude": -68.2242648,
+      "coordinates": [
+        [
+          44.352582,
+          -68.2242693
+        ],
+        [
+          44.352572,
+          -68.2242602
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Loop",
+      "surface": "Concrete",
+      "description": "A short loop trail at Cadillac Summit.",
+      "parkName": "Acadia National Park",
+      "stateCode": "ME",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/1395771556",
+      "source": "osm"
+    },
+    {
+      "name": "Trail",
+      "distanceMiles": 0.4,
+      "elevationGainFt": 0,
+      "latitude": 44.2867609,
+      "longitude": -68.3326813,
+      "coordinates": [
+        [
+          44.2867609,
+          -68.3326813
+        ],
+        [
+          44.2868336,
+          -68.3325137
+        ],
+        [
+          44.2869298,
+          -68.3322094
+        ],
+        [
+          44.2869771,
+          -68.3320749
+        ],
+        [
+          44.2869957,
+          -68.3317446
+        ],
+        [
+          44.2870075,
+          -68.3314921
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Linear",
+      "surface": "Gravel",
+      "description": "A pleasant stroll along a gravel path.",
+      "parkName": "Acadia National Park",
+      "stateCode": "ME",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/1414385821",
+      "source": "osm"
+    },
+    {
+      "name": "Trail",
+      "distanceMiles": 0.3,
+      "elevationGainFt": 0,
+      "latitude": 44.2870075,
+      "longitude": -68.3314137,
+      "coordinates": [
+        [
+          44.2870075,
+          -68.3314137
+        ],
+        [
+          44.2870075,
+          -68.3313104
+        ],
+        [
+          44.2869788,
+          -68.3311877
+        ],
+        [
+          44.2869873,
+          -68.3310462
+        ],
+        [
+          44.2870075,
+          -68.3309565
+        ],
+        [
+          44.2870312,
+          -68.3308126
+        ],
+        [
+          44.2870734,
+          -68.3307135
+        ],
+        [
+          44.287092,
+          -68.3306686
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Linear",
+      "surface": "Gravel",
+      "description": "A pleasant stroll along a gravel path.",
+      "parkName": "Acadia National Park",
+      "stateCode": "ME",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/1414385821",
+      "source": "osm"
+    },
+    {
+      "name": "Beech Mountain South Trail",
+      "distanceMiles": 1.5,
+      "elevationGainFt": 300,
+      "latitude": 44.306172,
+      "longitude": -68.3437379,
+      "coordinates": [
+        [
+          44.3108312,
+          -68.3453238
+        ],
+        [
+          44.310813,
+          -68.3452981
+        ],
+        [
+          44.3107584,
+          -68.3452024
+        ],
+        [
+          44.310398,
+          -68.3451437
+        ],
+        [
+          44.31033,
+          -68.3450684
+        ],
+        [
+          44.3102795,
+          -68.3448919
+        ],
+        [
+          44.3101345,
+          -68.3447187
+        ],
+        [
+          44.3099176,
+          -68.3445793
+        ],
+        [
+          44.3098006,
+          -68.3445924
+        ],
+        [
+          44.3097552,
+          -68.3445161
+        ],
+        [
+          44.3095207,
+          -68.3444521
+        ],
+        [
+          44.3094131,
+          -68.3445214
+        ],
+        [
+          44.3092375,
+          -68.3445132
+        ],
+        [
+          44.3082991,
+          -68.3441593
+        ],
+        [
+          44.3081919,
+          -68.3442921
+        ],
+        [
+          44.3079713,
+          -68.3442859
+        ],
+        [
+          44.3078368,
+          -68.3443909
+        ],
+        [
+          44.3075604,
+          -68.3440797
+        ],
+        [
+          44.3075646,
+          -68.344028
+        ],
+        [
+          44.3074565,
+          -68.3440135
+        ],
+        [
+          44.3073328,
+          -68.3436364
+        ],
+        [
+          44.3071928,
+          -68.3435525
+        ],
+        [
+          44.3067561,
+          -68.3435394
+        ],
+        [
+          44.3066756,
+          -68.3436296
+        ],
+        [
+          44.306172,
+          -68.3437379
+        ],
+        [
+          44.306014,
+          -68.3436534
+        ],
+        [
+          44.3059156,
+          -68.3437595
+        ],
+        [
+          44.3058076,
+          -68.3437694
+        ],
+        [
+          44.3054108,
+          -68.34365
+        ],
+        [
+          44.3052795,
+          -68.3435253
+        ],
+        [
+          44.3051686,
+          -68.3430352
+        ],
+        [
+          44.3049924,
+          -68.3429228
+        ],
+        [
+          44.3049377,
+          -68.3428004
+        ],
+        [
+          44.3046218,
+          -68.3426644
+        ],
+        [
+          44.3040364,
+          -68.3426286
+        ],
+        [
+          44.3039772,
+          -68.3424992
+        ],
+        [
+          44.3038326,
+          -68.3424099
+        ],
+        [
+          44.3037912,
+          -68.3422639
+        ],
+        [
+          44.3038628,
+          -68.3421769
+        ],
+        [
+          44.3040422,
+          -68.3420675
+        ],
+        [
+          44.3041506,
+          -68.3421267
+        ],
+        [
+          44.3041906,
+          -68.3420353
+        ],
+        [
+          44.303864,
+          -68.3416033
+        ],
+        [
+          44.3034941,
+          -68.3414735
+        ],
+        [
+          44.3033041,
+          -68.3414005
+        ],
+        [
+          44.3031323,
+          -68.3415337
+        ],
+        [
+          44.3030186,
+          -68.341514
+        ],
+        [
+          44.3028512,
+          -68.3417377
+        ],
+        [
+          44.302742,
+          -68.3417246
+        ],
+        [
+          44.3027317,
+          -68.3415958
+        ],
+        [
+          44.3028262,
+          -68.3411855
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Loop",
+      "surface": "Dirt",
+      "description": "A scenic trail offering beautiful views and moderate elevation changes.",
+      "parkName": "Acadia National Park",
+      "stateCode": "ME",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/1459154115",
+      "source": "osm"
+    },
+    {
+      "name": "Beech West Ridge Trail",
+      "distanceMiles": 1.8,
+      "elevationGainFt": 300,
+      "latitude": 44.3042852,
+      "longitude": -68.3486996,
+      "coordinates": [
+        [
+          44.3002467,
+          -68.3497831
+        ],
+        [
+          44.3042852,
+          -68.3486996
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Loop",
+      "surface": "Dirt",
+      "description": "A scenic loop trail with moderate elevation gain.",
+      "parkName": "Acadia National Park",
+      "stateCode": "ME",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/6174017",
+      "source": "osm"
+    },
+    {
+      "name": "Bernard Mountain Trail",
+      "distanceMiles": 3.5,
+      "elevationGainFt": 800,
+      "latitude": 44.2950382,
+      "longitude": -68.3629315,
+      "coordinates": [
+        [
+          44.2928121,
+          -68.3710485
+        ],
+        [
+          44.2950382,
+          -68.3629315
+        ]
+      ],
+      "difficulty": "Hard",
+      "trailType": "Out and Back",
+      "surface": "Rocky",
+      "description": "A challenging trail leading to stunning views from the summit.",
+      "parkName": "Acadia National Park",
+      "stateCode": "ME",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/6174017",
+      "source": "osm"
+    },
+    {
+      "name": "Cold Brook Trail",
+      "distanceMiles": 2.5,
+      "elevationGainFt": 200,
+      "latitude": 44.2966502,
+      "longitude": -68.3571571,
+      "coordinates": [
+        [
+          44.300128,
+          -68.3510997
+        ],
+        [
+          44.2966502,
+          -68.3571571
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Out and Back",
+      "surface": "Dirt",
+      "description": "A gentle trail following the brook, suitable for all skill levels.",
+      "parkName": "Acadia National Park",
+      "stateCode": "ME",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/6174017",
+      "source": "osm"
+    },
+    {
+      "name": "Long Pond Trail",
+      "distanceMiles": 0.5,
+      "elevationGainFt": 0,
+      "latitude": 44.3001151,
+      "longitude": -68.3502695,
+      "coordinates": [
+        [
+          44.3001151,
+          -68.3502695
+        ],
+        [
+          44.3000937,
+          -68.3503714
+        ],
+        [
+          44.3000701,
+          -68.3504589
+        ],
+        [
+          44.3001335,
+          -68.3507884
+        ],
+        [
+          44.300128,
+          -68.3510997
+        ],
+        [
+          44.3001201,
+          -68.3514691
+        ],
+        [
+          44.3001138,
+          -68.3517635
+        ],
+        [
+          44.3001792,
+          -68.3521874
+        ],
+        [
+          44.300252,
+          -68.3523285
+        ],
+        [
+          44.3014336,
+          -68.3535025
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Loop",
+      "surface": "Dirt",
+      "description": "A scenic trail around Long Pond.",
+      "parkName": "Acadia National Park",
+      "stateCode": "ME",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/6174020",
+      "source": "osm"
+    },
+    {
+      "name": "Ship Harbor",
+      "distanceMiles": 1.2,
+      "elevationGainFt": 0,
+      "latitude": 44.2271233,
+      "longitude": -68.3209853,
+      "coordinates": [
+        [
+          44.2271233,
+          -68.3209853
+        ],
+        [
+          44.2272307,
+          -68.3210589
+        ],
+        [
+          44.2280146,
+          -68.3201908
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Out and Back",
+      "surface": "Dirt",
+      "description": "A beautiful coastal trail with views of the harbor.",
+      "parkName": "Acadia National Park",
+      "stateCode": "ME",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/6174020",
+      "source": "osm"
+    },
+    {
+      "name": "Sluceway Trail",
+      "distanceMiles": 1.5,
+      "elevationGainFt": 0,
+      "latitude": 44.2999533,
+      "longitude": -68.3656773,
+      "coordinates": [
+        [
+          44.2999533,
+          -68.3656773
+        ],
+        [
+          44.2950382,
+          -68.3629315
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Linear",
+      "surface": "Dirt",
+      "description": "A trail connecting various points along the sluiceway.",
+      "parkName": "Acadia National Park",
+      "stateCode": "ME",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/6174020",
+      "source": "osm"
+    },
+    {
+      "name": "Valley Trail",
+      "distanceMiles": 1.5,
+      "elevationGainFt": 200,
+      "latitude": 44.312,
+      "longitude": -68.342,
+      "coordinates": [
+        [
+          44.3150391,
+          -68.3434491
+        ],
+        [
+          44.3116219,
+          -68.3428772
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Loop",
+      "surface": "Dirt",
+      "description": "A scenic trail through the valley.",
+      "parkName": "Acadia National Park",
+      "stateCode": "ME",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/6174023",
+      "source": "osm"
+    },
+    {
+      "name": "Wonderland",
+      "distanceMiles": 2,
+      "elevationGainFt": 150,
+      "latitude": 44.231,
+      "longitude": -68.315,
+      "coordinates": [
+        [
+          44.2287323,
+          -68.3121912
+        ],
+        [
+          44.2338112,
+          -68.3201613
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Out and Back",
+      "surface": "Dirt",
+      "description": "A beautiful coastal trail with stunning views.",
+      "parkName": "Acadia National Park",
+      "stateCode": "ME",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/6174023",
+      "source": "osm"
+    },
+    {
+      "name": "Acadia Mountain Trail",
+      "distanceMiles": 3,
+      "elevationGainFt": 800,
+      "latitude": 44.318,
+      "longitude": -68.316,
+      "coordinates": [
+        [
+          44.3182314,
+          -68.3167603
+        ],
+        [
+          44.3237752,
+          -68.3324557
+        ]
+      ],
+      "difficulty": "Hard",
+      "trailType": "Loop",
+      "surface": "Rocky",
+      "description": "A challenging hike with rewarding views from the summit.",
+      "parkName": "Acadia National Park",
+      "stateCode": "ME",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/6174023",
+      "source": "osm"
+    },
+    {
+      "name": "Saint Sauveur Mountain Trail",
+      "distanceMiles": 1.5,
+      "elevationGainFt": 300,
+      "latitude": 44.316,
+      "longitude": -68.33,
+      "coordinates": [
+        [
+          44.3047342,
+          -68.3195822
+        ],
+        [
+          44.3210492,
+          -68.3305023
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Loop",
+      "surface": "Dirt",
+      "description": "A scenic trail leading to the summit of Saint Sauveur Mountain.",
+      "parkName": "Acadia National Park",
+      "stateCode": "ME",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/6174061",
+      "source": "osm"
+    },
+    {
+      "name": "Beech Cliff Trail",
+      "distanceMiles": 1.2,
+      "elevationGainFt": 400,
+      "latitude": 44.316,
+      "longitude": -68.34,
+      "coordinates": [
+        [
+          44.3148879,
+          -68.3367227
+        ],
+        [
+          44.3176457,
+          -68.339725
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Out and Back",
+      "surface": "Rock",
+      "description": "A challenging trail with stunning views of the surrounding area.",
+      "parkName": "Acadia National Park",
+      "stateCode": "ME",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/6174061",
+      "source": "osm"
+    },
+    {
+      "name": "Perpendicular Trail",
+      "distanceMiles": 2,
+      "elevationGainFt": 250,
+      "latitude": 44.306,
+      "longitude": -68.36,
+      "coordinates": [
+        [
+          44.3066225,
+          -68.3593639
+        ],
+        [
+          44.3067276,
+          -68.36176
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Loop",
+      "surface": "Dirt",
+      "description": "A unique trail that offers a different perspective of the landscape.",
+      "parkName": "Acadia National Park",
+      "stateCode": "ME",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/6174061",
+      "source": "osm"
+    },
+    {
+      "name": "Great Notch Trail",
+      "distanceMiles": 2.5,
+      "elevationGainFt": 300,
+      "latitude": 44.3102658,
+      "longitude": -68.3715644,
+      "coordinates": [
+        [
+          44.3102658,
+          -68.3715644
+        ],
+        [
+          44.3151655,
+          -68.39003
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Loop",
+      "surface": "Dirt",
+      "description": "A scenic loop trail with moderate elevation gain.",
+      "parkName": "Acadia National Park",
+      "stateCode": "ME",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/6176488",
+      "source": "osm"
+    },
+    {
+      "name": "Valley Cove Trail",
+      "distanceMiles": 1.8,
+      "elevationGainFt": 200,
+      "latitude": 44.3113799,
+      "longitude": -68.3185771,
+      "coordinates": [
+        [
+          44.3071585,
+          -68.3168431
+        ],
+        [
+          44.3173448,
+          -68.3176245
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Out and Back",
+      "surface": "Dirt",
+      "description": "A beautiful trail leading to a scenic cove.",
+      "parkName": "Acadia National Park",
+      "stateCode": "ME",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/6176488",
+      "source": "osm"
+    },
+    {
+      "name": "Valley Peak Trail",
+      "distanceMiles": 3,
+      "elevationGainFt": 400,
+      "latitude": 44.3169901,
+      "longitude": -68.3180448,
+      "coordinates": [
+        [
+          44.3115702,
+          -68.3727399
+        ],
+        [
+          44.3173448,
+          -68.3176245
+        ]
+      ],
+      "difficulty": "Hard",
+      "trailType": "Loop",
+      "surface": "Rocky",
+      "description": "Challenging trail with steep sections and rewarding views.",
+      "parkName": "Acadia National Park",
+      "stateCode": "ME",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/6176488",
+      "source": "osm"
+    },
+    {
+      "name": "Jesup Path",
+      "distanceMiles": 1.2,
+      "elevationGainFt": 100,
+      "latitude": 44.3713919,
+      "longitude": -68.2118515,
+      "coordinates": [
+        [
+          44.3585278,
+          -68.2071819
+        ],
+        [
+          44.3713919,
+          -68.2118515
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Out and Back",
+      "surface": "Dirt",
+      "description": "A scenic path through the woods.",
+      "parkName": "Acadia National Park",
+      "stateCode": "ME",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/9772843",
+      "source": "osm"
+    },
+    {
+      "name": "Cadillac South Ridge Trail",
+      "distanceMiles": 3.5,
+      "elevationGainFt": 1300,
+      "latitude": 44.3512531,
+      "longitude": -68.2263386,
+      "coordinates": [
+        [
+          44.3522954,
+          -68.2254606
+        ],
+        [
+          44.3512531,
+          -68.2263386
+        ]
+      ],
+      "difficulty": "Hard",
+      "trailType": "Out and Back",
+      "surface": "Rock",
+      "description": "A challenging trail with stunning views.",
+      "parkName": "Acadia National Park",
+      "stateCode": "ME",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/9772843",
+      "source": "osm"
+    },
+    {
+      "name": "Cadillac North Ridge Trail",
+      "distanceMiles": 3,
+      "elevationGainFt": 1200,
+      "latitude": 44.3530356,
+      "longitude": -68.2253,
+      "coordinates": [
+        [
+          44.3530356,
+          -68.2253
+        ],
+        [
+          44.3785489,
+          -68.2295537
+        ]
+      ],
+      "difficulty": "Very Hard",
+      "trailType": "Loop",
+      "surface": "Rock",
+      "description": "A strenuous hike with breathtaking vistas.",
+      "parkName": "Acadia National Park",
+      "stateCode": "ME",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/9772843",
+      "source": "osm"
+    },
+    {
+      "name": "Dorr Mountain North Ridge Trail",
+      "distanceMiles": 1.5,
+      "elevationGainFt": 800,
+      "latitude": 44.3559739,
+      "longitude": -68.2165302,
+      "coordinates": [
+        [
+          44.3669719,
+          -68.216097
+        ],
+        [
+          44.354708,
+          -68.216088
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Out and Back",
+      "surface": "Dirt",
+      "description": "A scenic trail leading to the summit of Dorr Mountain.",
+      "parkName": "Acadia National Park",
+      "stateCode": "ME",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/9776204",
+      "source": "osm"
+    },
+    {
+      "name": "Dorr Mountain South Ridge Trail",
+      "distanceMiles": 1.8,
+      "elevationGainFt": 900,
+      "latitude": 44.354708,
+      "longitude": -68.216088,
+      "coordinates": [
+        [
+          44.354708,
+          -68.216088
+        ],
+        [
+          44.3390852,
+          -68.2111454
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Out and Back",
+      "surface": "Dirt",
+      "description": "A beautiful trail offering views of the surrounding area.",
+      "parkName": "Acadia National Park",
+      "stateCode": "ME",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/9776204",
+      "source": "osm"
+    },
+    {
+      "name": "Kane Path",
+      "distanceMiles": 2.2,
+      "elevationGainFt": 300,
+      "latitude": 44.3517552,
+      "longitude": -68.205071,
+      "coordinates": [
+        [
+          44.3473527,
+          -68.206026
+        ],
+        [
+          44.3517552,
+          -68.205071
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Loop",
+      "surface": "Dirt",
+      "description": "A gentle path suitable for families and beginners.",
+      "parkName": "Acadia National Park",
+      "stateCode": "ME",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/9776204",
+      "source": "osm"
+    },
+    {
+      "name": "Canon Brook Trail",
+      "distanceMiles": 1.5,
+      "elevationGainFt": 100,
+      "latitude": 44.3390852,
+      "longitude": -68.2111454,
+      "coordinates": [
+        [
+          44.3482386,
+          -68.2020312
+        ],
+        [
+          44.3400891,
+          -68.2137265
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Loop",
+      "surface": "Dirt",
+      "description": "A scenic trail along Canon Brook.",
+      "parkName": "Acadia National Park",
+      "stateCode": "ME",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/9776207",
+      "source": "osm"
+    },
+    {
+      "name": "Homans Path",
+      "distanceMiles": 0.5,
+      "elevationGainFt": 50,
+      "latitude": 44.362049,
+      "longitude": -68.2116196,
+      "coordinates": [
+        [
+          44.3631492,
+          -68.2071934
+        ],
+        [
+          44.362049,
+          -68.2116196
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Out and Back",
+      "surface": "Dirt",
+      "description": "A short path through the woods.",
+      "parkName": "Acadia National Park",
+      "stateCode": "ME",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/9776207",
+      "source": "osm"
+    },
+    {
+      "name": "Emery Path",
+      "distanceMiles": 1,
+      "elevationGainFt": 75,
+      "latitude": 44.362049,
+      "longitude": -68.2116196,
+      "coordinates": [
+        [
+          44.362049,
+          -68.2116196
+        ],
+        [
+          44.3598717,
+          -68.2106939
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Out and Back",
+      "surface": "Dirt",
+      "description": "A winding path with beautiful views.",
+      "parkName": "Acadia National Park",
+      "stateCode": "ME",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/9776207",
+      "source": "osm"
+    },
+    {
+      "name": "Schiff Path",
+      "distanceMiles": 1.2,
+      "elevationGainFt": 100,
+      "latitude": 44.3565,
+      "longitude": -68.2105,
+      "coordinates": [
+        [
+          44.3598717,
+          -68.2106939
+        ],
+        [
+          44.353458,
+          -68.209844
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Loop",
+      "surface": "Dirt",
+      "description": "A scenic path through the woods.",
+      "parkName": "Acadia National Park",
+      "stateCode": "ME",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/9791636",
+      "source": "osm"
+    },
+    {
+      "name": "Kurt Diederichs Climb",
+      "distanceMiles": 0.8,
+      "elevationGainFt": 300,
+      "latitude": 44.3585,
+      "longitude": -68.2085,
+      "coordinates": [
+        [
+          44.3598717,
+          -68.2106939
+        ],
+        [
+          44.3585278,
+          -68.2071819
+        ]
+      ],
+      "difficulty": "Hard",
+      "trailType": "Climb",
+      "surface": "Rock",
+      "description": "A challenging climb with beautiful views.",
+      "parkName": "Acadia National Park",
+      "stateCode": "ME",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/9791636",
+      "source": "osm"
+    },
+    {
+      "name": "Ladder Trail",
+      "distanceMiles": 1.5,
+      "elevationGainFt": 400,
+      "latitude": 44.3525,
+      "longitude": -68.2065,
+      "coordinates": [
+        [
+          44.3512046,
+          -68.2061195
+        ],
+        [
+          44.353458,
+          -68.209844
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Out and Back",
+      "surface": "Dirt",
+      "description": "A trail featuring a series of ladders.",
+      "parkName": "Acadia National Park",
+      "stateCode": "ME",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/9791636",
+      "source": "osm"
+    },
+    {
+      "name": "Kebo Mountain Trail",
+      "distanceMiles": 1.5,
+      "elevationGainFt": 300,
+      "latitude": 44.3770654,
+      "longitude": -68.2189331,
+      "coordinates": [
+        [
+          44.3770654,
+          -68.2189331
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Loop",
+      "surface": "Dirt",
+      "description": "A scenic trail leading to the summit of Kebo Mountain.",
+      "parkName": "Acadia National Park",
+      "stateCode": "ME",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/9808341",
+      "source": "osm"
+    },
+    {
+      "name": "Kebo Brook Trail",
+      "distanceMiles": 1.8,
+      "elevationGainFt": 200,
+      "latitude": 44.3796275,
+      "longitude": -68.2323341,
+      "coordinates": [
+        [
+          44.3796275,
+          -68.2323341
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Out and Back",
+      "surface": "Dirt",
+      "description": "A gentle trail following Kebo Brook.",
+      "parkName": "Acadia National Park",
+      "stateCode": "ME",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/9808341",
+      "source": "osm"
+    },
+    {
+      "name": "Great Meadow Loop",
+      "distanceMiles": 2.2,
+      "elevationGainFt": 150,
+      "latitude": 44.3767246,
+      "longitude": -68.2140087,
+      "coordinates": [
+        [
+          44.3767246,
+          -68.2140087
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Loop",
+      "surface": "Grass",
+      "description": "A loop trail through the meadows with beautiful views.",
+      "parkName": "Acadia National Park",
+      "stateCode": "ME",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/9808341",
+      "source": "osm"
+    },
+    {
+      "name": "Stratheden Path",
+      "distanceMiles": 1.2,
+      "elevationGainFt": 50,
+      "latitude": 44.3757514,
+      "longitude": -68.2172689,
+      "coordinates": [
+        [
+          44.3757514,
+          -68.2172689
+        ],
+        [
+          44.3756253,
+          -68.2172864
+        ],
+        [
+          44.3755177,
+          -68.2172967
+        ],
+        [
+          44.375422,
+          -68.217266
+        ],
+        [
+          44.375324,
+          -68.217276
+        ],
+        [
+          44.375201,
+          -68.217253
+        ],
+        [
+          44.375027,
+          -68.217169
+        ],
+        [
+          44.373954,
+          -68.217003
+        ],
+        [
+          44.373764,
+          -68.216906
+        ],
+        [
+          44.373382,
+          -68.216797
+        ],
+        [
+          44.372934,
+          -68.216641
+        ],
+        [
+          44.3725,
+          -68.216601
+        ],
+        [
+          44.372091,
+          -68.216376
+        ],
+        [
+          44.371793,
+          -68.216272
+        ],
+        [
+          44.37145,
+          -68.216203
+        ],
+        [
+          44.371186,
+          -68.216203
+        ],
+        [
+          44.370961,
+          -68.216129
+        ],
+        [
+          44.370837,
+          -68.216059
+        ],
+        [
+          44.370434,
+          -68.215764
+        ],
+        [
+          44.370049,
+          -68.215575
+        ],
+        [
+          44.369723,
+          -68.215342
+        ],
+        [
+          44.369555,
+          -68.215263
+        ],
+        [
+          44.369389,
+          -68.215144
+        ],
+        [
+          44.369085,
+          -68.214975
+        ],
+        [
+          44.368903,
+          -68.21485
+        ],
+        [
+          44.368534,
+          -68.214684
+        ],
+        [
+          44.368231,
+          -68.214595
+        ],
+        [
+          44.368071,
+          -68.214522
+        ],
+        [
+          44.367745,
+          -68.214148
+        ],
+        [
+          44.367217,
+          -68.213691
+        ],
+        [
+          44.367058,
+          -68.213479
+        ],
+        [
+          44.366831,
+          -68.213223
+        ],
+        [
+          44.366708,
+          -68.213029
+        ],
+        [
+          44.3666362,
+          -68.2129394
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Path",
+      "surface": "Dirt",
+      "description": "A scenic path through the woods.",
+      "parkName": "Acadia National Park",
+      "stateCode": "ME",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/9808344",
+      "source": "osm"
+    },
+    {
+      "name": "Hemlock Road",
+      "distanceMiles": 1.5,
+      "elevationGainFt": 100,
+      "latitude": 44.371133,
+      "longitude": -68.209481,
+      "coordinates": [
+        [
+          44.3630163,
+          -68.2089717
+        ],
+        [
+          44.363214,
+          -68.209583
+        ],
+        [
+          44.3634617,
+          -68.2099933
+        ],
+        [
+          44.363476,
+          -68.210017
+        ],
+        [
+          44.363874,
+          -68.210425
+        ],
+        [
+          44.364143,
+          -68.210734
+        ],
+        [
+          44.364593,
+          -68.211113
+        ],
+        [
+          44.365098,
+          -68.211453
+        ],
+        [
+          44.365732,
+          -68.212079
+        ],
+        [
+          44.365917,
+          -68.212329
+        ],
+        [
+          44.366134,
+          -68.212526
+        ],
+        [
+          44.366552,
+          -68.212716
+        ],
+        [
+          44.366652,
+          -68.212746
+        ],
+        [
+          44.366805,
+          -68.212756
+        ],
+        [
+          44.36701,
+          -68.212741
+        ],
+        [
+          44.367086,
+          -68.212707
+        ],
+        [
+          44.367259,
+          -68.212533
+        ],
+        [
+          44.367432,
+          -68.212186
+        ],
+        [
+          44.367541,
+          -68.211856
+        ],
+        [
+          44.367618,
+          -68.211673
+        ],
+        [
+          44.367807,
+          -68.21141
+        ],
+        [
+          44.3678733,
+          -68.2113579
+        ],
+        [
+          44.367991,
+          -68.211318
+        ],
+        [
+          44.368166,
+          -68.211168
+        ],
+        [
+          44.369061,
+          -68.210705
+        ],
+        [
+          44.369311,
+          -68.210543
+        ],
+        [
+          44.3699,
+          -68.210215
+        ],
+        [
+          44.370136,
+          -68.210097
+        ],
+        [
+          44.370351,
+          -68.210019
+        ],
+        [
+          44.370965,
+          -68.209676
+        ],
+        [
+          44.371026,
+          -68.209631
+        ],
+        [
+          44.3710717,
+          -68.2095669
+        ],
+        [
+          44.371133,
+          -68.209481
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Road",
+      "surface": "Paved",
+      "description": "A road leading through the forest.",
+      "parkName": "Acadia National Park",
+      "stateCode": "ME",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/9808344",
+      "source": "osm"
+    },
+    {
+      "name": "Hemlock Trail",
+      "distanceMiles": 0.8,
+      "elevationGainFt": 30,
+      "latitude": 44.3676072,
+      "longitude": -68.2203813,
+      "coordinates": [
+        [
+          44.366552,
+          -68.212716
+        ],
+        [
+          44.366629,
+          -68.212873
+        ],
+        [
+          44.3666362,
+          -68.2129394
+        ],
+        [
+          44.36662,
+          -68.213067
+        ],
+        [
+          44.366549,
+          -68.213254
+        ],
+        [
+          44.366495,
+          -68.213473
+        ],
+        [
+          44.3663005,
+          -68.2137605
+        ],
+        [
+          44.366217,
+          -68.213931
+        ],
+        [
+          44.3662056,
+          -68.2140896
+        ],
+        [
+          44.366233,
+          -68.214191
+        ],
+        [
+          44.36631,
+          -68.214297
+        ],
+        [
+          44.3665004,
+          -68.2143901
+        ],
+        [
+          44.366551,
+          -68.214623
+        ],
+        [
+          44.366534,
+          -68.214879
+        ],
+        [
+          44.366553,
+          -68.214981
+        ],
+        [
+          44.366848,
+          -68.2154905
+        ],
+        [
+          44.3669837,
+          -68.2157351
+        ],
+        [
+          44.3669737,
+          -68.215923
+        ],
+        [
+          44.3669719,
+          -68.216097
+        ],
+        [
+          44.367002,
+          -68.2164029
+        ],
+        [
+          44.3670371,
+          -68.2165416
+        ],
+        [
+          44.3671553,
+          -68.2166771
+        ],
+        [
+          44.3672276,
+          -68.2167758
+        ],
+        [
+          44.3672518,
+          -68.2169275
+        ],
+        [
+          44.367355,
+          -68.217358
+        ],
+        [
+          44.367458,
+          -68.218043
+        ],
+        [
+          44.3674906,
+          -68.2181431
+        ],
+        [
+          44.3674324,
+          -68.2183578
+        ],
+        [
+          44.367292,
+          -68.218654
+        ],
+        [
+          44.367186,
+          -68.218995
+        ],
+        [
+          44.367169,
+          -68.2191
+        ],
+        [
+          44.367173,
+          -68.219198
+        ],
+        [
+          44.3672,
+          -68.219366
+        ],
+        [
+          44.367237,
+          -68.219464
+        ],
+        [
+          44.3675118,
+          -68.2197471
+        ],
+        [
+          44.3675563,
+          -68.2200207
+        ],
+        [
+          44.367594,
+          -68.220253
+        ],
+        [
+          44.3676072,
+          -68.2203813
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Trail",
+      "surface": "Dirt",
+      "description": "A gentle trail through the woods.",
+      "parkName": "Acadia National Park",
+      "stateCode": "ME",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/9808344",
+      "source": "osm"
+    },
+    {
+      "name": "Gorge Path",
+      "distanceMiles": 1.5,
+      "elevationGainFt": 100,
+      "latitude": 44.3676072,
+      "longitude": -68.2203813,
+      "coordinates": [
+        [
+          44.3770749,
+          -68.2229689
+        ],
+        [
+          44.3561102,
+          -68.2189673
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Loop",
+      "surface": "Dirt",
+      "description": "A scenic path through the gorge.",
+      "parkName": "Acadia National Park",
+      "stateCode": "ME",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/9813684",
+      "source": "osm"
+    },
+    {
+      "name": "A Murray Young Path",
+      "distanceMiles": 2.3,
+      "elevationGainFt": 150,
+      "latitude": 44.3400891,
+      "longitude": -68.2137265,
+      "coordinates": [
+        [
+          44.3557792,
+          -68.2191103
+        ],
+        [
+          44.3400891,
+          -68.2137265
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Out and Back",
+      "surface": "Gravel",
+      "description": "A gentle path suitable for all skill levels.",
+      "parkName": "Acadia National Park",
+      "stateCode": "ME",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/9813684",
+      "source": "osm"
+    },
+    {
+      "name": "Beachcroft Path",
+      "distanceMiles": 3,
+      "elevationGainFt": 200,
+      "latitude": 44.351845,
+      "longitude": -68.194937,
+      "coordinates": [
+        [
+          44.3585278,
+          -68.2071819
+        ],
+        [
+          44.350845,
+          -68.194037
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Loop",
+      "surface": "Dirt",
+      "description": "A beautiful coastal path with stunning views.",
+      "parkName": "Acadia National Park",
+      "stateCode": "ME",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/9813684",
+      "source": "osm"
+    },
+    {
+      "name": "Champlain North Ridge Trail",
+      "distanceMiles": 2.5,
+      "elevationGainFt": 600,
+      "latitude": 44.356,
+      "longitude": -68.192,
+      "coordinates": [
+        [
+          44.3631569,
+          -68.1933434
+        ],
+        [
+          44.350845,
+          -68.194037
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Loop",
+      "surface": "Dirt",
+      "description": "A scenic trail offering views of the surrounding landscape.",
+      "parkName": "Acadia National Park",
+      "stateCode": "ME",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/9816831",
+      "source": "osm"
+    },
+    {
+      "name": "Precipice Trail",
+      "distanceMiles": 1.8,
+      "elevationGainFt": 800,
+      "latitude": 44.349,
+      "longitude": -68.189,
+      "coordinates": [
+        [
+          44.349843,
+          -68.190103
+        ],
+        [
+          44.3495114,
+          -68.1879225
+        ]
+      ],
+      "difficulty": "Hard",
+      "trailType": "Out and Back",
+      "surface": "Rock",
+      "description": "A challenging trail with steep climbs and stunning views.",
+      "parkName": "Acadia National Park",
+      "stateCode": "ME",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/9816831",
+      "source": "osm"
+    },
+    {
+      "name": "Champlain South Ridge Trail",
+      "distanceMiles": 3.2,
+      "elevationGainFt": 700,
+      "latitude": 44.348,
+      "longitude": -68.193,
+      "coordinates": [
+        [
+          44.3506869,
+          -68.1939682
+        ],
+        [
+          44.350845,
+          -68.194037
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Loop",
+      "surface": "Dirt",
+      "description": "A beautiful trail with diverse scenery and moderate difficulty.",
+      "parkName": "Acadia National Park",
+      "stateCode": "ME",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/9816831",
+      "source": "osm"
+    },
+    {
+      "name": "Murphy Lane",
+      "distanceMiles": 0.5,
+      "elevationGainFt": 0,
+      "latitude": 44.3487385,
+      "longitude": -68.1861638,
+      "coordinates": [
+        [
+          44.3489785,
+          -68.1877729
+        ],
+        [
+          44.3489322,
+          -68.1876613
+        ],
+        [
+          44.3487405,
+          -68.1875994
+        ],
+        [
+          44.3486602,
+          -68.1871748
+        ],
+        [
+          44.3486562,
+          -68.1868602
+        ],
+        [
+          44.3486173,
+          -68.1868402
+        ],
+        [
+          44.3484977,
+          -68.1861638
+        ],
+        [
+          44.3485206,
+          -68.1855629
+        ],
+        [
+          44.3486121,
+          -68.1851838
+        ],
+        [
+          44.3485015,
+          -68.1842524
+        ],
+        [
+          44.3488141,
+          -68.1835102
+        ],
+        [
+          44.3488189,
+          -68.1820596
+        ],
+        [
+          44.348866,
+          -68.1818692
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Loop",
+      "surface": "Dirt",
+      "description": "A scenic loop trail through the woods.",
+      "parkName": "Acadia National Park",
+      "stateCode": "ME",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/9816834",
+      "source": "osm"
+    },
+    {
+      "name": "Bowl Trail",
+      "distanceMiles": 1.2,
+      "elevationGainFt": 150,
+      "latitude": 44.3316757,
+      "longitude": -68.1875799,
+      "coordinates": [
+        [
+          44.3316757,
+          -68.1875799
+        ],
+        [
+          44.331935,
+          -68.187291
+        ],
+        [
+          44.331982,
+          -68.187202
+        ],
+        [
+          44.332002,
+          -68.187084
+        ],
+        [
+          44.331973,
+          -68.18681
+        ],
+        [
+          44.331973,
+          -68.186649
+        ],
+        [
+          44.332015,
+          -68.186369
+        ],
+        [
+          44.332003,
+          -68.186259
+        ],
+        [
+          44.331914,
+          -68.185903
+        ],
+        [
+          44.3318872,
+          -68.1858518
+        ],
+        [
+          44.331857,
+          -68.185794
+        ],
+        [
+          44.331675,
+          -68.185635
+        ],
+        [
+          44.331611,
+          -68.185567
+        ],
+        [
+          44.331563,
+          -68.185481
+        ],
+        [
+          44.331534,
+          -68.185338
+        ],
+        [
+          44.331539,
+          -68.185149
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Out and Back",
+      "surface": "Dirt",
+      "description": "A trail leading to a scenic bowl with views.",
+      "parkName": "Acadia National Park",
+      "stateCode": "ME",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/9816834",
+      "source": "osm"
+    },
+    {
+      "name": "Beehive Trail",
+      "distanceMiles": 2.5,
+      "elevationGainFt": 600,
+      "latitude": 44.3356559,
+      "longitude": -68.192482,
+      "coordinates": [
+        [
+          44.3316757,
+          -68.1875799
+        ],
+        [
+          44.3318281,
+          -68.1877396
+        ],
+        [
+          44.3318525,
+          -68.1879353
+        ],
+        [
+          44.3319905,
+          -68.1880592
+        ],
+        [
+          44.3320121,
+          -68.1881935
+        ],
+        [
+          44.3321083,
+          -68.1881878
+        ],
+        [
+          44.3321503,
+          -68.1881016
+        ],
+        [
+          44.3322353,
+          -68.1879623
+        ],
+        [
+          44.3322659,
+          -68.1878737
+        ],
+        [
+          44.3323338,
+          -68.1878064
+        ],
+        [
+          44.3323467,
+          -68.188005
+        ],
+        [
+          44.3323897,
+          -68.1880012
+        ],
+        [
+          44.3323926,
+          -68.1877677
+        ],
+        [
+          44.3324739,
+          -68.1876346
+        ],
+        [
+          44.3324719,
+          -68.1877098
+        ],
+        [
+          44.3325086,
+          -68.1876834
+        ],
+        [
+          44.3325031,
+          -68.1879317
+        ],
+        [
+          44.3326492,
+          -68.1881029
+        ],
+        [
+          44.3326264,
+          -68.1877526
+        ],
+        [
+          44.3326761,
+          -68.187816
+        ],
+        [
+          44.3327378,
+          -68.1877058
+        ],
+        [
+          44.3327391,
+          -68.1878292
+        ],
+        [
+          44.3330194,
+          -68.1878877
+        ],
+        [
+          44.3331464,
+          -68.1878794
+        ],
+        [
+          44.3332336,
+          -68.1879493
+        ],
+        [
+          44.3332655,
+          -68.1880157
+        ],
+        [
+          44.3333783,
+          -68.1880787
+        ],
+        [
+          44.3334584,
+          -68.1880561
+        ],
+        [
+          44.3335008,
+          -68.1880299
+        ],
+        [
+          44.33361,
+          -68.1879652
+        ],
+        [
+          44.3336914,
+          -68.1879931
+        ],
+        [
+          44.3337382,
+          -68.1880451
+        ],
+        [
+          44.3338782,
+          -68.1880478
+        ],
+        [
+          44.3339479,
+          -68.1881075
+        ],
+        [
+          44.3339597,
+          -68.1882336
+        ],
+        [
+          44.3339413,
+          -68.1883808
+        ],
+        [
+          44.3339572,
+          -68.1885243
+        ],
+        [
+          44.3338639,
+          -68.1887542
+        ],
+        [
+          44.3338384,
+          -68.1889412
+        ],
+        [
+          44.3338217,
+          -68.1890527
+        ],
+        [
+          44.3339663,
+          -68.1895031
+        ],
+        [
+          44.3340235,
+          -68.1896044
+        ],
+        [
+          44.3341377,
+          -68.1896173
+        ],
+        [
+          44.3341873,
+          -68.1896719
+        ],
+        [
+          44.3341968,
+          -68.1897335
+        ],
+        [
+          44.3342629,
+          -68.1897798
+        ],
+        [
+          44.3342732,
+          -68.1898785
+        ],
+        [
+          44.3343196,
+          -68.1898989
+        ],
+        [
+          44.3343571,
+          -68.1900254
+        ],
+        [
+          44.3343469,
+          -68.1901518
+        ],
+        [
+          44.3343563,
+          -68.1904492
+        ],
+        [
+          44.3343737,
+          -68.1905091
+        ],
+        [
+          44.3346097,
+          -68.1905885
+        ],
+        [
+          44.3346769,
+          -68.1906876
+        ],
+        [
+          44.3347579,
+          -68.1907227
+        ],
+        [
+          44.3348989,
+          -68.1907243
+        ],
+        [
+          44.3350032,
+          -68.1907898
+        ],
+        [
+          44.3351023,
+          -68.1908058
+        ],
+        [
+          44.3352316,
+          -68.1909412
+        ],
+        [
+          44.3353929,
+          -68.1909936
+        ],
+        [
+          44.335677,
+          -68.1909926
+        ],
+        [
+          44.3359255,
+          -68.1911897
+        ],
+        [
+          44.3360193,
+          -68.191699
+        ],
+        [
+          44.3357062,
+          -68.191976
+        ],
+        [
+          44.3356559,
+          -68.192482
+        ]
+      ],
+      "difficulty": "Hard",
+      "trailType": "Loop",
+      "surface": "Dirt",
+      "description": "Challenging trail with steep sections and beautiful views.",
+      "parkName": "Acadia National Park",
+      "stateCode": "ME",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/9816834",
+      "source": "osm"
+    },
+    {
+      "name": "Schooner Head Path",
+      "distanceMiles": 1.2,
+      "elevationGainFt": 100,
+      "latitude": 44.3560817,
+      "longitude": -68.1851623,
+      "coordinates": [
+        [
+          44.3408756,
+          -68.1805821
+        ],
+        [
+          44.3408619,
+          -68.1803165
+        ],
+        [
+          44.3408192,
+          -68.180238
+        ],
+        [
+          44.3406974,
+          -68.1800784
+        ],
+        [
+          44.3404918,
+          -68.1799026
+        ],
+        [
+          44.3403211,
+          -68.1796924
+        ],
+        [
+          44.3402672,
+          -68.1795246
+        ],
+        [
+          44.3401691,
+          -68.1793575
+        ],
+        [
+          44.3400562,
+          -68.1792378
+        ],
+        [
+          44.3399959,
+          -68.1791752
+        ],
+        [
+          44.3399465,
+          -68.1791428
+        ],
+        [
+          44.3398714,
+          -68.1791228
+        ],
+        [
+          44.3397435,
+          -68.179018
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Out and Back",
+      "surface": "Dirt",
+      "description": "A scenic path with views of the coastline.",
+      "parkName": "Acadia National Park",
+      "stateCode": "ME",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/9816837",
+      "source": "osm"
+    },
+    {
+      "name": "Compass Harbor Trail",
+      "distanceMiles": 1.5,
+      "elevationGainFt": 150,
+      "latitude": 44.3746154,
+      "longitude": -68.1938338,
+      "coordinates": [
+        [
+          44.3738042,
+          -68.1975146
+        ],
+        [
+          44.373741,
+          -68.1973115
+        ],
+        [
+          44.3737797,
+          -68.1970075
+        ],
+        [
+          44.3737596,
+          -68.1967901
+        ],
+        [
+          44.3735131,
+          -68.1957554
+        ],
+        [
+          44.3734811,
+          -68.1953864
+        ],
+        [
+          44.3733053,
+          -68.1947178
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Loop",
+      "surface": "Dirt",
+      "description": "A gentle trail through the woods leading to the harbor.",
+      "parkName": "Acadia National Park",
+      "stateCode": "ME",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/9816837",
+      "source": "osm"
+    },
+    {
+      "name": "Orange & Black Path",
+      "distanceMiles": 2,
+      "elevationGainFt": 200,
+      "latitude": 44.356572,
+      "longitude": -68.190986,
+      "coordinates": [
+        [
+          44.356572,
+          -68.190986
+        ],
+        [
+          44.356417,
+          -68.190988
+        ],
+        [
+          44.356061,
+          -68.19089
+        ],
+        [
+          44.355875,
+          -68.19077
+        ],
+        [
+          44.355733,
+          -68.190752
+        ],
+        [
+          44.355506,
+          -68.19067
+        ],
+        [
+          44.355306,
+          -68.190416
+        ],
+        [
+          44.355205,
+          -68.190315
+        ],
+        [
+          44.35516,
+          -68.190238
+        ],
+        [
+          44.355147,
+          -68.190032
+        ],
+        [
+          44.355106,
+          -68.189884
+        ],
+        [
+          44.355038,
+          -68.189761
+        ],
+        [
+          44.354864,
+          -68.189574
+        ],
+        [
+          44.354501,
+          -68.189356
+        ],
+        [
+          44.354235,
+          -68.189045
+        ],
+        [
+          44.353878,
+          -68.188898
+        ],
+        [
+          44.353625,
+          -68.188817
+        ],
+        [
+          44.353385,
+          -68.188809
+        ],
+        [
+          44.352956,
+          -68.188977
+        ],
+        [
+          44.352865,
+          -68.189058
+        ],
+        [
+          44.352678,
+          -68.189301
+        ],
+        [
+          44.352374,
+          -68.18951
+        ],
+        [
+          44.351914,
+          -68.189692
+        ],
+        [
+          44.351637,
+          -68.18971
+        ],
+        [
+          44.351404,
+          -68.189777
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Loop",
+      "surface": "Dirt",
+      "description": "A winding path through varied terrain.",
+      "parkName": "Acadia National Park",
+      "stateCode": "ME",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/9816837",
+      "source": "osm"
+    },
+    {
+      "name": "Great Head Trail",
+      "distanceMiles": 1.5,
+      "elevationGainFt": 200,
+      "latitude": 44.3319195,
+      "longitude": -68.1773819,
+      "coordinates": [
+        [
+          44.3338903,
+          -68.1786266
+        ],
+        [
+          44.3288757,
+          -68.1766492
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Loop",
+      "surface": "Dirt",
+      "description": "A scenic trail with views of the coastline.",
+      "parkName": "Acadia National Park",
+      "stateCode": "ME",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/9816840",
+      "source": "osm"
+    },
+    {
+      "name": "Satterlee Trail",
+      "distanceMiles": 1.2,
+      "elevationGainFt": 150,
+      "latitude": 44.3323295,
+      "longitude": -68.1849687,
+      "coordinates": [
+        [
+          44.3335218,
+          -68.1824301
+        ],
+        [
+          44.3305141,
+          -68.1843791
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Out and Back",
+      "surface": "Dirt",
+      "description": "A gentle trail through the woods.",
+      "parkName": "Acadia National Park",
+      "stateCode": "ME",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/9816840",
+      "source": "osm"
+    },
+    {
+      "name": "Ocean Path",
+      "distanceMiles": 2,
+      "elevationGainFt": 100,
+      "latitude": 44.3078203,
+      "longitude": -68.1930321,
+      "coordinates": [
+        [
+          44.3069522,
+          -68.1915029
+        ],
+        [
+          44.3078203,
+          -68.1930321
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Out and Back",
+      "surface": "Paved",
+      "description": "A beautiful coastal path with ocean views.",
+      "parkName": "Acadia National Park",
+      "stateCode": "ME",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/9816840",
+      "source": "osm"
+    },
+    {
+      "name": "Gorham Mountain Trail",
+      "distanceMiles": 1.5,
+      "elevationGainFt": 300,
+      "latitude": 44.326918,
+      "longitude": -68.193209,
+      "coordinates": [
+        [
+          44.3165902,
+          -68.1916689
+        ],
+        [
+          44.332023,
+          -68.190978
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Loop",
+      "surface": "Dirt",
+      "description": "A scenic loop trail with views of the surrounding area.",
+      "parkName": "Acadia National Park",
+      "stateCode": "ME",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/9816843",
+      "source": "osm"
+    },
+    {
+      "name": "Cadillac Cliffs Path",
+      "distanceMiles": 0.5,
+      "elevationGainFt": 100,
+      "latitude": 44.3190217,
+      "longitude": -68.1926458,
+      "coordinates": [
+        [
+          44.3190217,
+          -68.1926458
+        ],
+        [
+          44.3221388,
+          -68.1929467
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Out and Back",
+      "surface": "Rock",
+      "description": "A short path leading to stunning cliff views.",
+      "parkName": "Acadia National Park",
+      "stateCode": "ME",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/9816843",
+      "source": "osm"
+    },
+    {
+      "name": "Otter Cove Trail",
+      "distanceMiles": 1.2,
+      "elevationGainFt": 150,
+      "latitude": 44.317346,
+      "longitude": -68.196498,
+      "coordinates": [
+        [
+          44.3168823,
+          -68.2004776
+        ],
+        [
+          44.318029,
+          -68.198094
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Loop",
+      "surface": "Dirt",
+      "description": "A beautiful trail through coastal landscapes.",
+      "parkName": "Acadia National Park",
+      "stateCode": "ME",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/9816843",
+      "source": "osm"
+    },
+    {
+      "name": "Eagles Crag Trail",
+      "distanceMiles": 0.5,
+      "elevationGainFt": 0,
+      "latitude": 44.325,
+      "longitude": -68.219,
+      "coordinates": [
+        [
+          44.3261096,
+          -68.2201931
+        ],
+        [
+          44.3261105,
+          -68.2200862
+        ],
+        [
+          44.325974,
+          -68.2198709
+        ],
+        [
+          44.3259453,
+          -68.2196126
+        ],
+        [
+          44.3258028,
+          -68.2191912
+        ],
+        [
+          44.3257032,
+          -68.2191024
+        ],
+        [
+          44.3256466,
+          -68.2187214
+        ],
+        [
+          44.3253741,
+          -68.2183683
+        ],
+        [
+          44.3251749,
+          -68.2182103
+        ],
+        [
+          44.325165,
+          -68.2180717
+        ],
+        [
+          44.3249024,
+          -68.2178557
+        ],
+        [
+          44.3247178,
+          -68.217844
+        ],
+        [
+          44.3246821,
+          -68.2178916
+        ],
+        [
+          44.3242572,
+          -68.2176393
+        ],
+        [
+          44.324159,
+          -68.2177566
+        ],
+        [
+          44.3240705,
+          -68.2179859
+        ],
+        [
+          44.3240949,
+          -68.2182576
+        ],
+        [
+          44.3239439,
+          -68.2185582
+        ],
+        [
+          44.3240444,
+          -68.2187724
+        ],
+        [
+          44.324022,
+          -68.219312
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Loop",
+      "surface": "Dirt",
+      "description": "A scenic trail offering views of the surrounding landscape.",
+      "parkName": "Acadia National Park",
+      "stateCode": "ME",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/9841900",
+      "source": "osm"
+    },
+    {
+      "name": "Day Mountain Trail",
+      "distanceMiles": 1.5,
+      "elevationGainFt": 500,
+      "latitude": 44.312,
+      "longitude": -68.233,
+      "coordinates": [
+        [
+          44.2993523,
+          -68.2276984
+        ],
+        [
+          44.2994402,
+          -68.2277718
+        ],
+        [
+          44.299552,
+          -68.227865
+        ],
+        [
+          44.299863,
+          -68.22802
+        ],
+        [
+          44.299924,
+          -68.228069
+        ],
+        [
+          44.3002399,
+          -68.2284625
+        ],
+        [
+          44.300523,
+          -68.228815
+        ],
+        [
+          44.30069,
+          -68.228993
+        ],
+        [
+          44.300755,
+          -68.229127
+        ],
+        [
+          44.300878,
+          -68.229458
+        ],
+        [
+          44.300984,
+          -68.229606
+        ],
+        [
+          44.30137,
+          -68.229991
+        ],
+        [
+          44.3018103,
+          -68.2301715
+        ],
+        [
+          44.3016597,
+          -68.230197
+        ],
+        [
+          44.30157,
+          -68.2301619
+        ],
+        [
+          44.3015369,
+          -68.2301093
+        ],
+        [
+          44.3015162,
+          -68.2299688
+        ],
+        [
+          44.3014832,
+          -68.2298733
+        ],
+        [
+          44.3014335,
+          -68.2297524
+        ],
+        [
+          44.3019108,
+          -68.2302927
+        ],
+        [
+          44.3021025,
+          -68.230197
+        ],
+        [
+          44.302347,
+          -68.230397
+        ],
+        [
+          44.302437,
+          -68.230513
+        ],
+        [
+          44.302589,
+          -68.230769
+        ],
+        [
+          44.302699,
+          -68.230893
+        ],
+        [
+          44.302897,
+          -68.23118
+        ],
+        [
+          44.303127,
+          -68.231455
+        ],
+        [
+          44.303349,
+          -68.231658
+        ],
+        [
+          44.303559,
+          -68.231752
+        ],
+        [
+          44.304073,
+          -68.232084
+        ],
+        [
+          44.304207,
+          -68.232136
+        ],
+        [
+          44.304569,
+          -68.232199
+        ],
+        [
+          44.304793,
+          -68.232138
+        ],
+        [
+          44.304963,
+          -68.232147
+        ],
+        [
+          44.305114,
+          -68.232048
+        ],
+        [
+          44.305177,
+          -68.232034
+        ],
+        [
+          44.305675,
+          -68.23204
+        ],
+        [
+          44.305844,
+          -68.232009
+        ],
+        [
+          44.306073,
+          -68.231907
+        ],
+        [
+          44.306232,
+          -68.231867
+        ],
+        [
+          44.306417,
+          -68.23188
+        ],
+        [
+          44.306681,
+          -68.232021
+        ],
+        [
+          44.306768,
+          -68.232043
+        ],
+        [
+          44.307118,
+          -68.232031
+        ],
+        [
+          44.307308,
+          -68.23209
+        ],
+        [
+          44.307533,
+          -68.232112
+        ],
+        [
+          44.307863,
+          -68.232257
+        ],
+        [
+          44.307984,
+          -68.232236
+        ],
+        [
+          44.308291,
+          -68.232053
+        ],
+        [
+          44.30854,
+          -68.232078
+        ],
+        [
+          44.309014,
+          -68.232071
+        ],
+        [
+          44.309187,
+          -68.232119
+        ],
+        [
+          44.309416,
+          -68.232264
+        ],
+        [
+          44.3095094,
+          -68.2323035
+        ],
+        [
+          44.3095501,
+          -68.2322825
+        ],
+        [
+          44.3096588,
+          -68.2322658
+        ],
+        [
+          44.309899,
+          -68.232389
+        ],
+        [
+          44.309957,
+          -68.232417
+        ],
+        [
+          44.310002,
+          -68.2324195
+        ],
+        [
+          44.310392,
+          -68.232536
+        ],
+        [
+          44.310461,
+          -68.232528
+        ],
+        [
+          44.310637,
+          -68.232457
+        ],
+        [
+          44.311098,
+          -68.232588
+        ],
+        [
+          44.311409,
+          -68.232618
+        ],
+        [
+          44.31155,
+          -68.232598
+        ],
+        [
+          44.311748,
+          -68.232508
+        ],
+        [
+          44.311869,
+          -68.232518
+        ],
+        [
+          44.312402,
+          -68.232744
+        ],
+        [
+          44.31277,
+          -68.232831
+        ],
+        [
+          44.31288,
+          -68.2329
+        ],
+        [
+          44.313258,
+          -68.23338
+        ],
+        [
+          44.313367,
+          -68.233449
+        ],
+        [
+          44.313999,
+          -68.233511
+        ],
+        [
+          44.314349,
+          -68.233629
+        ],
+        [
+          44.314828,
+          -68.233661
+        ],
+        [
+          44.315237,
+          -68.233808
+        ],
+        [
+          44.3157007,
+          -68.2340617
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Loop",
+      "surface": "Dirt",
+      "description": "A challenging trail with beautiful views and varied terrain.",
+      "parkName": "Acadia National Park",
+      "stateCode": "ME",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/9841900",
+      "source": "osm"
+    },
+    {
+      "name": "Triad Trail",
+      "distanceMiles": 1.2,
+      "elevationGainFt": 300,
+      "latitude": 44.32,
+      "longitude": -68.236,
+      "coordinates": [
+        [
+          44.3160786,
+          -68.2337206
+        ],
+        [
+          44.3160837,
+          -68.2338535
+        ],
+        [
+          44.3160813,
+          -68.2339163
+        ],
+        [
+          44.3160685,
+          -68.2339607
+        ],
+        [
+          44.316037,
+          -68.2340258
+        ],
+        [
+          44.3159996,
+          -68.2340807
+        ],
+        [
+          44.3159674,
+          -68.2341395
+        ],
+        [
+          44.3159379,
+          -68.2342059
+        ],
+        [
+          44.31597,
+          -68.2344083
+        ],
+        [
+          44.3265389,
+          -68.2402305
+        ],
+        [
+          44.326034,
+          -68.239859
+        ],
+        [
+          44.325913,
+          -68.239733
+        ],
+        [
+          44.325631,
+          -68.239226
+        ],
+        [
+          44.3255009,
+          -68.23901
+        ],
+        [
+          44.325368,
+          -68.238839
+        ],
+        [
+          44.3251687,
+          -68.2385321
+        ],
+        [
+          44.324816,
+          -68.238389
+        ],
+        [
+          44.324562,
+          -68.238189
+        ],
+        [
+          44.324304,
+          -68.237945
+        ],
+        [
+          44.3241898,
+          -68.2377633
+        ],
+        [
+          44.3240395,
+          -68.2377156
+        ],
+        [
+          44.3237318,
+          -68.2375518
+        ],
+        [
+          44.32347,
+          -68.2375736
+        ],
+        [
+          44.3233158,
+          -68.2374709
+        ],
+        [
+          44.3230587,
+          -68.2375366
+        ],
+        [
+          44.3229151,
+          -68.2377496
+        ],
+        [
+          44.3227581,
+          -68.237735
+        ],
+        [
+          44.3226861,
+          -68.2376269
+        ],
+        [
+          44.3225312,
+          -68.2375042
+        ],
+        [
+          44.322413,
+          -68.237288
+        ],
+        [
+          44.322143,
+          -68.237007
+        ],
+        [
+          44.3220089,
+          -68.2368843
+        ],
+        [
+          44.3218001,
+          -68.2368837
+        ],
+        [
+          44.3217819,
+          -68.2368211
+        ],
+        [
+          44.321547,
+          -68.2366705
+        ],
+        [
+          44.3214683,
+          -68.2365668
+        ],
+        [
+          44.3213181,
+          -68.2365819
+        ],
+        [
+          44.3212627,
+          -68.2366583
+        ],
+        [
+          44.3212059,
+          -68.236673
+        ],
+        [
+          44.3211321,
+          -68.236633
+        ],
+        [
+          44.3210712,
+          -68.2364676
+        ],
+        [
+          44.3209761,
+          -68.2364871
+        ],
+        [
+          44.320738,
+          -68.236449
+        ],
+        [
+          44.320659,
+          -68.236464
+        ],
+        [
+          44.320525,
+          -68.236532
+        ],
+        [
+          44.320324,
+          -68.236736
+        ],
+        [
+          44.320245,
+          -68.236791
+        ],
+        [
+          44.320012,
+          -68.236887
+        ],
+        [
+          44.3200156,
+          -68.2369871
+        ],
+        [
+          44.3199583,
+          -68.2370464
+        ],
+        [
+          44.3198673,
+          -68.2370542
+        ],
+        [
+          44.319631,
+          -68.237088
+        ],
+        [
+          44.319498,
+          -68.23704
+        ],
+        [
+          44.319351,
+          -68.236948
+        ],
+        [
+          44.319215,
+          -68.236889
+        ],
+        [
+          44.3190031,
+          -68.2368744
+        ],
+        [
+          44.3189272,
+          -68.2369146
+        ],
+        [
+          44.318885,
+          -68.2368135
+        ],
+        [
+          44.3187368,
+          -68.2367624
+        ],
+        [
+          44.3186588,
+          -68.2367594
+        ],
+        [
+          44.3186,
+          -68.2368558
+        ],
+        [
+          44.3185563,
+          -68.2368235
+        ],
+        [
+          44.3184959,
+          -68.2365848
+        ],
+        [
+          44.3184953,
+          -68.2364351
+        ],
+        [
+          44.3184317,
+          -68.2363382
+        ],
+        [
+          44.3183043,
+          -68.2363813
+        ],
+        [
+          44.318017,
+          -68.2362065
+        ],
+        [
+          44.31798,
+          -68.2360577
+        ],
+        [
+          44.3178728,
+          -68.2356454
+        ],
+        [
+          44.3177337,
+          -68.2354496
+        ],
+        [
+          44.3176425,
+          -68.2354247
+        ],
+        [
+          44.317593,
+          -68.2353749
+        ],
+        [
+          44.3176321,
+          -68.2352086
+        ],
+        [
+          44.3175146,
+          -68.2352491
+        ],
+        [
+          44.3174007,
+          -68.2353813
+        ],
+        [
+          44.3170262,
+          -68.2352774
+        ],
+        [
+          44.3168885,
+          -68.2352793
+        ],
+        [
+          44.3167922,
+          -68.2351895
+        ],
+        [
+          44.3165685,
+          -68.2351532
+        ],
+        [
+          44.3165611,
+          -68.2350463
+        ],
+        [
+          44.316399,
+          -68.2350224
+        ],
+        [
+          44.3162937,
+          -68.2350986
+        ],
+        [
+          44.3162362,
+          -68.2350186
+        ],
+        [
+          44.3161092,
+          -68.2350222
+        ],
+        [
+          44.316069,
+          -68.2349622
+        ],
+        [
+          44.3161117,
+          -68.234864
+        ],
+        [
+          44.3160673,
+          -68.2347014
+        ],
+        [
+          44.3159833,
+          -68.234608
+        ],
+        [
+          44.3160079,
+          -68.2344807
+        ],
+        [
+          44.31597,
+          -68.2344083
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Loop",
+      "surface": "Dirt",
+      "description": "A scenic trail with moderate elevation changes.",
+      "parkName": "Acadia National Park",
+      "stateCode": "ME",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/9841900",
+      "source": "osm"
+    },
+    {
+      "name": "Pemetic East Cliff Trail",
+      "distanceMiles": 0.5,
+      "elevationGainFt": 100,
+      "latitude": 44.327,
+      "longitude": -68.241,
+      "coordinates": [
+        [
+          44.3265389,
+          -68.2402305
+        ],
+        [
+          44.329263,
+          -68.24311
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Out and Back",
+      "surface": "Dirt",
+      "description": "A scenic trail with views of the cliffs.",
+      "parkName": "Acadia National Park",
+      "stateCode": "ME",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/9845685",
+      "source": "osm"
+    },
+    {
+      "name": "Pemetic South Ridge Trail",
+      "distanceMiles": 1.2,
+      "elevationGainFt": 300,
+      "latitude": 44.329,
+      "longitude": -68.243,
+      "coordinates": [
+        [
+          44.329263,
+          -68.24311
+        ],
+        [
+          44.335789,
+          -68.245591
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Out and Back",
+      "surface": "Dirt",
+      "description": "A challenging trail leading to the summit.",
+      "parkName": "Acadia National Park",
+      "stateCode": "ME",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/9845685",
+      "source": "osm"
+    },
+    {
+      "name": "Pemetic Mountain North Ridge Trail",
+      "distanceMiles": 2.5,
+      "elevationGainFt": 800,
+      "latitude": 44.343,
+      "longitude": -68.243,
+      "coordinates": [
+        [
+          44.3373945,
+          -68.2458063
+        ],
+        [
+          44.3496651,
+          -68.2412622
+        ]
+      ],
+      "difficulty": "Hard",
+      "trailType": "Loop",
+      "surface": "Rocky",
+      "description": "A strenuous hike with rewarding views.",
+      "parkName": "Acadia National Park",
+      "stateCode": "ME",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/9845685",
+      "source": "osm"
+    },
+    {
+      "name": "Pemetic Mountain Northwest Trail",
+      "distanceMiles": 1.5,
+      "elevationGainFt": 300,
+      "latitude": 44.33937,
+      "longitude": -68.246675,
+      "coordinates": [
+        [
+          44.341112,
+          -68.2502369
+        ],
+        [
+          44.3373945,
+          -68.2458063
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Loop",
+      "surface": "Dirt",
+      "description": "A scenic trail leading to the summit of Pemetic Mountain.",
+      "parkName": "Acadia National Park",
+      "stateCode": "ME",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/9845688",
+      "source": "osm"
+    },
+    {
+      "name": "Cadillac West Face Trail",
+      "distanceMiles": 2,
+      "elevationGainFt": 600,
+      "latitude": 44.3474407,
+      "longitude": -68.2323054,
+      "coordinates": [
+        [
+          44.3469467,
+          -68.2293885
+        ],
+        [
+          44.3494415,
+          -68.240844
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Out and Back",
+      "surface": "Rocky",
+      "description": "A challenging trail with stunning views of Cadillac Mountain.",
+      "parkName": "Acadia National Park",
+      "stateCode": "ME",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/9845688",
+      "source": "osm"
+    },
+    {
+      "name": "Hunters Brook Trail",
+      "distanceMiles": 3.2,
+      "elevationGainFt": 400,
+      "latitude": 44.321178,
+      "longitude": -68.240981,
+      "coordinates": [
+        [
+          44.3217819,
+          -68.2368211
+        ],
+        [
+          44.321178,
+          -68.240981
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Loop",
+      "surface": "Dirt",
+      "description": "A family-friendly trail that follows Hunters Brook.",
+      "parkName": "Acadia National Park",
+      "stateCode": "ME",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/9845688",
+      "source": "osm"
+    },
+    {
+      "name": "Traid Pass",
+      "distanceMiles": 0.5,
+      "elevationGainFt": 0,
+      "latitude": 44.322546,
+      "longitude": -68.242335,
+      "coordinates": [
+        [
+          44.322546,
+          -68.242335
+        ],
+        [
+          44.322372,
+          -68.242307
+        ],
+        [
+          44.32211,
+          -68.242183
+        ],
+        [
+          44.322008,
+          -68.242114
+        ],
+        [
+          44.321837,
+          -68.241941
+        ],
+        [
+          44.321423,
+          -68.241578
+        ],
+        [
+          44.321358,
+          -68.241496
+        ],
+        [
+          44.321235,
+          -68.241261
+        ],
+        [
+          44.3211116,
+          -68.2410826
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Loop",
+      "surface": "Dirt",
+      "description": "Brief description",
+      "parkName": "Acadia National Park",
+      "stateCode": "ME",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/9845691",
+      "source": "osm"
+    },
+    {
+      "name": "Indian Point Trail",
+      "distanceMiles": 1.2,
+      "elevationGainFt": 0,
+      "latitude": 44.3915483,
+      "longitude": -68.3713434,
+      "coordinates": [
+        [
+          44.3848006,
+          -68.368944
+        ],
+        [
+          44.3843932,
+          -68.3688211
+        ],
+        [
+          44.3842705,
+          -68.3686548
+        ],
+        [
+          44.3842379,
+          -68.3684912
+        ],
+        [
+          44.384284,
+          -68.3679199
+        ],
+        [
+          44.3843146,
+          -68.3673942
+        ],
+        [
+          44.3842664,
+          -68.3672258
+        ],
+        [
+          44.3840824,
+          -68.3670542
+        ],
+        [
+          44.3839638,
+          -68.3670107
+        ],
+        [
+          44.3838105,
+          -68.3670777
+        ],
+        [
+          44.383423,
+          -68.3670327
+        ],
+        [
+          44.3833025,
+          -68.3668765
+        ],
+        [
+          44.383193,
+          -68.3666036
+        ],
+        [
+          44.3830916,
+          -68.3663535
+        ],
+        [
+          44.383055,
+          -68.3657667
+        ],
+        [
+          44.3828863,
+          -68.3652732
+        ],
+        [
+          44.3827934,
+          -68.3651645
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Out and Back",
+      "surface": "Dirt",
+      "description": "Brief description",
+      "parkName": "Acadia National Park",
+      "stateCode": "ME",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/9845691",
+      "source": "osm"
+    },
+    {
+      "name": "Jordan Cliffs Trail",
+      "distanceMiles": 1.8,
+      "elevationGainFt": 0,
+      "latitude": 44.3394069,
+      "longitude": -68.2645677,
+      "coordinates": [
+        [
+          44.335889,
+          -68.2632672
+        ],
+        [
+          44.335834,
+          -68.26325
+        ],
+        [
+          44.335554,
+          -68.262892
+        ],
+        [
+          44.335494,
+          -68.262842
+        ],
+        [
+          44.335409,
+          -68.262824
+        ],
+        [
+          44.33516,
+          -68.262835
+        ],
+        [
+          44.335049,
+          -68.262798
+        ],
+        [
+          44.334895,
+          -68.262703
+        ],
+        [
+          44.334784,
+          -68.262693
+        ],
+        [
+          44.334635,
+          -68.262727
+        ],
+        [
+          44.334262,
+          -68.262714
+        ],
+        [
+          44.334013,
+          -68.262736
+        ],
+        [
+          44.333824,
+          -68.262805
+        ],
+        [
+          44.333671,
+          -68.262924
+        ],
+        [
+          44.333503,
+          -68.263002
+        ],
+        [
+          44.333141,
+          -68.262959
+        ],
+        [
+          44.333012,
+          -68.262997
+        ],
+        [
+          44.332563,
+          -68.263232
+        ],
+        [
+          44.332257,
+          -68.263292
+        ],
+        [
+          44.3321,
+          -68.263275
+        ],
+        [
+          44.331902,
+          -68.263215
+        ],
+        [
+          44.331806,
+          -68.263206
+        ],
+        [
+          44.331387,
+          -68.263241
+        ],
+        [
+          44.330871,
+          -68.263191
+        ],
+        [
+          44.33064,
+          -68.263117
+        ],
+        [
+          44.330365,
+          -68.262971
+        ],
+        [
+          44.330279,
+          -68.262908
+        ],
+        [
+          44.330089,
+          -68.262707
+        ],
+        [
+          44.329793,
+          -68.262535
+        ],
+        [
+          44.329681,
+          -68.262494
+        ],
+        [
+          44.329449,
+          -68.262476
+        ],
+        [
+          44.329134,
+          -68.262405
+        ],
+        [
+          44.328856,
+          -68.262246
+        ],
+        [
+          44.328768,
+          -68.262228
+        ],
+        [
+          44.328639,
+          -68.262259
+        ],
+        [
+          44.32841,
+          -68.262359
+        ],
+        [
+          44.328244,
+          -68.262385
+        ],
+        [
+          44.327643,
+          -68.262216
+        ],
+        [
+          44.327536,
+          -68.262162
+        ],
+        [
+          44.327363,
+          -68.262009
+        ],
+        [
+          44.327269,
+          -68.261975
+        ],
+        [
+          44.32711,
+          -68.26196
+        ],
+        [
+          44.326898,
+          -68.26197
+        ],
+        [
+          44.326831,
+          -68.261946
+        ],
+        [
+          44.326429,
+          -68.261682
+        ],
+        [
+          44.326352,
+          -68.261685
+        ],
+        [
+          44.326257,
+          -68.26172
+        ],
+        [
+          44.326163,
+          -68.261719
+        ],
+        [
+          44.325826,
+          -68.261598
+        ],
+        [
+          44.325281,
+          -68.261243
+        ],
+        [
+          44.325144,
+          -68.261191
+        ],
+        [
+          44.324871,
+          -68.261191
+        ],
+        [
+          44.324579,
+          -68.261037
+        ],
+        [
+          44.324157,
+          -68.260889
+        ],
+        [
+          44.32398,
+          -68.260805
+        ],
+        [
+          44.323524,
+          -68.2607
+        ],
+        [
+          44.323134,
+          -68.260525
+        ],
+        [
+          44.322878,
+          -68.260352
+        ],
+        [
+          44.322774,
+          -68.260338
+        ],
+        [
+          44.32259,
+          -68.260367
+        ],
+        [
+          44.322318,
+          -68.260321
+        ],
+        [
+          44.322033,
+          -68.260229
+        ],
+        [
+          44.321937,
+          -68.260162
+        ],
+        [
+          44.3218778,
+          -68.2601007
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Loop",
+      "surface": "Dirt",
+      "description": "Brief description",
+      "parkName": "Acadia National Park",
+      "stateCode": "ME",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/9845691",
+      "source": "osm"
+    },
+    {
+      "name": "Flying Mountain Trail",
+      "distanceMiles": 1.5,
+      "elevationGainFt": 300,
+      "latitude": 44.3030325,
+      "longitude": -68.3142792,
+      "coordinates": [
+        [
+          44.3071585,
+          -68.3168431
+        ],
+        [
+          44.3056569,
+          -68.3135442
+        ],
+        [
+          44.302168,
+          -68.3142493
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Loop",
+      "surface": "Dirt",
+      "description": "A scenic loop trail with views of the surrounding area.",
+      "parkName": "Acadia National Park",
+      "stateCode": "ME",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/15948308",
+      "source": "osm"
+    },
+    {
+      "name": "Giant Slide Trail",
+      "distanceMiles": 2.8,
+      "elevationGainFt": 600,
+      "latitude": 44.3389001,
+      "longitude": -68.2834339,
+      "coordinates": [
+        [
+          44.350191,
+          -68.3018603
+        ],
+        [
+          44.3389001,
+          -68.2834339
+        ]
+      ],
+      "difficulty": "Hard",
+      "trailType": "Out and Back",
+      "surface": "Rocky",
+      "description": "A challenging trail leading to stunning views from the summit.",
+      "parkName": "Acadia National Park",
+      "stateCode": "ME",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/15948308",
+      "source": "osm"
+    },
+    {
+      "name": "Cadillac-Dorr Connector",
+      "distanceMiles": 3.2,
+      "elevationGainFt": 400,
+      "latitude": 44.3561102,
+      "longitude": -68.2189673,
+      "coordinates": [
+        [
+          44.3561102,
+          -68.2189673
+        ],
+        [
+          44.3559739,
+          -68.2165302
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Connector",
+      "surface": "Gravel",
+      "description": "A connector trail linking Cadillac and Dorr Mountains.",
+      "parkName": "Acadia National Park",
+      "stateCode": "ME",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/15948308",
+      "source": "osm"
+    },
+    {
+      "name": "Hadlock Ponds Trail",
+      "distanceMiles": 2.5,
+      "elevationGainFt": 300,
+      "latitude": 44.3180564,
+      "longitude": -68.2878863,
+      "coordinates": [
+        [
+          44.3180564,
+          -68.2878863
+        ],
+        [
+          44.3181595,
+          -68.2877113
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Loop",
+      "surface": "Dirt",
+      "description": "A scenic trail around Hadlock Ponds with beautiful views.",
+      "parkName": "Acadia National Park",
+      "stateCode": "ME",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/19298197",
+      "source": "osm"
+    }
+  ],
+  "source": "osm",
+  "timestamp": "2026-01-24T23:51:43.777Z",
+  "errors": []
+}

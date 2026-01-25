@@ -1,0 +1,6492 @@
+{
+  "parkName": "Glacier National Park",
+  "parkCode": "glac",
+  "trailsFound": 135,
+  "trails": [
+    {
+      "name": "Forest Road 11080",
+      "distanceMiles": 1.2,
+      "elevationGainFt": 0,
+      "latitude": 48.3805055,
+      "longitude": -114.0492699,
+      "coordinates": [
+        [
+          48.3758098,
+          -114.0492278
+        ],
+        [
+          48.3860746,
+          -114.0516823
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Out and Back",
+      "surface": "Ground",
+      "description": "A scenic forest road suitable for easy hiking.",
+      "parkName": "Glacier National Park",
+      "stateCode": "MT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/5543744",
+      "source": "osm"
+    },
+    {
+      "name": "National Forest Development Road 896",
+      "distanceMiles": 2.5,
+      "elevationGainFt": 200,
+      "latitude": 48.320946,
+      "longitude": -113.83433,
+      "coordinates": [
+        [
+          48.312204,
+          -113.830732
+        ],
+        [
+          48.328415,
+          -113.8375908
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Out and Back",
+      "surface": "Ground",
+      "description": "A scenic route through the national forest.",
+      "parkName": "Glacier National Park",
+      "stateCode": "MT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/5555800",
+      "source": "osm"
+    },
+    {
+      "name": "National Forest Development Road 896",
+      "distanceMiles": 1.5,
+      "elevationGainFt": 0,
+      "latitude": 48.3490543,
+      "longitude": -113.9023866,
+      "coordinates": [
+        [
+          48.3508845,
+          -113.8999437
+        ],
+        [
+          48.3510378,
+          -113.8986641
+        ],
+        [
+          48.3515483,
+          -113.8977901
+        ],
+        [
+          48.351409,
+          -113.897488
+        ],
+        [
+          48.3510602,
+          -113.897924
+        ],
+        [
+          48.3502644,
+          -113.899123
+        ],
+        [
+          48.3497624,
+          -113.8998646
+        ],
+        [
+          48.349904,
+          -113.901276
+        ],
+        [
+          48.3496762,
+          -113.901787
+        ],
+        [
+          48.3490543,
+          -113.9023866
+        ],
+        [
+          48.3484324,
+          -113.9026546
+        ],
+        [
+          48.348234,
+          -113.9032751
+        ],
+        [
+          48.3479492,
+          -113.9041958
+        ],
+        [
+          48.3473661,
+          -113.9049467
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Track",
+      "surface": "Gravel",
+      "description": "A gravel road through the national forest.",
+      "parkName": "Glacier National Park",
+      "stateCode": "MT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/5556609",
+      "source": "osm"
+    },
+    {
+      "name": "Forest Road 895A",
+      "distanceMiles": 1.5,
+      "elevationGainFt": 0,
+      "latitude": 48.292658,
+      "longitude": -114.0218069,
+      "coordinates": [
+        [
+          48.2801425,
+          -114.0510851
+        ],
+        [
+          48.2810972,
+          -114.0461991
+        ],
+        [
+          48.2841547,
+          -114.0415557
+        ],
+        [
+          48.2859933,
+          -114.0358709
+        ],
+        [
+          48.2873856,
+          -114.0283159
+        ],
+        [
+          48.2913363,
+          -114.0218069
+        ],
+        [
+          48.2916461,
+          -114.0129537
+        ],
+        [
+          48.29379,
+          -114.003428
+        ],
+        [
+          48.295381,
+          -113.998195
+        ],
+        [
+          48.2989305,
+          -113.991306
+        ],
+        [
+          48.3018732,
+          -113.9878316
+        ],
+        [
+          48.3050556,
+          -113.9836033
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Track",
+      "surface": "Gravel",
+      "description": "A gravel road suitable for vehicles.",
+      "parkName": "Glacier National Park",
+      "stateCode": "MT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/5556609",
+      "source": "osm"
+    },
+    {
+      "name": "Haskil Basin Road",
+      "distanceMiles": 0.8,
+      "elevationGainFt": 0,
+      "latitude": 48.4409999,
+      "longitude": -114.2827168,
+      "coordinates": [
+        [
+          48.4412384,
+          -114.2827383
+        ],
+        [
+          48.4411156,
+          -114.282749
+        ],
+        [
+          48.4409999,
+          -114.2827168
+        ],
+        [
+          48.4407375,
+          -114.2826028
+        ],
+        [
+          48.440604,
+          -114.2825076
+        ],
+        [
+          48.4402232,
+          -114.2820919
+        ],
+        [
+          48.4396683,
+          -114.2815901
+        ],
+        [
+          48.439387,
+          -114.2815243
+        ],
+        [
+          48.4391152,
+          -114.2815086
+        ],
+        [
+          48.4389243,
+          -114.2813836
+        ],
+        [
+          48.438776,
+          -114.2811809
+        ],
+        [
+          48.438599,
+          -114.280355
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Track",
+      "surface": "Dirt",
+      "description": "A dirt road leading to Haskil Basin.",
+      "parkName": "Glacier National Park",
+      "stateCode": "MT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/5556609",
+      "source": "osm"
+    },
+    {
+      "name": "Lost Johnny Road",
+      "distanceMiles": 4.1,
+      "elevationGainFt": 0,
+      "latitude": 48.2397311,
+      "longitude": -114.0088428,
+      "coordinates": [
+        [
+          48.2397311,
+          -114.0088428
+        ],
+        [
+          48.2432729,
+          -114.0036613
+        ],
+        [
+          48.2496435,
+          -114.0005812
+        ],
+        [
+          48.2563163,
+          -114.0000522
+        ],
+        [
+          48.2621601,
+          -114.0000539
+        ],
+        [
+          48.268292,
+          -113.996973
+        ],
+        [
+          48.2734567,
+          -113.9868953
+        ],
+        [
+          48.279975,
+          -113.9798778
+        ],
+        [
+          48.2865833,
+          -113.9773743
+        ],
+        [
+          48.2912728,
+          -113.9762894
+        ],
+        [
+          48.3037802,
+          -113.9699868
+        ],
+        [
+          48.3054293,
+          -113.9697955
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Track",
+      "surface": "Gravel",
+      "description": "A scenic road through the forest.",
+      "parkName": "Glacier National Park",
+      "stateCode": "MT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/5720281",
+      "source": "osm"
+    },
+    {
+      "name": "Forest Road 38B",
+      "distanceMiles": 1.5,
+      "elevationGainFt": 0,
+      "latitude": 48.3330648,
+      "longitude": -113.8781589,
+      "coordinates": [
+        [
+          48.3330648,
+          -113.8781589
+        ],
+        [
+          48.3294637,
+          -113.8715018
+        ],
+        [
+          48.3256588,
+          -113.8627553
+        ],
+        [
+          48.3218101,
+          -113.8552129
+        ],
+        [
+          48.3197055,
+          -113.8521391
+        ],
+        [
+          48.3193845,
+          -113.8504762
+        ],
+        [
+          48.3154604,
+          -113.8492423
+        ],
+        [
+          48.3199268,
+          -113.846121
+        ],
+        [
+          48.3253272,
+          -113.8479185
+        ],
+        [
+          48.3273377,
+          -113.8444259
+        ],
+        [
+          48.3272873,
+          -113.8412802
+        ],
+        [
+          48.3284251,
+          -113.837349
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Track",
+      "surface": "Ground",
+      "description": "A forest road suitable for vehicles and hikers.",
+      "parkName": "Glacier National Park",
+      "stateCode": "MT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/5720281",
+      "source": "osm"
+    },
+    {
+      "name": "National Forest Development Road 38",
+      "distanceMiles": 0.5,
+      "elevationGainFt": 0,
+      "latitude": 48.3292879,
+      "longitude": -113.9559984,
+      "coordinates": [
+        [
+          48.3292879,
+          -113.9559984
+        ],
+        [
+          48.3294371,
+          -113.9558924
+        ],
+        [
+          48.3296225,
+          -113.9558727
+        ],
+        [
+          48.3299028,
+          -113.9558355
+        ],
+        [
+          48.3303388,
+          -113.9558774
+        ],
+        [
+          48.3307334,
+          -113.9560284
+        ],
+        [
+          48.3315082,
+          -113.956468
+        ],
+        [
+          48.3316274,
+          -113.956442
+        ],
+        [
+          48.3316332,
+          -113.9560279
+        ],
+        [
+          48.3316582,
+          -113.9553598
+        ],
+        [
+          48.3318173,
+          -113.9551958
+        ],
+        [
+          48.3319941,
+          -113.9551714
+        ],
+        [
+          48.3321474,
+          -113.9550239
+        ],
+        [
+          48.3324748,
+          -113.9548128
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Track",
+      "surface": "Gravel",
+      "description": "A well-maintained road for forest access.",
+      "parkName": "Glacier National Park",
+      "stateCode": "MT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/5720281",
+      "source": "osm"
+    },
+    {
+      "name": "Oldman Lake",
+      "distanceMiles": 1.5,
+      "elevationGainFt": 200,
+      "latitude": 48.5125228,
+      "longitude": -113.4551566,
+      "coordinates": [
+        [
+          48.5116434,
+          -113.4449071
+        ],
+        [
+          48.5113443,
+          -113.4457332
+        ],
+        [
+          48.5109788,
+          -113.4477013
+        ],
+        [
+          48.5110196,
+          -113.4495859
+        ],
+        [
+          48.5112479,
+          -113.4509456
+        ],
+        [
+          48.5113702,
+          -113.452703
+        ],
+        [
+          48.5116046,
+          -113.454647
+        ],
+        [
+          48.5119506,
+          -113.4561249
+        ],
+        [
+          48.5125228,
+          -113.4551566
+        ],
+        [
+          48.5128306,
+          -113.4543711
+        ],
+        [
+          48.5132086,
+          -113.4533294
+        ],
+        [
+          48.5134067,
+          -113.4521165
+        ],
+        [
+          48.5134735,
+          -113.4519956
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Loop",
+      "surface": "Dirt",
+      "description": "A scenic trail leading to Oldman Lake.",
+      "parkName": "Glacier National Park",
+      "stateCode": "MT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/82483441",
+      "source": "osm"
+    },
+    {
+      "name": "No Name Lake",
+      "distanceMiles": 1.2,
+      "elevationGainFt": 150,
+      "latitude": 48.4801508,
+      "longitude": -113.4461895,
+      "coordinates": [
+        [
+          48.4811273,
+          -113.4459473
+        ],
+        [
+          48.4808654,
+          -113.4460539
+        ],
+        [
+          48.4805643,
+          -113.4461365
+        ],
+        [
+          48.4802678,
+          -113.4459346
+        ],
+        [
+          48.4801508,
+          -113.4461895
+        ],
+        [
+          48.4801382,
+          -113.4467119
+        ],
+        [
+          48.4802879,
+          -113.4473293
+        ],
+        [
+          48.4802374,
+          -113.4478224
+        ],
+        [
+          48.4801369,
+          -113.4484277
+        ],
+        [
+          48.4799848,
+          -113.4489707
+        ],
+        [
+          48.4798585,
+          -113.4491885
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Out and Back",
+      "surface": "Ground",
+      "description": "A short and easy trail to No Name Lake.",
+      "parkName": "Glacier National Park",
+      "stateCode": "MT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/82483441",
+      "source": "osm"
+    },
+    {
+      "name": "Nyack Creek",
+      "distanceMiles": 5.2,
+      "elevationGainFt": 1200,
+      "latitude": 48.4504391,
+      "longitude": -113.7935438,
+      "coordinates": [
+        [
+          48.4504391,
+          -113.7935438
+        ],
+        [
+          48.4626557,
+          -113.7598096
+        ],
+        [
+          48.4744824,
+          -113.7305455
+        ],
+        [
+          48.4909138,
+          -113.7007284
+        ],
+        [
+          48.5012798,
+          -113.6762881
+        ],
+        [
+          48.5245882,
+          -113.6567617
+        ],
+        [
+          48.5351426,
+          -113.6396974
+        ],
+        [
+          48.5478059,
+          -113.6165972
+        ],
+        [
+          48.5488934,
+          -113.5719406
+        ],
+        [
+          48.5372049,
+          -113.533507
+        ],
+        [
+          48.5110207,
+          -113.5258098
+        ],
+        [
+          48.5103335,
+          -113.5259652
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Linear",
+      "surface": "Ground",
+      "description": "A scenic trail along Nyack Creek.",
+      "parkName": "Glacier National Park",
+      "stateCode": "MT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/82582897",
+      "source": "osm"
+    },
+    {
+      "name": "Two Medicine Pass",
+      "distanceMiles": 0.5,
+      "elevationGainFt": 300,
+      "latitude": 48.4354006,
+      "longitude": -113.4254143,
+      "coordinates": [
+        [
+          48.4361724,
+          -113.4254143
+        ],
+        [
+          48.4361622,
+          -113.4253775
+        ],
+        [
+          48.436102,
+          -113.4253332
+        ],
+        [
+          48.4358725,
+          -113.4253665
+        ],
+        [
+          48.4358225,
+          -113.4253474
+        ],
+        [
+          48.4356347,
+          -113.4253655
+        ],
+        [
+          48.4355708,
+          -113.4253149
+        ],
+        [
+          48.4355411,
+          -113.42526
+        ],
+        [
+          48.4355251,
+          -113.4251032
+        ],
+        [
+          48.4354549,
+          -113.425002
+        ],
+        [
+          48.4354611,
+          -113.4248619
+        ],
+        [
+          48.4354006,
+          -113.4248114
+        ],
+        [
+          48.4354229,
+          -113.4246973
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Linear",
+      "surface": "Ground",
+      "description": "A short but steep trail leading to Two Medicine Pass.",
+      "parkName": "Glacier National Park",
+      "stateCode": "MT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/82582897",
+      "source": "osm"
+    },
+    {
+      "name": "Paradise Point",
+      "distanceMiles": 1.2,
+      "elevationGainFt": 150,
+      "latitude": 48.4806504,
+      "longitude": -113.3706392,
+      "coordinates": [
+        [
+          48.4806504,
+          -113.3706392
+        ],
+        [
+          48.4808675,
+          -113.3709894
+        ],
+        [
+          48.4807045,
+          -113.3714979
+        ],
+        [
+          48.4805449,
+          -113.3720812
+        ],
+        [
+          48.4802303,
+          -113.3725223
+        ],
+        [
+          48.4801372,
+          -113.3732038
+        ],
+        [
+          48.4804004,
+          -113.3740923
+        ],
+        [
+          48.4806765,
+          -113.374516
+        ],
+        [
+          48.4808689,
+          -113.3750033
+        ],
+        [
+          48.4815179,
+          -113.3755828
+        ],
+        [
+          48.4815153,
+          -113.3761889
+        ],
+        [
+          48.4818647,
+          -113.3764834
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Loop",
+      "surface": "Ground",
+      "description": "A gentle trail leading to scenic views at Paradise Point.",
+      "parkName": "Glacier National Park",
+      "stateCode": "MT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/82582897",
+      "source": "osm"
+    },
+    {
+      "name": "Huckleberry Mtn Interpretive",
+      "distanceMiles": 0.5,
+      "elevationGainFt": 0,
+      "latitude": 48.6244908,
+      "longitude": -114.1295657,
+      "coordinates": [
+        [
+          48.6244908,
+          -114.1295657
+        ],
+        [
+          48.6233564,
+          -114.1299248
+        ],
+        [
+          48.6224485,
+          -114.1300547
+        ],
+        [
+          48.6214528,
+          -114.1305285
+        ],
+        [
+          48.6207347,
+          -114.1310717
+        ],
+        [
+          48.6199694,
+          -114.1318148
+        ],
+        [
+          48.6201751,
+          -114.1326603
+        ],
+        [
+          48.6207169,
+          -114.1334091
+        ],
+        [
+          48.6217333,
+          -114.1325781
+        ],
+        [
+          48.6226243,
+          -114.1315808
+        ],
+        [
+          48.6235612,
+          -114.1297984
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Footway",
+      "surface": "Dirt",
+      "description": "A scenic interpretive trail with views of Huckleberry Mountain.",
+      "parkName": "Glacier National Park",
+      "stateCode": "MT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/82582971",
+      "source": "osm"
+    },
+    {
+      "name": "Sperry Loading Ramp Trail",
+      "distanceMiles": 0.5,
+      "elevationGainFt": 0,
+      "latitude": 48.6188397,
+      "longitude": -113.8746338,
+      "coordinates": [
+        [
+          48.6188397,
+          -113.8746338
+        ],
+        [
+          48.6189101,
+          -113.8745144
+        ],
+        [
+          48.6190304,
+          -113.8743825
+        ],
+        [
+          48.6191222,
+          -113.8741836
+        ],
+        [
+          48.6192275,
+          -113.8740548
+        ],
+        [
+          48.619289,
+          -113.8739317
+        ],
+        [
+          48.6193297,
+          -113.8738323
+        ],
+        [
+          48.6194004,
+          -113.8734392
+        ],
+        [
+          48.6194436,
+          -113.8733084
+        ],
+        [
+          48.6194421,
+          -113.8732104
+        ],
+        [
+          48.6194255,
+          -113.8731672
+        ],
+        [
+          48.6193998,
+          -113.8731003
+        ],
+        [
+          48.6192991,
+          -113.8729928
+        ],
+        [
+          48.6193231,
+          -113.8727507
+        ],
+        [
+          48.6192885,
+          -113.8726966
+        ],
+        [
+          48.6192603,
+          -113.8725622
+        ],
+        [
+          48.6192842,
+          -113.872276
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Footway",
+      "surface": "Dirt",
+      "description": "A loading ramp trail providing access to Sperry Glacier.",
+      "parkName": "Glacier National Park",
+      "stateCode": "MT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/82582971",
+      "source": "osm"
+    },
+    {
+      "name": "Mt Henry / Appistoki Falls trail",
+      "distanceMiles": 1.5,
+      "elevationGainFt": 300,
+      "latitude": 48.4851271,
+      "longitude": -113.3615637,
+      "coordinates": [
+        [
+          48.4851271,
+          -113.3615637
+        ],
+        [
+          48.4853465,
+          -113.3605168
+        ],
+        [
+          48.4851291,
+          -113.359542
+        ],
+        [
+          48.4850051,
+          -113.3586687
+        ],
+        [
+          48.4850533,
+          -113.3575851
+        ],
+        [
+          48.4853366,
+          -113.3564628
+        ],
+        [
+          48.4854847,
+          -113.3550811
+        ],
+        [
+          48.485552,
+          -113.3536753
+        ],
+        [
+          48.485102,
+          -113.3527872
+        ],
+        [
+          48.4845623,
+          -113.3528314
+        ],
+        [
+          48.4838107,
+          -113.3532515
+        ],
+        [
+          48.4832019,
+          -113.3529556
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Footway",
+      "surface": "Unpaved",
+      "description": "A trail leading to stunning views of Appistoki Falls.",
+      "parkName": "Glacier National Park",
+      "stateCode": "MT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/82582971",
+      "source": "osm"
+    },
+    {
+      "name": "Swiftcurrent Lake",
+      "distanceMiles": 0.2,
+      "elevationGainFt": 0,
+      "latitude": 48.789022,
+      "longitude": -113.666396,
+      "coordinates": [
+        [
+          48.7889982,
+          -113.6665323
+        ],
+        [
+          48.7889898,
+          -113.6663414
+        ],
+        [
+          48.7890562,
+          -113.6662608
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Out and Back",
+      "surface": "Dirt",
+      "description": "A scenic trail around Swiftcurrent Lake.",
+      "parkName": "Glacier National Park",
+      "stateCode": "MT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/82583065",
+      "source": "osm"
+    },
+    {
+      "name": "Ahern Pass Overlook",
+      "distanceMiles": 0.5,
+      "elevationGainFt": 0,
+      "latitude": 48.821075,
+      "longitude": -113.769438,
+      "coordinates": [
+        [
+          48.8193484,
+          -113.7737637
+        ],
+        [
+          48.8216014,
+          -113.7660647
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Out and Back",
+      "surface": "Dirt",
+      "description": "A trail leading to an overlook of Ahern Pass.",
+      "parkName": "Glacier National Park",
+      "stateCode": "MT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/82583065",
+      "source": "osm"
+    },
+    {
+      "name": "Medicine Grizzly",
+      "distanceMiles": 3.5,
+      "elevationGainFt": 300,
+      "latitude": 48.5705093,
+      "longitude": -113.481549,
+      "coordinates": [
+        [
+          48.5739634,
+          -113.461919
+        ],
+        [
+          48.5667998,
+          -113.4992677
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Loop",
+      "surface": "Ground",
+      "description": "A trail through the Medicine Grizzly area.",
+      "parkName": "Glacier National Park",
+      "stateCode": "MT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/82583065",
+      "source": "osm"
+    },
+    {
+      "name": "Twin Falls",
+      "distanceMiles": 0.5,
+      "elevationGainFt": 0,
+      "latitude": 48.4754,
+      "longitude": -113.4255,
+      "coordinates": [
+        [
+          48.4749486,
+          -113.424984
+        ],
+        [
+          48.475859,
+          -113.426132
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Footway",
+      "surface": "Dirt",
+      "description": "A scenic trail leading to Twin Falls.",
+      "parkName": "Glacier National Park",
+      "stateCode": "MT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/82583151",
+      "source": "osm"
+    },
+    {
+      "name": "Mad Wolf Boundary",
+      "distanceMiles": 1.5,
+      "elevationGainFt": 0,
+      "latitude": 48.5929935,
+      "longitude": -113.3926602,
+      "coordinates": [
+        [
+          48.6004591,
+          -113.3887398
+        ],
+        [
+          48.584985,
+          -113.3705304
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Footway",
+      "surface": "Dirt",
+      "description": "A boundary trail with beautiful views.",
+      "parkName": "Glacier National Park",
+      "stateCode": "MT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/82583151",
+      "source": "osm"
+    },
+    {
+      "name": "Dry Fork",
+      "distanceMiles": 3.2,
+      "elevationGainFt": 0,
+      "latitude": 48.511,
+      "longitude": -113.334,
+      "coordinates": [
+        [
+          48.5051354,
+          -113.3292202
+        ],
+        [
+          48.5143174,
+          -113.3779332
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Footway",
+      "surface": "Dirt",
+      "description": "A trail following the Dry Fork river.",
+      "parkName": "Glacier National Park",
+      "stateCode": "MT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/82583151",
+      "source": "osm"
+    },
+    {
+      "name": "Martha's Basin",
+      "distanceMiles": 0.5,
+      "elevationGainFt": 0,
+      "latitude": 48.478,
+      "longitude": -113.566,
+      "coordinates": [
+        [
+          48.4802857,
+          -113.558194
+        ],
+        [
+          48.480281,
+          -113.558329
+        ],
+        [
+          48.4801485,
+          -113.5621086
+        ],
+        [
+          48.4795811,
+          -113.5633808
+        ],
+        [
+          48.4790299,
+          -113.566181
+        ],
+        [
+          48.4788347,
+          -113.5676228
+        ],
+        [
+          48.4780639,
+          -113.5701478
+        ],
+        [
+          48.477051,
+          -113.5739613
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Loop",
+      "surface": "Ground",
+      "description": "A scenic loop trail around Martha's Basin.",
+      "parkName": "Glacier National Park",
+      "stateCode": "MT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/82583194",
+      "source": "osm"
+    },
+    {
+      "name": "Two Medecine Boat Dock",
+      "distanceMiles": 0.4,
+      "elevationGainFt": 0,
+      "latitude": 48.474,
+      "longitude": -113.409,
+      "coordinates": [
+        [
+          48.474806,
+          -113.4109029
+        ],
+        [
+          48.4747874,
+          -113.4108005
+        ],
+        [
+          48.4746799,
+          -113.4104346
+        ],
+        [
+          48.4747046,
+          -113.4103625
+        ],
+        [
+          48.4747269,
+          -113.4102103
+        ],
+        [
+          48.4747248,
+          -113.4101631
+        ],
+        [
+          48.4746778,
+          -113.4100541
+        ],
+        [
+          48.4746714,
+          -113.4098868
+        ],
+        [
+          48.474575,
+          -113.4097304
+        ],
+        [
+          48.4745751,
+          -113.4096967
+        ],
+        [
+          48.4744567,
+          -113.4094106
+        ],
+        [
+          48.4742757,
+          -113.4091788
+        ],
+        [
+          48.474303,
+          -113.4090966
+        ],
+        [
+          48.4743532,
+          -113.4090563
+        ],
+        [
+          48.4743066,
+          -113.4088841
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Out and Back",
+      "surface": "Ground",
+      "description": "A short trail leading to the Two Medecine Boat Dock.",
+      "parkName": "Glacier National Park",
+      "stateCode": "MT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/82583194",
+      "source": "osm"
+    },
+    {
+      "name": "Two Medecine South Shore",
+      "distanceMiles": 1.2,
+      "elevationGainFt": 0,
+      "latitude": 48.465,
+      "longitude": -113.392,
+      "coordinates": [
+        [
+          48.4658993,
+          -113.3886577
+        ],
+        [
+          48.4650929,
+          -113.3893231
+        ],
+        [
+          48.4642061,
+          -113.3904996
+        ],
+        [
+          48.4632203,
+          -113.3915744
+        ],
+        [
+          48.4630806,
+          -113.3927082
+        ],
+        [
+          48.4630774,
+          -113.3934737
+        ],
+        [
+          48.4626526,
+          -113.3945937
+        ],
+        [
+          48.4640604,
+          -113.3964421
+        ],
+        [
+          48.4644336,
+          -113.3964644
+        ],
+        [
+          48.4647719,
+          -113.3964094
+        ],
+        [
+          48.4657147,
+          -113.3964737
+        ],
+        [
+          48.4661987,
+          -113.3962742
+        ],
+        [
+          48.4663809,
+          -113.3961307
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Loop",
+      "surface": "Ground",
+      "description": "A pleasant trail along the south shore of Two Medecine.",
+      "parkName": "Glacier National Park",
+      "stateCode": "MT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/82583194",
+      "source": "osm"
+    },
+    {
+      "name": "Loneman Lookout",
+      "distanceMiles": 2.5,
+      "elevationGainFt": 300,
+      "latitude": 48.4538265,
+      "longitude": -113.7988489,
+      "coordinates": [
+        [
+          48.4538265,
+          -113.7988489
+        ],
+        [
+          48.4607474,
+          -113.8016036
+        ],
+        [
+          48.4645868,
+          -113.7941396
+        ],
+        [
+          48.4699716,
+          -113.7868021
+        ],
+        [
+          48.474174,
+          -113.7825394
+        ],
+        [
+          48.4766952,
+          -113.7806981
+        ],
+        [
+          48.4841937,
+          -113.7807394
+        ],
+        [
+          48.4926858,
+          -113.7795747
+        ],
+        [
+          48.4899209,
+          -113.7744187
+        ],
+        [
+          48.4863895,
+          -113.7701928
+        ],
+        [
+          48.4890046,
+          -113.7695349
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Out and Back",
+      "surface": "Dirt",
+      "description": "A scenic trail leading to a lookout point.",
+      "parkName": "Glacier National Park",
+      "stateCode": "MT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/82583300",
+      "source": "osm"
+    },
+    {
+      "name": "Divide Creek",
+      "distanceMiles": 2,
+      "elevationGainFt": 200,
+      "latitude": 48.6934079,
+      "longitude": -113.4219571,
+      "coordinates": [
+        [
+          48.6934079,
+          -113.4219571
+        ],
+        [
+          48.6968012,
+          -113.4222091
+        ],
+        [
+          48.6992055,
+          -113.4229697
+        ],
+        [
+          48.7023639,
+          -113.4240177
+        ],
+        [
+          48.7039782,
+          -113.4277391
+        ],
+        [
+          48.7025639,
+          -113.4302836
+        ],
+        [
+          48.7024582,
+          -113.4329849
+        ],
+        [
+          48.7003982,
+          -113.4372236
+        ],
+        [
+          48.6988437,
+          -113.4411636
+        ],
+        [
+          48.7001833,
+          -113.44231
+        ],
+        [
+          48.7039343,
+          -113.4432197
+        ],
+        [
+          48.7059117,
+          -113.4447325
+        ],
+        [
+          48.7068644,
+          -113.4444018
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Loop",
+      "surface": "Ground",
+      "description": "A gentle trail along Divide Creek.",
+      "parkName": "Glacier National Park",
+      "stateCode": "MT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/82583300",
+      "source": "osm"
+    },
+    {
+      "name": "McGee Meadow Ski Trail",
+      "distanceMiles": 1,
+      "elevationGainFt": 100,
+      "latitude": 48.5952822,
+      "longitude": -114.0250898,
+      "coordinates": [
+        [
+          48.5952822,
+          -114.0250898
+        ],
+        [
+          48.5952781,
+          -114.0251687
+        ],
+        [
+          48.5954406,
+          -114.0265845
+        ],
+        [
+          48.5956463,
+          -114.0273157
+        ],
+        [
+          48.5952143,
+          -114.0283479
+        ],
+        [
+          48.594822,
+          -114.0292333
+        ],
+        [
+          48.5948218,
+          -114.0299251
+        ],
+        [
+          48.5955938,
+          -114.0306775
+        ],
+        [
+          48.5957934,
+          -114.0316386
+        ],
+        [
+          48.5962949,
+          -114.0327538
+        ],
+        [
+          48.5968056,
+          -114.0331778
+        ],
+        [
+          48.5973175,
+          -114.0342394
+        ],
+        [
+          48.5974249,
+          -114.0343532
+        ],
+        [
+          48.5975543,
+          -114.0344343
+        ],
+        [
+          48.5975956,
+          -114.0345604
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Loop",
+      "surface": "Dirt",
+      "description": "A short ski trail through McGee Meadow.",
+      "parkName": "Glacier National Park",
+      "stateCode": "MT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/82583300",
+      "source": "osm"
+    },
+    {
+      "name": "Surprise Pass",
+      "distanceMiles": 2.1,
+      "elevationGainFt": 0,
+      "latitude": 48.493,
+      "longitude": -113.543,
+      "coordinates": [
+        [
+          48.5103335,
+          -113.5259652
+        ],
+        [
+          48.4764224,
+          -113.5572995
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Loop",
+      "surface": "Ground",
+      "description": "A scenic trail leading through Surprise Pass.",
+      "parkName": "Glacier National Park",
+      "stateCode": "MT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/82583400",
+      "source": "osm"
+    },
+    {
+      "name": "Fielding",
+      "distanceMiles": 6.5,
+      "elevationGainFt": 0,
+      "latitude": 48.412,
+      "longitude": -113.61,
+      "coordinates": [
+        [
+          48.3134829,
+          -113.4866337
+        ],
+        [
+          48.412165,
+          -113.6104186
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Point-to-Point",
+      "surface": "Ground",
+      "description": "A long trail connecting various scenic points.",
+      "parkName": "Glacier National Park",
+      "stateCode": "MT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/82583400",
+      "source": "osm"
+    },
+    {
+      "name": "Two Medicine South Shore",
+      "distanceMiles": 1.5,
+      "elevationGainFt": 0,
+      "latitude": 48.475,
+      "longitude": -113.375,
+      "coordinates": [
+        [
+          48.4832962,
+          -113.3694904
+        ],
+        [
+          48.4677616,
+          -113.4471088
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Loop",
+      "surface": "Ground",
+      "description": "A gentle trail along the south shore of Two Medicine.",
+      "parkName": "Glacier National Park",
+      "stateCode": "MT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/82583400",
+      "source": "osm"
+    },
+    {
+      "name": "Nyack Pack Trail",
+      "distanceMiles": 1,
+      "elevationGainFt": 0,
+      "latitude": 48.4476585,
+      "longitude": -113.7997687,
+      "coordinates": [
+        [
+          48.4435849,
+          -113.8032123
+        ],
+        [
+          48.4521676,
+          -113.7958558
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Linear",
+      "surface": "Dirt",
+      "description": "A scenic trail through the Nyack area.",
+      "parkName": "Glacier National Park",
+      "stateCode": "MT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/82583509",
+      "source": "osm"
+    },
+    {
+      "name": "Trail of the Cedars",
+      "distanceMiles": 0.2,
+      "elevationGainFt": 0,
+      "latitude": 48.6806463,
+      "longitude": -113.8188772,
+      "coordinates": [
+        [
+          48.6807313,
+          -113.819074
+        ],
+        [
+          48.6805613,
+          -113.8186806
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Linear",
+      "surface": "Dirt",
+      "description": "A short, easy trail surrounded by cedar trees.",
+      "parkName": "Glacier National Park",
+      "stateCode": "MT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/82583509",
+      "source": "osm"
+    },
+    {
+      "name": "Appistoki Falls",
+      "distanceMiles": 0.5,
+      "elevationGainFt": 0,
+      "latitude": 48.4829333,
+      "longitude": -113.3526314,
+      "coordinates": [
+        [
+          48.4832019,
+          -113.3529556
+        ],
+        [
+          48.4826662,
+          -113.3524393
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Loop",
+      "surface": "Unpaved",
+      "description": "A trail leading to the beautiful Appistoki Falls.",
+      "parkName": "Glacier National Park",
+      "stateCode": "MT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/82583509",
+      "source": "osm"
+    },
+    {
+      "name": "Milk River Ridge Bdy",
+      "distanceMiles": 1.2,
+      "elevationGainFt": 200,
+      "latitude": 48.6118201,
+      "longitude": -113.3759385,
+      "coordinates": [
+        [
+          48.6057416,
+          -113.3768259
+        ],
+        [
+          48.6168892,
+          -113.3718132
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Footway",
+      "surface": "Dirt",
+      "description": "A scenic trail along the Milk River Ridge.",
+      "parkName": "Glacier National Park",
+      "stateCode": "MT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/82583549",
+      "source": "osm"
+    },
+    {
+      "name": "Lake McDonald Trail",
+      "distanceMiles": 2.5,
+      "elevationGainFt": 300,
+      "latitude": 48.6239714,
+      "longitude": -113.9084281,
+      "coordinates": [
+        [
+          48.6085414,
+          -113.9148774
+        ],
+        [
+          48.6239714,
+          -113.9084281
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Footway",
+      "surface": "Dirt",
+      "description": "A beautiful trail with views of Lake McDonald.",
+      "parkName": "Glacier National Park",
+      "stateCode": "MT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/82583549",
+      "source": "osm"
+    },
+    {
+      "name": "Triple Divide",
+      "distanceMiles": 5.5,
+      "elevationGainFt": 1500,
+      "latitude": 48.655263,
+      "longitude": -113.500424,
+      "coordinates": [
+        [
+          48.655263,
+          -113.500424
+        ],
+        [
+          48.5756503,
+          -113.4482125
+        ]
+      ],
+      "difficulty": "Hard",
+      "trailType": "Footway",
+      "surface": "Ground",
+      "description": "Challenging trail with stunning views at the Triple Divide.",
+      "parkName": "Glacier National Park",
+      "stateCode": "MT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/82583549",
+      "source": "osm"
+    },
+    {
+      "name": "Dawson Pass",
+      "distanceMiles": 3.5,
+      "elevationGainFt": 600,
+      "latitude": 48.5172625,
+      "longitude": -113.4624536,
+      "coordinates": [
+        [
+          48.5172625,
+          -113.4624536
+        ],
+        [
+          48.4988985,
+          -113.4714798
+        ],
+        [
+          48.4883494,
+          -113.4684387
+        ],
+        [
+          48.4857349,
+          -113.4548592
+        ],
+        [
+          48.4814635,
+          -113.4431577
+        ],
+        [
+          48.479126,
+          -113.4304504
+        ],
+        [
+          48.4777331,
+          -113.4206319
+        ],
+        [
+          48.4780888,
+          -113.4064935
+        ],
+        [
+          48.4785237,
+          -113.3918975
+        ],
+        [
+          48.4842204,
+          -113.38113
+        ],
+        [
+          48.4915513,
+          -113.3671699
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Footpath",
+      "surface": "Ground",
+      "description": "A scenic trail leading to Dawson Pass.",
+      "parkName": "Glacier National Park",
+      "stateCode": "MT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/82583653",
+      "source": "osm"
+    },
+    {
+      "name": "Pitamakan Pass",
+      "distanceMiles": 4.2,
+      "elevationGainFt": 800,
+      "latitude": 48.4915513,
+      "longitude": -113.3671699,
+      "coordinates": [
+        [
+          48.4915513,
+          -113.3671699
+        ],
+        [
+          48.5066235,
+          -113.3676193
+        ],
+        [
+          48.5165658,
+          -113.3878237
+        ],
+        [
+          48.5146372,
+          -113.4058185
+        ],
+        [
+          48.5139271,
+          -113.4284365
+        ],
+        [
+          48.5122384,
+          -113.4464179
+        ],
+        [
+          48.5176067,
+          -113.4581689
+        ],
+        [
+          48.524737,
+          -113.4576501
+        ],
+        [
+          48.5387169,
+          -113.4513758
+        ],
+        [
+          48.5505117,
+          -113.4525475
+        ],
+        [
+          48.5732207,
+          -113.4501771
+        ],
+        [
+          48.5756503,
+          -113.4482125
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Footpath",
+      "surface": "Ground",
+      "description": "A challenging trail with stunning views at Pitamakan Pass.",
+      "parkName": "Glacier National Park",
+      "stateCode": "MT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/82583653",
+      "source": "osm"
+    },
+    {
+      "name": "Martha's Basin",
+      "distanceMiles": 1.5,
+      "elevationGainFt": 200,
+      "latitude": 48.4765824,
+      "longitude": -113.5847963,
+      "coordinates": [
+        [
+          48.4765824,
+          -113.5847963
+        ],
+        [
+          48.4767794,
+          -113.5821671
+        ],
+        [
+          48.4772687,
+          -113.5806451
+        ],
+        [
+          48.4774349,
+          -113.5796521
+        ],
+        [
+          48.4775155,
+          -113.5784653
+        ],
+        [
+          48.477051,
+          -113.5739613
+        ],
+        [
+          48.4792261,
+          -113.5747878
+        ],
+        [
+          48.4810453,
+          -113.5739211
+        ],
+        [
+          48.481987,
+          -113.5736575
+        ],
+        [
+          48.4828505,
+          -113.5744727
+        ],
+        [
+          48.4843246,
+          -113.5738016
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Footpath",
+      "surface": "Ground",
+      "description": "A short and easy trail leading to Martha's Basin.",
+      "parkName": "Glacier National Park",
+      "stateCode": "MT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/82583653",
+      "source": "osm"
+    },
+    {
+      "name": "Two Medicine Pass",
+      "distanceMiles": 2.5,
+      "elevationGainFt": 300,
+      "latitude": 48.4636595,
+      "longitude": -113.3966877,
+      "coordinates": [
+        [
+          48.4636595,
+          -113.3966877
+        ],
+        [
+          48.4564304,
+          -113.3997827
+        ],
+        [
+          48.4525902,
+          -113.4040118
+        ],
+        [
+          48.4503846,
+          -113.4117156
+        ],
+        [
+          48.4437443,
+          -113.4205806
+        ],
+        [
+          48.4371109,
+          -113.4265227
+        ],
+        [
+          48.4359209,
+          -113.432779
+        ],
+        [
+          48.4377863,
+          -113.4410206
+        ],
+        [
+          48.4314297,
+          -113.4288401
+        ],
+        [
+          48.424514,
+          -113.4233744
+        ],
+        [
+          48.4176382,
+          -113.4577988
+        ],
+        [
+          48.415389,
+          -113.4603124
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Point to Point",
+      "surface": "Ground",
+      "description": "A scenic trail offering views of the Two Medicine area.",
+      "parkName": "Glacier National Park",
+      "stateCode": "MT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/82583752",
+      "source": "osm"
+    },
+    {
+      "name": "Aster Park",
+      "distanceMiles": 1.8,
+      "elevationGainFt": 200,
+      "latitude": 48.4727344,
+      "longitude": -113.3772764,
+      "coordinates": [
+        [
+          48.4727344,
+          -113.3772764
+        ],
+        [
+          48.4717699,
+          -113.3768701
+        ],
+        [
+          48.4711911,
+          -113.3760573
+        ],
+        [
+          48.4707766,
+          -113.3761216
+        ],
+        [
+          48.4707711,
+          -113.3756287
+        ],
+        [
+          48.4698178,
+          -113.3762239
+        ],
+        [
+          48.4690152,
+          -113.3771716
+        ],
+        [
+          48.4683047,
+          -113.3779155
+        ],
+        [
+          48.467738,
+          -113.3781663
+        ],
+        [
+          48.4670784,
+          -113.3773653
+        ],
+        [
+          48.4664498,
+          -113.3775762
+        ],
+        [
+          48.4665051,
+          -113.3776864
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Loop",
+      "surface": "Ground",
+      "description": "A gentle trail through Aster Park with beautiful wildflowers.",
+      "parkName": "Glacier National Park",
+      "stateCode": "MT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/82583752",
+      "source": "osm"
+    },
+    {
+      "name": "Cut Bank Pass",
+      "distanceMiles": 3.2,
+      "elevationGainFt": 400,
+      "latitude": 48.5390115,
+      "longitude": -113.5371225,
+      "coordinates": [
+        [
+          48.5390115,
+          -113.5371225
+        ],
+        [
+          48.5383408,
+          -113.5207059
+        ],
+        [
+          48.54008,
+          -113.5024462
+        ],
+        [
+          48.538307,
+          -113.492245
+        ],
+        [
+          48.5392232,
+          -113.4842759
+        ],
+        [
+          48.5354861,
+          -113.4767272
+        ],
+        [
+          48.5298952,
+          -113.4770014
+        ],
+        [
+          48.5264427,
+          -113.4797783
+        ],
+        [
+          48.5253009,
+          -113.4813413
+        ],
+        [
+          48.5229832,
+          -113.4748521
+        ],
+        [
+          48.5178881,
+          -113.4678321
+        ],
+        [
+          48.5168333,
+          -113.465625
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Point to Point",
+      "surface": "Ground",
+      "description": "A challenging trail leading to stunning views from Cut Bank Pass.",
+      "parkName": "Glacier National Park",
+      "stateCode": "MT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/82583752",
+      "source": "osm"
+    },
+    {
+      "name": "Huckleberry Lookout",
+      "distanceMiles": 0.5,
+      "elevationGainFt": 0,
+      "latitude": 48.5966231,
+      "longitude": -114.0382488,
+      "coordinates": [
+        [
+          48.5966231,
+          -114.0382488
+        ],
+        [
+          48.5965764,
+          -114.038373
+        ],
+        [
+          48.5965343,
+          -114.0384245
+        ],
+        [
+          48.596474,
+          -114.0387761
+        ],
+        [
+          48.5964281,
+          -114.039087
+        ],
+        [
+          48.596381,
+          -114.0393536
+        ],
+        [
+          48.5963209,
+          -114.0397427
+        ],
+        [
+          48.5962854,
+          -114.0398884
+        ],
+        [
+          48.5961396,
+          -114.040177
+        ],
+        [
+          48.5958613,
+          -114.0405256
+        ],
+        [
+          48.5953244,
+          -114.0412478
+        ],
+        [
+          48.5951852,
+          -114.0416301
+        ],
+        [
+          48.5951248,
+          -114.0418842
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Out and Back",
+      "surface": "Dirt",
+      "description": "A scenic trail leading to Huckleberry Lookout.",
+      "parkName": "Glacier National Park",
+      "stateCode": "MT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/82583820",
+      "source": "osm"
+    },
+    {
+      "name": "McDonald Creek Cutoff",
+      "distanceMiles": 0.1,
+      "elevationGainFt": 0,
+      "latitude": 48.6412064,
+      "longitude": -113.8578008,
+      "coordinates": [
+        [
+          48.6411584,
+          -113.8578008
+        ],
+        [
+          48.6412064,
+          -113.8578038
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Connector",
+      "surface": "Dirt",
+      "description": "A short connector trail to McDonald Creek.",
+      "parkName": "Glacier National Park",
+      "stateCode": "MT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/82583820",
+      "source": "osm"
+    },
+    {
+      "name": "Nyack Crossing",
+      "distanceMiles": 1.5,
+      "elevationGainFt": 0,
+      "latitude": 48.4402222,
+      "longitude": -113.7958823,
+      "coordinates": [
+        [
+          48.4355995,
+          -113.7984168
+        ],
+        [
+          48.4358635,
+          -113.7983146
+        ],
+        [
+          48.4362631,
+          -113.798355
+        ],
+        [
+          48.4366868,
+          -113.7980712
+        ],
+        [
+          48.4371102,
+          -113.7979716
+        ],
+        [
+          48.4383166,
+          -113.7984433
+        ],
+        [
+          48.4384771,
+          -113.7977274
+        ],
+        [
+          48.4386704,
+          -113.7975107
+        ],
+        [
+          48.4391186,
+          -113.7970624
+        ],
+        [
+          48.4398653,
+          -113.7966059
+        ],
+        [
+          48.4401739,
+          -113.7961867
+        ],
+        [
+          48.4402222,
+          -113.7958823
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Out and Back",
+      "surface": "Dirt",
+      "description": "A trail crossing Nyack with beautiful views.",
+      "parkName": "Glacier National Park",
+      "stateCode": "MT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/82583820",
+      "source": "osm"
+    },
+    {
+      "name": "Running Eagle Falls",
+      "distanceMiles": 0.7,
+      "elevationGainFt": 0,
+      "latitude": 48.4968473,
+      "longitude": -113.3499174,
+      "coordinates": [
+        [
+          48.4971516,
+          -113.3494546
+        ],
+        [
+          48.4971914,
+          -113.3496853
+        ],
+        [
+          48.4968473,
+          -113.3499174
+        ],
+        [
+          48.4965587,
+          -113.3497192
+        ],
+        [
+          48.4961947,
+          -113.3494352
+        ],
+        [
+          48.4960498,
+          -113.3493161
+        ],
+        [
+          48.4959104,
+          -113.3492092
+        ],
+        [
+          48.4957214,
+          -113.3490957
+        ],
+        [
+          48.495596,
+          -113.348879
+        ],
+        [
+          48.4955521,
+          -113.3484842
+        ],
+        [
+          48.4956244,
+          -113.3482433
+        ],
+        [
+          48.4959216,
+          -113.3480607
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Out and Back",
+      "surface": "Dirt",
+      "description": "A scenic trail leading to Running Eagle Falls.",
+      "parkName": "Glacier National Park",
+      "stateCode": "MT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/82583913",
+      "source": "osm"
+    },
+    {
+      "name": "Covey Meadow Ski Trail",
+      "distanceMiles": 1.5,
+      "elevationGainFt": 0,
+      "latitude": 48.7843946,
+      "longitude": -114.2790124,
+      "coordinates": [
+        [
+          48.783805,
+          -114.2798638
+        ],
+        [
+          48.7838092,
+          -114.2797631
+        ],
+        [
+          48.7838163,
+          -114.2795929
+        ],
+        [
+          48.783834,
+          -114.2794489
+        ],
+        [
+          48.7839271,
+          -114.2793013
+        ],
+        [
+          48.7843946,
+          -114.2790124
+        ],
+        [
+          48.7846192,
+          -114.2785387
+        ],
+        [
+          48.7854227,
+          -114.2777833
+        ],
+        [
+          48.785547,
+          -114.2773406
+        ],
+        [
+          48.7855071,
+          -114.2769999
+        ],
+        [
+          48.7857316,
+          -114.2765261
+        ],
+        [
+          48.7855902,
+          -114.2758218
+        ],
+        [
+          48.7850034,
+          -114.2750698
+        ],
+        [
+          48.7842731,
+          -114.2736885
+        ],
+        [
+          48.7843024,
+          -114.2726573
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Loop",
+      "surface": "Dirt",
+      "description": "A ski trail through Covey Meadow.",
+      "parkName": "Glacier National Park",
+      "stateCode": "MT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/82583913",
+      "source": "osm"
+    },
+    {
+      "name": "Harrison Creek",
+      "distanceMiles": 5.5,
+      "elevationGainFt": 0,
+      "latitude": 48.4946489,
+      "longitude": -113.8497702,
+      "coordinates": [
+        [
+          48.4946489,
+          -113.8497702
+        ],
+        [
+          48.4974566,
+          -113.8419334
+        ],
+        [
+          48.5016145,
+          -113.8341416
+        ],
+        [
+          48.5024337,
+          -113.8217946
+        ],
+        [
+          48.5049485,
+          -113.8102838
+        ],
+        [
+          48.5058729,
+          -113.7995616
+        ],
+        [
+          48.5084023,
+          -113.7892197
+        ],
+        [
+          48.5131123,
+          -113.7799476
+        ],
+        [
+          48.5180912,
+          -113.7748991
+        ],
+        [
+          48.5222706,
+          -113.7687826
+        ],
+        [
+          48.5283819,
+          -113.7543599
+        ],
+        [
+          48.5313147,
+          -113.7496764
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Point to Point",
+      "surface": "Ground",
+      "description": "A long trail following Harrison Creek.",
+      "parkName": "Glacier National Park",
+      "stateCode": "MT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/82583913",
+      "source": "osm"
+    },
+    {
+      "name": "Running Eagle Falls",
+      "distanceMiles": 0.5,
+      "elevationGainFt": 0,
+      "latitude": 48.4972898,
+      "longitude": -113.3493777,
+      "coordinates": [
+        [
+          48.4961247,
+          -113.3481051
+        ],
+        [
+          48.4960616,
+          -113.3483403
+        ],
+        [
+          48.4961304,
+          -113.3486726
+        ],
+        [
+          48.4962324,
+          -113.3489579
+        ],
+        [
+          48.4963711,
+          -113.3491246
+        ],
+        [
+          48.4967893,
+          -113.3492998
+        ],
+        [
+          48.4970241,
+          -113.3495137
+        ],
+        [
+          48.4972898,
+          -113.3493777
+        ],
+        [
+          48.4975091,
+          -113.3492199
+        ],
+        [
+          48.497792,
+          -113.3496141
+        ],
+        [
+          48.4978852,
+          -113.3497077
+        ],
+        [
+          48.4980086,
+          -113.3498084
+        ],
+        [
+          48.4982469,
+          -113.3496855
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Out and Back",
+      "surface": "Dirt",
+      "description": "A scenic trail leading to Running Eagle Falls.",
+      "parkName": "Glacier National Park",
+      "stateCode": "MT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/82583988",
+      "source": "osm"
+    },
+    {
+      "name": "Coal Creek",
+      "distanceMiles": 6.5,
+      "elevationGainFt": 0,
+      "latitude": 48.4764224,
+      "longitude": -113.5572995,
+      "coordinates": [
+        [
+          48.4119737,
+          -113.7180848
+        ],
+        [
+          48.4139339,
+          -113.7059309
+        ],
+        [
+          48.4167557,
+          -113.6872791
+        ],
+        [
+          48.4139852,
+          -113.6667646
+        ],
+        [
+          48.4169333,
+          -113.6301808
+        ],
+        [
+          48.4109363,
+          -113.5959352
+        ],
+        [
+          48.4157232,
+          -113.5654568
+        ],
+        [
+          48.4263084,
+          -113.5440126
+        ],
+        [
+          48.4499227,
+          -113.5263718
+        ],
+        [
+          48.4636818,
+          -113.5480435
+        ],
+        [
+          48.4760926,
+          -113.5571611
+        ],
+        [
+          48.4764224,
+          -113.5572995
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Point to Point",
+      "surface": "Ground",
+      "description": "A trail following Coal Creek with beautiful views.",
+      "parkName": "Glacier National Park",
+      "stateCode": "MT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/82583988",
+      "source": "osm"
+    },
+    {
+      "name": "Park Creek",
+      "distanceMiles": 8.2,
+      "elevationGainFt": 0,
+      "latitude": 48.415389,
+      "longitude": -113.4603124,
+      "coordinates": [
+        [
+          48.307051,
+          -113.6079633
+        ],
+        [
+          48.3189498,
+          -113.5902904
+        ],
+        [
+          48.3202711,
+          -113.5723204
+        ],
+        [
+          48.3325105,
+          -113.5504012
+        ],
+        [
+          48.3402983,
+          -113.5388464
+        ],
+        [
+          48.3463455,
+          -113.522619
+        ],
+        [
+          48.3542589,
+          -113.5107041
+        ],
+        [
+          48.3666773,
+          -113.4903581
+        ],
+        [
+          48.3824531,
+          -113.4747973
+        ],
+        [
+          48.3949205,
+          -113.4659755
+        ],
+        [
+          48.4142206,
+          -113.4605674
+        ],
+        [
+          48.415389,
+          -113.4603124
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Point to Point",
+      "surface": "Ground",
+      "description": "A scenic trail along Park Creek with diverse landscapes.",
+      "parkName": "Glacier National Park",
+      "stateCode": "MT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/82583988",
+      "source": "osm"
+    },
+    {
+      "name": "Dawson Cutoff",
+      "distanceMiles": 0.5,
+      "elevationGainFt": 0,
+      "latitude": 48.4776701,
+      "longitude": -113.420092,
+      "coordinates": [
+        [
+          48.4776701,
+          -113.420092
+        ],
+        [
+          48.4776326,
+          -113.4201395
+        ],
+        [
+          48.4775951,
+          -113.4201869
+        ],
+        [
+          48.4775531,
+          -113.4202856
+        ],
+        [
+          48.4774852,
+          -113.4204997
+        ],
+        [
+          48.4774359,
+          -113.4207199
+        ],
+        [
+          48.4774154,
+          -113.4209133
+        ],
+        [
+          48.4773842,
+          -113.4210019
+        ],
+        [
+          48.4773253,
+          -113.4210663
+        ],
+        [
+          48.4772774,
+          -113.4211647
+        ],
+        [
+          48.4772296,
+          -113.4214163
+        ],
+        [
+          48.477112,
+          -113.4218355
+        ],
+        [
+          48.4768265,
+          -113.4221885
+        ],
+        [
+          48.4765235,
+          -113.4228271
+        ],
+        [
+          48.4763921,
+          -113.4229411
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Footway",
+      "surface": "Ground",
+      "description": "A scenic footway leading through the area.",
+      "parkName": "Glacier National Park",
+      "stateCode": "MT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/82584082",
+      "source": "osm"
+    },
+    {
+      "name": "Running Eagle Falls",
+      "distanceMiles": 0.2,
+      "elevationGainFt": 0,
+      "latitude": 48.497792,
+      "longitude": -113.3496141,
+      "coordinates": [
+        [
+          48.497792,
+          -113.3496141
+        ],
+        [
+          48.4977365,
+          -113.3496478
+        ],
+        [
+          48.4976883,
+          -113.3497305
+        ],
+        [
+          48.4976911,
+          -113.3498065
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Footway",
+      "surface": "Ground",
+      "description": "A short footway leading to the beautiful Running Eagle Falls.",
+      "parkName": "Glacier National Park",
+      "stateCode": "MT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/82584082",
+      "source": "osm"
+    },
+    {
+      "name": "McDonald Lake",
+      "distanceMiles": 0.5,
+      "elevationGainFt": 0,
+      "latitude": 48.5465759,
+      "longitude": -113.9856046,
+      "coordinates": [
+        [
+          48.5465759,
+          -113.9856046
+        ],
+        [
+          48.5465829,
+          -113.9856585
+        ],
+        [
+          48.5466261,
+          -113.9858872
+        ],
+        [
+          48.5466967,
+          -113.9859997
+        ],
+        [
+          48.5467177,
+          -113.9860773
+        ],
+        [
+          48.546707,
+          -113.98616
+        ],
+        [
+          48.5467236,
+          -113.9861729
+        ],
+        [
+          48.5467405,
+          -113.9862763
+        ],
+        [
+          48.5467235,
+          -113.9864092
+        ],
+        [
+          48.5467288,
+          -113.9864827
+        ],
+        [
+          48.5468139,
+          -113.9867652
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Footway",
+      "surface": "Ground",
+      "description": "A pleasant footway around McDonald Lake.",
+      "parkName": "Glacier National Park",
+      "stateCode": "MT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/82584082",
+      "source": "osm"
+    },
+    {
+      "name": "Dawson Pass",
+      "distanceMiles": 0.1,
+      "elevationGainFt": 0,
+      "latitude": 48.4918041,
+      "longitude": -113.3658469,
+      "coordinates": [
+        [
+          48.4918041,
+          -113.3658469
+        ],
+        [
+          48.4919617,
+          -113.3656349
+        ],
+        [
+          48.4921502,
+          -113.3654919
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Out and Back",
+      "surface": "Dirt",
+      "description": "A scenic footway leading through Dawson Pass.",
+      "parkName": "Glacier National Park",
+      "stateCode": "MT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/82863087",
+      "source": "osm"
+    },
+    {
+      "name": "Trail of the Cedars",
+      "distanceMiles": 0.02,
+      "elevationGainFt": 0,
+      "latitude": 48.6803645,
+      "longitude": -113.8190941,
+      "coordinates": [
+        [
+          48.6803377,
+          -113.8190491
+        ],
+        [
+          48.6803914,
+          -113.8191392
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Out and Back",
+      "surface": "Paved",
+      "description": "A scenic trail through cedar trees.",
+      "parkName": "Glacier National Park",
+      "stateCode": "MT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/83391206",
+      "source": "osm"
+    },
+    {
+      "name": "Lake McDonald Trail",
+      "distanceMiles": 0.02,
+      "elevationGainFt": 0,
+      "latitude": 48.6085267,
+      "longitude": -113.9149345,
+      "coordinates": [
+        [
+          48.6085414,
+          -113.9148774
+        ],
+        [
+          48.608413,
+          -113.9150115
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Out and Back",
+      "surface": "Dirt",
+      "description": "A trail along the shores of Lake McDonald.",
+      "parkName": "Glacier National Park",
+      "stateCode": "MT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/83391206",
+      "source": "osm"
+    },
+    {
+      "name": "Swiftcurrent Lake Trail",
+      "distanceMiles": 0.1,
+      "elevationGainFt": 0,
+      "latitude": 48.7884672,
+      "longitude": -113.663101,
+      "coordinates": [
+        [
+          48.7884672,
+          -113.663101
+        ],
+        [
+          48.7883366,
+          -113.6635432
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Out and Back",
+      "surface": "Dirt",
+      "description": "A scenic trail around Swiftcurrent Lake.",
+      "parkName": "Glacier National Park",
+      "stateCode": "MT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/83411648",
+      "source": "osm"
+    },
+    {
+      "name": "Covey Meadow Loop Trail",
+      "distanceMiles": 1.5,
+      "elevationGainFt": 0,
+      "latitude": 48.7808441,
+      "longitude": -114.2716056,
+      "coordinates": [
+        [
+          48.7775215,
+          -114.2775104
+        ],
+        [
+          48.7779626,
+          -114.2764323
+        ],
+        [
+          48.7782828,
+          -114.2754478
+        ],
+        [
+          48.7786367,
+          -114.2745272
+        ],
+        [
+          48.778662,
+          -114.2737728
+        ],
+        [
+          48.7790032,
+          -114.272865
+        ],
+        [
+          48.7794034,
+          -114.2721746
+        ],
+        [
+          48.7802291,
+          -114.2714202
+        ],
+        [
+          48.7808441,
+          -114.2716056
+        ],
+        [
+          48.7815856,
+          -114.2716951
+        ],
+        [
+          48.7821121,
+          -114.2709727
+        ],
+        [
+          48.7829293,
+          -114.2711645
+        ],
+        [
+          48.7840793,
+          -114.2719636
+        ],
+        [
+          48.7843024,
+          -114.2726573
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Loop",
+      "surface": "Dirt",
+      "description": "A scenic loop trail through Covey Meadow.",
+      "parkName": "Glacier National Park",
+      "stateCode": "MT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/83432288",
+      "source": "osm"
+    },
+    {
+      "name": "West Shore Duck Road",
+      "distanceMiles": 1.2,
+      "elevationGainFt": 50,
+      "latitude": 48.8709078,
+      "longitude": -113.359329,
+      "coordinates": [
+        [
+          48.8687127,
+          -113.3599457
+        ],
+        [
+          48.871156,
+          -113.3589535
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Track",
+      "surface": "Gravel",
+      "description": "A scenic route along the west shore.",
+      "parkName": "Glacier National Park",
+      "stateCode": "MT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/83485623",
+      "source": "osm"
+    },
+    {
+      "name": "Huckleberry Lookout",
+      "distanceMiles": 5.2,
+      "elevationGainFt": 1200,
+      "latitude": 48.5951623,
+      "longitude": -114.0419825,
+      "coordinates": [
+        [
+          48.5951623,
+          -114.0419825
+        ],
+        [
+          48.5928546,
+          -114.05464
+        ],
+        [
+          48.5903647,
+          -114.0654861
+        ],
+        [
+          48.5879869,
+          -114.074283
+        ],
+        [
+          48.5868243,
+          -114.0847158
+        ],
+        [
+          48.588664,
+          -114.092193
+        ],
+        [
+          48.5887212,
+          -114.0970071
+        ],
+        [
+          48.5906843,
+          -114.1052554
+        ],
+        [
+          48.5891303,
+          -114.119369
+        ],
+        [
+          48.5947357,
+          -114.1280276
+        ],
+        [
+          48.6000051,
+          -114.1341404
+        ],
+        [
+          48.6003501,
+          -114.1343517
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Out and Back",
+      "surface": "Dirt",
+      "description": "Trail leading to Huckleberry Lookout with scenic views.",
+      "parkName": "Glacier National Park",
+      "stateCode": "MT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/177947905",
+      "source": "osm"
+    },
+    {
+      "name": "Huckleberry Lookout",
+      "distanceMiles": 0.02,
+      "elevationGainFt": 0,
+      "latitude": 48.5951435,
+      "longitude": -114.0419345,
+      "coordinates": [
+        [
+          48.5951248,
+          -114.0418842
+        ],
+        [
+          48.5951623,
+          -114.0419825
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Out and Back",
+      "surface": "Footway",
+      "description": "Trail leading to Huckleberry Lookout.",
+      "parkName": "Glacier National Park",
+      "stateCode": "MT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/181129494",
+      "source": "osm"
+    },
+    {
+      "name": "Lake McDonald Trail",
+      "distanceMiles": 0.02,
+      "elevationGainFt": 0,
+      "latitude": 48.5523947,
+      "longitude": -113.9863778,
+      "coordinates": [
+        [
+          48.5524081,
+          -113.9863249
+        ],
+        [
+          48.5523814,
+          -113.9864312
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Out and Back",
+      "surface": "Footway",
+      "description": "Trail along Lake McDonald.",
+      "parkName": "Glacier National Park",
+      "stateCode": "MT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/181129494",
+      "source": "osm"
+    },
+    {
+      "name": "McDonald Creek Cutoff",
+      "distanceMiles": 0.02,
+      "elevationGainFt": 0,
+      "latitude": 48.6415,
+      "longitude": -113.8578,
+      "coordinates": [
+        [
+          48.6414815,
+          -113.8578173
+        ],
+        [
+          48.64152,
+          -113.857819
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Out and Back",
+      "surface": "Ground",
+      "description": "Short cutoff trail leading to McDonald Creek.",
+      "parkName": "Glacier National Park",
+      "stateCode": "MT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/181198593",
+      "source": "osm"
+    },
+    {
+      "name": "McDonald Creek Cutoff",
+      "distanceMiles": 0.1,
+      "elevationGainFt": 0,
+      "latitude": 48.6413439,
+      "longitude": -113.8578108,
+      "coordinates": [
+        [
+          48.6412064,
+          -113.8578038
+        ],
+        [
+          48.6414815,
+          -113.8578173
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Out and Back",
+      "surface": "Dirt",
+      "description": "A short trail along McDonald Creek.",
+      "parkName": "Glacier National Park",
+      "stateCode": "MT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/181203242",
+      "source": "osm"
+    },
+    {
+      "name": "Many Glacier Hotel Connector",
+      "distanceMiles": 0.3,
+      "elevationGainFt": 0,
+      "latitude": 48.798311,
+      "longitude": -113.656636,
+      "coordinates": [
+        [
+          48.7980093,
+          -113.6568904
+        ],
+        [
+          48.798075,
+          -113.6569103
+        ],
+        [
+          48.7981332,
+          -113.6568507
+        ],
+        [
+          48.7981906,
+          -113.6567221
+        ],
+        [
+          48.7983093,
+          -113.656636
+        ],
+        [
+          48.7984115,
+          -113.656594
+        ],
+        [
+          48.7986642,
+          -113.6565995
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Connector",
+      "surface": "Paved",
+      "description": "Connector trail to Many Glacier Hotel",
+      "parkName": "Glacier National Park",
+      "stateCode": "MT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/181210956",
+      "source": "osm"
+    },
+    {
+      "name": "Many Glacier Hotel Connector",
+      "distanceMiles": 0.3,
+      "elevationGainFt": 0,
+      "latitude": 48.7965,
+      "longitude": -113.6565,
+      "coordinates": [
+        [
+          48.7953161,
+          -113.6565922
+        ],
+        [
+          48.7954389,
+          -113.6563913
+        ],
+        [
+          48.7956504,
+          -113.6562373
+        ],
+        [
+          48.7958638,
+          -113.6563273
+        ],
+        [
+          48.7959154,
+          -113.6565563
+        ],
+        [
+          48.7960469,
+          -113.6566793
+        ],
+        [
+          48.7963,
+          -113.6568907
+        ],
+        [
+          48.7965553,
+          -113.6569124
+        ],
+        [
+          48.7970396,
+          -113.6568284
+        ],
+        [
+          48.7971541,
+          -113.6568835
+        ],
+        [
+          48.7973264,
+          -113.6567785
+        ],
+        [
+          48.7975905,
+          -113.6566193
+        ],
+        [
+          48.7977873,
+          -113.6567036
+        ],
+        [
+          48.7978802,
+          -113.6567728
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Connector",
+      "surface": "Dirt",
+      "description": "A connector trail leading to Many Glacier Hotel.",
+      "parkName": "Glacier National Park",
+      "stateCode": "MT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/181211230",
+      "source": "osm"
+    },
+    {
+      "name": "Swiftcurrent Pass Trail",
+      "distanceMiles": 0.01,
+      "elevationGainFt": 0,
+      "latitude": 48.7979284,
+      "longitude": -113.680355,
+      "coordinates": [
+        [
+          48.7978941,
+          -113.680305
+        ],
+        [
+          48.7979626,
+          -113.6804753
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Footway",
+      "surface": "Dirt",
+      "description": "A scenic trail leading to Swiftcurrent Pass.",
+      "parkName": "Glacier National Park",
+      "stateCode": "MT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/181284662",
+      "source": "osm"
+    },
+    {
+      "name": "South Boundary",
+      "distanceMiles": 5.5,
+      "elevationGainFt": 0,
+      "latitude": 48.4129576,
+      "longitude": -113.713759,
+      "coordinates": [
+        [
+          48.5001805,
+          -113.9697736
+        ],
+        [
+          48.4975744,
+          -113.9556092
+        ],
+        [
+          48.5019386,
+          -113.9467477
+        ],
+        [
+          48.5028876,
+          -113.9305152
+        ],
+        [
+          48.4966556,
+          -113.9152886
+        ],
+        [
+          48.4953875,
+          -113.8940612
+        ],
+        [
+          48.4954906,
+          -113.8797482
+        ],
+        [
+          48.4988949,
+          -113.8634726
+        ],
+        [
+          48.4948198,
+          -113.8498761
+        ],
+        [
+          48.450333,
+          -113.7933721
+        ],
+        [
+          48.4170903,
+          -113.7220212
+        ],
+        [
+          48.4129576,
+          -113.713759
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Footway",
+      "surface": "Ground",
+      "description": "A trail that follows the southern boundary of the park.",
+      "parkName": "Glacier National Park",
+      "stateCode": "MT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/181284662",
+      "source": "osm"
+    },
+    {
+      "name": "Piegan Pass Trail",
+      "distanceMiles": 2.5,
+      "elevationGainFt": 800,
+      "latitude": 48.6934432,
+      "longitude": -113.6587526,
+      "coordinates": [
+        [
+          48.707456,
+          -113.655391
+        ],
+        [
+          48.7063585,
+          -113.6563003
+        ],
+        [
+          48.7045425,
+          -113.6566597
+        ],
+        [
+          48.7025988,
+          -113.6564505
+        ],
+        [
+          48.7008145,
+          -113.6561501
+        ],
+        [
+          48.6994062,
+          -113.6555359
+        ],
+        [
+          48.6988884,
+          -113.6551845
+        ],
+        [
+          48.6975359,
+          -113.6551899
+        ],
+        [
+          48.6962172,
+          -113.6558883
+        ],
+        [
+          48.695068,
+          -113.6568743
+        ],
+        [
+          48.693656,
+          -113.6586544
+        ],
+        [
+          48.6934432,
+          -113.6587526
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Path",
+      "surface": "Ground",
+      "description": "A scenic trail leading to Piegan Pass with beautiful views.",
+      "parkName": "Glacier National Park",
+      "stateCode": "MT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/224281075",
+      "source": "osm"
+    },
+    {
+      "name": "Siyeh Pass Trail",
+      "distanceMiles": 1.5,
+      "elevationGainFt": 0,
+      "latitude": 48.7150151,
+      "longitude": -113.6425433,
+      "coordinates": [
+        [
+          48.7150151,
+          -113.6425433
+        ],
+        [
+          48.7146416,
+          -113.6436242
+        ],
+        [
+          48.71427,
+          -113.6448982
+        ],
+        [
+          48.7140426,
+          -113.646919
+        ],
+        [
+          48.7142682,
+          -113.6492917
+        ],
+        [
+          48.7138134,
+          -113.649509
+        ],
+        [
+          48.7130347,
+          -113.6495841
+        ],
+        [
+          48.7124613,
+          -113.6509976
+        ],
+        [
+          48.7124365,
+          -113.6531782
+        ],
+        [
+          48.7124949,
+          -113.6547795
+        ],
+        [
+          48.7121112,
+          -113.655528
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Path",
+      "surface": "Ground",
+      "description": "A scenic hiking trail with beautiful views.",
+      "parkName": "Glacier National Park",
+      "stateCode": "MT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/242102402",
+      "source": "osm"
+    },
+    {
+      "name": "Whitefish Trail - Skyles Connection",
+      "distanceMiles": 1.5,
+      "elevationGainFt": 200,
+      "latitude": 48.4111166,
+      "longitude": -114.3962594,
+      "coordinates": [
+        [
+          48.4086327,
+          -114.4083122
+        ],
+        [
+          48.4110124,
+          -114.4108631
+        ],
+        [
+          48.4123624,
+          -114.4116564
+        ],
+        [
+          48.4127845,
+          -114.4108035
+        ],
+        [
+          48.4122428,
+          -114.4080074
+        ],
+        [
+          48.4121186,
+          -114.406405
+        ],
+        [
+          48.4133186,
+          -114.4049782
+        ],
+        [
+          48.4132044,
+          -114.4019752
+        ],
+        [
+          48.4136237,
+          -114.3993283
+        ],
+        [
+          48.4111166,
+          -114.3962594
+        ],
+        [
+          48.4098239,
+          -114.3934249
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Path",
+      "surface": "Dirt",
+      "description": "A scenic connection through the Whitefish Trail system.",
+      "parkName": "Glacier National Park",
+      "stateCode": "MT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/247091430",
+      "source": "osm"
+    },
+    {
+      "name": "Kings Loop",
+      "distanceMiles": 0.5,
+      "elevationGainFt": 50,
+      "latitude": 48.2370006,
+      "longitude": -114.289548,
+      "coordinates": [
+        [
+          48.2378454,
+          -114.2896366
+        ],
+        [
+          48.2377576,
+          -114.2895804
+        ],
+        [
+          48.2375527,
+          -114.289551
+        ],
+        [
+          48.2374049,
+          -114.2895804
+        ],
+        [
+          48.2370006,
+          -114.289548
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Loop",
+      "surface": "Dirt",
+      "description": "A short loop trail ideal for beginners.",
+      "parkName": "Glacier National Park",
+      "stateCode": "MT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/247091430",
+      "source": "osm"
+    },
+    {
+      "name": "Spoon Lake Trail",
+      "distanceMiles": 0.5,
+      "elevationGainFt": 0,
+      "latitude": 48.4716838,
+      "longitude": -114.1454763,
+      "coordinates": [
+        [
+          48.4643629,
+          -114.1433441
+        ],
+        [
+          48.4648511,
+          -114.1429414
+        ],
+        [
+          48.4653835,
+          -114.1434438
+        ],
+        [
+          48.466136,
+          -114.1438194
+        ],
+        [
+          48.4677249,
+          -114.1436336
+        ],
+        [
+          48.4689205,
+          -114.1440765
+        ],
+        [
+          48.4691879,
+          -114.144721
+        ],
+        [
+          48.4700006,
+          -114.1451639
+        ],
+        [
+          48.4708003,
+          -114.1454486
+        ],
+        [
+          48.471377,
+          -114.145413
+        ],
+        [
+          48.4716838,
+          -114.1454763
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Footway",
+      "surface": "Dirt",
+      "description": "A scenic trail leading to Spoon Lake.",
+      "parkName": "Glacier National Park",
+      "stateCode": "MT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/284939624",
+      "source": "osm"
+    },
+    {
+      "name": "Whitefish Trail - Woods Lake",
+      "distanceMiles": 1.5,
+      "elevationGainFt": 200,
+      "latitude": 48.4527857,
+      "longitude": -114.4161984,
+      "coordinates": [
+        [
+          48.4527857,
+          -114.4161984
+        ],
+        [
+          48.4501666,
+          -114.4136117
+        ],
+        [
+          48.4518602,
+          -114.412084
+        ],
+        [
+          48.4537404,
+          -114.4123763
+        ],
+        [
+          48.4547573,
+          -114.4130657
+        ],
+        [
+          48.452686,
+          -114.4154731
+        ],
+        [
+          48.4519773,
+          -114.4170918
+        ],
+        [
+          48.4524126,
+          -114.4187905
+        ],
+        [
+          48.4543781,
+          -114.4216502
+        ],
+        [
+          48.4557021,
+          -114.4223889
+        ],
+        [
+          48.451871,
+          -114.420763
+        ],
+        [
+          48.4508512,
+          -114.4204446
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Loop",
+      "surface": "Dirt",
+      "description": "A scenic trail around Woods Lake with good visibility.",
+      "parkName": "Glacier National Park",
+      "stateCode": "MT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/295388834",
+      "source": "osm"
+    },
+    {
+      "name": "Swiftcurrent Lake Trail",
+      "distanceMiles": 0.2,
+      "elevationGainFt": 0,
+      "latitude": 48.7941558,
+      "longitude": -113.6670568,
+      "coordinates": [
+        [
+          48.7940806,
+          -113.6670915
+        ],
+        [
+          48.7942311,
+          -113.6670221
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Out and Back",
+      "surface": "Dirt",
+      "description": "Trail around Swiftcurrent Lake",
+      "parkName": "Glacier National Park",
+      "stateCode": "MT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/308324845",
+      "source": "osm"
+    },
+    {
+      "name": "800 Road",
+      "distanceMiles": 1.5,
+      "elevationGainFt": 100,
+      "latitude": 48.4395193,
+      "longitude": -114.3293665,
+      "coordinates": [
+        [
+          48.4444433,
+          -114.3293665
+        ],
+        [
+          48.4429142,
+          -114.3261301
+        ],
+        [
+          48.4425092,
+          -114.3239592
+        ],
+        [
+          48.4420724,
+          -114.3230469
+        ],
+        [
+          48.4416583,
+          -114.324429
+        ],
+        [
+          48.4420815,
+          -114.3272516
+        ],
+        [
+          48.441581,
+          -114.3267063
+        ],
+        [
+          48.4408711,
+          -114.3250086
+        ],
+        [
+          48.440564,
+          -114.3230092
+        ],
+        [
+          48.4406663,
+          -114.3211263
+        ],
+        [
+          48.4404775,
+          -114.3186742
+        ],
+        [
+          48.4395193,
+          -114.317393
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Footpath",
+      "surface": "Ground",
+      "description": "A scenic footpath along the 800 Road.",
+      "parkName": "Glacier National Park",
+      "stateCode": "MT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/310864423",
+      "source": "osm"
+    },
+    {
+      "name": "Running Eagle Falls",
+      "distanceMiles": 0.2,
+      "elevationGainFt": 0,
+      "latitude": 48.498276,
+      "longitude": -113.349784,
+      "coordinates": [
+        [
+          48.4983169,
+          -113.3497844
+        ],
+        [
+          48.4982429,
+          -113.3499509
+        ],
+        [
+          48.4981967,
+          -113.350208
+        ],
+        [
+          48.4982202,
+          -113.3505065
+        ],
+        [
+          48.4982044,
+          -113.3505886
+        ],
+        [
+          48.4982232,
+          -113.3506383
+        ],
+        [
+          48.4982526,
+          -113.3506503
+        ],
+        [
+          48.4982597,
+          -113.3507217
+        ],
+        [
+          48.4983048,
+          -113.3508588
+        ],
+        [
+          48.4983088,
+          -113.3510077
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Out and Back",
+      "surface": "Dirt",
+      "description": "A short trail leading to the scenic Running Eagle Falls.",
+      "parkName": "Glacier National Park",
+      "stateCode": "MT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/505730739",
+      "source": "osm"
+    },
+    {
+      "name": "Mt Henry",
+      "distanceMiles": 5.5,
+      "elevationGainFt": 0,
+      "latitude": 48.4766227,
+      "longitude": -113.3428745,
+      "coordinates": [
+        [
+          48.4832019,
+          -113.3529556
+        ],
+        [
+          48.4766227,
+          -113.3428745
+        ],
+        [
+          48.4797319,
+          -113.3428834
+        ],
+        [
+          48.4795128,
+          -113.3349151
+        ],
+        [
+          48.4839347,
+          -113.3200032
+        ],
+        [
+          48.480883,
+          -113.3052237
+        ],
+        [
+          48.4783673,
+          -113.3028984
+        ],
+        [
+          48.4749072,
+          -113.2932659
+        ],
+        [
+          48.4704927,
+          -113.2825419
+        ],
+        [
+          48.4679441,
+          -113.275434
+        ],
+        [
+          48.4612239,
+          -113.2701933
+        ],
+        [
+          48.4604097,
+          -113.2694263
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Loop",
+      "surface": "Unpaved",
+      "description": "A scenic trail around Mt Henry with beautiful views.",
+      "parkName": "Glacier National Park",
+      "stateCode": "MT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/505730739",
+      "source": "osm"
+    },
+    {
+      "name": "Elk Calf Mountain Trail",
+      "distanceMiles": 3.5,
+      "elevationGainFt": 600,
+      "latitude": 48.2880315,
+      "longitude": -113.2184082,
+      "coordinates": [
+        [
+          48.2880315,
+          -113.2184082
+        ],
+        [
+          48.3262674,
+          -113.3163393
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Point-to-Point",
+      "surface": "Ground",
+      "description": "A scenic trail leading to Elk Calf Mountain.",
+      "parkName": "Glacier National Park",
+      "stateCode": "MT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/505743794",
+      "source": "osm"
+    },
+    {
+      "name": "Dawson Pass",
+      "distanceMiles": 0.2,
+      "elevationGainFt": 100,
+      "latitude": 48.4915513,
+      "longitude": -113.3671699,
+      "coordinates": [
+        [
+          48.4915513,
+          -113.3671699
+        ],
+        [
+          48.4917634,
+          -113.3663466
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Out-and-Back",
+      "surface": "Dirt",
+      "description": "A short trail leading to Dawson Pass.",
+      "parkName": "Glacier National Park",
+      "stateCode": "MT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/505743794",
+      "source": "osm"
+    },
+    {
+      "name": "Pitamakan Pass",
+      "distanceMiles": 2.5,
+      "elevationGainFt": 800,
+      "latitude": 48.5880666,
+      "longitude": -113.4274409,
+      "coordinates": [
+        [
+          48.5756503,
+          -113.4482125
+        ],
+        [
+          48.6024653,
+          -113.3836756
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Out and Back",
+      "surface": "Dirt",
+      "description": "A scenic trail leading to stunning views at the pass.",
+      "parkName": "Glacier National Park",
+      "stateCode": "MT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/550703890",
+      "source": "osm"
+    },
+    {
+      "name": "cdt",
+      "distanceMiles": 0.5,
+      "elevationGainFt": 100,
+      "latitude": 48.6819565,
+      "longitude": -113.4781775,
+      "coordinates": [
+        [
+          48.6828823,
+          -113.4781484
+        ],
+        [
+          48.6819565,
+          -113.4781775
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Point to Point",
+      "surface": "Dirt",
+      "description": "A short segment of the Continental Divide Trail.",
+      "parkName": "Glacier National Park",
+      "stateCode": "MT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/550703890",
+      "source": "osm"
+    },
+    {
+      "name": "Danny On Trail",
+      "distanceMiles": 1.5,
+      "elevationGainFt": 0,
+      "latitude": 48.484898,
+      "longitude": -114.3555161,
+      "coordinates": [
+        [
+          48.484898,
+          -114.3555161
+        ],
+        [
+          48.487457,
+          -114.3539567
+        ],
+        [
+          48.4883192,
+          -114.3545555
+        ],
+        [
+          48.4886433,
+          -114.3516943
+        ],
+        [
+          48.4894893,
+          -114.3445045
+        ],
+        [
+          48.4913402,
+          -114.3346992
+        ],
+        [
+          48.4987666,
+          -114.3320424
+        ],
+        [
+          48.502312,
+          -114.325544
+        ],
+        [
+          48.502094,
+          -114.331856
+        ],
+        [
+          48.5023709,
+          -114.3367264
+        ],
+        [
+          48.5014845,
+          -114.3419423
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Linear",
+      "surface": "Gravel",
+      "description": "A scenic trail through the forest.",
+      "parkName": "Glacier National Park",
+      "stateCode": "MT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/609554071",
+      "source": "osm"
+    },
+    {
+      "name": "Crypt Lake Trail",
+      "distanceMiles": 2.5,
+      "elevationGainFt": 1200,
+      "latitude": 49.0003123,
+      "longitude": -113.8425396,
+      "coordinates": [
+        [
+          49.0003123,
+          -113.8425396
+        ],
+        [
+          49.0008614,
+          -113.8431968
+        ],
+        [
+          49.0023044,
+          -113.8436969
+        ],
+        [
+          49.0035162,
+          -113.8410601
+        ],
+        [
+          49.0037103,
+          -113.8391755
+        ],
+        [
+          49.0022551,
+          -113.8383535
+        ],
+        [
+          49.0001605,
+          -113.8385793
+        ],
+        [
+          48.9992097,
+          -113.8389653
+        ],
+        [
+          48.9983886,
+          -113.8397826
+        ],
+        [
+          48.9994273,
+          -113.8413517
+        ],
+        [
+          49.0000033,
+          -113.8425379
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Out and Back",
+      "surface": "Dirt",
+      "description": "A scenic trail leading to Crypt Lake with stunning views.",
+      "parkName": "Glacier National Park",
+      "stateCode": "MT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/714758107",
+      "source": "osm"
+    },
+    {
+      "name": "Flower Point Trail",
+      "distanceMiles": 1.5,
+      "elevationGainFt": 200,
+      "latitude": 48.502838,
+      "longitude": -114.332441,
+      "coordinates": [
+        [
+          48.502838,
+          -114.332441
+        ],
+        [
+          48.503285,
+          -114.328683
+        ],
+        [
+          48.50416,
+          -114.325956
+        ],
+        [
+          48.505066,
+          -114.323444
+        ],
+        [
+          48.504649,
+          -114.321179
+        ],
+        [
+          48.503032,
+          -114.319735
+        ],
+        [
+          48.501701,
+          -114.319688
+        ],
+        [
+          48.500134,
+          -114.319078
+        ],
+        [
+          48.498159,
+          -114.32083
+        ],
+        [
+          48.496685,
+          -114.323886
+        ],
+        [
+          48.497827,
+          -114.325742
+        ],
+        [
+          48.501851,
+          -114.323761
+        ],
+        [
+          48.501877,
+          -114.3245864
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Point to Point",
+      "surface": "Dirt",
+      "description": "A scenic trail leading to Flower Point with beautiful views.",
+      "parkName": "Glacier National Park",
+      "stateCode": "MT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/828997228",
+      "source": "osm"
+    },
+    {
+      "name": "East Rim Loop",
+      "distanceMiles": 2,
+      "elevationGainFt": 150,
+      "latitude": 48.5023762,
+      "longitude": -114.3381976,
+      "coordinates": [
+        [
+          48.5023762,
+          -114.3381976
+        ],
+        [
+          48.5020451,
+          -114.3380094
+        ],
+        [
+          48.5016613,
+          -114.3375807
+        ],
+        [
+          48.5001433,
+          -114.3358207
+        ],
+        [
+          48.5000266,
+          -114.3354533
+        ],
+        [
+          48.5001372,
+          -114.3352923
+        ],
+        [
+          48.5002499,
+          -114.3352377
+        ],
+        [
+          48.5003425,
+          -114.3351375
+        ],
+        [
+          48.5007248,
+          -114.3352225
+        ],
+        [
+          48.5013444,
+          -114.3356507
+        ],
+        [
+          48.5017207,
+          -114.3360034
+        ],
+        [
+          48.5018191,
+          -114.336266
+        ],
+        [
+          48.5020753,
+          -114.336558
+        ],
+        [
+          48.5023709,
+          -114.3367264
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Loop",
+      "surface": "Dirt",
+      "description": "A gentle loop trail with stunning views of the surrounding area.",
+      "parkName": "Glacier National Park",
+      "stateCode": "MT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/828997228",
+      "source": "osm"
+    },
+    {
+      "name": "Arnica Ridge Trail",
+      "distanceMiles": 0.5,
+      "elevationGainFt": 0,
+      "latitude": 48.474,
+      "longitude": -114.344,
+      "coordinates": [
+        [
+          48.4719542,
+          -114.3431887
+        ],
+        [
+          48.4766593,
+          -114.3467328
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Out and Back",
+      "surface": "Dirt",
+      "description": "A scenic trail with views of the surrounding area.",
+      "parkName": "Glacier National Park",
+      "stateCode": "MT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/839712163",
+      "source": "osm"
+    },
+    {
+      "name": "Styx Trail",
+      "distanceMiles": 0.3,
+      "elevationGainFt": 0,
+      "latitude": 48.475,
+      "longitude": -114.341,
+      "coordinates": [
+        [
+          48.47596,
+          -114.3423431
+        ],
+        [
+          48.4754818,
+          -114.3403598
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Out and Back",
+      "surface": "Dirt",
+      "description": "A short trail ideal for a quick hike.",
+      "parkName": "Glacier National Park",
+      "stateCode": "MT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/839712163",
+      "source": "osm"
+    },
+    {
+      "name": "Journey Trail",
+      "distanceMiles": 0.7,
+      "elevationGainFt": 0,
+      "latitude": 48.481,
+      "longitude": -114.334,
+      "coordinates": [
+        [
+          48.4798257,
+          -114.3365512
+        ],
+        [
+          48.4821066,
+          -114.3433773
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Loop",
+      "surface": "Dirt",
+      "description": "A longer trail with varied terrain and beautiful scenery.",
+      "parkName": "Glacier National Park",
+      "stateCode": "MT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/839712163",
+      "source": "osm"
+    },
+    {
+      "name": "Upper Badger",
+      "distanceMiles": 0.5,
+      "elevationGainFt": 0,
+      "latitude": 48.4746863,
+      "longitude": -114.3388408,
+      "coordinates": [
+        [
+          48.4766193,
+          -114.3382924
+        ],
+        [
+          48.4760408,
+          -114.3383639
+        ],
+        [
+          48.4746863,
+          -114.3388408
+        ],
+        [
+          48.4737516,
+          -114.3388573
+        ],
+        [
+          48.4729062,
+          -114.3382776
+        ],
+        [
+          48.4717036,
+          -114.3373038
+        ],
+        [
+          48.47134,
+          -114.3379162
+        ],
+        [
+          48.4720937,
+          -114.3405714
+        ],
+        [
+          48.4721541,
+          -114.3412552
+        ],
+        [
+          48.4717463,
+          -114.3420791
+        ],
+        [
+          48.4716139,
+          -114.3424243
+        ],
+        [
+          48.471943,
+          -114.3429904
+        ],
+        [
+          48.4719542,
+          -114.3431887
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Loop",
+      "surface": "Dirt",
+      "description": "A scenic loop trail with gentle terrain.",
+      "parkName": "Glacier National Park",
+      "stateCode": "MT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/839712166",
+      "source": "osm"
+    },
+    {
+      "name": "Kalispell Park Line Trail",
+      "distanceMiles": 1.5,
+      "elevationGainFt": 0,
+      "latitude": 48.2021904,
+      "longitude": -114.3034438,
+      "coordinates": [
+        [
+          48.2016132,
+          -114.304334
+        ],
+        [
+          48.2019736,
+          -114.303789
+        ],
+        [
+          48.2021904,
+          -114.3034438
+        ],
+        [
+          48.2023231,
+          -114.303086
+        ],
+        [
+          48.2025941,
+          -114.3022648
+        ],
+        [
+          48.2027513,
+          -114.3019233
+        ],
+        [
+          48.2029382,
+          -114.3015533
+        ],
+        [
+          48.2031116,
+          -114.3012647
+        ],
+        [
+          48.2034341,
+          -114.300789
+        ],
+        [
+          48.2035723,
+          -114.3006445
+        ],
+        [
+          48.2037105,
+          -114.3005004
+        ],
+        [
+          48.2039652,
+          -114.3002808
+        ],
+        [
+          48.2041386,
+          -114.3001223
+        ],
+        [
+          48.2044141,
+          -114.2998785
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Linear",
+      "surface": "Paved",
+      "description": "A scenic trail through Kalispell Park.",
+      "parkName": "Glacier National Park",
+      "stateCode": "MT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/927437369",
+      "source": "osm"
+    },
+    {
+      "name": "P&R Trail",
+      "distanceMiles": 0.4,
+      "elevationGainFt": 0,
+      "latitude": 48.2110405,
+      "longitude": -114.3542073,
+      "coordinates": [
+        [
+          48.2111607,
+          -114.3542804
+        ],
+        [
+          48.2111267,
+          -114.3542858
+        ],
+        [
+          48.2110758,
+          -114.354271
+        ],
+        [
+          48.2110267,
+          -114.3542321
+        ],
+        [
+          48.2109936,
+          -114.3541744
+        ],
+        [
+          48.2109596,
+          -114.3541382
+        ],
+        [
+          48.2109203,
+          -114.3541382
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Out and Back",
+      "surface": "Dirt",
+      "description": "A short trail suitable for all skill levels.",
+      "parkName": "Glacier National Park",
+      "stateCode": "MT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/968380362",
+      "source": "osm"
+    },
+    {
+      "name": "P&R Trail",
+      "distanceMiles": 0.3,
+      "elevationGainFt": 0,
+      "latitude": 48.2109866,
+      "longitude": -114.3537204,
+      "coordinates": [
+        [
+          48.2109203,
+          -114.3541382
+        ],
+        [
+          48.2108738,
+          -114.3539116
+        ],
+        [
+          48.2108765,
+          -114.3538499
+        ],
+        [
+          48.2109176,
+          -114.3537681
+        ],
+        [
+          48.2109543,
+          -114.3537198
+        ],
+        [
+          48.2109989,
+          -114.3537024
+        ],
+        [
+          48.2110579,
+          -114.3537265
+        ],
+        [
+          48.2111508,
+          -114.3537272
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Out and Back",
+      "surface": "Dirt",
+      "description": "A short trail suitable for all skill levels.",
+      "parkName": "Glacier National Park",
+      "stateCode": "MT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/968380362",
+      "source": "osm"
+    },
+    {
+      "name": "P&R Trail",
+      "distanceMiles": 0.5,
+      "elevationGainFt": 0,
+      "latitude": 48.2109203,
+      "longitude": -114.3541382,
+      "coordinates": [
+        [
+          48.2109203,
+          -114.3541382
+        ],
+        [
+          48.2109239,
+          -114.3541986
+        ],
+        [
+          48.2109158,
+          -114.3542415
+        ],
+        [
+          48.2108872,
+          -114.3543139
+        ],
+        [
+          48.2108256,
+          -114.3543837
+        ],
+        [
+          48.2107845,
+          -114.3544172
+        ],
+        [
+          48.210755,
+          -114.3545272
+        ],
+        [
+          48.2107219,
+          -114.3545835
+        ],
+        [
+          48.2106584,
+          -114.3545848
+        ],
+        [
+          48.2105727,
+          -114.3545379
+        ],
+        [
+          48.2105038,
+          -114.3544775
+        ],
+        [
+          48.2104449,
+          -114.3544883
+        ],
+        [
+          48.2103492,
+          -114.3545848
+        ],
+        [
+          48.2102304,
+          -114.3546519
+        ],
+        [
+          48.210082,
+          -114.354668
+        ],
+        [
+          48.2099721,
+          -114.3546693
+        ],
+        [
+          48.2099345,
+          -114.3546693
+        ],
+        [
+          48.2098568,
+          -114.3546728
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Path",
+      "surface": "Dirt",
+      "description": "A short trail suitable for walking.",
+      "parkName": "Glacier National Park",
+      "stateCode": "MT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/968380371",
+      "source": "osm"
+    },
+    {
+      "name": "Abandoned Trail",
+      "distanceMiles": 0.5,
+      "elevationGainFt": 0,
+      "latitude": 48.2081391,
+      "longitude": -114.3530238,
+      "coordinates": [
+        [
+          48.2081391,
+          -114.3530238
+        ],
+        [
+          48.2082582,
+          -114.3531317
+        ],
+        [
+          48.2083821,
+          -114.3531636
+        ],
+        [
+          48.2084552,
+          -114.3532113
+        ],
+        [
+          48.2085861,
+          -114.3533069
+        ],
+        [
+          48.208684,
+          -114.3534361
+        ],
+        [
+          48.2087972,
+          -114.3534821
+        ],
+        [
+          48.2088833,
+          -114.3536059
+        ],
+        [
+          48.2090342,
+          -114.3537174
+        ],
+        [
+          48.209112,
+          -114.3537971
+        ],
+        [
+          48.2092276,
+          -114.3538732
+        ],
+        [
+          48.2093267,
+          -114.3539298
+        ],
+        [
+          48.2094033,
+          -114.3540023
+        ],
+        [
+          48.2094812,
+          -114.354059
+        ],
+        [
+          48.209559,
+          -114.3540749
+        ],
+        [
+          48.2096345,
+          -114.3540501
+        ],
+        [
+          48.209697,
+          -114.354043
+        ],
+        [
+          48.2097253,
+          -114.3540253
+        ],
+        [
+          48.209785,
+          -114.3539711
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Path",
+      "surface": "Dirt",
+      "description": "An abandoned trail that is still passable.",
+      "parkName": "Glacier National Park",
+      "stateCode": "MT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/968380371",
+      "source": "osm"
+    },
+    {
+      "name": "P&R Trail",
+      "distanceMiles": 0.5,
+      "elevationGainFt": 0,
+      "latitude": 48.2097819,
+      "longitude": -114.3560356,
+      "coordinates": [
+        [
+          48.2081875,
+          -114.3535051
+        ],
+        [
+          48.2097819,
+          -114.3560356
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Path",
+      "surface": "Dirt",
+      "description": "A short trail suitable for walking.",
+      "parkName": "Glacier National Park",
+      "stateCode": "MT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/968380374",
+      "source": "osm"
+    },
+    {
+      "name": "Lupfer Overlook",
+      "distanceMiles": 1.2,
+      "elevationGainFt": 100,
+      "latitude": 48.47296,
+      "longitude": -114.487751,
+      "coordinates": [
+        [
+          48.47296,
+          -114.487751
+        ],
+        [
+          48.470924,
+          -114.486721
+        ],
+        [
+          48.470503,
+          -114.488322
+        ],
+        [
+          48.47037,
+          -114.488804
+        ],
+        [
+          48.469826,
+          -114.488226
+        ],
+        [
+          48.469342,
+          -114.487895
+        ],
+        [
+          48.468803,
+          -114.486969
+        ],
+        [
+          48.468381,
+          -114.48659
+        ],
+        [
+          48.4679,
+          -114.486275
+        ],
+        [
+          48.467465,
+          -114.486224
+        ],
+        [
+          48.467221,
+          -114.48604
+        ],
+        [
+          48.466949,
+          -114.485872
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Out and Back",
+      "surface": "Dirt",
+      "description": "Trail leading to a scenic overlook.",
+      "parkName": "Glacier National Park",
+      "stateCode": "MT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/969310554",
+      "source": "osm"
+    },
+    {
+      "name": "Roller Coaster",
+      "distanceMiles": 0.5,
+      "elevationGainFt": 50,
+      "latitude": 48.4766593,
+      "longitude": -114.3467328,
+      "coordinates": [
+        [
+          48.4766593,
+          -114.3467328
+        ],
+        [
+          48.4770489,
+          -114.346342
+        ],
+        [
+          48.4758569,
+          -114.3453155
+        ],
+        [
+          48.4761618,
+          -114.345208
+        ],
+        [
+          48.4773001,
+          -114.3447701
+        ],
+        [
+          48.4761879,
+          -114.3426369
+        ],
+        [
+          48.4745709,
+          -114.3412276
+        ],
+        [
+          48.4748333,
+          -114.3400462
+        ],
+        [
+          48.4754294,
+          -114.3398708
+        ],
+        [
+          48.4755867,
+          -114.3403412
+        ],
+        [
+          48.4765872,
+          -114.3385644
+        ],
+        [
+          48.4766193,
+          -114.3382924
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Loop",
+      "surface": "Dirt",
+      "description": "A winding trail with moderate elevation changes.",
+      "parkName": "Glacier National Park",
+      "stateCode": "MT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/1040051390",
+      "source": "osm"
+    },
+    {
+      "name": "Journey Trail",
+      "distanceMiles": 0.5,
+      "elevationGainFt": 30,
+      "latitude": 48.4766193,
+      "longitude": -114.3382924,
+      "coordinates": [
+        [
+          48.4766193,
+          -114.3382924
+        ],
+        [
+          48.476759,
+          -114.3379738
+        ],
+        [
+          48.4769464,
+          -114.3378578
+        ],
+        [
+          48.4772165,
+          -114.338033
+        ],
+        [
+          48.4774224,
+          -114.3380666
+        ],
+        [
+          48.4778786,
+          -114.3376036
+        ],
+        [
+          48.4780578,
+          -114.3375184
+        ],
+        [
+          48.4785072,
+          -114.3374648
+        ],
+        [
+          48.4789944,
+          -114.3372446
+        ],
+        [
+          48.479305,
+          -114.3369369
+        ],
+        [
+          48.4794932,
+          -114.3368665
+        ],
+        [
+          48.4797165,
+          -114.3366074
+        ],
+        [
+          48.4798257,
+          -114.3365512
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Point-to-Point",
+      "surface": "Dirt",
+      "description": "A scenic trail ideal for beginners.",
+      "parkName": "Glacier National Park",
+      "stateCode": "MT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/1040051390",
+      "source": "osm"
+    },
+    {
+      "name": "Arnica Ridge Trail",
+      "distanceMiles": 0.6,
+      "elevationGainFt": 70,
+      "latitude": 48.477111,
+      "longitude": -114.3469358,
+      "coordinates": [
+        [
+          48.477111,
+          -114.3469358
+        ],
+        [
+          48.4772423,
+          -114.3469886
+        ],
+        [
+          48.4775704,
+          -114.34734
+        ],
+        [
+          48.4783394,
+          -114.3476083
+        ],
+        [
+          48.4784442,
+          -114.3475895
+        ],
+        [
+          48.4786274,
+          -114.347612
+        ],
+        [
+          48.4789806,
+          -114.3476574
+        ],
+        [
+          48.4793487,
+          -114.3476649
+        ],
+        [
+          48.4796944,
+          -114.3476536
+        ],
+        [
+          48.48003,
+          -114.3476234
+        ],
+        [
+          48.4801828,
+          -114.3477745
+        ],
+        [
+          48.4802631,
+          -114.3478535
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Point-to-Point",
+      "surface": "Dirt",
+      "description": "A beautiful ridge trail with stunning views.",
+      "parkName": "Glacier National Park",
+      "stateCode": "MT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/1040051390",
+      "source": "osm"
+    },
+    {
+      "name": "Arnica Ridge Trail",
+      "distanceMiles": 0.3,
+      "elevationGainFt": 0,
+      "latitude": 48.4767865,
+      "longitude": -114.3467883,
+      "coordinates": [
+        [
+          48.4766593,
+          -114.3467328
+        ],
+        [
+          48.4767865,
+          -114.3467883
+        ],
+        [
+          48.477111,
+          -114.3469358
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Out and Back",
+      "surface": "Dirt",
+      "description": "A scenic trail offering views of the surrounding landscape.",
+      "parkName": "Glacier National Park",
+      "stateCode": "MT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/1040051396",
+      "source": "osm"
+    },
+    {
+      "name": "Arnica Ridge Trail",
+      "distanceMiles": 0.3,
+      "elevationGainFt": 0,
+      "latitude": 48.471405,
+      "longitude": -114.342673,
+      "coordinates": [
+        [
+          48.4711006,
+          -114.3424368
+        ],
+        [
+          48.471405,
+          -114.342673
+        ],
+        [
+          48.4719542,
+          -114.3431887
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Out and Back",
+      "surface": "Dirt",
+      "description": "A scenic trail offering views of the surrounding landscape.",
+      "parkName": "Glacier National Park",
+      "stateCode": "MT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/1040051396",
+      "source": "osm"
+    },
+    {
+      "name": "Kalispell Park Line Trail",
+      "distanceMiles": 0.8,
+      "elevationGainFt": 0,
+      "latitude": 48.2050135,
+      "longitude": -114.2977869,
+      "coordinates": [
+        [
+          48.2048475,
+          -114.2995055
+        ],
+        [
+          48.2049362,
+          -114.2994031
+        ],
+        [
+          48.2049879,
+          -114.2992812
+        ],
+        [
+          48.2050447,
+          -114.2992049
+        ],
+        [
+          48.2052365,
+          -114.29899
+        ],
+        [
+          48.2052488,
+          -114.2988639
+        ],
+        [
+          48.2052054,
+          -114.2987903
+        ],
+        [
+          48.2050863,
+          -114.2988594
+        ],
+        [
+          48.2050361,
+          -114.2988504
+        ],
+        [
+          48.2050138,
+          -114.2987827
+        ],
+        [
+          48.2051287,
+          -114.2982648
+        ],
+        [
+          48.2051278,
+          -114.2981113
+        ],
+        [
+          48.2050135,
+          -114.2977869
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Linear",
+      "surface": "Paved",
+      "description": "A scenic trail through Kalispell Park.",
+      "parkName": "Glacier National Park",
+      "stateCode": "MT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/1059145099",
+      "source": "osm"
+    },
+    {
+      "name": "Piegan Pass Trail",
+      "distanceMiles": 0.2,
+      "elevationGainFt": 0,
+      "latitude": 48.6933625,
+      "longitude": -113.6587793,
+      "coordinates": [
+        [
+          48.6933625,
+          -113.6587793
+        ],
+        [
+          48.6932586,
+          -113.6588886
+        ],
+        [
+          48.6931452,
+          -113.6589476
+        ],
+        [
+          48.6930567,
+          -113.6590281
+        ],
+        [
+          48.6929598,
+          -113.6591408
+        ],
+        [
+          48.6925977,
+          -113.6598403
+        ],
+        [
+          48.6925031,
+          -113.6599501
+        ],
+        [
+          48.6924765,
+          -113.6600373
+        ],
+        [
+          48.6924039,
+          -113.6600761
+        ],
+        [
+          48.692346,
+          -113.6601787
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Path",
+      "surface": "Ground",
+      "description": "A scenic trail leading through Piegan Pass.",
+      "parkName": "Glacier National Park",
+      "stateCode": "MT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/1082352581",
+      "source": "osm"
+    },
+    {
+      "name": "Piegan Pass Trail",
+      "distanceMiles": 0.1,
+      "elevationGainFt": 0,
+      "latitude": 48.6934432,
+      "longitude": -113.6587526,
+      "coordinates": [
+        [
+          48.6934432,
+          -113.6587526
+        ],
+        [
+          48.6933625,
+          -113.6587793
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Path",
+      "surface": "Wood",
+      "description": "A short segment of the Piegan Pass Trail.",
+      "parkName": "Glacier National Park",
+      "stateCode": "MT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/1082352581",
+      "source": "osm"
+    },
+    {
+      "name": "Powerline walking path",
+      "distanceMiles": 0.5,
+      "elevationGainFt": 0,
+      "latitude": 48.212,
+      "longitude": -114.367,
+      "coordinates": [
+        [
+          48.2115266,
+          -114.3676508
+        ],
+        [
+          48.214446,
+          -114.3679548
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Path",
+      "surface": "Asphalt",
+      "description": "A walking path along the powerline.",
+      "parkName": "Glacier National Park",
+      "stateCode": "MT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/1105845544",
+      "source": "osm"
+    },
+    {
+      "name": "Journey Trail",
+      "distanceMiles": 0.5,
+      "elevationGainFt": 0,
+      "latitude": 48.4821066,
+      "longitude": -114.3433773,
+      "coordinates": [
+        [
+          48.4821066,
+          -114.3433773
+        ],
+        [
+          48.4823779,
+          -114.34368
+        ],
+        [
+          48.4825746,
+          -114.344009
+        ],
+        [
+          48.4826194,
+          -114.3445379
+        ],
+        [
+          48.4826544,
+          -114.3452049
+        ],
+        [
+          48.4827362,
+          -114.3456222
+        ],
+        [
+          48.4826836,
+          -114.3459865
+        ],
+        [
+          48.4825979,
+          -114.3463538
+        ],
+        [
+          48.482599,
+          -114.346452
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Point-to-Point",
+      "surface": "Dirt",
+      "description": "A scenic trail through the forest.",
+      "parkName": "Glacier National Park",
+      "stateCode": "MT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/1198041852",
+      "source": "osm"
+    },
+    {
+      "name": "Journey Trail",
+      "distanceMiles": 0.2,
+      "elevationGainFt": 0,
+      "latitude": 48.483732,
+      "longitude": -114.352552,
+      "coordinates": [
+        [
+          48.483732,
+          -114.352552
+        ],
+        [
+          48.4837587,
+          -114.3527592
+        ],
+        [
+          48.4839106,
+          -114.3529619
+        ],
+        [
+          48.4839807,
+          -114.3531089
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Point-to-Point",
+      "surface": "Dirt",
+      "description": "A short connecting trail.",
+      "parkName": "Glacier National Park",
+      "stateCode": "MT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/1198041852",
+      "source": "osm"
+    },
+    {
+      "name": "Kalispell Park Line Trail",
+      "distanceMiles": 1.5,
+      "elevationGainFt": 0,
+      "latitude": 48.1993058,
+      "longitude": -114.319889,
+      "coordinates": [
+        [
+          48.1993058,
+          -114.319889
+        ],
+        [
+          48.1995449,
+          -114.3184404
+        ],
+        [
+          48.1999625,
+          -114.315911
+        ],
+        [
+          48.2000366,
+          -114.3154571
+        ],
+        [
+          48.2000566,
+          -114.3151962
+        ],
+        [
+          48.2000608,
+          -114.315107
+        ],
+        [
+          48.2000651,
+          -114.3149597
+        ],
+        [
+          48.2000649,
+          -114.3147952
+        ],
+        [
+          48.2000593,
+          -114.3146254
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Linear",
+      "surface": "Dirt",
+      "description": "A scenic trail through Kalispell Park.",
+      "parkName": "Glacier National Park",
+      "stateCode": "MT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/1201918524",
+      "source": "osm"
+    },
+    {
+      "name": "Kalispell Park Line Trail",
+      "distanceMiles": 1.2,
+      "elevationGainFt": 0,
+      "latitude": 48.2000593,
+      "longitude": -114.3146254,
+      "coordinates": [
+        [
+          48.2000593,
+          -114.3146254
+        ],
+        [
+          48.2000452,
+          -114.314495
+        ],
+        [
+          48.2000423,
+          -114.3143142
+        ],
+        [
+          48.2000471,
+          -114.3141665
+        ],
+        [
+          48.2000873,
+          -114.3138806
+        ],
+        [
+          48.2000649,
+          -114.3134865
+        ],
+        [
+          48.2000242,
+          -114.3132041
+        ],
+        [
+          48.1999473,
+          -114.3129912
+        ],
+        [
+          48.1999196,
+          -114.3129185
+        ],
+        [
+          48.1999028,
+          -114.3127786
+        ],
+        [
+          48.1999118,
+          -114.312693
+        ],
+        [
+          48.1999197,
+          -114.3126183
+        ],
+        [
+          48.1999226,
+          -114.3124936
+        ],
+        [
+          48.1999241,
+          -114.3120702
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Linear",
+      "surface": "Dirt",
+      "description": "A scenic footway through Kalispell Park.",
+      "parkName": "Glacier National Park",
+      "stateCode": "MT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/1202693216",
+      "source": "osm"
+    },
+    {
+      "name": "Kalispell Park Line Trail",
+      "distanceMiles": 1,
+      "elevationGainFt": 0,
+      "latitude": 48.200279,
+      "longitude": -114.3092841,
+      "coordinates": [
+        [
+          48.1999241,
+          -114.3120702
+        ],
+        [
+          48.1999399,
+          -114.3117296
+        ],
+        [
+          48.1999714,
+          -114.3112685
+        ],
+        [
+          48.2000296,
+          -114.3107942
+        ],
+        [
+          48.2001974,
+          -114.3097531
+        ],
+        [
+          48.2002096,
+          -114.309635
+        ],
+        [
+          48.2002284,
+          -114.3095293
+        ],
+        [
+          48.200279,
+          -114.3092841
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Linear",
+      "surface": "Dirt",
+      "description": "Continuation of the Kalispell Park Line Trail.",
+      "parkName": "Glacier National Park",
+      "stateCode": "MT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/1202693216",
+      "source": "osm"
+    },
+    {
+      "name": "Kalispell Park Line Trail",
+      "distanceMiles": 0.9,
+      "elevationGainFt": 0,
+      "latitude": 48.200279,
+      "longitude": -114.3092841,
+      "coordinates": [
+        [
+          48.200279,
+          -114.3092841
+        ],
+        [
+          48.2003988,
+          -114.3089971
+        ],
+        [
+          48.200532,
+          -114.3081806
+        ],
+        [
+          48.2006803,
+          -114.3072653
+        ],
+        [
+          48.2008192,
+          -114.3065814
+        ],
+        [
+          48.2008984,
+          -114.3063041
+        ],
+        [
+          48.2009298,
+          -114.3059796
+        ],
+        [
+          48.2009518,
+          -114.3057038
+        ],
+        [
+          48.2010191,
+          -114.3054003
+        ],
+        [
+          48.2011118,
+          -114.3051263
+        ],
+        [
+          48.2012578,
+          -114.3048558
+        ],
+        [
+          48.2014012,
+          -114.304649
+        ],
+        [
+          48.2016132,
+          -114.304334
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Linear",
+      "surface": "Dirt",
+      "description": "Final segment of the Kalispell Park Line Trail.",
+      "parkName": "Glacier National Park",
+      "stateCode": "MT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/1202693216",
+      "source": "osm"
+    },
+    {
+      "name": "National Forest Development Road 38",
+      "distanceMiles": 0.5,
+      "elevationGainFt": 0,
+      "latitude": 48.3343317,
+      "longitude": -113.8309447,
+      "coordinates": [
+        [
+          48.3339734,
+          -113.8309447
+        ],
+        [
+          48.3343317,
+          -113.83138
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Out and Back",
+      "surface": "Gravel",
+      "description": "A road through the national forest.",
+      "parkName": "Glacier National Park",
+      "stateCode": "MT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/1206221523",
+      "source": "osm"
+    },
+    {
+      "name": "9790",
+      "distanceMiles": 0.5,
+      "elevationGainFt": 0,
+      "latitude": 48.503241,
+      "longitude": -114.341619,
+      "coordinates": [
+        [
+          48.504677,
+          -114.342928
+        ],
+        [
+          48.504545,
+          -114.342692
+        ],
+        [
+          48.5043698,
+          -114.3425294
+        ],
+        [
+          48.503635,
+          -114.341802
+        ],
+        [
+          48.503241,
+          -114.341619
+        ],
+        [
+          48.5029449,
+          -114.3415584
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Loop",
+      "surface": "Dirt",
+      "description": "Brief description",
+      "parkName": "Glacier National Park",
+      "stateCode": "MT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/1212429315",
+      "source": "osm"
+    },
+    {
+      "name": "Summit Campground Cutoff Trail",
+      "distanceMiles": 0.5,
+      "elevationGainFt": 0,
+      "latitude": 48.3262674,
+      "longitude": -113.3163393,
+      "coordinates": [
+        [
+          48.3262674,
+          -113.3163393
+        ],
+        [
+          48.3264348,
+          -113.3204803
+        ],
+        [
+          48.325948,
+          -113.3236438
+        ],
+        [
+          48.3255823,
+          -113.3264318
+        ],
+        [
+          48.3238899,
+          -113.3296636
+        ],
+        [
+          48.3220613,
+          -113.3342079
+        ],
+        [
+          48.3212012,
+          -113.3375839
+        ],
+        [
+          48.3203654,
+          -113.3417
+        ],
+        [
+          48.3202192,
+          -113.3433992
+        ],
+        [
+          48.3214017,
+          -113.3470255
+        ],
+        [
+          48.3206597,
+          -113.3493322
+        ],
+        [
+          48.3205021,
+          -113.3499698
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Footpath",
+      "surface": "Ground",
+      "description": "A scenic trail leading to the Summit Campground.",
+      "parkName": "Glacier National Park",
+      "stateCode": "MT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/1272238691",
+      "source": "osm"
+    },
+    {
+      "name": "Apgar Bike Trail",
+      "distanceMiles": 0.2,
+      "elevationGainFt": 0,
+      "latitude": 48.5249688,
+      "longitude": -113.9954862,
+      "coordinates": [
+        [
+          48.5250041,
+          -113.9954862
+        ],
+        [
+          48.5249786,
+          -113.9955304
+        ],
+        [
+          48.5249334,
+          -113.9956117
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Out and Back",
+      "surface": "Paved",
+      "description": "A scenic bike trail in Apgar.",
+      "parkName": "Glacier National Park",
+      "stateCode": "MT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/1309907685",
+      "source": "osm"
+    },
+    {
+      "name": "Baker Underpass South",
+      "distanceMiles": 0.1,
+      "elevationGainFt": 0,
+      "latitude": 48.4130398,
+      "longitude": -114.3383695,
+      "coordinates": [
+        [
+          48.4130689,
+          -114.338177
+        ],
+        [
+          48.4130108,
+          -114.338561
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Point-to-Point",
+      "surface": "Paved",
+      "description": "A short underpass trail.",
+      "parkName": "Glacier National Park",
+      "stateCode": "MT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/1337784323",
+      "source": "osm"
+    },
+    {
+      "name": "Piegan Pass Trail",
+      "distanceMiles": 0.1,
+      "elevationGainFt": 0,
+      "latitude": 48.7075,
+      "longitude": -113.6554,
+      "coordinates": [
+        [
+          48.7075453,
+          -113.6554568
+        ],
+        [
+          48.707456,
+          -113.655391
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Point-to-Point",
+      "surface": "Dirt",
+      "description": "A short hiking trail leading to Piegan Pass.",
+      "parkName": "Glacier National Park",
+      "stateCode": "MT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/1356524316",
+      "source": "osm"
+    },
+    {
+      "name": "Piegan Pass Trail",
+      "distanceMiles": 1.2,
+      "elevationGainFt": 0,
+      "latitude": 48.709,
+      "longitude": -113.655,
+      "coordinates": [
+        [
+          48.7121112,
+          -113.655528
+        ],
+        [
+          48.712047,
+          -113.6555668
+        ],
+        [
+          48.7115946,
+          -113.6560566
+        ],
+        [
+          48.7111468,
+          -113.6564213
+        ],
+        [
+          48.7106613,
+          -113.6563018
+        ],
+        [
+          48.7102282,
+          -113.6560812
+        ],
+        [
+          48.7096171,
+          -113.6557612
+        ],
+        [
+          48.7094383,
+          -113.6556217
+        ],
+        [
+          48.7092224,
+          -113.65567
+        ],
+        [
+          48.7090319,
+          -113.6557468
+        ],
+        [
+          48.7086634,
+          -113.6557959
+        ],
+        [
+          48.7083569,
+          -113.6557397
+        ],
+        [
+          48.7080347,
+          -113.6556459
+        ],
+        [
+          48.7076023,
+          -113.6555342
+        ],
+        [
+          48.7075453,
+          -113.6554568
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Path",
+      "surface": "Ground",
+      "description": "A scenic hiking trail leading through beautiful landscapes.",
+      "parkName": "Glacier National Park",
+      "stateCode": "MT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/1373454250",
+      "source": "osm"
+    },
+    {
+      "name": "Hutton Ranch Path",
+      "distanceMiles": 0.1,
+      "elevationGainFt": 0,
+      "latitude": 48.229273,
+      "longitude": -114.3303138,
+      "coordinates": [
+        [
+          48.2292135,
+          -114.3303143
+        ],
+        [
+          48.229272,
+          -114.3303138
+        ],
+        [
+          48.229373,
+          -114.3303132
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Path",
+      "surface": "Dirt",
+      "description": "A short path through Hutton Ranch.",
+      "parkName": "Glacier National Park",
+      "stateCode": "MT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/1380139547",
+      "source": "osm"
+    },
+    {
+      "name": "Continental Divide National Scenic Trail",
+      "distanceMiles": 3.1,
+      "elevationGainFt": 0,
+      "latitude": 31.4969852,
+      "longitude": -108.2087367,
+      "coordinates": [
+        [
+          31.4969852,
+          -108.2087367
+        ],
+        [
+          48.998693,
+          -113.906121
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Point to Point",
+      "surface": "Natural",
+      "description": "A scenic trail along the continental divide.",
+      "parkName": "Glacier National Park",
+      "stateCode": "MT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/1457286505",
+      "source": "osm"
+    },
+    {
+      "name": "Siyeh Pass Trail",
+      "distanceMiles": 5.2,
+      "elevationGainFt": 1200,
+      "latitude": 48.6776297,
+      "longitude": -113.5915357,
+      "coordinates": [
+        [
+          48.6776297,
+          -113.5915357
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Out and Back",
+      "surface": "Dirt",
+      "description": "A scenic trail leading to Siyeh Pass with stunning views.",
+      "parkName": "Glacier National Park",
+      "stateCode": "MT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/18919463",
+      "source": "osm"
+    },
+    {
+      "name": "Piegan Pass Trail",
+      "distanceMiles": 6.5,
+      "elevationGainFt": 1500,
+      "latitude": 48.6759586,
+      "longitude": -113.5817179,
+      "coordinates": [
+        [
+          48.6759586,
+          -113.5817179
+        ]
+      ],
+      "difficulty": "Hard",
+      "trailType": "Out and Back",
+      "surface": "Rock",
+      "description": "Challenging trail with breathtaking views of the surrounding mountains.",
+      "parkName": "Glacier National Park",
+      "stateCode": "MT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/18919463",
+      "source": "osm"
+    },
+    {
+      "name": "Rising Sun Trail",
+      "distanceMiles": 4.5,
+      "elevationGainFt": 800,
+      "latitude": 48.6915438,
+      "longitude": -113.5181478,
+      "coordinates": [
+        [
+          48.6915438,
+          -113.5181478
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Loop",
+      "surface": "Dirt",
+      "description": "A beautiful trail that offers a variety of landscapes and wildlife.",
+      "parkName": "Glacier National Park",
+      "stateCode": "MT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/18919463",
+      "source": "osm"
+    },
+    {
+      "name": "Redgap Pass Trail",
+      "distanceMiles": 5.2,
+      "elevationGainFt": 1200,
+      "latitude": 48.8054226,
+      "longitude": -113.704155,
+      "coordinates": [
+        [
+          48.8054226,
+          -113.704155
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Loop",
+      "surface": "Dirt",
+      "description": "A scenic trail leading to Redgap Pass.",
+      "parkName": "Glacier National Park",
+      "stateCode": "MT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/18920017",
+      "source": "osm"
+    },
+    {
+      "name": "Mokowanis Lake Trail",
+      "distanceMiles": 6.5,
+      "elevationGainFt": 800,
+      "latitude": 48.8880408,
+      "longitude": -113.8148645,
+      "coordinates": [
+        [
+          48.8880408,
+          -113.8148645
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Out and Back",
+      "surface": "Dirt",
+      "description": "A beautiful trail to Mokowanis Lake.",
+      "parkName": "Glacier National Park",
+      "stateCode": "MT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/18920017",
+      "source": "osm"
+    },
+    {
+      "name": "Helen Lake Trail",
+      "distanceMiles": 4.8,
+      "elevationGainFt": 600,
+      "latitude": 48.8409403,
+      "longitude": -113.7454732,
+      "coordinates": [
+        [
+          48.8409403,
+          -113.7454732
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Out and Back",
+      "surface": "Dirt",
+      "description": "A trail leading to the serene Helen Lake.",
+      "parkName": "Glacier National Park",
+      "stateCode": "MT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/18920017",
+      "source": "osm"
+    },
+    {
+      "name": "Stoney Indian Pass Trail",
+      "distanceMiles": 5.2,
+      "elevationGainFt": 1200,
+      "latitude": 48.8712925,
+      "longitude": -113.904807,
+      "coordinates": [
+        [
+          48.8712925,
+          -113.904807
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Out and Back",
+      "surface": "Dirt",
+      "description": "A scenic trail leading to Stoney Indian Pass.",
+      "parkName": "Glacier National Park",
+      "stateCode": "MT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/18923805",
+      "source": "osm"
+    },
+    {
+      "name": "Numa Ridge Lookout Trail",
+      "distanceMiles": 6.5,
+      "elevationGainFt": 1500,
+      "latitude": 48.8375673,
+      "longitude": -114.1955209,
+      "coordinates": [
+        [
+          48.8375673,
+          -114.1955209
+        ]
+      ],
+      "difficulty": "Hard",
+      "trailType": "Out and Back",
+      "surface": "Rock",
+      "description": "A challenging hike with stunning views from the lookout.",
+      "parkName": "Glacier National Park",
+      "stateCode": "MT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/18923805",
+      "source": "osm"
+    },
+    {
+      "name": "Akokala Lake Trail",
+      "distanceMiles": 4.8,
+      "elevationGainFt": 800,
+      "latitude": 48.875378,
+      "longitude": -114.2000488,
+      "coordinates": [
+        [
+          48.875378,
+          -114.2000488
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Loop",
+      "surface": "Dirt",
+      "description": "A beautiful trail around Akokala Lake.",
+      "parkName": "Glacier National Park",
+      "stateCode": "MT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/18923805",
+      "source": "osm"
+    },
+    {
+      "name": "Bowman Lake Trail",
+      "distanceMiles": 5.2,
+      "elevationGainFt": 1200,
+      "latitude": 48.8301136,
+      "longitude": -114.2017369,
+      "coordinates": [
+        [
+          48.9507887,
+          -114.0356424
+        ],
+        [
+          48.8301136,
+          -114.2017369
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Loop",
+      "surface": "Dirt",
+      "description": "A scenic trail around Bowman Lake.",
+      "parkName": "Glacier National Park",
+      "stateCode": "MT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/18924741",
+      "source": "osm"
+    },
+    {
+      "name": "North Boundary Trail",
+      "distanceMiles": 6.5,
+      "elevationGainFt": 800,
+      "latitude": 48.9950865,
+      "longitude": -113.9083204,
+      "coordinates": [
+        [
+          48.9950865,
+          -113.9083204
+        ],
+        [
+          48.9987909,
+          -114.0097779
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Point-to-Point",
+      "surface": "Dirt",
+      "description": "A trail that follows the northern boundary of the park.",
+      "parkName": "Glacier National Park",
+      "stateCode": "MT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/18924741",
+      "source": "osm"
+    },
+    {
+      "name": "Kintla Trail",
+      "distanceMiles": 7,
+      "elevationGainFt": 1000,
+      "latitude": 48.9762944,
+      "longitude": -114.3904886,
+      "coordinates": [
+        [
+          48.9762944,
+          -114.3904886
+        ],
+        [
+          48.9761834,
+          -114.3954048
+        ]
+      ],
+      "difficulty": "Hard",
+      "trailType": "Out-and-Back",
+      "surface": "Dirt",
+      "description": "A challenging trail leading to Kintla Lake.",
+      "parkName": "Glacier National Park",
+      "stateCode": "MT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/18924741",
+      "source": "osm"
+    }
+  ],
+  "source": "osm",
+  "timestamp": "2026-01-25T13:24:15.715Z",
+  "errors": []
+}

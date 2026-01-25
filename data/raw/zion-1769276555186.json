@@ -1,0 +1,9 @@
+{
+  "parkName": "Zion National Park",
+  "parkCode": "zion",
+  "trailsFound": 0,
+  "trails": [],
+  "source": "osm",
+  "timestamp": "2026-01-24T17:42:35.186Z",
+  "errors": []
+}

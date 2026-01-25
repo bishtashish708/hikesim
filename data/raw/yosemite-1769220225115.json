@@ -1,0 +1,8118 @@
+{
+  "parkName": "Yosemite National Park",
+  "parkCode": "yose",
+  "trailsFound": 206,
+  "trails": [
+    {
+      "name": "View Meadow Road",
+      "distanceMiles": 1.5,
+      "elevationGainFt": 100,
+      "latitude": 38.0595162,
+      "longitude": -119.2121221,
+      "coordinates": [
+        [
+          38.0571224,
+          -119.2127109
+        ],
+        [
+          38.05836,
+          -119.2129777
+        ],
+        [
+          38.0595162,
+          -119.2121221
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Out and Back",
+      "surface": "Dirt",
+      "description": "A scenic road leading to a beautiful meadow.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/10429339",
+      "source": "osm"
+    },
+    {
+      "name": "Jordan Spring Road",
+      "distanceMiles": 2.8,
+      "elevationGainFt": 300,
+      "latitude": 38.0455669,
+      "longitude": -119.1990799,
+      "coordinates": [
+        [
+          38.0455669,
+          -119.1990799
+        ],
+        [
+          38.0464044,
+          -119.1981116
+        ],
+        [
+          38.0471744,
+          -119.1978903
+        ],
+        [
+          38.0481903,
+          -119.1966552
+        ],
+        [
+          38.0491947,
+          -119.1963105
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Out and Back",
+      "surface": "Dirt",
+      "description": "A rugged road leading to Jordan Spring, suitable for adventurous hikers.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/10429339",
+      "source": "osm"
+    },
+    {
+      "name": "Woodcutters Road",
+      "distanceMiles": 1.5,
+      "elevationGainFt": 200,
+      "latitude": 38.075472,
+      "longitude": -119.197058,
+      "coordinates": [
+        [
+          38.0685621,
+          -119.2108952
+        ],
+        [
+          38.0703136,
+          -119.2078681
+        ],
+        [
+          38.075472,
+          -119.197058
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Out and Back",
+      "surface": "Dirt",
+      "description": "A scenic dirt road through the forest, suitable for hiking.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/10448081",
+      "source": "osm"
+    },
+    {
+      "name": "Jordan Spring Road",
+      "distanceMiles": 2,
+      "elevationGainFt": 300,
+      "latitude": 38.0570479,
+      "longitude": -119.2265034,
+      "coordinates": [
+        [
+          38.0455669,
+          -119.1990799
+        ],
+        [
+          38.0570479,
+          -119.2265034
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Out and Back",
+      "surface": "Dirt",
+      "description": "A dirt road leading to Jordan Spring, offering beautiful views.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/10448081",
+      "source": "osm"
+    },
+    {
+      "name": "Jordan Spring Spur Road",
+      "distanceMiles": 0.5,
+      "elevationGainFt": 0,
+      "latitude": 38.0554676,
+      "longitude": -119.2097976,
+      "coordinates": [
+        [
+          38.0544254,
+          -119.2113322
+        ],
+        [
+          38.055004,
+          -119.2109674
+        ],
+        [
+          38.0554676,
+          -119.2097976
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Out and Back",
+      "surface": "Dirt",
+      "description": "A short dirt track leading to Jordan Spring.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/10455760",
+      "source": "osm"
+    },
+    {
+      "name": "Forestway Road",
+      "distanceMiles": 0.5,
+      "elevationGainFt": 0,
+      "latitude": 38.0821227,
+      "longitude": -119.2386357,
+      "coordinates": [
+        [
+          38.0821227,
+          -119.2386357
+        ],
+        [
+          38.0821892,
+          -119.2381342
+        ],
+        [
+          38.0826178,
+          -119.2366911
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Out and Back",
+      "surface": "Dirt",
+      "description": "A dirt road through the forest, suitable for light hiking.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/10455760",
+      "source": "osm"
+    },
+    {
+      "name": "Spur Road",
+      "distanceMiles": 0.5,
+      "elevationGainFt": 0,
+      "latitude": 38.075396,
+      "longitude": -119.2398052,
+      "coordinates": [
+        [
+          38.075396,
+          -119.2398052
+        ],
+        [
+          38.075492,
+          -119.2401177
+        ],
+        [
+          38.0757327,
+          -119.2430493
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Out and Back",
+      "surface": "Dirt",
+      "description": "A short spur road leading to scenic views.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/10455760",
+      "source": "osm"
+    },
+    {
+      "name": "Dunderberg Mill Road",
+      "distanceMiles": 2.5,
+      "elevationGainFt": 300,
+      "latitude": 38.113631,
+      "longitude": -119.238182,
+      "coordinates": [
+        [
+          38.0772128,
+          -119.2362767
+        ],
+        [
+          38.0805635,
+          -119.2375736
+        ],
+        [
+          38.113631,
+          -119.238182
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Out and Back",
+      "surface": "Dirt",
+      "description": "A longer dirt road with moderate elevation gain, leading to Dunderberg Mill.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/10455760",
+      "source": "osm"
+    },
+    {
+      "name": "Aspen Valley Road",
+      "distanceMiles": 5,
+      "elevationGainFt": 200,
+      "latitude": 37.8205735,
+      "longitude": -119.8059726,
+      "coordinates": [
+        [
+          37.824488,
+          -119.773075
+        ],
+        [
+          37.8205735,
+          -119.8059726
+        ],
+        [
+          37.823998,
+          -119.845294
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Out and Back",
+      "surface": "Dirt",
+      "description": "A scenic road through Aspen Valley, suitable for hiking and biking.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/10455760",
+      "source": "osm"
+    },
+    {
+      "name": "Mono Meadow Trail",
+      "distanceMiles": 1.8,
+      "elevationGainFt": 300,
+      "latitude": 37.6863484,
+      "longitude": -119.5479038,
+      "coordinates": [
+        [
+          37.6713395,
+          -119.5851357
+        ],
+        [
+          37.676203,
+          -119.5849088
+        ],
+        [
+          37.6811259,
+          -119.5610269
+        ],
+        [
+          37.6863484,
+          -119.5479038
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Out and Back",
+      "surface": "Ground",
+      "description": "A scenic trail through meadows and forest, offering views of the surrounding landscape.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/32879688",
+      "source": "osm"
+    },
+    {
+      "name": "Unnamed Trail",
+      "distanceMiles": 0.5,
+      "elevationGainFt": 50,
+      "latitude": 37.9901426,
+      "longitude": -119.3013471,
+      "coordinates": [
+        [
+          37.988859,
+          -119.300385
+        ],
+        [
+          37.9898508,
+          -119.3011218
+        ],
+        [
+          37.9895211,
+          -119.3018487
+        ],
+        [
+          37.9901426,
+          -119.3013471
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Loop",
+      "surface": "Dirt",
+      "description": "A short loop trail suitable for families and beginners.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/32879688",
+      "source": "osm"
+    },
+    {
+      "name": "Half Dome Trail",
+      "distanceMiles": 16,
+      "elevationGainFt": 4800,
+      "latitude": 37.7450665,
+      "longitude": -119.5127253,
+      "coordinates": [
+        [
+          37.7450665,
+          -119.5127253
+        ],
+        [
+          37.7457388,
+          -119.51318
+        ],
+        [
+          37.7465384,
+          -119.5135394
+        ],
+        [
+          37.7476667,
+          -119.513931
+        ],
+        [
+          37.7482902,
+          -119.5149395
+        ],
+        [
+          37.7491576,
+          -119.5155215
+        ],
+        [
+          37.7506613,
+          -119.5157656
+        ],
+        [
+          37.7513781,
+          -119.5162994
+        ],
+        [
+          37.7522582,
+          -119.5195207
+        ]
+      ],
+      "difficulty": "Very Hard",
+      "trailType": "Out and Back",
+      "surface": "Ground",
+      "description": "Challenging hike to the summit of Half Dome with stunning views.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/39832228",
+      "source": "osm"
+    },
+    {
+      "name": "John Muir Trail",
+      "distanceMiles": 211,
+      "elevationGainFt": 10000,
+      "latitude": 37.725028,
+      "longitude": -119.5449036,
+      "coordinates": [
+        [
+          37.725028,
+          -119.5449036
+        ],
+        [
+          37.7251715,
+          -119.5444009
+        ],
+        [
+          37.7254601,
+          -119.544071
+        ],
+        [
+          37.7259607,
+          -119.5439234
+        ],
+        [
+          37.7262586,
+          -119.5414827
+        ]
+      ],
+      "difficulty": "Very Hard",
+      "trailType": "Point to Point",
+      "surface": "Ground",
+      "description": "A scenic trail that passes through some of the most beautiful areas of the Sierra Nevada.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/39832228",
+      "source": "osm"
+    },
+    {
+      "name": "Mist Trail",
+      "distanceMiles": 3,
+      "elevationGainFt": 1000,
+      "latitude": 37.7258945,
+      "longitude": -119.5515104,
+      "coordinates": [
+        [
+          37.7258945,
+          -119.5515104
+        ],
+        [
+          37.7261509,
+          -119.5516359
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Out and Back",
+      "surface": "Wood",
+      "description": "A popular trail leading to Vernal and Nevada Falls with stunning views.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/39832228",
+      "source": "osm"
+    },
+    {
+      "name": "Mist Trail",
+      "distanceMiles": 1.5,
+      "elevationGainFt": 800,
+      "latitude": 37.7265155,
+      "longitude": -119.5402054,
+      "coordinates": [
+        [
+          37.7265155,
+          -119.5402054
+        ],
+        [
+          37.7268019,
+          -119.5391974
+        ],
+        [
+          37.727135,
+          -119.53885
+        ],
+        [
+          37.7274245,
+          -119.5385228
+        ],
+        [
+          37.7277693,
+          -119.5381245
+        ],
+        [
+          37.7272156,
+          -119.5387709
+        ],
+        [
+          37.7264413,
+          -119.5373154
+        ],
+        [
+          37.7261886,
+          -119.5356371
+        ],
+        [
+          37.7260679,
+          -119.5354477
+        ],
+        [
+          37.726136,
+          -119.5304666
+        ]
+      ],
+      "difficulty": "Hard",
+      "trailType": "Out and Back",
+      "surface": "Ground",
+      "description": "A popular trail leading to stunning views of waterfalls.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/40291552",
+      "source": "osm"
+    },
+    {
+      "name": "Small Falls Trail",
+      "distanceMiles": 0.5,
+      "elevationGainFt": 100,
+      "latitude": 37.8118661,
+      "longitude": -119.9270209,
+      "coordinates": [
+        [
+          37.8118661,
+          -119.9270209
+        ],
+        [
+          37.8119519,
+          -119.9316343
+        ],
+        [
+          37.8120377,
+          -119.9319348
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Loop",
+      "surface": "Dirt",
+      "description": "A short trail leading to small waterfalls.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/40291552",
+      "source": "osm"
+    },
+    {
+      "name": "John Muir Trail",
+      "distanceMiles": 1.5,
+      "elevationGainFt": 200,
+      "latitude": 37.725028,
+      "longitude": -119.5449036,
+      "coordinates": [
+        [
+          37.725028,
+          -119.5449036
+        ],
+        [
+          37.7248038,
+          -119.5454114
+        ],
+        [
+          37.724201,
+          -119.544313
+        ],
+        [
+          37.7239962,
+          -119.5437638
+        ],
+        [
+          37.723644,
+          -119.5440455
+        ],
+        [
+          37.722806,
+          -119.5402153
+        ],
+        [
+          37.722202,
+          -119.5409707
+        ],
+        [
+          37.7217898,
+          -119.5373856
+        ]
+      ],
+      "difficulty": "Hard",
+      "trailType": "Path",
+      "surface": "Ground",
+      "description": "A scenic trail offering stunning views and a challenging hike.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/80230543",
+      "source": "osm"
+    },
+    {
+      "name": "Mist Trail",
+      "distanceMiles": 1.8,
+      "elevationGainFt": 800,
+      "latitude": 37.7269514,
+      "longitude": -119.5429142,
+      "coordinates": [
+        [
+          37.7269514,
+          -119.5429142
+        ],
+        [
+          37.7271826,
+          -119.5431656
+        ],
+        [
+          37.7273267,
+          -119.543292
+        ],
+        [
+          37.7261649,
+          -119.5409404
+        ]
+      ],
+      "difficulty": "Very Hard",
+      "trailType": "Path",
+      "surface": "Ground",
+      "description": "Famous for its breathtaking waterfalls and steep climbs.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/80230543",
+      "source": "osm"
+    },
+    {
+      "name": "Sentinel Dome Trail",
+      "distanceMiles": 2.5,
+      "elevationGainFt": 600,
+      "latitude": 37.712802,
+      "longitude": -119.5867263,
+      "coordinates": [
+        [
+          37.712802,
+          -119.5867263
+        ],
+        [
+          37.7136814,
+          -119.5859517
+        ],
+        [
+          37.7141311,
+          -119.5857806
+        ],
+        [
+          37.71505,
+          -119.5847125
+        ],
+        [
+          37.7160255,
+          -119.5841069
+        ],
+        [
+          37.7167911,
+          -119.5837998
+        ],
+        [
+          37.7175395,
+          -119.5831799
+        ],
+        [
+          37.7182151,
+          -119.5829432
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Path",
+      "surface": "Ground",
+      "description": "A moderate hike leading to stunning panoramic views from the dome.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/80230543",
+      "source": "osm"
+    },
+    {
+      "name": "Saddlebag Lake Loop Trail",
+      "distanceMiles": 4,
+      "elevationGainFt": 300,
+      "latitude": 37.9649998,
+      "longitude": -119.2721137,
+      "coordinates": [
+        [
+          37.9649998,
+          -119.2721137
+        ],
+        [
+          37.965206,
+          -119.2722923
+        ],
+        [
+          37.9655784,
+          -119.2732692
+        ],
+        [
+          37.9658272,
+          -119.2739706
+        ],
+        [
+          37.9668216,
+          -119.274178
+        ],
+        [
+          37.9675913,
+          -119.2743174
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Loop",
+      "surface": "Ground",
+      "description": "A scenic loop around Saddlebag Lake, perfect for families.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/80230543",
+      "source": "osm"
+    },
+    {
+      "name": "Saddlebag Lake Loop Trail",
+      "distanceMiles": 3.5,
+      "elevationGainFt": 250,
+      "latitude": 37.9781231,
+      "longitude": -119.2858932,
+      "coordinates": [
+        [
+          37.9781231,
+          -119.2858932
+        ],
+        [
+          37.9783863,
+          -119.2868434
+        ],
+        [
+          37.9787531,
+          -119.2883277
+        ],
+        [
+          37.9793779,
+          -119.2976359
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Path",
+      "surface": "Ground",
+      "description": "A beautiful trail with views of the lake and surrounding mountains.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/80230543",
+      "source": "osm"
+    },
+    {
+      "name": "Unnamed Trail 1",
+      "distanceMiles": 0.3,
+      "elevationGainFt": 0,
+      "latitude": 37.9958378,
+      "longitude": -119.3043139,
+      "coordinates": [
+        [
+          37.9958378,
+          -119.3043139
+        ],
+        [
+          37.9960633,
+          -119.3038711
+        ],
+        [
+          37.9965495,
+          -119.3047965
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Path",
+      "surface": "Dirt",
+      "description": "A short hiking path through the park.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/82161817",
+      "source": "osm"
+    },
+    {
+      "name": "Unnamed Trail 2",
+      "distanceMiles": 0.4,
+      "elevationGainFt": 0,
+      "latitude": 37.9950035,
+      "longitude": -119.3052657,
+      "coordinates": [
+        [
+          37.9950035,
+          -119.3052657
+        ],
+        [
+          37.9962641,
+          -119.3050995
+        ],
+        [
+          37.9971849,
+          -119.3039997
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Path",
+      "surface": "Dirt",
+      "description": "Another scenic hiking path in the area.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/82161817",
+      "source": "osm"
+    },
+    {
+      "name": "Unnamed Trail 3",
+      "distanceMiles": 0.5,
+      "elevationGainFt": 0,
+      "latitude": 37.9432995,
+      "longitude": -119.790998,
+      "coordinates": [
+        [
+          37.9432995,
+          -119.790998
+        ],
+        [
+          37.9465018,
+          -119.7897369
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Path",
+      "surface": "Dirt",
+      "description": "A gentle trail suitable for all hikers.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/82161817",
+      "source": "osm"
+    },
+    {
+      "name": "Unnamed Trail 4",
+      "distanceMiles": 0.4,
+      "elevationGainFt": 0,
+      "latitude": 37.7260822,
+      "longitude": -119.6417507,
+      "coordinates": [
+        [
+          37.7260822,
+          -119.6358009
+        ],
+        [
+          37.7320694,
+          -119.6417507
+        ]
+      ],
+      "difficulty": "Very Hard",
+      "trailType": "Climbing Access",
+      "surface": "Rock",
+      "description": "A challenging climbing access trail.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/82161817",
+      "source": "osm"
+    },
+    {
+      "name": "Valley Loop Trail",
+      "distanceMiles": 2.5,
+      "elevationGainFt": 300,
+      "latitude": 37.7421211,
+      "longitude": -119.5847074,
+      "coordinates": [
+        [
+          37.7431591,
+          -119.5896114
+        ],
+        [
+          37.7429731,
+          -119.5885192
+        ],
+        [
+          37.7424674,
+          -119.5860442
+        ],
+        [
+          37.7421211,
+          -119.5847074
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Loop",
+      "surface": "Ground",
+      "description": "A scenic loop trail offering views of the valley and surrounding landscapes.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/159289417",
+      "source": "osm"
+    },
+    {
+      "name": "Lower Yosemite Fall Trail",
+      "distanceMiles": 0.5,
+      "elevationGainFt": 50,
+      "latitude": 37.7464757,
+      "longitude": -119.5930996,
+      "coordinates": [
+        [
+          37.7464757,
+          -119.5930996
+        ],
+        [
+          37.7461942,
+          -119.5939454
+        ],
+        [
+          37.7456807,
+          -119.5937434
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Out and Back",
+      "surface": "Asphalt",
+      "description": "A short and accessible trail leading to the base of Lower Yosemite Falls.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/162322618",
+      "source": "osm"
+    },
+    {
+      "name": "Lower Yosemite Fall Trail",
+      "distanceMiles": 0.5,
+      "elevationGainFt": 50,
+      "latitude": 37.7456489,
+      "longitude": -119.5956633,
+      "coordinates": [
+        [
+          37.7456489,
+          -119.5955687
+        ],
+        [
+          37.7458698,
+          -119.5956107
+        ],
+        [
+          37.7460126,
+          -119.5956519
+        ],
+        [
+          37.7460499,
+          -119.5956633
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Out and Back",
+      "surface": "Asphalt",
+      "description": "A short and accessible trail leading to the base of Lower Yosemite Falls.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/162322683",
+      "source": "osm"
+    },
+    {
+      "name": "Lower Yosemite Fall Trail",
+      "distanceMiles": 0.5,
+      "elevationGainFt": 0,
+      "latitude": 37.7460499,
+      "longitude": -119.5956633,
+      "coordinates": [
+        [
+          37.7460499,
+          -119.5956633
+        ],
+        [
+          37.7461608,
+          -119.59572
+        ],
+        [
+          37.7463606,
+          -119.5960055
+        ],
+        [
+          37.746407,
+          -119.5962639
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Out and Back",
+      "surface": "Asphalt",
+      "description": "A short and accessible trail leading to the base of Lower Yosemite Falls.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/162322709",
+      "source": "osm"
+    },
+    {
+      "name": "Lower Yosemite Fall Trail",
+      "distanceMiles": 0.5,
+      "elevationGainFt": 0,
+      "latitude": 37.746321,
+      "longitude": -119.5929874,
+      "coordinates": [
+        [
+          37.746321,
+          -119.5929874
+        ],
+        [
+          37.7462238,
+          -119.5930681
+        ],
+        [
+          37.7459763,
+          -119.5930115
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Out and Back",
+      "surface": "Dirt",
+      "description": "A short and easy trail leading to the base of Lower Yosemite Falls.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/162322718",
+      "source": "osm"
+    },
+    {
+      "name": "Rafferty Creek Trail",
+      "distanceMiles": 5.5,
+      "elevationGainFt": 800,
+      "latitude": 37.8669005,
+      "longitude": -119.323124,
+      "coordinates": [
+        [
+          37.8669005,
+          -119.323124
+        ],
+        [
+          37.8659521,
+          -119.3230328
+        ],
+        [
+          37.8654037,
+          -119.3228638
+        ],
+        [
+          37.8641903,
+          -119.3230435
+        ],
+        [
+          37.8635763,
+          -119.322947
+        ],
+        [
+          37.8624518,
+          -119.3229389
+        ],
+        [
+          37.8615625,
+          -119.3226197
+        ],
+        [
+          37.8602792,
+          -119.3227699
+        ],
+        [
+          37.8590488,
+          -119.3225661
+        ],
+        [
+          37.8575241,
+          -119.3228987
+        ],
+        [
+          37.8554318,
+          -119.322204
+        ],
+        [
+          37.8542156,
+          -119.3342391
+        ],
+        [
+          37.8536549,
+          -119.3221021
+        ],
+        [
+          37.8521216,
+          -119.3213806
+        ],
+        [
+          37.8515201,
+          -119.321343
+        ],
+        [
+          37.8501774,
+          -119.3213189
+        ],
+        [
+          37.849434,
+          -119.3214744
+        ],
+        [
+          37.8481251,
+          -119.321335
+        ],
+        [
+          37.8471021,
+          -119.3213457
+        ],
+        [
+          37.846634,
+          -119.3209621
+        ],
+        [
+          37.8451154,
+          -119.3203425
+        ],
+        [
+          37.844588,
+          -119.3201521
+        ],
+        [
+          37.8438678,
+          -119.3202165
+        ],
+        [
+          37.8432917,
+          -119.3202835
+        ],
+        [
+          37.8426393,
+          -119.3202916
+        ],
+        [
+          37.8417116,
+          -119.3201897
+        ],
+        [
+          37.8409999,
+          -119.3204954
+        ],
+        [
+          37.8401738,
+          -119.3213055
+        ],
+        [
+          37.8394028,
+          -119.322145
+        ],
+        [
+          37.8381509,
+          -119.3228316
+        ],
+        [
+          37.8375832,
+          -119.3232259
+        ],
+        [
+          37.8365028,
+          -119.3242237
+        ],
+        [
+          37.8356725,
+          -119.3249989
+        ],
+        [
+          37.8342998,
+          -119.3262166
+        ],
+        [
+          37.833463,
+          -119.3271312
+        ],
+        [
+          37.8325108,
+          -119.3289538
+        ],
+        [
+          37.8311613,
+          -119.3300776
+        ],
+        [
+          37.8304421,
+          -119.3302989
+        ],
+        [
+          37.8292875,
+          -119.3306811
+        ],
+        [
+          37.8280132,
+          -119.3311371
+        ],
+        [
+          37.827224,
+          -119.3314147
+        ],
+        [
+          37.8265111,
+          -119.332222
+        ],
+        [
+          37.8253618,
+          -119.3333204
+        ],
+        [
+          37.8242156,
+          -119.3342391
+        ],
+        [
+          37.8232791,
+          -119.3348721
+        ],
+        [
+          37.822135,
+          -119.3354729
+        ],
+        [
+          37.8214687,
+          -119.3359315
+        ],
+        [
+          37.8208034,
+          -119.3362024
+        ],
+        [
+          37.820011,
+          -119.3368073
+        ],
+        [
+          37.8195258,
+          -119.336995
+        ],
+        [
+          37.8185119,
+          -119.3375087
+        ],
+        [
+          37.8176125,
+          -119.337903
+        ],
+        [
+          37.816553,
+          -119.3383697
+        ],
+        [
+          37.8155932,
+          -119.3390791
+        ],
+        [
+          37.81404,
+          -119.3397
+        ],
+        [
+          37.8130801,
+          -119.3400313
+        ],
+        [
+          37.8122124,
+          -119.3400608
+        ],
+        [
+          37.8116487,
+          -119.340152
+        ],
+        [
+          37.8101431,
+          -119.3398717
+        ],
+        [
+          37.8096049,
+          -119.3399119
+        ],
+        [
+          37.808112,
+          -119.339928
+        ],
+        [
+          37.8071721,
+          -119.339865
+        ],
+        [
+          37.806102,
+          -119.3399428
+        ],
+        [
+          37.8050985,
+          -119.3403478
+        ],
+        [
+          37.8043769,
+          -119.3408185
+        ],
+        [
+          37.8042712,
+          -119.34089
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Out and Back",
+      "surface": "Ground",
+      "description": "A scenic trail following Rafferty Creek, leading to beautiful views and diverse wildlife.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/162384000",
+      "source": "osm"
+    },
+    {
+      "name": "Route up Ritter",
+      "distanceMiles": 2.5,
+      "elevationGainFt": 1500,
+      "latitude": 37.6867688,
+      "longitude": -119.183928,
+      "coordinates": [
+        [
+          37.6867688,
+          -119.183928
+        ],
+        [
+          37.6855264,
+          -119.1856859
+        ],
+        [
+          37.6841688,
+          -119.1971111
+        ],
+        [
+          37.6839981,
+          -119.1975627
+        ],
+        [
+          37.6892117,
+          -119.1994821
+        ]
+      ],
+      "difficulty": "Very Hard",
+      "trailType": "Out and Back",
+      "surface": "Gravel",
+      "description": "A demanding alpine hiking route with challenging visibility.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/164768960",
+      "source": "osm"
+    },
+    {
+      "name": "East Beach Trail",
+      "distanceMiles": 0.5,
+      "elevationGainFt": 0,
+      "latitude": 37.837571,
+      "longitude": -119.451275,
+      "coordinates": [
+        [
+          37.837571,
+          -119.451275
+        ],
+        [
+          37.8374202,
+          -119.4511791
+        ],
+        [
+          37.836925,
+          -119.4513682
+        ],
+        [
+          37.8363112,
+          -119.4519615
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Out and Back",
+      "surface": "Dirt",
+      "description": "A short, accessible trail leading to East Beach.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/193057629",
+      "source": "osm"
+    },
+    {
+      "name": "Old Yosemite Coulterville Road",
+      "distanceMiles": 0.5,
+      "elevationGainFt": 0,
+      "latitude": 37.7030818,
+      "longitude": -119.7543782,
+      "coordinates": [
+        [
+          37.7030818,
+          -119.7543782
+        ],
+        [
+          37.703049,
+          -119.754118
+        ],
+        [
+          37.703127,
+          -119.753898
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Out and Back",
+      "surface": "Dirt",
+      "description": "A scenic route through the forest, suitable for all skill levels.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/233178575",
+      "source": "osm"
+    },
+    {
+      "name": "John Muir Trail",
+      "distanceMiles": 1.2,
+      "elevationGainFt": 100,
+      "latitude": 37.7248532,
+      "longitude": -119.5330321,
+      "coordinates": [
+        [
+          37.7248532,
+          -119.5330321
+        ],
+        [
+          37.725295,
+          -119.532328
+        ],
+        [
+          37.7261368,
+          -119.5303823
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Path",
+      "surface": "Ground",
+      "description": "A scenic trail that offers stunning views and a moderate hiking experience.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/283589527",
+      "source": "osm"
+    },
+    {
+      "name": "John Muir Trail",
+      "distanceMiles": 1.5,
+      "elevationGainFt": 150,
+      "latitude": 37.7440196,
+      "longitude": -119.4612936,
+      "coordinates": [
+        [
+          37.7440196,
+          -119.4612936
+        ],
+        [
+          37.7438363,
+          -119.4611691
+        ],
+        [
+          37.7409245,
+          -119.4464194
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Path",
+      "surface": "Ground",
+      "description": "A beautiful hiking trail that traverses through diverse landscapes.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/283589527",
+      "source": "osm"
+    },
+    {
+      "name": "Valley Loop Trail",
+      "distanceMiles": 5.2,
+      "elevationGainFt": 200,
+      "latitude": 37.7192396,
+      "longitude": -119.6480066,
+      "coordinates": [
+        [
+          37.7192396,
+          -119.6480066
+        ],
+        [
+          37.7196121,
+          -119.6482722
+        ],
+        [
+          37.7202512,
+          -119.6488003
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Loop",
+      "surface": "Asphalt",
+      "description": "A scenic loop trail around the valley with views of iconic landmarks.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/288543336",
+      "source": "osm"
+    },
+    {
+      "name": "Unnamed Trail",
+      "distanceMiles": 0.1,
+      "elevationGainFt": 0,
+      "latitude": 37.741236,
+      "longitude": -119.4460672,
+      "coordinates": [
+        [
+          37.741236,
+          -119.4460672
+        ],
+        [
+          37.7413636,
+          -119.44614
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Path",
+      "surface": "Wood",
+      "description": "A short bridge path for hikers.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/288543336",
+      "source": "osm"
+    },
+    {
+      "name": "Unnamed Trail",
+      "distanceMiles": 0.5,
+      "elevationGainFt": 300,
+      "latitude": 37.7465912,
+      "longitude": -119.4362332,
+      "coordinates": [
+        [
+          37.7465912,
+          -119.4362332
+        ],
+        [
+          37.7466241,
+          -119.4364021
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Path",
+      "surface": "Ground",
+      "description": "A path leading through the forest.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/288543336",
+      "source": "osm"
+    },
+    {
+      "name": "Lower Yosemite Fall Trail",
+      "distanceMiles": 0.5,
+      "elevationGainFt": 0,
+      "latitude": 37.7498766,
+      "longitude": -119.5958424,
+      "coordinates": [
+        [
+          37.7498766,
+          -119.5958424
+        ],
+        [
+          37.7498292,
+          -119.595952
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Out and Back",
+      "surface": "Asphalt",
+      "description": "A short and accessible trail leading to the base of Lower Yosemite Fall.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/291544778",
+      "source": "osm"
+    },
+    {
+      "name": "Lower Yosemite Fall Trail",
+      "distanceMiles": 0.5,
+      "elevationGainFt": 50,
+      "latitude": 37.7462221,
+      "longitude": -119.5944586,
+      "coordinates": [
+        [
+          37.7462221,
+          -119.5944586
+        ],
+        [
+          37.7460964,
+          -119.5940641
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Out and Back",
+      "surface": "Asphalt",
+      "description": "A short and accessible trail leading to the base of Lower Yosemite Fall.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/291689117",
+      "source": "osm"
+    },
+    {
+      "name": "Unnamed Path",
+      "distanceMiles": 0.1,
+      "elevationGainFt": 0,
+      "latitude": 37.7449956,
+      "longitude": -119.4611288,
+      "coordinates": [
+        [
+          37.7449956,
+          -119.4611288
+        ],
+        [
+          37.7448813,
+          -119.4612892
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Path",
+      "surface": "Wood",
+      "description": "A short bridge path suitable for mountain hiking.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/302308026",
+      "source": "osm"
+    },
+    {
+      "name": "Unnamed Path",
+      "distanceMiles": 0.2,
+      "elevationGainFt": 0,
+      "latitude": 37.7459159,
+      "longitude": -119.4355453,
+      "coordinates": [
+        [
+          37.7459159,
+          -119.4355453
+        ],
+        [
+          37.7458889,
+          -119.4354806
+        ],
+        [
+          37.745343,
+          -119.434541
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Path",
+      "surface": "Ground",
+      "description": "A mountain hiking path with a natural surface.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/302308026",
+      "source": "osm"
+    },
+    {
+      "name": "Unnamed Trail",
+      "distanceMiles": 0.2,
+      "elevationGainFt": 0,
+      "latitude": 37.7404869,
+      "longitude": -119.4074008,
+      "coordinates": [
+        [
+          37.7404869,
+          -119.4074008
+        ],
+        [
+          37.7391376,
+          -119.4068445
+        ],
+        [
+          37.7389141,
+          -119.406662
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Path",
+      "surface": "Ground",
+      "description": "A short hiking path in Yosemite National Park.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/302317370",
+      "source": "osm"
+    },
+    {
+      "name": "Unnamed Trail",
+      "distanceMiles": 0.1,
+      "elevationGainFt": 0,
+      "latitude": 37.7391488,
+      "longitude": -119.4066647,
+      "coordinates": [
+        [
+          37.7391488,
+          -119.4066647
+        ],
+        [
+          37.7390205,
+          -119.4067405
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Path",
+      "surface": "Ground",
+      "description": "A connecting path in Yosemite National Park.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/302317370",
+      "source": "osm"
+    },
+    {
+      "name": "Unnamed Trail",
+      "distanceMiles": 0.1,
+      "elevationGainFt": 0,
+      "latitude": 37.739494,
+      "longitude": -119.4071825,
+      "coordinates": [
+        [
+          37.739494,
+          -119.4071825
+        ],
+        [
+          37.7393835,
+          -119.4070916
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Path",
+      "surface": "Ground",
+      "description": "A short hiking path in Yosemite National Park.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/302317370",
+      "source": "osm"
+    },
+    {
+      "name": "Unnamed Trail",
+      "distanceMiles": 0.1,
+      "elevationGainFt": 0,
+      "latitude": 37.745343,
+      "longitude": -119.434541,
+      "coordinates": [
+        [
+          37.745343,
+          -119.434541
+        ],
+        [
+          37.7453052,
+          -119.4343794
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Path",
+      "surface": "Wood",
+      "description": "A bridge path in Yosemite National Park.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/302317370",
+      "source": "osm"
+    },
+    {
+      "name": "Unnamed Trail",
+      "distanceMiles": 0.1,
+      "elevationGainFt": 0,
+      "latitude": 37.73926,
+      "longitude": -119.4065911,
+      "coordinates": [
+        [
+          37.73926,
+          -119.4065911
+        ],
+        [
+          37.7392126,
+          -119.4065619
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Path",
+      "surface": "Ground",
+      "description": "A short hiking path in Yosemite National Park.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/302317370",
+      "source": "osm"
+    },
+    {
+      "name": "Unnamed Trail 1",
+      "distanceMiles": 0.2,
+      "elevationGainFt": 0,
+      "latitude": 37.7396029,
+      "longitude": -119.4070466,
+      "coordinates": [
+        [
+          37.7396029,
+          -119.4070466
+        ],
+        [
+          37.7396235,
+          -119.4069474
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Path",
+      "surface": "Ground",
+      "description": "A short hiking path in Yosemite National Park.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/302317375",
+      "source": "osm"
+    },
+    {
+      "name": "Unnamed Trail 2",
+      "distanceMiles": 0.5,
+      "elevationGainFt": 0,
+      "latitude": 37.7453052,
+      "longitude": -119.4343794,
+      "coordinates": [
+        [
+          37.7453052,
+          -119.4343794
+        ],
+        [
+          37.745266,
+          -119.434283
+        ],
+        [
+          37.7451978,
+          -119.4341807
+        ],
+        [
+          37.7451242,
+          -119.434104
+        ],
+        [
+          37.7448823,
+          -119.4339645
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Path",
+      "surface": "Ground",
+      "description": "A scenic hiking path with beautiful views.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/302317375",
+      "source": "osm"
+    },
+    {
+      "name": "Unnamed Trail 3",
+      "distanceMiles": 0.3,
+      "elevationGainFt": 0,
+      "latitude": 37.7389771,
+      "longitude": -119.4067019,
+      "coordinates": [
+        [
+          37.7389771,
+          -119.4067019
+        ],
+        [
+          37.7390542,
+          -119.4065333
+        ],
+        [
+          37.7390895,
+          -119.4064707
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Path",
+      "surface": "Ground",
+      "description": "A short connecting path in the park.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/302317375",
+      "source": "osm"
+    },
+    {
+      "name": "Unnamed Trail 4",
+      "distanceMiles": 0.2,
+      "elevationGainFt": 0,
+      "latitude": 37.7391334,
+      "longitude": -119.4066281,
+      "coordinates": [
+        [
+          37.7391334,
+          -119.4066281
+        ],
+        [
+          37.7392126,
+          -119.4065619
+        ],
+        [
+          37.7392451,
+          -119.4064939
+        ],
+        [
+          37.7392904,
+          -119.4065279
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Path",
+      "surface": "Ground",
+      "description": "A short path leading to a viewpoint.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/302317375",
+      "source": "osm"
+    },
+    {
+      "name": "Unnamed Trail 5",
+      "distanceMiles": 0.4,
+      "elevationGainFt": 0,
+      "latitude": 37.7393597,
+      "longitude": -119.4070233,
+      "coordinates": [
+        [
+          37.7393597,
+          -119.4070233
+        ],
+        [
+          37.7394756,
+          -119.4070108
+        ],
+        [
+          37.7396029,
+          -119.4070466
+        ],
+        [
+          37.7397542,
+          -119.4071932
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Path",
+      "surface": "Ground",
+      "description": "A connecting trail through the forest.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/302317375",
+      "source": "osm"
+    },
+    {
+      "name": "Unnamed Trail 1",
+      "distanceMiles": 0.1,
+      "elevationGainFt": 0,
+      "latitude": 37.7396142,
+      "longitude": -119.4071914,
+      "coordinates": [
+        [
+          37.7396142,
+          -119.4071914
+        ],
+        [
+          37.739494,
+          -119.4071825
+        ],
+        [
+          37.7393597,
+          -119.4070233
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Path",
+      "surface": "Ground",
+      "description": "A short hiking path in Yosemite National Park.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/302317380",
+      "source": "osm"
+    },
+    {
+      "name": "Unnamed Trail 2",
+      "distanceMiles": 0.1,
+      "elevationGainFt": 0,
+      "latitude": 37.7391849,
+      "longitude": -119.4067502,
+      "coordinates": [
+        [
+          37.7391849,
+          -119.4067502
+        ],
+        [
+          37.7393964,
+          -119.4068355
+        ],
+        [
+          37.7398066,
+          -119.4070376
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Path",
+      "surface": "Ground",
+      "description": "A scenic hiking path in Yosemite National Park.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/302317380",
+      "source": "osm"
+    },
+    {
+      "name": "Unnamed Trail 3",
+      "distanceMiles": 0.1,
+      "elevationGainFt": 0,
+      "latitude": 37.7389141,
+      "longitude": -119.406662,
+      "coordinates": [
+        [
+          37.7389141,
+          -119.406662
+        ],
+        [
+          37.7389679,
+          -119.4064671
+        ],
+        [
+          37.7391849,
+          -119.4067502
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Path",
+      "surface": "Ground",
+      "description": "A connecting hiking path in Yosemite National Park.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/302317380",
+      "source": "osm"
+    },
+    {
+      "name": "Unnamed Trail 4",
+      "distanceMiles": 0.1,
+      "elevationGainFt": 0,
+      "latitude": 37.7389141,
+      "longitude": -119.406662,
+      "coordinates": [
+        [
+          37.7389141,
+          -119.406662
+        ],
+        [
+          37.7388604,
+          -119.4066871
+        ],
+        [
+          37.7383687,
+          -119.4063363
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Path",
+      "surface": "Ground",
+      "description": "A short hiking path in Yosemite National Park.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/302317380",
+      "source": "osm"
+    },
+    {
+      "name": "Unnamed Trail 5",
+      "distanceMiles": 0.1,
+      "elevationGainFt": 0,
+      "latitude": 37.7397033,
+      "longitude": -119.407347,
+      "coordinates": [
+        [
+          37.7397033,
+          -119.407347
+        ],
+        [
+          37.739425,
+          -119.4072102
+        ],
+        [
+          37.7391292,
+          -119.4069803
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Path",
+      "surface": "Ground",
+      "description": "A short hiking path in Yosemite National Park.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/302317380",
+      "source": "osm"
+    },
+    {
+      "name": "Unnamed Trail",
+      "distanceMiles": 0.1,
+      "elevationGainFt": 0,
+      "latitude": 37.738781,
+      "longitude": -119.396654,
+      "coordinates": [
+        [
+          37.738781,
+          -119.396654
+        ],
+        [
+          37.7387271,
+          -119.3965257
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Path",
+      "surface": "Wood",
+      "description": "A short path with a wooden surface.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/302320539",
+      "source": "osm"
+    },
+    {
+      "name": "Unnamed Trail",
+      "distanceMiles": 0.1,
+      "elevationGainFt": 0,
+      "latitude": 37.7385698,
+      "longitude": -119.3958894,
+      "coordinates": [
+        [
+          37.7385677,
+          -119.3958894
+        ],
+        [
+          37.7385698,
+          -119.3958128
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Path",
+      "surface": "Ground",
+      "description": "A short path with a ground surface.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/302320539",
+      "source": "osm"
+    },
+    {
+      "name": "Unnamed Trail",
+      "distanceMiles": 0.1,
+      "elevationGainFt": 0,
+      "latitude": 37.7385698,
+      "longitude": -119.3958128,
+      "coordinates": [
+        [
+          37.7385698,
+          -119.3958128
+        ],
+        [
+          37.7385408,
+          -119.3956302
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Path",
+      "surface": "Wood",
+      "description": "A short path with a wooden surface.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/302320539",
+      "source": "osm"
+    },
+    {
+      "name": "Unnamed Trail",
+      "distanceMiles": 0.1,
+      "elevationGainFt": 0,
+      "latitude": 37.7385532,
+      "longitude": -119.3960177,
+      "coordinates": [
+        [
+          37.7385532,
+          -119.3960177
+        ],
+        [
+          37.7385677,
+          -119.3958894
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Path",
+      "surface": "Wood",
+      "description": "A short path with a wooden surface.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/302320539",
+      "source": "osm"
+    },
+    {
+      "name": "Unnamed Trail",
+      "distanceMiles": 0.1,
+      "elevationGainFt": 0,
+      "latitude": 37.7387271,
+      "longitude": -119.3965257,
+      "coordinates": [
+        [
+          37.7387271,
+          -119.3965257
+        ],
+        [
+          37.7385159,
+          -119.396311
+        ],
+        [
+          37.7384786,
+          -119.3962298
+        ],
+        [
+          37.7385035,
+          -119.3961413
+        ],
+        [
+          37.7385532,
+          -119.3960177
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Path",
+      "surface": "Ground",
+      "description": "A short path with a ground surface.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/302320539",
+      "source": "osm"
+    },
+    {
+      "name": "Panorama Trail",
+      "distanceMiles": 8.5,
+      "elevationGainFt": 1200,
+      "latitude": 37.7198527,
+      "longitude": -119.5400235,
+      "coordinates": [
+        [
+          37.7121191,
+          -119.5605401
+        ],
+        [
+          37.7155,
+          -119.5591148
+        ],
+        [
+          37.7191515,
+          -119.5545592
+        ],
+        [
+          37.7198527,
+          -119.5400235
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Point to Point",
+      "surface": "ground",
+      "description": "A scenic trail offering stunning views of Yosemite Valley and the surrounding peaks.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/302322841",
+      "source": "osm"
+    },
+    {
+      "name": "Snake Dike Approach",
+      "distanceMiles": 2,
+      "elevationGainFt": 800,
+      "latitude": 37.7383497,
+      "longitude": -119.5395382,
+      "coordinates": [
+        [
+          37.7383497,
+          -119.5395382
+        ],
+        [
+          37.7385143,
+          -119.5388795
+        ]
+      ],
+      "difficulty": "Hard",
+      "trailType": "Access",
+      "surface": "earth",
+      "description": "Used to reach the south and southwest faces of Half Dome for climbing.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/302322841",
+      "source": "osm"
+    },
+    {
+      "name": "Sentinel Dome Fire Road",
+      "distanceMiles": 0.5,
+      "elevationGainFt": 0,
+      "latitude": 37.7246374,
+      "longitude": -119.5830385,
+      "coordinates": [
+        [
+          37.7246374,
+          -119.5830385
+        ],
+        [
+          37.7246883,
+          -119.5826683
+        ],
+        [
+          37.7236275,
+          -119.5825906
+        ],
+        [
+          37.7229028,
+          -119.5826472
+        ],
+        [
+          37.7218831,
+          -119.5832117
+        ],
+        [
+          37.7205173,
+          -119.5823465
+        ],
+        [
+          37.7191976,
+          -119.5822607
+        ],
+        [
+          37.7188687,
+          -119.5810832
+        ],
+        [
+          37.7189451,
+          -119.5804046
+        ],
+        [
+          37.7189731,
+          -119.5803036
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Out and Back",
+      "surface": "Paved",
+      "description": "A scenic fire road leading to Sentinel Dome.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/336626152",
+      "source": "osm"
+    },
+    {
+      "name": "Bridalveil Fall Trail",
+      "distanceMiles": 0.6,
+      "elevationGainFt": 100,
+      "latitude": 37.7175123,
+      "longitude": -119.6500322,
+      "coordinates": [
+        [
+          37.7175123,
+          -119.6500322
+        ],
+        [
+          37.7173381,
+          -119.6498618
+        ],
+        [
+          37.7176938,
+          -119.6493652
+        ],
+        [
+          37.7175596,
+          -119.6486912
+        ],
+        [
+          37.7174334,
+          -119.6485433
+        ],
+        [
+          37.7176004,
+          -119.6482812
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Out and Back",
+      "surface": "Asphalt",
+      "description": "A short trail leading to the stunning Bridalveil Fall.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/336626152",
+      "source": "osm"
+    },
+    {
+      "name": "Dozier Dome Climbing Approach",
+      "distanceMiles": 1.5,
+      "elevationGainFt": 800,
+      "latitude": 37.8539525,
+      "longitude": -119.4381867,
+      "coordinates": [
+        [
+          37.8539525,
+          -119.4381867
+        ],
+        [
+          37.8538032,
+          -119.438062
+        ],
+        [
+          37.8527231,
+          -119.4376007
+        ],
+        [
+          37.85214,
+          -119.437237
+        ],
+        [
+          37.8518961,
+          -119.437028
+        ],
+        [
+          37.851248,
+          -119.4359337
+        ],
+        [
+          37.850668,
+          -119.433601
+        ],
+        [
+          37.8501795,
+          -119.4316435
+        ],
+        [
+          37.8491297,
+          -119.4319584
+        ]
+      ],
+      "difficulty": "Very Hard",
+      "trailType": "Approach",
+      "surface": "Ground",
+      "description": "A challenging approach trail for climbers heading to Dozier Dome.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/336626152",
+      "source": "osm"
+    },
+    {
+      "name": "Sunnyside Bench Climber's Descent",
+      "distanceMiles": 0.8,
+      "elevationGainFt": 200,
+      "latitude": 37.7516934,
+      "longitude": -119.5970273,
+      "coordinates": [
+        [
+          37.7516934,
+          -119.5970273
+        ],
+        [
+          37.7514842,
+          -119.5967658
+        ],
+        [
+          37.7514971,
+          -119.5953783
+        ],
+        [
+          37.751985,
+          -119.5941543
+        ],
+        [
+          37.752291,
+          -119.5936446
+        ],
+        [
+          37.7528163,
+          -119.5915541
+        ],
+        [
+          37.7529473,
+          -119.5898985
+        ],
+        [
+          37.7530967,
+          -119.5897002
+        ]
+      ],
+      "difficulty": "Very Hard",
+      "trailType": "Descent",
+      "surface": "Ground",
+      "description": "A challenging descent for climbers accessing the Sunnyside Bench.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/368820452",
+      "source": "osm"
+    },
+    {
+      "name": "Climbers' Descent",
+      "distanceMiles": 1.5,
+      "elevationGainFt": 300,
+      "latitude": 37.829025,
+      "longitude": -119.4425199,
+      "coordinates": [
+        [
+          37.829025,
+          -119.4425199
+        ],
+        [
+          37.8286371,
+          -119.4434443
+        ],
+        [
+          37.8275356,
+          -119.4438469
+        ],
+        [
+          37.8268061,
+          -119.4440992
+        ],
+        [
+          37.8264447,
+          -119.4441026
+        ],
+        [
+          37.826009,
+          -119.4438271
+        ],
+        [
+          37.8252362,
+          -119.4460341
+        ],
+        [
+          37.8253506,
+          -119.4458718
+        ],
+        [
+          37.8254476,
+          -119.4448933
+        ],
+        [
+          37.825484,
+          -119.4447069
+        ]
+      ],
+      "difficulty": "Hard",
+      "trailType": "Descent",
+      "surface": "Earth",
+      "description": "A steep descent for climbers, offering access to various climbing routes.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/368820452",
+      "source": "osm"
+    },
+    {
+      "name": "Panorama Trail",
+      "distanceMiles": 6.5,
+      "elevationGainFt": 1200,
+      "latitude": 37.7269261,
+      "longitude": -119.5738097,
+      "coordinates": [
+        [
+          37.7269261,
+          -119.5738097
+        ],
+        [
+          37.7267422,
+          -119.573658
+        ],
+        [
+          37.7260876,
+          -119.573188
+        ],
+        [
+          37.7257184,
+          -119.5732363
+        ],
+        [
+          37.7250904,
+          -119.572413
+        ],
+        [
+          37.724822,
+          -119.5724166
+        ],
+        [
+          37.7246438,
+          -119.5727267
+        ],
+        [
+          37.7244897,
+          -119.5726484
+        ],
+        [
+          37.7244337,
+          -119.5725947
+        ],
+        [
+          37.7242172,
+          -119.5713191
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Loop",
+      "surface": "Dirt",
+      "description": "A scenic trail offering panoramic views of the surrounding landscape.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/368820452",
+      "source": "osm"
+    },
+    {
+      "name": "Castle Rock Road",
+      "distanceMiles": 1.5,
+      "elevationGainFt": 200,
+      "latitude": 38.06,
+      "longitude": -119.235,
+      "coordinates": [
+        [
+          38.059229,
+          -119.2405669
+        ],
+        [
+          38.0602533,
+          -119.2323406
+        ],
+        [
+          38.0629471,
+          -119.2288759
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Track",
+      "surface": "Dirt",
+      "description": "A dirt track leading to Castle Rock with scenic views.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/399576553",
+      "source": "osm"
+    },
+    {
+      "name": "Mount Conness South Slope Route",
+      "distanceMiles": 3.2,
+      "elevationGainFt": 1500,
+      "latitude": 37.961,
+      "longitude": -119.318,
+      "coordinates": [
+        [
+          37.9379657,
+          -119.3343177
+        ],
+        [
+          37.9669683,
+          -119.3212751
+        ]
+      ],
+      "difficulty": "Very Hard",
+      "trailType": "Path",
+      "surface": "Rocky",
+      "description": "A demanding alpine hiking route with challenging terrain.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/399576553",
+      "source": "osm"
+    },
+    {
+      "name": "Staircase Falls Climbing Approach",
+      "distanceMiles": 0.3,
+      "elevationGainFt": 100,
+      "latitude": 37.7365887,
+      "longitude": -119.5749041,
+      "coordinates": [
+        [
+          37.735685,
+          -119.5753547
+        ],
+        [
+          37.7359274,
+          -119.5751714
+        ],
+        [
+          37.7367371,
+          -119.5746493
+        ],
+        [
+          37.7370914,
+          -119.5745473
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Approach",
+      "surface": "Earth",
+      "description": "A short approach trail leading to Staircase Falls, suitable for climbers.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/420203859",
+      "source": "osm"
+    },
+    {
+      "name": "Panorama Trail",
+      "distanceMiles": 1.2,
+      "elevationGainFt": 300,
+      "latitude": 37.7277952,
+      "longitude": -119.5732841,
+      "coordinates": [
+        [
+          37.7277952,
+          -119.5732841
+        ],
+        [
+          37.7275224,
+          -119.5735297
+        ],
+        [
+          37.72715,
+          -119.5736889
+        ],
+        [
+          37.7269261,
+          -119.5738097
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Path",
+      "surface": "Ground",
+      "description": "A scenic trail offering stunning views of the surrounding landscape.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/423200546",
+      "source": "osm"
+    },
+    {
+      "name": "John Muir Trail",
+      "distanceMiles": 1.5,
+      "elevationGainFt": 400,
+      "latitude": 37.7223711,
+      "longitude": -119.5354182,
+      "coordinates": [
+        [
+          37.7223711,
+          -119.5354182
+        ],
+        [
+          37.72246,
+          -119.5350638
+        ],
+        [
+          37.723474,
+          -119.534142
+        ],
+        [
+          37.7246325,
+          -119.5330918
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Path",
+      "surface": "Ground",
+      "description": "A popular hiking trail that offers breathtaking views and a connection to nature.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/423200546",
+      "source": "osm"
+    },
+    {
+      "name": "Dozier Dome Climber's Descent",
+      "distanceMiles": 1,
+      "elevationGainFt": 500,
+      "latitude": 37.8468703,
+      "longitude": -119.4310882,
+      "coordinates": [
+        [
+          37.8468703,
+          -119.4310882
+        ],
+        [
+          37.8454939,
+          -119.4310815
+        ],
+        [
+          37.8471857,
+          -119.433493
+        ],
+        [
+          37.8491297,
+          -119.4319584
+        ]
+      ],
+      "difficulty": "Hard",
+      "trailType": "Climbing Access",
+      "surface": "Ground",
+      "description": "A challenging descent for climbers, providing access to climbing routes.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/423200546",
+      "source": "osm"
+    },
+    {
+      "name": "Half Dome Trail",
+      "distanceMiles": 0.5,
+      "elevationGainFt": 800,
+      "latitude": 37.7456264,
+      "longitude": -119.5328459,
+      "coordinates": [
+        [
+          37.7456264,
+          -119.5328459
+        ],
+        [
+          37.7454811,
+          -119.5329934
+        ],
+        [
+          37.7459445,
+          -119.5332322
+        ]
+      ],
+      "difficulty": "Very Hard",
+      "trailType": "Path",
+      "surface": "Ground",
+      "description": "A demanding trail leading to one of the most iconic landmarks in Yosemite.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/423200546",
+      "source": "osm"
+    },
+    {
+      "name": "The Cables",
+      "distanceMiles": 0.5,
+      "elevationGainFt": 100,
+      "latitude": 37.7466375,
+      "longitude": -119.5300611,
+      "coordinates": [
+        [
+          37.7466375,
+          -119.5300611
+        ],
+        [
+          37.7461333,
+          -119.5314083
+        ],
+        [
+          37.7456264,
+          -119.5328459
+        ]
+      ],
+      "difficulty": "Very Hard",
+      "trailType": "Path",
+      "surface": "Rock",
+      "description": "A demanding mountain hiking trail with stunning views.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/435976809",
+      "source": "osm"
+    },
+    {
+      "name": "Endless Slabs",
+      "distanceMiles": 0.5,
+      "elevationGainFt": 150,
+      "latitude": 37.7406121,
+      "longitude": -119.5383945,
+      "coordinates": [
+        [
+          37.7406121,
+          -119.5383945
+        ],
+        [
+          37.7438946,
+          -119.5345089
+        ]
+      ],
+      "difficulty": "Very Hard",
+      "trailType": "Path",
+      "surface": "N/A",
+      "description": "A challenging alpine hiking trail with poor visibility.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/435976809",
+      "source": "osm"
+    },
+    {
+      "name": "Northwest Books Approach Scramble",
+      "distanceMiles": 0.3,
+      "elevationGainFt": 200,
+      "latitude": 37.8812992,
+      "longitude": -119.351358,
+      "coordinates": [
+        [
+          37.8812992,
+          -119.351358
+        ],
+        [
+          37.8805632,
+          -119.3512749
+        ]
+      ],
+      "difficulty": "Very Hard",
+      "trailType": "Path",
+      "surface": "Stone",
+      "description": "A demanding alpine hiking scramble with steep inclines.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/435976809",
+      "source": "osm"
+    },
+    {
+      "name": "Lower Yosemite Fall Trail",
+      "distanceMiles": 0.5,
+      "elevationGainFt": 50,
+      "latitude": 37.7475013,
+      "longitude": -119.5934728,
+      "coordinates": [
+        [
+          37.7475013,
+          -119.5934728
+        ],
+        [
+          37.747394,
+          -119.5935849
+        ],
+        [
+          37.7472875,
+          -119.5937117
+        ],
+        [
+          37.7471626,
+          -119.5938922
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Out and Back",
+      "surface": "Gravel",
+      "description": "A short and easy trail leading to the base of Lower Yosemite Falls.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/440612493",
+      "source": "osm"
+    },
+    {
+      "name": "Lower Yosemite Fall Trail",
+      "distanceMiles": 0.5,
+      "elevationGainFt": 0,
+      "latitude": 37.7501674,
+      "longitude": -119.5931378,
+      "coordinates": [
+        [
+          37.7501674,
+          -119.5931378
+        ],
+        [
+          37.750582,
+          -119.593455
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Out and Back",
+      "surface": "asphalt",
+      "description": "A short, accessible trail leading to the base of Lower Yosemite Fall.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/440834748",
+      "source": "osm"
+    },
+    {
+      "name": "Snake Dike Approach",
+      "distanceMiles": 2.5,
+      "elevationGainFt": 1200,
+      "latitude": 37.7314961,
+      "longitude": -119.5214335,
+      "coordinates": [
+        [
+          37.7314961,
+          -119.5214335
+        ],
+        [
+          37.7388046,
+          -119.5371542
+        ]
+      ],
+      "difficulty": "Very Hard",
+      "trailType": "Approach",
+      "surface": "earth",
+      "description": "Used to reach the south and southwest faces of Half Dome for climbing.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/440834748",
+      "source": "osm"
+    },
+    {
+      "name": "Snake Dike Approach",
+      "distanceMiles": 0.3,
+      "elevationGainFt": 200,
+      "latitude": 37.7384566,
+      "longitude": -119.5385933,
+      "coordinates": [
+        [
+          37.7384566,
+          -119.5385933
+        ],
+        [
+          37.7383989,
+          -119.5384787
+        ],
+        [
+          37.7385623,
+          -119.5376126
+        ]
+      ],
+      "difficulty": "Hard",
+      "trailType": "Approach",
+      "surface": "Earth",
+      "description": "Used to reach the south and southwest faces of Half Dome for climbing.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/440840248",
+      "source": "osm"
+    },
+    {
+      "name": "John Muir Route",
+      "distanceMiles": 0.5,
+      "elevationGainFt": 300,
+      "latitude": 37.8484496,
+      "longitude": -119.4054532,
+      "coordinates": [
+        [
+          37.8484496,
+          -119.4054532
+        ],
+        [
+          37.8487509,
+          -119.4056805
+        ],
+        [
+          37.847776,
+          -119.4060963
+        ]
+      ],
+      "difficulty": "Hard",
+      "trailType": "Route",
+      "surface": "Dirt",
+      "description": "A demanding alpine hiking route.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/440840248",
+      "source": "osm"
+    },
+    {
+      "name": "Puppy Boulders Approach",
+      "distanceMiles": 0.4,
+      "elevationGainFt": 150,
+      "latitude": 37.8764752,
+      "longitude": -119.3462548,
+      "coordinates": [
+        [
+          37.8764752,
+          -119.3462548
+        ],
+        [
+          37.8763107,
+          -119.3462579
+        ],
+        [
+          37.8742453,
+          -119.3454633
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Approach",
+      "surface": "Dirt",
+      "description": "Access trail to the Puppy Boulders climbing area.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/440840248",
+      "source": "osm"
+    },
+    {
+      "name": "Medlicott Dome Climbing Approach",
+      "distanceMiles": 0.6,
+      "elevationGainFt": 250,
+      "latitude": 37.846746,
+      "longitude": -119.426998,
+      "coordinates": [
+        [
+          37.846746,
+          -119.426998
+        ],
+        [
+          37.8607357,
+          -119.434798
+        ],
+        [
+          37.8468342,
+          -119.4270942
+        ]
+      ],
+      "difficulty": "Hard",
+      "trailType": "Approach",
+      "surface": "Ground",
+      "description": "Trail leading to the Medlicott Dome climbing area.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/440840248",
+      "source": "osm"
+    },
+    {
+      "name": "Swan Slab Climber's Descent",
+      "distanceMiles": 0.3,
+      "elevationGainFt": 100,
+      "latitude": 37.7454886,
+      "longitude": -119.6002242,
+      "coordinates": [
+        [
+          37.7454886,
+          -119.6002242
+        ],
+        [
+          37.7456919,
+          -119.6004194
+        ],
+        [
+          37.7451736,
+          -119.6013744
+        ],
+        [
+          37.7447833,
+          -119.6012179
+        ],
+        [
+          37.7444584,
+          -119.6008396
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Descent",
+      "surface": "Earth",
+      "description": "A descent trail for climbers leading to the base of Swan Slab.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/443317639",
+      "source": "osm"
+    },
+    {
+      "name": "Climbing Access Path",
+      "distanceMiles": 0.2,
+      "elevationGainFt": 50,
+      "latitude": 37.7300321,
+      "longitude": -119.6336729,
+      "coordinates": [
+        [
+          37.7300321,
+          -119.6336729
+        ],
+        [
+          37.7289413,
+          -119.6351848
+        ],
+        [
+          37.7280814,
+          -119.6368811
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Climbing Access",
+      "surface": "Rock",
+      "description": "Access path for climbers to reach climbing routes.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/443317639",
+      "source": "osm"
+    },
+    {
+      "name": "Mountain Hiking Path",
+      "distanceMiles": 0.3,
+      "elevationGainFt": 150,
+      "latitude": 37.7264307,
+      "longitude": -119.6344661,
+      "coordinates": [
+        [
+          37.7264307,
+          -119.6344661
+        ],
+        [
+          37.7271954,
+          -119.6358615
+        ],
+        [
+          37.7285599,
+          -119.636327
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Mountain Hiking",
+      "surface": "Earth",
+      "description": "A scenic mountain hiking path with excellent visibility.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/443317639",
+      "source": "osm"
+    },
+    {
+      "name": "Hiking Path",
+      "distanceMiles": 0.2,
+      "elevationGainFt": 30,
+      "latitude": 37.7265036,
+      "longitude": -119.6340768,
+      "coordinates": [
+        [
+          37.7265036,
+          -119.6340768
+        ],
+        [
+          37.725922,
+          -119.6337106
+        ],
+        [
+          37.7242894,
+          -119.6332731
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Hiking",
+      "surface": "Earth",
+      "description": "An easy hiking path with excellent visibility.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/443317639",
+      "source": "osm"
+    },
+    {
+      "name": "Royal Arches Climber's Descent",
+      "distanceMiles": 0.5,
+      "elevationGainFt": 300,
+      "latitude": 37.7495826,
+      "longitude": -119.5704967,
+      "coordinates": [
+        [
+          37.7495826,
+          -119.5704967
+        ],
+        [
+          37.7492253,
+          -119.5672766
+        ],
+        [
+          37.7496534,
+          -119.5604763
+        ],
+        [
+          37.7509021,
+          -119.55936
+        ],
+        [
+          37.7516338,
+          -119.5575156
+        ],
+        [
+          37.7522559,
+          -119.5565496
+        ]
+      ],
+      "difficulty": "Very Hard",
+      "trailType": "Descent",
+      "surface": "Ground",
+      "description": "Unmaintained climber access trail. Technical rock climbing skills required.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/445009276",
+      "source": "osm"
+    },
+    {
+      "name": "North Dome Gully Climber's Descent",
+      "distanceMiles": 0.6,
+      "elevationGainFt": 400,
+      "latitude": 37.7522559,
+      "longitude": -119.5565496,
+      "coordinates": [
+        [
+          37.7522559,
+          -119.5565496
+        ],
+        [
+          37.7519314,
+          -119.5563761
+        ],
+        [
+          37.7495898,
+          -119.5568239
+        ],
+        [
+          37.7491577,
+          -119.5574092
+        ],
+        [
+          37.7475628,
+          -119.556774
+        ],
+        [
+          37.7448844,
+          -119.5621209
+        ]
+      ],
+      "difficulty": "Very Hard",
+      "trailType": "Descent",
+      "surface": "Ground",
+      "description": "Unmaintained climber access trail. Requires technical climbing skills. Not for hikers.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/445009276",
+      "source": "osm"
+    },
+    {
+      "name": "Kavanaugh Ridge Trail",
+      "distanceMiles": 3.5,
+      "elevationGainFt": 800,
+      "latitude": 38.0753336,
+      "longitude": -119.275713,
+      "coordinates": [
+        [
+          38.0753336,
+          -119.275713
+        ],
+        [
+          38.0756683,
+          -119.2753364
+        ],
+        [
+          38.0761392,
+          -119.2749757
+        ],
+        [
+          38.076383,
+          -119.2747785
+        ],
+        [
+          38.0770144,
+          -119.2740101
+        ],
+        [
+          38.0773986,
+          -119.2732497
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Out and Back",
+      "surface": "Dirt",
+      "description": "A scenic trail offering views of the surrounding landscape.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/445009276",
+      "source": "osm"
+    },
+    {
+      "name": "Old Virginia Road",
+      "distanceMiles": 2.5,
+      "elevationGainFt": 300,
+      "latitude": 38.0685831,
+      "longitude": -119.206688,
+      "coordinates": [
+        [
+          38.0685831,
+          -119.206688
+        ],
+        [
+          38.069074,
+          -119.2061797
+        ],
+        [
+          38.0700538,
+          -119.2051993
+        ],
+        [
+          38.0718138,
+          -119.2026606
+        ],
+        [
+          38.0728928,
+          -119.2007093
+        ],
+        [
+          38.0736888,
+          -119.2001407
+        ],
+        [
+          38.0746105,
+          -119.1991094
+        ],
+        [
+          38.0752503,
+          -119.1978782
+        ],
+        [
+          38.0764802,
+          -119.1953127
+        ],
+        [
+          38.0775433,
+          -119.1937195
+        ],
+        [
+          38.0789167,
+          -119.1929711
+        ],
+        [
+          38.0808506,
+          -119.1902004
+        ],
+        [
+          38.0826537,
+          -119.1888526
+        ],
+        [
+          38.0839922,
+          -119.1883752
+        ],
+        [
+          38.0851554,
+          -119.1890135
+        ],
+        [
+          38.0863968,
+          -119.1894588
+        ],
+        [
+          38.0876529,
+          -119.1888875
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Track",
+      "surface": "Dirt",
+      "description": "A scenic dirt road through the forest, suitable for hiking and off-road vehicles.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/474076724",
+      "source": "osm"
+    },
+    {
+      "name": "Lower Yosemite Fall Trail",
+      "distanceMiles": 0.5,
+      "elevationGainFt": 0,
+      "latitude": 37.7498292,
+      "longitude": -119.595952,
+      "coordinates": [
+        [
+          37.7498292,
+          -119.595952
+        ],
+        [
+          37.7496452,
+          -119.5960675
+        ],
+        [
+          37.7485428,
+          -119.5963322
+        ],
+        [
+          37.7481855,
+          -119.5964051
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Out and Back",
+      "surface": "Asphalt",
+      "description": "A short and easy trail leading to the base of Lower Yosemite Falls.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/485590228",
+      "source": "osm"
+    },
+    {
+      "name": "Royal Arches Descent",
+      "distanceMiles": 0.3,
+      "elevationGainFt": 500,
+      "latitude": 37.7495826,
+      "longitude": -119.570137,
+      "coordinates": [
+        [
+          37.7492756,
+          -119.570137
+        ],
+        [
+          37.7495826,
+          -119.5704967
+        ]
+      ],
+      "difficulty": "Hard",
+      "trailType": "Descent",
+      "surface": "Earth",
+      "description": "A challenging descent leading to the Royal Arches.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/489203282",
+      "source": "osm"
+    },
+    {
+      "name": "Unnamed Trail",
+      "distanceMiles": 1.5,
+      "elevationGainFt": 300,
+      "latitude": 37.9494665,
+      "longitude": -119.2467619,
+      "coordinates": [
+        [
+          37.9529392,
+          -119.2553526
+        ],
+        [
+          37.9518719,
+          -119.2530919
+        ],
+        [
+          37.9512704,
+          -119.25134
+        ],
+        [
+          37.9511218,
+          -119.2509676
+        ],
+        [
+          37.9509793,
+          -119.2499723
+        ],
+        [
+          37.9505318,
+          -119.2494591
+        ],
+        [
+          37.950177,
+          -119.2487311
+        ],
+        [
+          37.9494665,
+          -119.2467619
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Path",
+      "surface": "Dirt",
+      "description": "A scenic hiking trail through Yosemite National Park.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/516441735",
+      "source": "osm"
+    },
+    {
+      "name": "Daff Dome Approach",
+      "distanceMiles": 1.2,
+      "elevationGainFt": 400,
+      "latitude": 37.8812886,
+      "longitude": -119.4152962,
+      "coordinates": [
+        [
+          37.876726,
+          -119.4156803
+        ],
+        [
+          37.8786702,
+          -119.4151344
+        ],
+        [
+          37.8799132,
+          -119.4157754
+        ],
+        [
+          37.8804627,
+          -119.4157692
+        ],
+        [
+          37.8802277,
+          -119.4115827
+        ]
+      ],
+      "difficulty": "Hard",
+      "trailType": "Climbing Access",
+      "surface": "Earth",
+      "description": "Access trail to Daff Dome, popular among climbers.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/516441735",
+      "source": "osm"
+    },
+    {
+      "name": "Unnamed Climbing Access Trail",
+      "distanceMiles": 1,
+      "elevationGainFt": 250,
+      "latitude": 37.8763852,
+      "longitude": -119.4146819,
+      "coordinates": [
+        [
+          37.8802277,
+          -119.4115827
+        ],
+        [
+          37.8788656,
+          -119.4118365
+        ],
+        [
+          37.8775352,
+          -119.414005
+        ],
+        [
+          37.8763852,
+          -119.4143929
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Climbing Access",
+      "surface": "Earth",
+      "description": "Trail providing access to climbing routes in the area.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/516441735",
+      "source": "osm"
+    },
+    {
+      "name": "Presidential Boulder Approach",
+      "distanceMiles": 0.3,
+      "elevationGainFt": 0,
+      "latitude": 37.7271499,
+      "longitude": -119.608696,
+      "coordinates": [
+        [
+          37.7271499,
+          -119.608696
+        ],
+        [
+          37.7272984,
+          -119.6082792
+        ],
+        [
+          37.7274132,
+          -119.6075778
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Approach",
+      "surface": "Unpaved",
+      "description": "Approach trail leading to Presidential Boulder.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/529347862",
+      "source": "osm"
+    },
+    {
+      "name": "Mount Conness East Climbing Approach",
+      "distanceMiles": 1.5,
+      "elevationGainFt": 0,
+      "latitude": 37.9614588,
+      "longitude": -119.2963918,
+      "coordinates": [
+        [
+          37.9614588,
+          -119.2963918
+        ],
+        [
+          37.9625191,
+          -119.2969179
+        ],
+        [
+          37.9654928,
+          -119.299622
+        ]
+      ],
+      "difficulty": "Very Hard",
+      "trailType": "Climbing Approach",
+      "surface": "Variable",
+      "description": "Challenging approach trail for climbing Mount Conness.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/529347862",
+      "source": "osm"
+    },
+    {
+      "name": "Lower Yosemite Fall Trail",
+      "distanceMiles": 0.1,
+      "elevationGainFt": 0,
+      "latitude": 37.7467084,
+      "longitude": -119.5964664,
+      "coordinates": [
+        [
+          37.7467084,
+          -119.5964664
+        ],
+        [
+          37.746741,
+          -119.5962808
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Out and Back",
+      "surface": "Dirt",
+      "description": "Short trail leading to the base of Lower Yosemite Falls.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/529347862",
+      "source": "osm"
+    },
+    {
+      "name": "John Muir Trail",
+      "distanceMiles": 5,
+      "elevationGainFt": 0,
+      "latitude": 37.7328208,
+      "longitude": -119.5577795,
+      "coordinates": [
+        [
+          37.7328208,
+          -119.5577795
+        ],
+        [
+          37.7318486,
+          -119.558189
+        ],
+        [
+          37.7261509,
+          -119.5516359
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Long Distance",
+      "surface": "Asphalt",
+      "description": "Part of the famous John Muir Trail, offering stunning views.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/529347862",
+      "source": "osm"
+    },
+    {
+      "name": "East Buttress Approach",
+      "distanceMiles": 0.5,
+      "elevationGainFt": 200,
+      "latitude": 37.718,
+      "longitude": -119.631,
+      "coordinates": [
+        [
+          37.7197129,
+          -119.6310189
+        ],
+        [
+          37.7193456,
+          -119.6310769
+        ],
+        [
+          37.7184977,
+          -119.6315891
+        ],
+        [
+          37.718043,
+          -119.6318719
+        ],
+        [
+          37.7175955,
+          -119.6320753
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Approach",
+      "surface": "Dirt",
+      "description": "Approach trail to the East Buttress.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/594050667",
+      "source": "osm"
+    },
+    {
+      "name": "Main Wall Approach",
+      "distanceMiles": 0.3,
+      "elevationGainFt": 150,
+      "latitude": 37.862,
+      "longitude": -119.422,
+      "coordinates": [
+        [
+          37.8628879,
+          -119.4219713
+        ],
+        [
+          37.862635,
+          -119.4222702
+        ],
+        [
+          37.8621561,
+          -119.4223189
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Approach",
+      "surface": "Earth",
+      "description": "Trail leading to the Main Wall.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/594050667",
+      "source": "osm"
+    },
+    {
+      "name": "Dozier Dome Climbing Approach",
+      "distanceMiles": 0.4,
+      "elevationGainFt": 180,
+      "latitude": 37.85,
+      "longitude": -119.432,
+      "coordinates": [
+        [
+          37.8507748,
+          -119.4331165
+        ],
+        [
+          37.8505001,
+          -119.4328731
+        ],
+        [
+          37.8495866,
+          -119.431641
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Approach",
+      "surface": "Ground",
+      "description": "Approach trail to Dozier Dome.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/594050667",
+      "source": "osm"
+    },
+    {
+      "name": "Mount Conness West Ridge Approach",
+      "distanceMiles": 0.6,
+      "elevationGainFt": 300,
+      "latitude": 37.964,
+      "longitude": -119.319,
+      "coordinates": [
+        [
+          37.965251,
+          -119.317518
+        ],
+        [
+          37.9633771,
+          -119.3190691
+        ],
+        [
+          37.964427,
+          -119.3206427
+        ]
+      ],
+      "difficulty": "Hard",
+      "trailType": "Climbing Access",
+      "surface": "Earth",
+      "description": "Trail leading to the West Ridge of Mount Conness.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/594050667",
+      "source": "osm"
+    },
+    {
+      "name": "Koip Peak Trail",
+      "distanceMiles": 0.8,
+      "elevationGainFt": 400,
+      "latitude": 37.813,
+      "longitude": -119.2,
+      "coordinates": [
+        [
+          37.8134965,
+          -119.1929269
+        ],
+        [
+          37.8135194,
+          -119.1945481
+        ],
+        [
+          37.8136441,
+          -119.2013877
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Hiking",
+      "surface": "Ground",
+      "description": "Trail leading to Koip Peak.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/594050667",
+      "source": "osm"
+    },
+    {
+      "name": "Vogelsang Peak Route",
+      "distanceMiles": 0.5,
+      "elevationGainFt": 200,
+      "latitude": 37.7803696,
+      "longitude": -119.3421362,
+      "coordinates": [
+        [
+          37.7803696,
+          -119.3421362
+        ],
+        [
+          37.779831,
+          -119.3428838
+        ],
+        [
+          37.7787753,
+          -119.3450028
+        ],
+        [
+          37.7771026,
+          -119.3473926
+        ],
+        [
+          37.7760469,
+          -119.3472827
+        ],
+        [
+          37.7759705,
+          -119.3473524
+        ],
+        [
+          37.7773077,
+          -119.349375
+        ]
+      ],
+      "difficulty": "Very Hard",
+      "trailType": "Path",
+      "surface": "Ground",
+      "description": "Trail does in some parts not exist, others parts are clearly visible, please take more data when you get to this area.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/637557430",
+      "source": "osm"
+    },
+    {
+      "name": "John Muir Trail",
+      "distanceMiles": 0.4,
+      "elevationGainFt": 100,
+      "latitude": 37.7262238,
+      "longitude": -119.5486763,
+      "coordinates": [
+        [
+          37.7262238,
+          -119.5486763
+        ],
+        [
+          37.7262535,
+          -119.5488319
+        ],
+        [
+          37.7261389,
+          -119.5494327
+        ],
+        [
+          37.7259628,
+          -119.549953
+        ],
+        [
+          37.7256881,
+          -119.551384
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Path",
+      "surface": "Asphalt",
+      "description": "Part of the famous John Muir Trail, known for its scenic views.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/637557430",
+      "source": "osm"
+    },
+    {
+      "name": "South Face Route Approach",
+      "distanceMiles": 1.5,
+      "elevationGainFt": 800,
+      "latitude": 37.755,
+      "longitude": -119.564,
+      "coordinates": [
+        [
+          37.7598804,
+          -119.5589682
+        ],
+        [
+          37.7581507,
+          -119.5616296
+        ],
+        [
+          37.755334,
+          -119.5642192
+        ],
+        [
+          37.754839,
+          -119.5645916
+        ]
+      ],
+      "difficulty": "Hard",
+      "trailType": "Approach",
+      "surface": "Earth",
+      "description": "A demanding alpine hiking trail leading to the South Face.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/722800669",
+      "source": "osm"
+    },
+    {
+      "name": "Loggerhead Buttress Climber Approach",
+      "distanceMiles": 0.5,
+      "elevationGainFt": 200,
+      "latitude": 37.729,
+      "longitude": -119.623,
+      "coordinates": [
+        [
+          37.7280044,
+          -119.6230615
+        ],
+        [
+          37.7286715,
+          -119.623205
+        ],
+        [
+          37.7297938,
+          -119.6231956
+        ]
+      ],
+      "difficulty": "Hard",
+      "trailType": "Approach",
+      "surface": "Earth",
+      "description": "Access trail for climbers heading to Loggerhead Buttress.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/722800669",
+      "source": "osm"
+    },
+    {
+      "name": "Lower Brother Climbing Approach",
+      "distanceMiles": 0.8,
+      "elevationGainFt": 300,
+      "latitude": 37.733,
+      "longitude": -119.612,
+      "coordinates": [
+        [
+          37.7330049,
+          -119.6114587
+        ],
+        [
+          37.7331963,
+          -119.6131426
+        ],
+        [
+          37.7349694,
+          -119.6121714
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Approach",
+      "surface": "Earth",
+      "description": "Trail leading to the Lower Brother climbing area.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/722800669",
+      "source": "osm"
+    },
+    {
+      "name": "North Dome Gully Climber's Descent",
+      "distanceMiles": 0.8,
+      "elevationGainFt": 600,
+      "latitude": 37.7463678,
+      "longitude": -119.5552415,
+      "coordinates": [
+        [
+          37.7475628,
+          -119.556774
+        ],
+        [
+          37.7463678,
+          -119.5552415
+        ],
+        [
+          37.7448512,
+          -119.5551376
+        ]
+      ],
+      "difficulty": "Very Hard",
+      "trailType": "Descent",
+      "surface": "Ground",
+      "description": "A challenging descent for climbers.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/730781012",
+      "source": "osm"
+    },
+    {
+      "name": "Approach to Northwest Buttress",
+      "distanceMiles": 0.5,
+      "elevationGainFt": 400,
+      "latitude": 37.832978,
+      "longitude": -119.4443,
+      "coordinates": [
+        [
+          37.833558,
+          -119.444511
+        ],
+        [
+          37.832978,
+          -119.4443
+        ],
+        [
+          37.830038,
+          -119.443192
+        ]
+      ],
+      "difficulty": "Hard",
+      "trailType": "Approach",
+      "surface": "Dirt",
+      "description": "An approach trail leading to the Northwest Buttress.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/730781012",
+      "source": "osm"
+    },
+    {
+      "name": "Upper Trail",
+      "distanceMiles": 1.5,
+      "elevationGainFt": 200,
+      "latitude": 37.5000926,
+      "longitude": -119.9623409,
+      "coordinates": [
+        [
+          37.4879686,
+          -119.9565255
+        ],
+        [
+          37.5000926,
+          -119.9623409
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Footway",
+      "surface": "Dirt",
+      "description": "A scenic trail suitable for foot traffic.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/730781012",
+      "source": "osm"
+    },
+    {
+      "name": "Cathedral Peak Climber's Approach",
+      "distanceMiles": 2.5,
+      "elevationGainFt": 1500,
+      "latitude": 37.8465661,
+      "longitude": -119.4036984,
+      "coordinates": [
+        [
+          37.8527565,
+          -119.3936231
+        ],
+        [
+          37.851848,
+          -119.3949796
+        ],
+        [
+          37.8506315,
+          -119.3961096
+        ],
+        [
+          37.8465661,
+          -119.4036984
+        ]
+      ],
+      "difficulty": "Very Hard",
+      "trailType": "Out and Back",
+      "surface": "Earth",
+      "description": "A challenging approach to Cathedral Peak, featuring steep inclines and rugged terrain.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/788319391",
+      "source": "osm"
+    },
+    {
+      "name": "Yosemite Hiking Trail",
+      "distanceMiles": 1.2,
+      "elevationGainFt": 300,
+      "latitude": 37.9271178,
+      "longitude": -119.2552607,
+      "coordinates": [
+        [
+          37.9271178,
+          -119.2552607
+        ],
+        [
+          37.9265249,
+          -119.2551863
+        ],
+        [
+          37.925797,
+          -119.2553634
+        ],
+        [
+          37.9245043,
+          -119.25524
+        ],
+        [
+          37.9217686,
+          -119.2539606
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Loop",
+      "surface": "Ground",
+      "description": "A scenic loop trail offering views of the surrounding landscape.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/788319391",
+      "source": "osm"
+    },
+    {
+      "name": "Mountain Hiking Trail",
+      "distanceMiles": 3,
+      "elevationGainFt": 800,
+      "latitude": 37.9178033,
+      "longitude": -119.2225063,
+      "coordinates": [
+        [
+          37.9168236,
+          -119.2338574
+        ],
+        [
+          37.9172278,
+          -119.2325807
+        ],
+        [
+          37.9183514,
+          -119.2298931
+        ],
+        [
+          37.9178033,
+          -119.2225063
+        ]
+      ],
+      "difficulty": "Hard",
+      "trailType": "Point to Point",
+      "surface": "Ground",
+      "description": "A challenging mountain trail with significant elevation changes.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/788319391",
+      "source": "osm"
+    },
+    {
+      "name": "Prospects Road B",
+      "distanceMiles": 1.5,
+      "elevationGainFt": 200,
+      "latitude": 38.0578573,
+      "longitude": -119.2026794,
+      "coordinates": [
+        [
+          38.0660987,
+          -119.1978501
+        ],
+        [
+          38.0659213,
+          -119.1981196
+        ],
+        [
+          38.0653881,
+          -119.1999623
+        ],
+        [
+          38.0643996,
+          -119.2002628
+        ],
+        [
+          38.0635382,
+          -119.200826
+        ],
+        [
+          38.0620843,
+          -119.2020531
+        ],
+        [
+          38.0606788,
+          -119.2016467
+        ],
+        [
+          38.0597348,
+          -119.2019257
+        ],
+        [
+          38.058152,
+          -119.202619
+        ],
+        [
+          38.0578573,
+          -119.2026794
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Track",
+      "surface": "Dirt",
+      "description": "A dirt track suitable for hiking and off-road vehicles.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/846801465",
+      "source": "osm"
+    },
+    {
+      "name": "Mist Trail",
+      "distanceMiles": 2,
+      "elevationGainFt": 800,
+      "latitude": 37.7262238,
+      "longitude": -119.5486763,
+      "coordinates": [
+        [
+          37.7262238,
+          -119.5486763
+        ],
+        [
+          37.726263,
+          -119.5480111
+        ],
+        [
+          37.726227,
+          -119.5470415
+        ],
+        [
+          37.7263765,
+          -119.5462489
+        ]
+      ],
+      "difficulty": "Hard",
+      "trailType": "Path",
+      "surface": "Ground",
+      "description": "A popular hiking trail leading to stunning views of waterfalls.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/846801465",
+      "source": "osm"
+    },
+    {
+      "name": "Sentinel Dome Trail",
+      "distanceMiles": 0.5,
+      "elevationGainFt": 200,
+      "latitude": 37.7232891,
+      "longitude": -119.5826197,
+      "coordinates": [
+        [
+          37.7232891,
+          -119.5826197
+        ],
+        [
+          37.7241436,
+          -119.5828227
+        ],
+        [
+          37.7243713,
+          -119.5831054
+        ],
+        [
+          37.7234201,
+          -119.5840466
+        ],
+        [
+          37.7230855,
+          -119.5843551
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Out and Back",
+      "surface": "Ground",
+      "description": "A scenic trail leading to the summit of Sentinel Dome with panoramic views.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/855563757",
+      "source": "osm"
+    },
+    {
+      "name": "Unnamed Trail",
+      "distanceMiles": 0.3,
+      "elevationGainFt": 150,
+      "latitude": 37.7965119,
+      "longitude": -119.3436572,
+      "coordinates": [
+        [
+          37.7965119,
+          -119.3436572
+        ],
+        [
+          37.7966753,
+          -119.3438881
+        ],
+        [
+          37.7971097,
+          -119.3439835
+        ],
+        [
+          37.7976841,
+          -119.3440841
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Out and Back",
+      "surface": "Dirt",
+      "description": "A short trail with excellent visibility, suitable for mountain hiking.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/855563757",
+      "source": "osm"
+    },
+    {
+      "name": "Alpine Hiking Trail",
+      "distanceMiles": 1.2,
+      "elevationGainFt": 300,
+      "latitude": 38.0002568,
+      "longitude": -119.2494249,
+      "coordinates": [
+        [
+          38.0002568,
+          -119.2494249
+        ],
+        [
+          38.0003382,
+          -119.2536986
+        ],
+        [
+          38.0019728,
+          -119.2554411
+        ]
+      ],
+      "difficulty": "Hard",
+      "trailType": "Loop",
+      "surface": "Ground",
+      "description": "A challenging alpine hiking trail with varied terrain and stunning views.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/855563757",
+      "source": "osm"
+    },
+    {
+      "name": "Unnamed Trail 1",
+      "distanceMiles": 0.5,
+      "elevationGainFt": 100,
+      "latitude": 38.0122527,
+      "longitude": -119.2504522,
+      "coordinates": [
+        [
+          38.0122527,
+          -119.2504522
+        ],
+        [
+          38.011737,
+          -119.2509833
+        ],
+        [
+          38.0106719,
+          -119.2522413
+        ],
+        [
+          38.0095793,
+          -119.2529279
+        ],
+        [
+          38.0085882,
+          -119.2541483
+        ],
+        [
+          38.0076689,
+          -119.2528957
+        ],
+        [
+          38.0067326,
+          -119.2586169
+        ],
+        [
+          38.0064156,
+          -119.2591453
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Path",
+      "surface": "Ground",
+      "description": "A scenic trail with moderate elevation changes.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/856896036",
+      "source": "osm"
+    },
+    {
+      "name": "Unnamed Trail 2",
+      "distanceMiles": 0.3,
+      "elevationGainFt": 50,
+      "latitude": 38.006796,
+      "longitude": -119.2597836,
+      "coordinates": [
+        [
+          38.006796,
+          -119.2597836
+        ],
+        [
+          38.0069693,
+          -119.2594886
+        ],
+        [
+          38.0070201,
+          -119.2593384
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Path",
+      "surface": "Ground",
+      "description": "A short trail leading to a viewpoint.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/856896036",
+      "source": "osm"
+    },
+    {
+      "name": "Unnamed Trail 3",
+      "distanceMiles": 0.6,
+      "elevationGainFt": 150,
+      "latitude": 38.0023746,
+      "longitude": -119.2610255,
+      "coordinates": [
+        [
+          38.0023746,
+          -119.2610255
+        ],
+        [
+          38.002586,
+          -119.2606661
+        ],
+        [
+          38.003628,
+          -119.2579195
+        ],
+        [
+          38.0064346,
+          -119.2587537
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Path",
+      "surface": "Ground",
+      "description": "A winding trail through the forest.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/856896036",
+      "source": "osm"
+    },
+    {
+      "name": "Unnamed Trail 4",
+      "distanceMiles": 0.8,
+      "elevationGainFt": 200,
+      "latitude": 38.0047122,
+      "longitude": -119.264566,
+      "coordinates": [
+        [
+          38.0047122,
+          -119.264566
+        ],
+        [
+          38.0052004,
+          -119.2643353
+        ],
+        [
+          38.006796,
+          -119.2597836
+        ],
+        [
+          38.0068003,
+          -119.2595932
+        ]
+      ],
+      "difficulty": "Hard",
+      "trailType": "Path",
+      "surface": "Earth",
+      "description": "A challenging trail with steep sections.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/856896036",
+      "source": "osm"
+    },
+    {
+      "name": "The Gunsight",
+      "distanceMiles": 0.5,
+      "elevationGainFt": 300,
+      "latitude": 37.7169336,
+      "longitude": -119.6430144,
+      "coordinates": [
+        [
+          37.7169336,
+          -119.6430144
+        ],
+        [
+          37.7165815,
+          -119.6432489
+        ],
+        [
+          37.7164633,
+          -119.6434575
+        ]
+      ],
+      "difficulty": "Hard",
+      "trailType": "Path",
+      "surface": "Unknown",
+      "description": "A demanding alpine hiking trail offering stunning views.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/859167385",
+      "source": "osm"
+    },
+    {
+      "name": "Snake Dike Approach",
+      "distanceMiles": 1.2,
+      "elevationGainFt": 600,
+      "latitude": 37.7340444,
+      "longitude": -119.5278646,
+      "coordinates": [
+        [
+          37.7340444,
+          -119.5278646
+        ],
+        [
+          37.7333816,
+          -119.5275169
+        ],
+        [
+          37.7329514,
+          -119.5268303
+        ],
+        [
+          37.7300984,
+          -119.524758
+        ]
+      ],
+      "difficulty": "Hard",
+      "trailType": "Climbing Access",
+      "surface": "Earth",
+      "description": "Used to reach the south and southwest faces of Half Dome for climbing.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/859167385",
+      "source": "osm"
+    },
+    {
+      "name": "Twin Lakes Gaging Station",
+      "distanceMiles": 0.5,
+      "elevationGainFt": 0,
+      "latitude": 38.1702085,
+      "longitude": -119.3253395,
+      "coordinates": [
+        [
+          38.1696529,
+          -119.3255966
+        ],
+        [
+          38.1702085,
+          -119.3253395
+        ],
+        [
+          38.1721991,
+          -119.324744
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Out and Back",
+      "surface": "Ground",
+      "description": "A short trail leading to the Twin Lakes Gaging Station.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/883876381",
+      "source": "osm"
+    },
+    {
+      "name": "Bridalveil Fall Trail",
+      "distanceMiles": 0.5,
+      "elevationGainFt": 100,
+      "latitude": 37.71673,
+      "longitude": -119.65094,
+      "coordinates": [
+        [
+          37.71673,
+          -119.65094
+        ],
+        [
+          37.7175123,
+          -119.6500322
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Out and Back",
+      "surface": "Asphalt",
+      "description": "A popular trail leading to the stunning Bridalveil Fall.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/883876381",
+      "source": "osm"
+    },
+    {
+      "name": "Peeler East Shore Use Trail",
+      "distanceMiles": 1.5,
+      "elevationGainFt": 800,
+      "latitude": 38.1201056,
+      "longitude": -119.4653401,
+      "coordinates": [
+        [
+          38.1225439,
+          -119.463885
+        ],
+        [
+          38.1217747,
+          -119.4642404
+        ],
+        [
+          38.1208653,
+          -119.4652542
+        ],
+        [
+          38.1201056,
+          -119.4649646
+        ]
+      ],
+      "difficulty": "Hard",
+      "trailType": "Out and Back",
+      "surface": "Dirt",
+      "description": "A challenging trail along the east shore with beautiful views.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/905179062",
+      "source": "osm"
+    },
+    {
+      "name": "Lower Yosemite Fall Trail",
+      "distanceMiles": 0.5,
+      "elevationGainFt": 50,
+      "latitude": 37.7476229,
+      "longitude": -119.5928982,
+      "coordinates": [
+        [
+          37.7476229,
+          -119.5928982
+        ],
+        [
+          37.7473792,
+          -119.5927302
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Out and Back",
+      "surface": "Wood",
+      "description": "A short and accessible trail leading to the base of Lower Yosemite Falls.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/968525241",
+      "source": "osm"
+    },
+    {
+      "name": "Lower Yosemite Fall Trail",
+      "distanceMiles": 0.4,
+      "elevationGainFt": 30,
+      "latitude": 37.7473792,
+      "longitude": -119.5927302,
+      "coordinates": [
+        [
+          37.7473792,
+          -119.5927302
+        ],
+        [
+          37.7464757,
+          -119.5930996
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Out and Back",
+      "surface": "Asphalt",
+      "description": "A continuation of the Lower Yosemite Fall Trail, providing scenic views of the falls.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/968525241",
+      "source": "osm"
+    },
+    {
+      "name": "Yosemite Mountain Trail",
+      "distanceMiles": 3.2,
+      "elevationGainFt": 1200,
+      "latitude": 37.7303945,
+      "longitude": -119.6456999,
+      "coordinates": [
+        [
+          37.7260692,
+          -119.6459273
+        ],
+        [
+          37.7344207,
+          -119.6483177
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Loop",
+      "surface": "Dirt",
+      "description": "A scenic loop trail offering stunning views of the surrounding mountains and valleys.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/968525241",
+      "source": "osm"
+    },
+    {
+      "name": "Ice Lake Route",
+      "distanceMiles": 0.8,
+      "elevationGainFt": 200,
+      "latitude": 38.1237371,
+      "longitude": -119.4191712,
+      "coordinates": [
+        [
+          38.1237371,
+          -119.4191712
+        ],
+        [
+          38.1220997,
+          -119.4196755
+        ],
+        [
+          38.1192385,
+          -119.4210089
+        ],
+        [
+          38.1171904,
+          -119.4224019
+        ],
+        [
+          38.1157681,
+          -119.4227855
+        ]
+      ],
+      "difficulty": "Very Hard",
+      "trailType": "Path",
+      "surface": "Ground",
+      "description": "A challenging route leading to Ice Lake with steep sections and poor visibility.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/997804064",
+      "source": "osm"
+    },
+    {
+      "name": "Kavanaugh Ridge Trail",
+      "distanceMiles": 0.5,
+      "elevationGainFt": 150,
+      "latitude": 38.081863,
+      "longitude": -119.2384668,
+      "coordinates": [
+        [
+          38.081863,
+          -119.2384668
+        ],
+        [
+          38.0819242,
+          -119.2385848
+        ],
+        [
+          38.0819094,
+          -119.2387605
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Track",
+      "surface": "Dirt",
+      "description": "A scenic trail offering views from Kavanaugh Ridge.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/997804064",
+      "source": "osm"
+    },
+    {
+      "name": "Old Yosemite-Coulterville Road",
+      "distanceMiles": 0.5,
+      "elevationGainFt": 0,
+      "latitude": 37.6943931,
+      "longitude": -119.7722368,
+      "coordinates": [
+        [
+          37.6943672,
+          -119.7722679
+        ],
+        [
+          37.6944191,
+          -119.7722057
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Track",
+      "surface": "Dirt",
+      "description": "A scenic road leading through the forest.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/1016247189",
+      "source": "osm"
+    },
+    {
+      "name": "Unnamed Trail",
+      "distanceMiles": 0.3,
+      "elevationGainFt": 0,
+      "latitude": 38.0671039,
+      "longitude": -119.2083389,
+      "coordinates": [
+        [
+          38.0690297,
+          -119.2013276
+        ],
+        [
+          38.0671039,
+          -119.2083389
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Track",
+      "surface": "Dirt",
+      "description": "A dirt track through the park.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/1016247189",
+      "source": "osm"
+    },
+    {
+      "name": "Unnamed Trail 1",
+      "distanceMiles": 0.1,
+      "elevationGainFt": 0,
+      "latitude": 37.7325142,
+      "longitude": -119.5121131,
+      "coordinates": [
+        [
+          37.7325142,
+          -119.5121131
+        ],
+        [
+          37.7324925,
+          -119.5120011
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Path",
+      "surface": "Ground",
+      "description": "A short path with mountain hiking characteristics.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/1061779921",
+      "source": "osm"
+    },
+    {
+      "name": "Unnamed Trail 2",
+      "distanceMiles": 0.2,
+      "elevationGainFt": 0,
+      "latitude": 37.9541964,
+      "longitude": -119.2577542,
+      "coordinates": [
+        [
+          37.9541964,
+          -119.2577542
+        ],
+        [
+          37.9538126,
+          -119.2568681
+        ],
+        [
+          37.9529392,
+          -119.2553526
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Path",
+      "surface": "Ground",
+      "description": "A path with mountain hiking characteristics and poor visibility.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/1061779921",
+      "source": "osm"
+    },
+    {
+      "name": "John Muir Trail",
+      "distanceMiles": 0.2,
+      "elevationGainFt": 0,
+      "latitude": 37.7262238,
+      "longitude": -119.5486763,
+      "coordinates": [
+        [
+          37.7258487,
+          -119.5491711
+        ],
+        [
+          37.7261282,
+          -119.5487179
+        ],
+        [
+          37.7262238,
+          -119.5486763
+        ]
+      ],
+      "difficulty": "Very Hard",
+      "trailType": "Path",
+      "surface": "Ground",
+      "description": "A famous long-distance hiking trail in the Sierra Nevada.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/1104716414",
+      "source": "osm"
+    },
+    {
+      "name": "Valley Loop Trail",
+      "distanceMiles": 0.3,
+      "elevationGainFt": 0,
+      "latitude": 37.7415633,
+      "longitude": -119.5827789,
+      "coordinates": [
+        [
+          37.7415633,
+          -119.5827789
+        ],
+        [
+          37.7411829,
+          -119.5822281
+        ],
+        [
+          37.7400865,
+          -119.5794654
+        ],
+        [
+          37.7387695,
+          -119.5773635
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Loop",
+      "surface": "Ground",
+      "description": "A scenic loop trail around Yosemite Valley.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/1104716414",
+      "source": "osm"
+    },
+    {
+      "name": "Old Yosemite-Coulterville Road",
+      "distanceMiles": 0.7,
+      "elevationGainFt": 0,
+      "latitude": 37.6803412,
+      "longitude": -119.7834072,
+      "coordinates": [
+        [
+          37.6772312,
+          -119.7908047
+        ],
+        [
+          37.678128,
+          -119.789511
+        ],
+        [
+          37.6803412,
+          -119.7834072
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Track",
+      "surface": "Grade 3",
+      "description": "A historic road offering access to various points in Yosemite.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/1104716414",
+      "source": "osm"
+    },
+    {
+      "name": "Four Mile Trail",
+      "distanceMiles": 1.5,
+      "elevationGainFt": 800,
+      "latitude": 37.7289604,
+      "longitude": -119.5738918,
+      "coordinates": [
+        [
+          37.7289604,
+          -119.5738918
+        ],
+        [
+          37.7287156,
+          -119.573528
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Out and Back",
+      "surface": "Paved",
+      "description": "A scenic trail offering stunning views of Yosemite Valley.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/1207625505",
+      "source": "osm"
+    },
+    {
+      "name": "Rockslides Trail",
+      "distanceMiles": 2,
+      "elevationGainFt": 1200,
+      "latitude": 37.7344981,
+      "longitude": -119.704151,
+      "coordinates": [
+        [
+          37.7344981,
+          -119.704151
+        ],
+        [
+          37.7222577,
+          -119.6616294
+        ]
+      ],
+      "difficulty": "Very Hard",
+      "trailType": "Path",
+      "surface": "Natural",
+      "description": "An unofficial path that follows a remnant section of the historic alignment of Big Oak Flat Road into Yosemite Valley.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/1207625505",
+      "source": "osm"
+    },
+    {
+      "name": "Demanding Mountain Hiking Trail",
+      "distanceMiles": 0.5,
+      "elevationGainFt": 300,
+      "latitude": 37.7441014,
+      "longitude": -119.5350105,
+      "coordinates": [
+        [
+          37.7441014,
+          -119.5350105
+        ],
+        [
+          37.7441332,
+          -119.5345008
+        ],
+        [
+          37.7441778,
+          -119.5341441
+        ]
+      ],
+      "difficulty": "Hard",
+      "trailType": "Path",
+      "surface": "Ground",
+      "description": "A challenging trail suitable for experienced hikers.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/1245131940",
+      "source": "osm"
+    },
+    {
+      "name": "Demanding Mountain Hiking Trail",
+      "distanceMiles": 0.3,
+      "elevationGainFt": 250,
+      "latitude": 37.7459413,
+      "longitude": -119.5332817,
+      "coordinates": [
+        [
+          37.7459413,
+          -119.5332817
+        ],
+        [
+          37.744756,
+          -119.5335563
+        ]
+      ],
+      "difficulty": "Hard",
+      "trailType": "Path",
+      "surface": "Ground",
+      "description": "A steep and demanding trail for seasoned hikers.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/1245131940",
+      "source": "osm"
+    },
+    {
+      "name": "East Beach Trail",
+      "distanceMiles": 0.3,
+      "elevationGainFt": 0,
+      "latitude": 37.8362498,
+      "longitude": -119.4520082,
+      "coordinates": [
+        [
+          37.8362498,
+          -119.4520082
+        ],
+        [
+          37.836122,
+          -119.451963
+        ],
+        [
+          37.835977,
+          -119.451897
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Out and Back",
+      "surface": "Paved",
+      "description": "A short ADA accessible trail leading to East Beach.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/1306899827",
+      "source": "osm"
+    },
+    {
+      "name": "Half Dome Trail",
+      "distanceMiles": 8.5,
+      "elevationGainFt": 4000,
+      "latitude": 37.7466375,
+      "longitude": -119.5300611,
+      "coordinates": [
+        [
+          37.7484354,
+          -119.5271128
+        ],
+        [
+          37.7481099,
+          -119.5275016
+        ],
+        [
+          37.747621,
+          -119.528735
+        ],
+        [
+          37.7469785,
+          -119.5296098
+        ],
+        [
+          37.7466375,
+          -119.5300611
+        ]
+      ],
+      "difficulty": "Very Hard",
+      "trailType": "Out and Back",
+      "surface": "Ground",
+      "description": "Challenging hike to Half Dome with significant elevation gain.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/1307272758",
+      "source": "osm"
+    },
+    {
+      "name": "Half Dome Approach Trail",
+      "distanceMiles": 0.5,
+      "elevationGainFt": 800,
+      "latitude": 37.7318455,
+      "longitude": -119.5207693,
+      "coordinates": [
+        [
+          37.7318455,
+          -119.5207693
+        ],
+        [
+          37.7319473,
+          -119.5210362
+        ],
+        [
+          37.7319982,
+          -119.521637
+        ]
+      ],
+      "difficulty": "Very Hard",
+      "trailType": "Access",
+      "surface": "Earth",
+      "description": "Used to reach the south and southwest faces of Half Dome for climbing. Connects to the John Muir trail near the Little Yosemite Valley campgrounds.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/1316201916",
+      "source": "osm"
+    },
+    {
+      "name": "Unnamed Trail",
+      "distanceMiles": 0.2,
+      "elevationGainFt": 50,
+      "latitude": 37.7261379,
+      "longitude": -119.5431988,
+      "coordinates": [
+        [
+          37.7259966,
+          -119.5437124
+        ],
+        [
+          37.7260589,
+          -119.5438266
+        ],
+        [
+          37.7261379,
+          -119.5436495
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Path",
+      "surface": "Ground",
+      "description": "A designated hiking path with moderate difficulty.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/1343104098",
+      "source": "osm"
+    },
+    {
+      "name": "Rockslides Trail",
+      "distanceMiles": 0.5,
+      "elevationGainFt": 300,
+      "latitude": 37.72537,
+      "longitude": -119.644566,
+      "coordinates": [
+        [
+          37.72537,
+          -119.644566
+        ],
+        [
+          37.7254024,
+          -119.6453397
+        ],
+        [
+          37.7260755,
+          -119.6456456
+        ]
+      ],
+      "difficulty": "Very Hard",
+      "trailType": "Path",
+      "surface": "Paved",
+      "description": "This unofficial path follows a remnant section of the historic alignment of Big Oak Flat Road into Yosemite Valley. Rock slides and vegetation have overtaken it in several places making the trail difficult to find and traverse in some sections.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/1384451430",
+      "source": "osm"
+    },
+    {
+      "name": "Unnamed Trail",
+      "distanceMiles": 0.5,
+      "elevationGainFt": 300,
+      "latitude": 38.0276337,
+      "longitude": -119.3073181,
+      "coordinates": [
+        [
+          38.0302933,
+          -119.3075755
+        ],
+        [
+          38.0299956,
+          -119.3075618
+        ],
+        [
+          38.0276337,
+          -119.3073181
+        ],
+        [
+          38.0253257,
+          -119.3059161
+        ],
+        [
+          38.0247109,
+          -119.3054341
+        ]
+      ],
+      "difficulty": "Hard",
+      "trailType": "Path",
+      "surface": "Dirt",
+      "description": "A challenging mountain hiking trail with significant elevation changes.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/1416989505",
+      "source": "osm"
+    },
+    {
+      "name": "View Meadow Road",
+      "distanceMiles": 1.5,
+      "elevationGainFt": 50,
+      "latitude": 38.0612173,
+      "longitude": -119.2138535,
+      "coordinates": [
+        [
+          38.0612173,
+          -119.2138535
+        ],
+        [
+          38.0617189,
+          -119.2140962
+        ],
+        [
+          38.062098,
+          -119.2139313
+        ],
+        [
+          38.0625415,
+          -119.2138977
+        ],
+        [
+          38.0635224,
+          -119.2137435
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Out and Back",
+      "surface": "Dirt",
+      "description": "A scenic road leading to a meadow with beautiful views.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/1422924237",
+      "source": "osm"
+    },
+    {
+      "name": "Woodcutters Road",
+      "distanceMiles": 2.5,
+      "elevationGainFt": 100,
+      "latitude": 38.05456,
+      "longitude": -119.2320342,
+      "coordinates": [
+        [
+          38.05456,
+          -119.2320342
+        ],
+        [
+          38.0550991,
+          -119.2314414
+        ],
+        [
+          38.0564582,
+          -119.2294854
+        ],
+        [
+          38.0579133,
+          -119.2265041
+        ],
+        [
+          38.0685621,
+          -119.2108952
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Out and Back",
+      "surface": "Dirt",
+      "description": "A rugged road through the forest, suitable for off-road vehicles.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/1422924237",
+      "source": "osm"
+    },
+    {
+      "name": "Woodcutters Road",
+      "distanceMiles": 0.5,
+      "elevationGainFt": 0,
+      "latitude": 38.0550748,
+      "longitude": -119.2304993,
+      "coordinates": [
+        [
+          38.0550748,
+          -119.2304993
+        ],
+        [
+          38.0549275,
+          -119.2302632
+        ],
+        [
+          38.0544921,
+          -119.2289229
+        ],
+        [
+          38.0535342,
+          -119.2278285
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Dirt",
+      "surface": "Dirt",
+      "description": "A dirt road suitable for light off-road vehicles.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/1425662302",
+      "source": "osm"
+    },
+    {
+      "name": "Castle Rock Road",
+      "distanceMiles": 0.5,
+      "elevationGainFt": 0,
+      "latitude": 38.059229,
+      "longitude": -119.2405669,
+      "coordinates": [
+        [
+          38.0590551,
+          -119.2416698
+        ],
+        [
+          38.0586414,
+          -119.2417096
+        ],
+        [
+          38.0582733,
+          -119.2410355
+        ],
+        [
+          38.059229,
+          -119.2405669
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Dirt",
+      "surface": "Compacted",
+      "description": "A compacted dirt road with moderate terrain.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/1425662302",
+      "source": "osm"
+    },
+    {
+      "name": "Labrosse Creek Road",
+      "distanceMiles": 0.5,
+      "elevationGainFt": 0,
+      "latitude": 38.2051333,
+      "longitude": -119.3247396,
+      "coordinates": [
+        [
+          38.2051333,
+          -119.3252879
+        ],
+        [
+          38.2042738,
+          -119.3252377
+        ],
+        [
+          38.2025747,
+          -119.3253321
+        ],
+        [
+          38.1947166,
+          -119.3247396
+        ]
+      ],
+      "difficulty": "Hard",
+      "trailType": "Dirt",
+      "surface": "Dirt",
+      "description": "A dirt road with challenging sections.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/1425662302",
+      "source": "osm"
+    },
+    {
+      "name": "Creek Way Road",
+      "distanceMiles": 0.5,
+      "elevationGainFt": 0,
+      "latitude": 38.1975538,
+      "longitude": -119.3250324,
+      "coordinates": [
+        [
+          38.1964442,
+          -119.3287402
+        ],
+        [
+          38.1975008,
+          -119.3263989
+        ],
+        [
+          38.1975538,
+          -119.3252024
+        ]
+      ],
+      "difficulty": "Very Hard",
+      "trailType": "Dirt",
+      "surface": "Dirt",
+      "description": "A very rough dirt road with significant obstacles.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/1425662302",
+      "source": "osm"
+    },
+    {
+      "name": "Mountain Toe Road",
+      "distanceMiles": 0.5,
+      "elevationGainFt": 0,
+      "latitude": 38.1979545,
+      "longitude": -119.3278461,
+      "coordinates": [
+        [
+          38.197375,
+          -119.3269902
+        ],
+        [
+          38.197491,
+          -119.3272856
+        ],
+        [
+          38.1979545,
+          -119.3278461
+        ]
+      ],
+      "difficulty": "Very Hard",
+      "trailType": "Dirt",
+      "surface": "Dirt",
+      "description": "A challenging dirt road with intermediate visibility.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/1425662302",
+      "source": "osm"
+    },
+    {
+      "name": "Rush Creek Trail",
+      "distanceMiles": 3.5,
+      "elevationGainFt": 800,
+      "latitude": 37.783349,
+      "longitude": -119.1281421,
+      "coordinates": [
+        [
+          37.7817805,
+          -119.1294501
+        ],
+        [
+          37.7816452,
+          -119.1295342
+        ],
+        [
+          37.7815889,
+          -119.129578
+        ],
+        [
+          37.7814273,
+          -119.1297689
+        ],
+        [
+          37.7812943,
+          -119.1299414
+        ],
+        [
+          37.7809186,
+          -119.1302195
+        ],
+        [
+          37.7805708,
+          -119.1299555
+        ],
+        [
+          37.7799985,
+          -119.1296804
+        ],
+        [
+          37.7798798,
+          -119.1296643
+        ],
+        [
+          37.7795483,
+          -119.1297712
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Out and Back",
+      "surface": "Dirt",
+      "description": "A scenic trail leading to beautiful views of the surrounding area.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/17134198",
+      "source": "osm"
+    },
+    {
+      "name": "Big Trees Loop Trail",
+      "distanceMiles": 1.5,
+      "elevationGainFt": 200,
+      "latitude": 37.5013732,
+      "longitude": -119.6107668,
+      "coordinates": [
+        [
+          37.501636,
+          -119.6108969
+        ],
+        [
+          37.5016317,
+          -119.6110145
+        ],
+        [
+          37.5016287,
+          -119.6111132
+        ],
+        [
+          37.5016035,
+          -119.6111375
+        ],
+        [
+          37.5015806,
+          -119.6111236
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Loop",
+      "surface": "Paved",
+      "description": "A short and easy loop trail perfect for families and beginners.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/17134198",
+      "source": "osm"
+    },
+    {
+      "name": "Grizzly Giant Loop Trail",
+      "distanceMiles": 2,
+      "elevationGainFt": 300,
+      "latitude": 37.5113056,
+      "longitude": -119.6107668,
+      "coordinates": [
+        [
+          37.5145027,
+          -119.5994908
+        ],
+        [
+          37.5144226,
+          -119.5994198
+        ],
+        [
+          37.5143416,
+          -119.599336
+        ],
+        [
+          37.5141529,
+          -119.5992004
+        ],
+        [
+          37.5140241,
+          -119.5991283
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Loop",
+      "surface": "Dirt",
+      "description": "A beautiful loop trail showcasing the giant sequoias.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/17134198",
+      "source": "osm"
+    },
+    {
+      "name": "Mariposa Grove Trail",
+      "distanceMiles": 5,
+      "elevationGainFt": 600,
+      "latitude": 37.5113056,
+      "longitude": -119.6107668,
+      "coordinates": [
+        [
+          37.5145027,
+          -119.5994908
+        ],
+        [
+          37.5144793,
+          -119.5987663
+        ],
+        [
+          37.5144772,
+          -119.5985385
+        ],
+        [
+          37.5145078,
+          -119.5983224
+        ],
+        [
+          37.5145915,
+          -119.5981365
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Out and Back",
+      "surface": "Dirt",
+      "description": "A longer trail that leads through the stunning Mariposa Grove.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/17134198",
+      "source": "osm"
+    },
+    {
+      "name": "Guardians Loop Trail",
+      "distanceMiles": 3,
+      "elevationGainFt": 400,
+      "latitude": 37.5113056,
+      "longitude": -119.6107668,
+      "coordinates": [
+        [
+          37.5145027,
+          -119.5994908
+        ],
+        [
+          37.5143416,
+          -119.599336
+        ],
+        [
+          37.5140241,
+          -119.5991283
+        ],
+        [
+          37.5138832,
+          -119.5991032
+        ],
+        [
+          37.5138367,
+          -119.5990714
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Loop",
+      "surface": "Dirt",
+      "description": "A scenic loop trail with views of the giant sequoias.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/17134198",
+      "source": "osm"
+    },
+    {
+      "name": "Perimeter Trail",
+      "distanceMiles": 2.5,
+      "elevationGainFt": 200,
+      "latitude": 37.5075259,
+      "longitude": -119.609672,
+      "coordinates": [
+        [
+          37.5075259,
+          -119.609672
+        ],
+        [
+          37.507933,
+          -119.6098096
+        ],
+        [
+          37.508025,
+          -119.6121485
+        ],
+        [
+          37.5083712,
+          -119.614093
+        ],
+        [
+          37.5089755,
+          -119.6148535
+        ],
+        [
+          37.5093794,
+          -119.6151483
+        ],
+        [
+          37.5104044,
+          -119.6153635
+        ],
+        [
+          37.5115074,
+          -119.6131757
+        ],
+        [
+          37.5121013,
+          -119.6115462
+        ],
+        [
+          37.5124675,
+          -119.609702
+        ],
+        [
+          37.5145058,
+          -119.6104913
+        ],
+        [
+          37.5151411,
+          -119.6060058
+        ],
+        [
+          37.5165038,
+          -119.6049562
+        ],
+        [
+          37.5169803,
+          -119.5970746
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Loop",
+      "surface": "Dirt",
+      "description": "A scenic loop trail around the park perimeter.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/17415670",
+      "source": "osm"
+    },
+    {
+      "name": "Dog Lake Trail",
+      "distanceMiles": 3.2,
+      "elevationGainFt": 400,
+      "latitude": 37.8774353,
+      "longitude": -119.3535845,
+      "coordinates": [
+        [
+          37.8774353,
+          -119.3535845
+        ],
+        [
+          37.8780528,
+          -119.3537974
+        ],
+        [
+          37.8785628,
+          -119.3543114
+        ],
+        [
+          37.8791159,
+          -119.3542761
+        ],
+        [
+          37.879847,
+          -119.354372
+        ],
+        [
+          37.880179,
+          -119.354574
+        ],
+        [
+          37.880776,
+          -119.354781
+        ],
+        [
+          37.8816733,
+          -119.3538691
+        ],
+        [
+          37.8820473,
+          -119.3526337
+        ],
+        [
+          37.8829365,
+          -119.3516064
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Out and Back",
+      "surface": "Dirt",
+      "description": "A beautiful trail leading to Dog Lake with stunning views.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/17415670",
+      "source": "osm"
+    },
+    {
+      "name": "Lembert Dome Trail",
+      "distanceMiles": 4.5,
+      "elevationGainFt": 800,
+      "latitude": 37.8783537,
+      "longitude": -119.3389739,
+      "coordinates": [
+        [
+          37.8783537,
+          -119.3389739
+        ],
+        [
+          37.8788149,
+          -119.3391876
+        ],
+        [
+          37.8797811,
+          -119.3391958
+        ],
+        [
+          37.8802648,
+          -119.3393728
+        ],
+        [
+          37.8808131,
+          -119.3392575
+        ],
+        [
+          37.8816733,
+          -119.3538691
+        ],
+        [
+          37.8822521,
+          -119.3390161
+        ],
+        [
+          37.8826712,
+          -119.33938
+        ]
+      ],
+      "difficulty": "Hard",
+      "trailType": "Loop",
+      "surface": "Rock",
+      "description": "Challenging hike to the summit of Lembert Dome with panoramic views.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/17415670",
+      "source": "osm"
+    },
+    {
+      "name": "Timber Creek Trail",
+      "distanceMiles": 5,
+      "elevationGainFt": 300,
+      "latitude": 37.5599732,
+      "longitude": -119.3226387,
+      "coordinates": [
+        [
+          37.5599732,
+          -119.3226387
+        ],
+        [
+          37.5605446,
+          -119.322538
+        ],
+        [
+          37.5611832,
+          -119.3217709
+        ],
+        [
+          37.5629104,
+          -119.3177659
+        ],
+        [
+          37.5631459,
+          -119.3178209
+        ],
+        [
+          37.5641071,
+          -119.3179732
+        ],
+        [
+          37.5654212,
+          -119.3179387
+        ],
+        [
+          37.5661069,
+          -119.3184702
+        ],
+        [
+          37.5667706,
+          -119.3185188
+        ],
+        [
+          37.5701987,
+          -119.3170636
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Out and Back",
+      "surface": "Dirt",
+      "description": "A gentle trail along Timber Creek, perfect for families.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/17415670",
+      "source": "osm"
+    },
+    {
+      "name": "Slab Lake Trail",
+      "distanceMiles": 1.5,
+      "elevationGainFt": 300,
+      "latitude": 37.6162201,
+      "longitude": -119.357518,
+      "coordinates": [
+        [
+          37.6162201,
+          -119.357518
+        ],
+        [
+          37.6154637,
+          -119.3563163
+        ],
+        [
+          37.6116223,
+          -119.354589
+        ],
+        [
+          37.6070709,
+          -119.3542586
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Loop",
+      "surface": "Dirt",
+      "description": "A scenic trail leading to Slab Lake with moderate elevation changes.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/19053407",
+      "source": "osm"
+    },
+    {
+      "name": "Post Peak Trail",
+      "distanceMiles": 3.2,
+      "elevationGainFt": 800,
+      "latitude": 37.6337748,
+      "longitude": -119.327032,
+      "coordinates": [
+        [
+          37.5882888,
+          -119.3579042
+        ],
+        [
+          37.5913643,
+          -119.3542352
+        ],
+        [
+          37.5944906,
+          -119.3475041
+        ],
+        [
+          37.6337748,
+          -119.327032
+        ]
+      ],
+      "difficulty": "Hard",
+      "trailType": "Out and Back",
+      "surface": "Rock",
+      "description": "Challenging trail with steep sections leading to stunning views from Post Peak.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/19053407",
+      "source": "osm"
+    },
+    {
+      "name": "Walton Trail",
+      "distanceMiles": 4,
+      "elevationGainFt": 500,
+      "latitude": 37.5583207,
+      "longitude": -119.3204423,
+      "coordinates": [
+        [
+          37.5583207,
+          -119.3204423
+        ],
+        [
+          37.5581262,
+          -119.3190752
+        ],
+        [
+          37.5579316,
+          -119.3189035
+        ],
+        [
+          37.5578306,
+          -119.3188418
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Loop",
+      "surface": "Dirt",
+      "description": "A pleasant trail through diverse landscapes, suitable for families.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/19053407",
+      "source": "osm"
+    },
+    {
+      "name": "Flat Lake Trail",
+      "distanceMiles": 2.5,
+      "elevationGainFt": 200,
+      "latitude": 37.5744765,
+      "longitude": -119.3553051,
+      "coordinates": [
+        [
+          37.573335,
+          -119.3553051
+        ],
+        [
+          37.5739493,
+          -119.3577862
+        ],
+        [
+          37.5741194,
+          -119.359771
+        ],
+        [
+          37.5744765,
+          -119.3606776
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Out and Back",
+      "surface": "Dirt",
+      "description": "A gentle trail leading to Flat Lake, perfect for a relaxing hike.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/19053407",
+      "source": "osm"
+    },
+    {
+      "name": "Rainbow Lake Trail",
+      "distanceMiles": 3,
+      "elevationGainFt": 600,
+      "latitude": 37.5767979,
+      "longitude": -119.3663049,
+      "coordinates": [
+        [
+          37.5767979,
+          -119.3663049
+        ],
+        [
+          37.5759221,
+          -119.3651462
+        ],
+        [
+          37.573335,
+          -119.3553051
+        ],
+        [
+          37.5722061,
+          -119.3560374
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Loop",
+      "surface": "Dirt",
+      "description": "A scenic trail that leads to Rainbow Lake, featuring beautiful views and wildlife.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/19053407",
+      "source": "osm"
+    },
+    {
+      "name": "Lillian Access Trail",
+      "distanceMiles": 1.5,
+      "elevationGainFt": 200,
+      "latitude": 37.5633833,
+      "longitude": -119.3672437,
+      "coordinates": [
+        [
+          37.5633833,
+          -119.3672437
+        ],
+        [
+          37.5644719,
+          -119.3661494
+        ],
+        [
+          37.5652925,
+          -119.3638748
+        ],
+        [
+          37.5653138,
+          -119.3636388
+        ],
+        [
+          37.5645653,
+          -119.3625337
+        ],
+        [
+          37.5642082,
+          -119.3616755
+        ],
+        [
+          37.5634194,
+          -119.3615145
+        ],
+        [
+          37.5632641,
+          -119.3613616
+        ],
+        [
+          37.5630579,
+          -119.3606803
+        ],
+        [
+          37.5630239,
+          -119.3605784
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Access",
+      "surface": "Dirt",
+      "description": "A scenic access trail leading to Lillian Lake.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/19053412",
+      "source": "osm"
+    },
+    {
+      "name": "Chittenden Lake Trail",
+      "distanceMiles": 2.8,
+      "elevationGainFt": 300,
+      "latitude": 37.5554184,
+      "longitude": -119.3736063,
+      "coordinates": [
+        [
+          37.5554184,
+          -119.3736063
+        ],
+        [
+          37.5561242,
+          -119.3734396
+        ],
+        [
+          37.5565112,
+          -119.3732411
+        ],
+        [
+          37.5571406,
+          -119.3731284
+        ],
+        [
+          37.5582633,
+          -119.3720073
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Out and Back",
+      "surface": "Dirt",
+      "description": "A beautiful trail leading to Chittenden Lake, perfect for a day hike.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/19053412",
+      "source": "osm"
+    },
+    {
+      "name": "Lady Lake Trail",
+      "distanceMiles": 3.5,
+      "elevationGainFt": 400,
+      "latitude": 37.5495727,
+      "longitude": -119.3571666,
+      "coordinates": [
+        [
+          37.5495727,
+          -119.3571666
+        ],
+        [
+          37.5497832,
+          -119.3573195
+        ],
+        [
+          37.5503829,
+          -119.3575931
+        ],
+        [
+          37.5505062,
+          -119.3586123
+        ],
+        [
+          37.5509487,
+          -119.3592399
+        ],
+        [
+          37.5511825,
+          -119.3621233
+        ],
+        [
+          37.5523371,
+          -119.3622521
+        ],
+        [
+          37.5526582,
+          -119.3624613
+        ],
+        [
+          37.5532175,
+          -119.3627188
+        ],
+        [
+          37.5544678,
+          -119.3634751
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Loop",
+      "surface": "Dirt",
+      "description": "A scenic loop trail around Lady Lake, offering stunning views.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/19053412",
+      "source": "osm"
+    },
+    {
+      "name": "Lillian Lake Trail",
+      "distanceMiles": 4,
+      "elevationGainFt": 500,
+      "latitude": 37.5630239,
+      "longitude": -119.3605784,
+      "coordinates": [
+        [
+          37.5630239,
+          -119.3605784
+        ],
+        [
+          37.5631876,
+          -119.3587062
+        ],
+        [
+          37.5638403,
+          -119.3575153
+        ],
+        [
+          37.564374,
+          -119.3566865
+        ],
+        [
+          37.5656475,
+          -119.3519953
+        ],
+        [
+          37.5663682,
+          -119.3508554
+        ],
+        [
+          37.568305,
+          -119.3424386
+        ]
+      ],
+      "difficulty": "Hard",
+      "trailType": "Out and Back",
+      "surface": "Rocky",
+      "description": "A challenging trail leading to Lillian Lake, with beautiful views along the way.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/19053412",
+      "source": "osm"
+    },
+    {
+      "name": "Fernandez Access Trail",
+      "distanceMiles": 2,
+      "elevationGainFt": 150,
+      "latitude": 37.5316019,
+      "longitude": -119.3190389,
+      "coordinates": [
+        [
+          37.5316019,
+          -119.3190389
+        ],
+        [
+          37.5321473,
+          -119.319798
+        ],
+        [
+          37.5332036,
+          -119.3226378
+        ],
+        [
+          37.5341644,
+          -119.3225741
+        ],
+        [
+          37.5409183,
+          -119.320288
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Access",
+      "surface": "Dirt",
+      "description": "An easy access trail leading to various points of interest in the park.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/19053412",
+      "source": "osm"
+    },
+    {
+      "name": "Frog Meadow Trail",
+      "distanceMiles": 1.2,
+      "elevationGainFt": 200,
+      "latitude": 37.5314227,
+      "longitude": -119.3077362,
+      "coordinates": [
+        [
+          37.5328925,
+          -119.3060095
+        ],
+        [
+          37.5324033,
+          -119.3069959
+        ],
+        [
+          37.5314227,
+          -119.3077362
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Loop",
+      "surface": "Dirt",
+      "description": "A scenic loop trail through Frog Meadow.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/19053417",
+      "source": "osm"
+    },
+    {
+      "name": "Norris Lake Trail",
+      "distanceMiles": 2.5,
+      "elevationGainFt": 300,
+      "latitude": 37.5316019,
+      "longitude": -119.3190389,
+      "coordinates": [
+        [
+          37.5274264,
+          -119.3153807
+        ],
+        [
+          37.53191,
+          -119.3175086
+        ],
+        [
+          37.5316019,
+          -119.3190389
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Out and Back",
+      "surface": "Dirt",
+      "description": "A beautiful trail leading to Norris Lake.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/19053417",
+      "source": "osm"
+    },
+    {
+      "name": "Jackass Lakes Trail",
+      "distanceMiles": 3.8,
+      "elevationGainFt": 400,
+      "latitude": 37.5240043,
+      "longitude": -119.3506783,
+      "coordinates": [
+        [
+          37.5240043,
+          -119.3506783
+        ],
+        [
+          37.5266644,
+          -119.3540579
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Out and Back",
+      "surface": "Dirt",
+      "description": "A trail that leads to the scenic Jackass Lakes.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/19053417",
+      "source": "osm"
+    },
+    {
+      "name": "Miller Creek Trail",
+      "distanceMiles": 5,
+      "elevationGainFt": 500,
+      "latitude": 37.511195,
+      "longitude": -119.3460636,
+      "coordinates": [
+        [
+          37.4945328,
+          -119.2743588
+        ],
+        [
+          37.511195,
+          -119.3460636
+        ]
+      ],
+      "difficulty": "Hard",
+      "trailType": "Out and Back",
+      "surface": "Dirt",
+      "description": "A challenging trail following Miller Creek.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/19053417",
+      "source": "osm"
+    },
+    {
+      "name": "Miller Meadow Trail",
+      "distanceMiles": 2,
+      "elevationGainFt": 150,
+      "latitude": 37.524635,
+      "longitude": -119.2963207,
+      "coordinates": [
+        [
+          37.5081514,
+          -119.2902079
+        ],
+        [
+          37.524635,
+          -119.2963207
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Out and Back",
+      "surface": "Dirt",
+      "description": "A gentle trail through Miller Meadow.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/19053417",
+      "source": "osm"
+    },
+    {
+      "name": "Clover Meadow Trail",
+      "distanceMiles": 2.5,
+      "elevationGainFt": 300,
+      "latitude": 37.5259199,
+      "longitude": -119.2769369,
+      "coordinates": [
+        [
+          37.5259199,
+          -119.2769369
+        ],
+        [
+          37.5251626,
+          -119.2778671
+        ],
+        [
+          37.5228736,
+          -119.2779529
+        ],
+        [
+          37.5207208,
+          -119.2809248
+        ],
+        [
+          37.5194508,
+          -119.2827031
+        ],
+        [
+          37.5174531,
+          -119.2835856
+        ],
+        [
+          37.5154363,
+          -119.2840684
+        ],
+        [
+          37.5141417,
+          -119.2851238
+        ],
+        [
+          37.5133268,
+          -119.2858426
+        ],
+        [
+          37.5110216,
+          -119.2866607
+        ],
+        [
+          37.5099727,
+          -119.2880273
+        ],
+        [
+          37.5090418,
+          -119.2902146
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Loop",
+      "surface": "Dirt",
+      "description": "A scenic loop trail through Clover Meadow.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/19053813",
+      "source": "osm"
+    },
+    {
+      "name": "Long Creek Trail",
+      "distanceMiles": 4.8,
+      "elevationGainFt": 600,
+      "latitude": 37.6540033,
+      "longitude": -119.2555833,
+      "coordinates": [
+        [
+          37.6002327,
+          -119.2599499
+        ],
+        [
+          37.6016693,
+          -119.2577505
+        ],
+        [
+          37.6030548,
+          -119.2565918
+        ],
+        [
+          37.6053157,
+          -119.2566562
+        ],
+        [
+          37.6062762,
+          -119.2570639
+        ],
+        [
+          37.6081461,
+          -119.2571926
+        ],
+        [
+          37.6107511,
+          -119.2559695
+        ],
+        [
+          37.6123404,
+          -119.2559052
+        ],
+        [
+          37.6142739,
+          -119.2561412
+        ],
+        [
+          37.6159991,
+          -119.2555833
+        ],
+        [
+          37.6180048,
+          -119.2565274
+        ],
+        [
+          37.6205967,
+          -119.2585874
+        ],
+        [
+          37.6221008,
+          -119.2595315
+        ],
+        [
+          37.6242677,
+          -119.2579597
+        ],
+        [
+          37.6250962,
+          -119.2580295
+        ],
+        [
+          37.6265238,
+          -119.2580402
+        ],
+        [
+          37.6282147,
+          -119.2577612
+        ],
+        [
+          37.6291983,
+          -119.2578068
+        ],
+        [
+          37.6307214,
+          -119.2584211
+        ],
+        [
+          37.634137,
+          -119.2592365
+        ],
+        [
+          37.6347997,
+          -119.2595959
+        ],
+        [
+          37.6356621,
+          -119.2592955
+        ],
+        [
+          37.6373783,
+          -119.259789
+        ],
+        [
+          37.6394428,
+          -119.2606688
+        ],
+        [
+          37.6403264,
+          -119.2610765
+        ],
+        [
+          37.641176,
+          -119.2620635
+        ],
+        [
+          37.6419661,
+          -119.2619991
+        ],
+        [
+          37.6424928,
+          -119.2620689
+        ],
+        [
+          37.6433168,
+          -119.2647135
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Out and Back",
+      "surface": "Dirt",
+      "description": "A beautiful trail following Long Creek.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/19053813",
+      "source": "osm"
+    },
+    {
+      "name": "Iron Creek Trail",
+      "distanceMiles": 6,
+      "elevationGainFt": 800,
+      "latitude": 37.5743022,
+      "longitude": -119.1828418,
+      "coordinates": [
+        [
+          37.6387175,
+          -119.2240633
+        ],
+        [
+          37.6362951,
+          -119.2222542
+        ],
+        [
+          37.6349505,
+          -119.2216735
+        ],
+        [
+          37.632238,
+          -119.220103
+        ],
+        [
+          37.6304133,
+          -119.2194057
+        ],
+        [
+          37.6287203,
+          -119.2185634
+        ],
+        [
+          37.6262689,
+          -119.2190248
+        ],
+        [
+          37.6245715,
+          -119.2196336
+        ],
+        [
+          37.622428,
+          -119.219977
+        ],
+        [
+          37.6201718,
+          -119.2193735
+        ],
+        [
+          37.6189141,
+          -119.2153931
+        ],
+        [
+          37.6172314,
+          -119.2157042
+        ],
+        [
+          37.6151068,
+          -119.216069
+        ],
+        [
+          37.6136195,
+          -119.2158222
+        ],
+        [
+          37.6119112,
+          -119.2158115
+        ],
+        [
+          37.6099054,
+          -119.2153609
+        ],
+        [
+          37.6086646,
+          -119.2157954
+        ],
+        [
+          37.6065567,
+          -119.2162138
+        ],
+        [
+          37.6056175,
+          -119.2151195
+        ],
+        [
+          37.6047632,
+          -119.2146421
+        ],
+        [
+          37.6035223,
+          -119.213773
+        ],
+        [
+          37.6011677,
+          -119.2123139
+        ],
+        [
+          37.5996887,
+          -119.2121637
+        ],
+        [
+          37.5984986,
+          -119.2113698
+        ],
+        [
+          37.5966455,
+          -119.2110908
+        ],
+        [
+          37.5941632,
+          -119.2102218
+        ],
+        [
+          37.5925905,
+          -119.2108762
+        ],
+        [
+          37.5906437,
+          -119.2102969
+        ],
+        [
+          37.589224,
+          -119.2106509
+        ],
+        [
+          37.5875832,
+          -119.2105436
+        ],
+        [
+          37.5864949,
+          -119.2102218
+        ],
+        [
+          37.5854322,
+          -119.2097256
+        ],
+        [
+          37.5840038,
+          -119.2058873
+        ],
+        [
+          37.5832386,
+          -119.2024648
+        ],
+        [
+          37.5821005,
+          -119.202495
+        ]
+      ],
+      "difficulty": "Hard",
+      "trailType": "Loop",
+      "surface": "Dirt",
+      "description": "Challenging trail with beautiful views along Iron Creek.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/19053813",
+      "source": "osm"
+    },
+    {
+      "name": "Snake Meadow Trail",
+      "distanceMiles": 3.5,
+      "elevationGainFt": 400,
+      "latitude": 37.5821005,
+      "longitude": -119.202495,
+      "coordinates": [
+        [
+          37.5821005,
+          -119.202495
+        ],
+        [
+          37.5814192,
+          -119.2024327
+        ],
+        [
+          37.5796846,
+          -119.2017889
+        ],
+        [
+          37.5787663,
+          -119.201274
+        ],
+        [
+          37.577746,
+          -119.2009736
+        ],
+        [
+          37.5768957,
+          -119.2000723
+        ],
+        [
+          37.5764195,
+          -119.1996003
+        ],
+        [
+          37.5754332,
+          -119.1995144
+        ],
+        [
+          37.5746169,
+          -119.1994715
+        ],
+        [
+          37.5733917,
+          -119.1997268
+        ],
+        [
+          37.5729991,
+          -119.2001836
+        ],
+        [
+          37.5717597,
+          -119.200201
+        ],
+        [
+          37.570161,
+          -119.1996003
+        ],
+        [
+          37.5692086,
+          -119.198742
+        ],
+        [
+          37.5685623,
+          -119.1983986
+        ],
+        [
+          37.5677459,
+          -119.1972399
+        ],
+        [
+          37.5663172,
+          -119.1969395
+        ],
+        [
+          37.565807,
+          -119.1965962
+        ],
+        [
+          37.5655349,
+          -119.1960812
+        ],
+        [
+          37.5648205,
+          -119.1952229
+        ],
+        [
+          37.5642762,
+          -119.1946221
+        ],
+        [
+          37.56397,
+          -119.1938925
+        ],
+        [
+          37.5637659,
+          -119.1935063
+        ],
+        [
+          37.5625413,
+          -119.192648
+        ],
+        [
+          37.5619077,
+          -119.1918057
+        ],
+        [
+          37.5616313,
+          -119.1908401
+        ],
+        [
+          37.5602747,
+          -119.191103
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Out and Back",
+      "surface": "Dirt",
+      "description": "A pleasant trail through Snake Meadow.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/19053813",
+      "source": "osm"
+    },
+    {
+      "name": "Junction Butte Trail",
+      "distanceMiles": 5,
+      "elevationGainFt": 700,
+      "latitude": 37.5328372,
+      "longitude": -119.1814524,
+      "coordinates": [
+        [
+          37.5536534,
+          -119.2023844
+        ],
+        [
+          37.5516758,
+          -119.2029315
+        ],
+        [
+          37.549528,
+          -119.2016923
+        ],
+        [
+          37.547427,
+          -119.2016816
+        ],
+        [
+          37.5465126,
+          -119.2002869
+        ],
+        [
+          37.5458448,
+          -119.1998416
+        ],
+        [
+          37.5446794,
+          -119.1961992
+        ],
+        [
+          37.5436118,
+          -119.1925138
+        ],
+        [
+          37.5422975,
+          -119.1926372
+        ],
+        [
+          37.5408981,
+          -119.1907328
+        ],
+        [
+          37.5392009,
+          -119.1871387
+        ],
+        [
+          37.5374399,
+          -119.1851109
+        ],
+        [
+          37.5360361,
+          -119.1840166
+        ],
+        [
+          37.5354916,
+          -119.1831958
+        ],
+        [
+          37.5341474,
+          -119.1817743
+        ],
+        [
+          37.5328372,
+          -119.1814685
+        ]
+      ],
+      "difficulty": "Hard",
+      "trailType": "Loop",
+      "surface": "Dirt",
+      "description": "A rugged trail leading to Junction Butte with stunning views.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/19053813",
+      "source": "osm"
+    },
+    {
+      "name": "Mammoth Trail",
+      "distanceMiles": 3.5,
+      "elevationGainFt": 500,
+      "latitude": 37.5602747,
+      "longitude": -119.191103,
+      "coordinates": [
+        [
+          37.5602747,
+          -119.191103
+        ],
+        [
+          37.5607212,
+          -119.1901213
+        ],
+        [
+          37.5615377,
+          -119.1894776
+        ],
+        [
+          37.563077,
+          -119.188174
+        ],
+        [
+          37.5642379,
+          -119.1877663
+        ],
+        [
+          37.565943,
+          -119.1869509
+        ],
+        [
+          37.5667764,
+          -119.1865432
+        ],
+        [
+          37.5681498,
+          -119.1852129
+        ],
+        [
+          37.5704544,
+          -119.1815436
+        ],
+        [
+          37.5716619,
+          -119.1797841
+        ],
+        [
+          37.5722997,
+          -119.1785288
+        ],
+        [
+          37.573775,
+          -119.1764796
+        ],
+        [
+          37.5746424,
+          -119.1741407
+        ],
+        [
+          37.5746944,
+          -119.1740692
+        ],
+        [
+          37.5747401,
+          -119.1736257
+        ],
+        [
+          37.5752032,
+          -119.1873264
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Loop",
+      "surface": "Dirt",
+      "description": "A scenic loop trail with moderate elevation gain.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/19053821",
+      "source": "osm"
+    },
+    {
+      "name": "Chetwood Cabin Trail",
+      "distanceMiles": 2.8,
+      "elevationGainFt": 300,
+      "latitude": 37.5909107,
+      "longitude": -119.2616006,
+      "coordinates": [
+        [
+          37.5828539,
+          -119.2601189
+        ],
+        [
+          37.5861438,
+          -119.2600602
+        ],
+        [
+          37.5909107,
+          -119.2616006
+        ],
+        [
+          37.5934507,
+          -119.2599145
+        ],
+        [
+          37.5946383,
+          -119.2593109
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Out and Back",
+      "surface": "Dirt",
+      "description": "A gentle trail leading to a historic cabin.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/19053821",
+      "source": "osm"
+    },
+    {
+      "name": "Stevenson Trail",
+      "distanceMiles": 5,
+      "elevationGainFt": 600,
+      "latitude": 37.6382407,
+      "longitude": -119.2240942,
+      "coordinates": [
+        [
+          37.6382407,
+          -119.2240942
+        ],
+        [
+          37.6384097,
+          -119.2239832
+        ],
+        [
+          37.6389575,
+          -119.2242672
+        ],
+        [
+          37.6392073,
+          -119.2242941
+        ],
+        [
+          37.6397255,
+          -119.224455
+        ],
+        [
+          37.6403032,
+          -119.2247018
+        ],
+        [
+          37.6410912,
+          -119.2246954
+        ],
+        [
+          37.6416326,
+          -119.2244294
+        ],
+        [
+          37.6419342,
+          -119.2241237
+        ],
+        [
+          37.6423208,
+          -119.2234665
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Loop",
+      "surface": "Dirt",
+      "description": "A moderate trail with beautiful views of the surrounding area.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/19053821",
+      "source": "osm"
+    },
+    {
+      "name": "Cora Creek Trail",
+      "distanceMiles": 4.2,
+      "elevationGainFt": 400,
+      "latitude": 37.5808771,
+      "longitude": -119.2621252,
+      "coordinates": [
+        [
+          37.5808771,
+          -119.2621252
+        ],
+        [
+          37.580965,
+          -119.2574757
+        ],
+        [
+          37.5812916,
+          -119.2432131
+        ],
+        [
+          37.5825397,
+          -119.2410494
+        ],
+        [
+          37.5837528,
+          -119.2362658
+        ],
+        [
+          37.5866454,
+          -119.2332484
+        ],
+        [
+          37.5882083,
+          -119.2332043
+        ],
+        [
+          37.5906315,
+          -119.231802
+        ],
+        [
+          37.5922205,
+          -119.2320415
+        ],
+        [
+          37.5943431,
+          -119.2336017
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Out and Back",
+      "surface": "Dirt",
+      "description": "A scenic trail that follows the creek with moderate elevation changes.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/19053821",
+      "source": "osm"
+    },
+    {
+      "name": "McClure Lake Trail",
+      "distanceMiles": 1.5,
+      "elevationGainFt": 300,
+      "latitude": 37.6410868,
+      "longitude": -119.3120331,
+      "coordinates": [
+        [
+          37.6410868,
+          -119.3120331
+        ],
+        [
+          37.6412631,
+          -119.3118104
+        ],
+        [
+          37.6415923,
+          -119.3097961
+        ],
+        [
+          37.6421651,
+          -119.3097569
+        ],
+        [
+          37.6426797,
+          -119.3088761
+        ],
+        [
+          37.6427052,
+          -119.3087447
+        ],
+        [
+          37.6425714,
+          -119.3090424
+        ],
+        [
+          37.6424779,
+          -119.3091255
+        ],
+        [
+          37.6423505,
+          -119.3093669
+        ],
+        [
+          37.6418811,
+          -119.3097129
+        ],
+        [
+          37.6414096,
+          -119.3098712
+        ],
+        [
+          37.6413098,
+          -119.3101072
+        ],
+        [
+          37.6412078,
+          -119.3109655
+        ],
+        [
+          37.6413714,
+          -119.3111962
+        ],
+        [
+          37.6414585,
+          -119.3112794
+        ],
+        [
+          37.64152,
+          -119.3115181
+        ],
+        [
+          37.6414287,
+          -119.3116522
+        ],
+        [
+          37.6412631,
+          -119.3048716
+        ],
+        [
+          37.6415243,
+          -119.3051907
+        ],
+        [
+          37.6420765,
+          -119.3058398
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Loop",
+      "surface": "Dirt",
+      "description": "A scenic trail leading to McClure Lake with moderate elevation gain.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/19053826",
+      "source": "osm"
+    },
+    {
+      "name": "Joe Crane Lake Trail",
+      "distanceMiles": 2.8,
+      "elevationGainFt": 400,
+      "latitude": 37.6239151,
+      "longitude": -119.2973292,
+      "coordinates": [
+        [
+          37.6239151,
+          -119.2973292
+        ],
+        [
+          37.624051,
+          -119.2974579
+        ],
+        [
+          37.6242155,
+          -119.2978925
+        ],
+        [
+          37.6224365,
+          -119.2995393
+        ],
+        [
+          37.6222623,
+          -119.2993408
+        ],
+        [
+          37.6221476,
+          -119.299078
+        ],
+        [
+          37.6220923,
+          -119.298842
+        ],
+        [
+          37.6220116,
+          -119.2986435
+        ],
+        [
+          37.6218926,
+          -119.2982036
+        ],
+        [
+          37.6218204,
+          -119.2980373
+        ],
+        [
+          37.6217227,
+          -119.2978871
+        ],
+        [
+          37.6217142,
+          -119.2978334
+        ],
+        [
+          37.6217397,
+          -119.2977959
+        ],
+        [
+          37.6218161,
+          -119.2977905
+        ],
+        [
+          37.6221518,
+          -119.2978549
+        ],
+        [
+          37.6222155,
+          -119.2978871
+        ],
+        [
+          37.6223558,
+          -119.2978925
+        ],
+        [
+          37.6229973,
+          -119.2978978
+        ],
+        [
+          37.623299,
+          -119.2978549
+        ],
+        [
+          37.6235114,
+          -119.2977852
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Out and Back",
+      "surface": "Dirt",
+      "description": "A beautiful trail leading to Joe Crane Lake, perfect for a day hike.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/19053826",
+      "source": "osm"
+    },
+    {
+      "name": "Isberg Trail",
+      "distanceMiles": 6.5,
+      "elevationGainFt": 1200,
+      "latitude": 37.5776184,
+      "longitude": -119.2652929,
+      "coordinates": [
+        [
+          37.5776184,
+          -119.2652929
+        ],
+        [
+          37.5779415,
+          -119.2653573
+        ],
+        [
+          37.5781456,
+          -119.2657328
+        ],
+        [
+          37.5785878,
+          -119.2662907
+        ],
+        [
+          37.5790469,
+          -119.2678142
+        ],
+        [
+          37.5793785,
+          -119.268297
+        ],
+        [
+          37.5796846,
+          -119.2683292
+        ],
+        [
+          37.5802628,
+          -119.2673421
+        ],
+        [
+          37.5806369,
+          -119.267503
+        ],
+        [
+          37.5810705,
+          -119.2676532
+        ],
+        [
+          37.5815297,
+          -119.2679966
+        ],
+        [
+          37.5821503,
+          -119.2686617
+        ],
+        [
+          37.5825159,
+          -119.2693055
+        ],
+        [
+          37.5832897,
+          -119.2691875
+        ],
+        [
+          37.5836552,
+          -119.2693913
+        ],
+        [
+          37.5841569,
+          -119.2693591
+        ],
+        [
+          37.584701,
+          -119.2695308
+        ],
+        [
+          37.5850708,
+          -119.2699868
+        ],
+        [
+          37.5862229,
+          -119.2706734
+        ],
+        [
+          37.5867457,
+          -119.270829
+        ]
+      ],
+      "difficulty": "Hard",
+      "trailType": "Loop",
+      "surface": "Dirt",
+      "description": "A challenging trail with significant elevation gain, offering stunning views.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/19053826",
+      "source": "osm"
+    },
+    {
+      "name": "Hole Trail",
+      "distanceMiles": 4,
+      "elevationGainFt": 600,
+      "latitude": 37.579387,
+      "longitude": -119.2700619,
+      "coordinates": [
+        [
+          37.579387,
+          -119.2700619
+        ],
+        [
+          37.5793658,
+          -119.2703086
+        ],
+        [
+          37.5792552,
+          -119.2705071
+        ],
+        [
+          37.5791192,
+          -119.2706251
+        ],
+        [
+          37.5785792,
+          -119.2707539
+        ],
+        [
+          37.5783284,
+          -119.2708719
+        ],
+        [
+          37.5781966,
+          -119.2709631
+        ],
+        [
+          37.577865,
+          -119.273302
+        ],
+        [
+          37.5776482,
+          -119.2735219
+        ],
+        [
+          37.5774781,
+          -119.2735165
+        ],
+        [
+          37.577206,
+          -119.2734253
+        ],
+        [
+          37.5769212,
+          -119.2734093
+        ],
+        [
+          37.5767766,
+          -119.273361
+        ],
+        [
+          37.5766916,
+          -119.273259
+        ],
+        [
+          37.5765715,
+          -119.2731531
+        ],
+        [
+          37.5765173,
+          -119.2731249
+        ],
+        [
+          37.5764737,
+          -119.2731316
+        ],
+        [
+          37.5764323,
+          -119.2732108
+        ],
+        [
+          37.5764291,
+          -119.273302
+        ],
+        [
+          37.57636,
+          -119.2733073
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Out and Back",
+      "surface": "Dirt",
+      "description": "A scenic trail leading to a beautiful viewpoint, suitable for moderate hikers.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/19053826",
+      "source": "osm"
+    },
+    {
+      "name": "Alger Lakes Trail",
+      "distanceMiles": 5.5,
+      "elevationGainFt": 800,
+      "latitude": 37.7749487,
+      "longitude": -119.1593966,
+      "coordinates": [
+        [
+          37.7749487,
+          -119.1593966
+        ],
+        [
+          37.7752243,
+          -119.1592518
+        ],
+        [
+          37.7755559,
+          -119.1592375
+        ],
+        [
+          37.7757628,
+          -119.1594154
+        ],
+        [
+          37.7763988,
+          -119.1601342
+        ],
+        [
+          37.7766214,
+          -119.1602737
+        ],
+        [
+          37.7770624,
+          -119.1605097
+        ],
+        [
+          37.7773888,
+          -119.1605741
+        ],
+        [
+          37.7775288,
+          -119.160507
+        ],
+        [
+          37.7781876,
+          -119.1607526
+        ],
+        [
+          37.778547,
+          -119.1607942
+        ],
+        [
+          37.7791887,
+          -119.1605392
+        ],
+        [
+          37.7795321,
+          -119.1603568
+        ],
+        [
+          37.7802063,
+          -119.160566
+        ],
+        [
+          37.7803949,
+          -119.1605929
+        ],
+        [
+          37.7806409,
+          -119.1605553
+        ],
+        [
+          37.7811963,
+          -119.1608584
+        ],
+        [
+          37.7814507,
+          -119.1608316
+        ],
+        [
+          37.7822223,
+          -119.1609764
+        ],
+        [
+          37.7827989,
+          -119.161301
+        ]
+      ],
+      "difficulty": "Hard",
+      "trailType": "Loop",
+      "surface": "Dirt",
+      "description": "A challenging trail leading to stunning alpine lakes, perfect for experienced hikers.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/19053826",
+      "source": "osm"
+    },
+    {
+      "name": "Rockslides Trail",
+      "distanceMiles": 1.5,
+      "elevationGainFt": 300,
+      "latitude": 37.72537,
+      "longitude": -119.644566,
+      "coordinates": [
+        [
+          37.72537,
+          -119.644566
+        ],
+        [
+          37.7260692,
+          -119.6459273
+        ],
+        [
+          37.7264483,
+          -119.6828049
+        ],
+        [
+          37.7344981,
+          -119.704151
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Loop",
+      "surface": "Dirt",
+      "description": "A scenic trail with views of rock formations and forest.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/19100193",
+      "source": "osm"
+    },
+    {
+      "name": "Old Big Oak Flat Road Trail",
+      "distanceMiles": 3.2,
+      "elevationGainFt": 400,
+      "latitude": 37.7419579,
+      "longitude": -119.7029299,
+      "coordinates": [
+        [
+          37.7419579,
+          -119.7029299
+        ],
+        [
+          37.7423262,
+          -119.7045341
+        ],
+        [
+          37.7344981,
+          -119.704151
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Out and Back",
+      "surface": "Paved",
+      "description": "A historic road turned trail with gentle slopes and beautiful views.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/19100193",
+      "source": "osm"
+    },
+    {
+      "name": "Tamarack Flat Trail",
+      "distanceMiles": 4.5,
+      "elevationGainFt": 600,
+      "latitude": 37.7423262,
+      "longitude": -119.7045341,
+      "coordinates": [
+        [
+          37.7423262,
+          -119.7045341
+        ],
+        [
+          37.7424449,
+          -119.7033352
+        ],
+        [
+          37.7477497,
+          -119.6366508
+        ]
+      ],
+      "difficulty": "Hard",
+      "trailType": "Loop",
+      "surface": "Dirt",
+      "description": "A challenging trail with steep sections and stunning views.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/19100193",
+      "source": "osm"
+    },
+    {
+      "name": "El Capitan Trail",
+      "distanceMiles": 5,
+      "elevationGainFt": 800,
+      "latitude": 37.7391488,
+      "longitude": -119.6369907,
+      "coordinates": [
+        [
+          37.7391488,
+          -119.6369907
+        ],
+        [
+          37.740379,
+          -119.6371863
+        ],
+        [
+          37.7477497,
+          -119.6366508
+        ]
+      ],
+      "difficulty": "Very Hard",
+      "trailType": "Out and Back",
+      "surface": "Rocky",
+      "description": "A strenuous hike leading to breathtaking views of El Capitan.",
+      "parkName": "Yosemite National Park",
+      "stateCode": "CA",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/19100193",
+      "source": "osm"
+    }
+  ],
+  "source": "osm",
+  "timestamp": "2026-01-24T02:03:45.113Z",
+  "errors": []
+}

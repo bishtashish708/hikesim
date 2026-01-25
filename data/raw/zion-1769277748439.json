@@ -1,0 +1,6330 @@
+{
+  "parkName": "Zion National Park",
+  "parkCode": "zion",
+  "trailsFound": 124,
+  "trails": [
+    {
+      "name": "Lower Emerald Pool Trail",
+      "distanceMiles": 0.5,
+      "elevationGainFt": 0,
+      "latitude": 37.2513374,
+      "longitude": -112.9587326,
+      "coordinates": [
+        [
+          37.2513374,
+          -112.9587326
+        ],
+        [
+          37.2513112,
+          -112.9586008
+        ],
+        [
+          37.2513044,
+          -112.958581
+        ],
+        [
+          37.2512983,
+          -112.9585693
+        ],
+        [
+          37.2512878,
+          -112.9585602
+        ],
+        [
+          37.2511665,
+          -112.9585106
+        ],
+        [
+          37.2511302,
+          -112.9584892
+        ],
+        [
+          37.2511118,
+          -112.9584723
+        ],
+        [
+          37.2510909,
+          -112.9584515
+        ],
+        [
+          37.2510731,
+          -112.9584396
+        ],
+        [
+          37.2510501,
+          -112.9584298
+        ],
+        [
+          37.2510204,
+          -112.9584215
+        ],
+        [
+          37.2510097,
+          -112.9584163
+        ],
+        [
+          37.2510052,
+          -112.958411
+        ],
+        [
+          37.251002,
+          -112.9583999
+        ],
+        [
+          37.250982,
+          -112.9581897
+        ],
+        [
+          37.2509677,
+          -112.9580165
+        ],
+        [
+          37.2509672,
+          -112.9579471
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Path",
+      "surface": "Paved",
+      "description": "A scenic trail leading to the Lower Emerald Pool.",
+      "parkName": "Zion National Park",
+      "stateCode": "UT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/10196012",
+      "source": "osm"
+    },
+    {
+      "name": "Human History Museum Trail",
+      "distanceMiles": 0.5,
+      "elevationGainFt": 50,
+      "latitude": 37.2078477,
+      "longitude": -112.9804096,
+      "coordinates": [
+        [
+          37.2078477,
+          -112.9804096
+        ],
+        [
+          37.2078057,
+          -112.9804716
+        ],
+        [
+          37.2077655,
+          -112.9805431
+        ],
+        [
+          37.2077174,
+          -112.9805595
+        ],
+        [
+          37.2075562,
+          -112.9805239
+        ],
+        [
+          37.2074498,
+          -112.9804433
+        ],
+        [
+          37.2072848,
+          -112.9801496
+        ],
+        [
+          37.2071966,
+          -112.9800679
+        ],
+        [
+          37.2071363,
+          -112.9799464
+        ],
+        [
+          37.2070977,
+          -112.979832
+        ],
+        [
+          37.2068948,
+          -112.9796512
+        ],
+        [
+          37.206729,
+          -112.979416
+        ],
+        [
+          37.2067318,
+          -112.9793538
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Out and Back",
+      "surface": "Dirt",
+      "description": "A scenic trail near the Human History Museum.",
+      "parkName": "Zion National Park",
+      "stateCode": "UT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/10197349",
+      "source": "osm"
+    },
+    {
+      "name": "Riverside Walk",
+      "distanceMiles": 1.2,
+      "elevationGainFt": 0,
+      "latitude": 37.296577,
+      "longitude": -112.9481877,
+      "coordinates": [
+        [
+          37.296577,
+          -112.9481877
+        ],
+        [
+          37.2954565,
+          -112.9480271
+        ],
+        [
+          37.2939384,
+          -112.948074
+        ],
+        [
+          37.2927342,
+          -112.9465057
+        ],
+        [
+          37.2917577,
+          -112.9468732
+        ],
+        [
+          37.2912163,
+          -112.9472606
+        ],
+        [
+          37.290857,
+          -112.947352
+        ],
+        [
+          37.2896775,
+          -112.9472043
+        ],
+        [
+          37.2882301,
+          -112.9469598
+        ],
+        [
+          37.2869204,
+          -112.9483769
+        ],
+        [
+          37.2855107,
+          -112.9480299
+        ],
+        [
+          37.2853285,
+          -112.9477951
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Path",
+      "surface": "Paved",
+      "description": "A scenic walk along the river.",
+      "parkName": "Zion National Park",
+      "stateCode": "UT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/14326787",
+      "source": "osm"
+    },
+    {
+      "name": "East Rim Trail",
+      "distanceMiles": 1.5,
+      "elevationGainFt": 300,
+      "latitude": 37.2810359,
+      "longitude": -112.9366122,
+      "coordinates": [
+        [
+          37.2741941,
+          -112.9285132
+        ],
+        [
+          37.274581,
+          -112.9273653
+        ],
+        [
+          37.2746338,
+          -112.9276362
+        ],
+        [
+          37.2757126,
+          -112.9279108
+        ],
+        [
+          37.2754112,
+          -112.9281296
+        ],
+        [
+          37.2753937,
+          -112.9285613
+        ],
+        [
+          37.275867,
+          -112.928984
+        ],
+        [
+          37.2752367,
+          -112.9300043
+        ],
+        [
+          37.2755239,
+          -112.9302825
+        ],
+        [
+          37.2772701,
+          -112.9315143
+        ],
+        [
+          37.280323,
+          -112.9364905
+        ],
+        [
+          37.2810359,
+          -112.9366122
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Path",
+      "surface": "Dirt",
+      "description": "A challenging hike with stunning views.",
+      "parkName": "Zion National Park",
+      "stateCode": "UT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/14326787",
+      "source": "osm"
+    },
+    {
+      "name": "East Rim Trail - Closed Indefinitely",
+      "distanceMiles": 0.5,
+      "elevationGainFt": 150,
+      "latitude": 37.2706159,
+      "longitude": -112.9384257,
+      "coordinates": [
+        [
+          37.2703735,
+          -112.9325577
+        ],
+        [
+          37.2706177,
+          -112.9341836
+        ],
+        [
+          37.2689287,
+          -112.934641
+        ],
+        [
+          37.2691139,
+          -112.9350019
+        ],
+        [
+          37.2694806,
+          -112.9353187
+        ],
+        [
+          37.2697004,
+          -112.9358537
+        ],
+        [
+          37.269315,
+          -112.9374274
+        ],
+        [
+          37.2705258,
+          -112.9363479
+        ],
+        [
+          37.2701115,
+          -112.9370827
+        ],
+        [
+          37.2702683,
+          -112.9370372
+        ],
+        [
+          37.2706159,
+          -112.9384257
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Path",
+      "surface": "Dirt",
+      "description": "A scenic trail that is currently closed.",
+      "parkName": "Zion National Park",
+      "stateCode": "UT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/14326787",
+      "source": "osm"
+    },
+    {
+      "name": "Chinle Trail",
+      "distanceMiles": 1.5,
+      "elevationGainFt": 300,
+      "latitude": 37.2158273,
+      "longitude": -113.0779785,
+      "coordinates": [
+        [
+          37.1612275,
+          -113.0193787
+        ],
+        [
+          37.2158273,
+          -113.0779785
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Path",
+      "surface": "Dirt",
+      "description": "A scenic trail with moderate elevation changes.",
+      "parkName": "Zion National Park",
+      "stateCode": "UT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/14326802",
+      "source": "osm"
+    },
+    {
+      "name": "East Rim Trail",
+      "distanceMiles": 1.8,
+      "elevationGainFt": 400,
+      "latitude": 37.266033,
+      "longitude": -112.9078459,
+      "coordinates": [
+        [
+          37.2732379,
+          -112.9313859
+        ],
+        [
+          37.266033,
+          -112.9078459
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Path",
+      "surface": "Dirt",
+      "description": "A beautiful trail offering stunning views of the canyon.",
+      "parkName": "Zion National Park",
+      "stateCode": "UT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/14326802",
+      "source": "osm"
+    },
+    {
+      "name": "Kayenta Trail",
+      "distanceMiles": 0.8,
+      "elevationGainFt": 200,
+      "latitude": 37.2599664,
+      "longitude": -112.9515271,
+      "coordinates": [
+        [
+          37.2571979,
+          -112.9602338
+        ],
+        [
+          37.2599664,
+          -112.9515271
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Path",
+      "surface": "Ground",
+      "description": "A gentle trail suitable for all skill levels.",
+      "parkName": "Zion National Park",
+      "stateCode": "UT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/14326802",
+      "source": "osm"
+    },
+    {
+      "name": "Sand Bench Trail",
+      "distanceMiles": 0.8,
+      "elevationGainFt": 200,
+      "latitude": 37.2484989,
+      "longitude": -112.9586945,
+      "coordinates": [
+        [
+          37.2484989,
+          -112.9586945
+        ],
+        [
+          37.246758,
+          -112.9587484
+        ],
+        [
+          37.245004,
+          -112.9586985
+        ],
+        [
+          37.2429485,
+          -112.9592857
+        ],
+        [
+          37.2415656,
+          -112.9605351
+        ],
+        [
+          37.2407997,
+          -112.9613869
+        ],
+        [
+          37.2399801,
+          -112.9618788
+        ],
+        [
+          37.2391485,
+          -112.9630449
+        ],
+        [
+          37.2387369,
+          -112.9641848
+        ],
+        [
+          37.2389528,
+          -112.9649403
+        ],
+        [
+          37.238879,
+          -112.9663127
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Path",
+      "surface": "Dirt",
+      "description": "A scenic trail offering views of the surrounding landscape.",
+      "parkName": "Zion National Park",
+      "stateCode": "UT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/14326833",
+      "source": "osm"
+    },
+    {
+      "name": "Lower Emerald Pool Trail",
+      "distanceMiles": 0.5,
+      "elevationGainFt": 100,
+      "latitude": 37.2575831,
+      "longitude": -112.9624639,
+      "coordinates": [
+        [
+          37.2575831,
+          -112.9624639
+        ],
+        [
+          37.2575878,
+          -112.962241
+        ],
+        [
+          37.2574551,
+          -112.9619107
+        ],
+        [
+          37.2575755,
+          -112.9616036
+        ],
+        [
+          37.2574042,
+          -112.9613988
+        ],
+        [
+          37.2574415,
+          -112.961205
+        ],
+        [
+          37.2573997,
+          -112.9609913
+        ],
+        [
+          37.257302,
+          -112.9608828
+        ],
+        [
+          37.2573774,
+          -112.9605719
+        ],
+        [
+          37.2572008,
+          -112.9604202
+        ],
+        [
+          37.2571979,
+          -112.9602338
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Path",
+      "surface": "Paved",
+      "description": "A short and easy trail leading to beautiful emerald pools.",
+      "parkName": "Zion National Park",
+      "stateCode": "UT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/14326833",
+      "source": "osm"
+    },
+    {
+      "name": "West Rim Trail",
+      "distanceMiles": 2.5,
+      "elevationGainFt": 800,
+      "latitude": 37.2599664,
+      "longitude": -112.9515271,
+      "coordinates": [
+        [
+          37.2599664,
+          -112.9515271
+        ],
+        [
+          37.2617704,
+          -112.9506935
+        ],
+        [
+          37.2642033,
+          -112.9504794
+        ],
+        [
+          37.2649746,
+          -112.9508406
+        ],
+        [
+          37.2662789,
+          -112.9508012
+        ],
+        [
+          37.2665552,
+          -112.9518322
+        ],
+        [
+          37.2678898,
+          -112.951396
+        ],
+        [
+          37.2687045,
+          -112.9513799
+        ],
+        [
+          37.2689977,
+          -112.9509735
+        ],
+        [
+          37.2690016,
+          -112.951606
+        ],
+        [
+          37.2695017,
+          -112.9509863
+        ],
+        [
+          37.2695348,
+          -112.951013
+        ]
+      ],
+      "difficulty": "Hard",
+      "trailType": "Path",
+      "surface": "Paved",
+      "description": "A challenging trail with stunning views of the canyon.",
+      "parkName": "Zion National Park",
+      "stateCode": "UT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/14326833",
+      "source": "osm"
+    },
+    {
+      "name": "Middle Emerald Pools",
+      "distanceMiles": 1.2,
+      "elevationGainFt": 200,
+      "latitude": 37.2576276,
+      "longitude": -112.9627986,
+      "coordinates": [
+        [
+          37.2576276,
+          -112.9627986
+        ],
+        [
+          37.2566643,
+          -112.9625673
+        ],
+        [
+          37.254957,
+          -112.9608986
+        ],
+        [
+          37.2546449,
+          -112.960434
+        ],
+        [
+          37.2536092,
+          -112.9588247
+        ],
+        [
+          37.2519317,
+          -112.9596404
+        ],
+        [
+          37.2512794,
+          -112.9608256
+        ],
+        [
+          37.2507945,
+          -112.9603186
+        ],
+        [
+          37.2501916,
+          -112.95944
+        ],
+        [
+          37.2502628,
+          -112.9590957
+        ],
+        [
+          37.2512002,
+          -112.9592631
+        ],
+        [
+          37.2514475,
+          -112.9591344
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Path",
+      "surface": "Ground",
+      "description": "A scenic trail leading to the Middle Emerald Pools.",
+      "parkName": "Zion National Park",
+      "stateCode": "UT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/14326839",
+      "source": "osm"
+    },
+    {
+      "name": "Lower Emerald Pool Trail",
+      "distanceMiles": 1,
+      "elevationGainFt": 150,
+      "latitude": 37.2569961,
+      "longitude": -112.9626885,
+      "coordinates": [
+        [
+          37.2514274,
+          -112.9590654
+        ],
+        [
+          37.2518853,
+          -112.9588505
+        ],
+        [
+          37.2523887,
+          -112.958437
+        ],
+        [
+          37.2529824,
+          -112.9582516
+        ],
+        [
+          37.2534699,
+          -112.9578633
+        ],
+        [
+          37.2538871,
+          -112.9586244
+        ],
+        [
+          37.2544103,
+          -112.9590829
+        ],
+        [
+          37.2547504,
+          -112.9594886
+        ],
+        [
+          37.2553087,
+          -112.9604126
+        ],
+        [
+          37.2562092,
+          -112.9618131
+        ],
+        [
+          37.2569961,
+          -112.9626885
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Path",
+      "surface": "Paved",
+      "description": "A gentle trail leading to the Lower Emerald Pool.",
+      "parkName": "Zion National Park",
+      "stateCode": "UT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/14326839",
+      "source": "osm"
+    },
+    {
+      "name": "Deertrap Mountain Trail",
+      "distanceMiles": 3.5,
+      "elevationGainFt": 800,
+      "latitude": 37.2526749,
+      "longitude": -112.9170243,
+      "coordinates": [
+        [
+          37.2526749,
+          -112.9170243
+        ],
+        [
+          37.2483262,
+          -112.9250439
+        ],
+        [
+          37.2453558,
+          -112.9288275
+        ],
+        [
+          37.2408864,
+          -112.9280503
+        ],
+        [
+          37.2404216,
+          -112.9326805
+        ],
+        [
+          37.2417918,
+          -112.9351217
+        ],
+        [
+          37.2413816,
+          -112.937683
+        ],
+        [
+          37.2418092,
+          -112.9405203
+        ],
+        [
+          37.2414349,
+          -112.9430471
+        ],
+        [
+          37.2429762,
+          -112.9454664
+        ],
+        [
+          37.2479677,
+          -112.9450281
+        ],
+        [
+          37.248153,
+          -112.9451608
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Path",
+      "surface": "Dirt",
+      "description": "A challenging trail leading to the summit of Deertrap Mountain.",
+      "parkName": "Zion National Park",
+      "stateCode": "UT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/14326839",
+      "source": "osm"
+    },
+    {
+      "name": "East Rim Trail",
+      "distanceMiles": 1.5,
+      "elevationGainFt": 300,
+      "latitude": 37.251943,
+      "longitude": -112.87719,
+      "coordinates": [
+        [
+          37.2620918,
+          -112.9063031
+        ],
+        [
+          37.2523896,
+          -112.8930853
+        ],
+        [
+          37.2520199,
+          -112.8863916
+        ],
+        [
+          37.2492778,
+          -112.8800084
+        ],
+        [
+          37.2477823,
+          -112.8808621
+        ],
+        [
+          37.2459104,
+          -112.873474
+        ],
+        [
+          37.2505994,
+          -112.8677842
+        ],
+        [
+          37.2490042,
+          -112.8673238
+        ],
+        [
+          37.2450364,
+          -112.8693989
+        ],
+        [
+          37.2426473,
+          -112.8739257
+        ],
+        [
+          37.2416771,
+          -112.8756412
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Path",
+      "surface": "Unpaved",
+      "description": "A scenic trail offering views of the canyon.",
+      "parkName": "Zion National Park",
+      "stateCode": "UT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/14326858",
+      "source": "osm"
+    },
+    {
+      "name": "Cable Mountain Trail",
+      "distanceMiles": 1.5,
+      "elevationGainFt": 400,
+      "latitude": 37.2603774,
+      "longitude": -112.9290465,
+      "coordinates": [
+        [
+          37.2526749,
+          -112.9170243
+        ],
+        [
+          37.2541875,
+          -112.918781
+        ],
+        [
+          37.2561722,
+          -112.9226473
+        ],
+        [
+          37.2579675,
+          -112.9248402
+        ],
+        [
+          37.2603774,
+          -112.9290465
+        ],
+        [
+          37.2618918,
+          -112.9303375
+        ],
+        [
+          37.2639121,
+          -112.9295766
+        ],
+        [
+          37.2649487,
+          -112.9296811
+        ],
+        [
+          37.2664017,
+          -112.9331793
+        ],
+        [
+          37.2680223,
+          -112.9334347
+        ],
+        [
+          37.2684183,
+          -112.9336063
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Path",
+      "surface": "Ground",
+      "description": "A trail leading to stunning views of the surrounding area.",
+      "parkName": "Zion National Park",
+      "stateCode": "UT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/14326858",
+      "source": "osm"
+    },
+    {
+      "name": "Angels Landing Trail",
+      "distanceMiles": 1.1,
+      "elevationGainFt": 1500,
+      "latitude": 37.2728723,
+      "longitude": -112.9502313,
+      "coordinates": [
+        [
+          37.2746715,
+          -112.9507479
+        ],
+        [
+          37.2744403,
+          -112.9506166
+        ],
+        [
+          37.2741982,
+          -112.9505403
+        ],
+        [
+          37.2738453,
+          -112.9504609
+        ],
+        [
+          37.2728723,
+          -112.9502313
+        ],
+        [
+          37.2716039,
+          -112.9500322
+        ],
+        [
+          37.27103,
+          -112.9498061
+        ],
+        [
+          37.2705456,
+          -112.9495303
+        ],
+        [
+          37.2701694,
+          -112.9490598
+        ],
+        [
+          37.2697915,
+          -112.94851
+        ],
+        [
+          37.2693119,
+          -112.9479191
+        ]
+      ],
+      "difficulty": "Very Hard",
+      "trailType": "Path",
+      "surface": "Ground",
+      "description": "A challenging trail with steep drop-offs and breathtaking views.",
+      "parkName": "Zion National Park",
+      "stateCode": "UT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/14326858",
+      "source": "osm"
+    },
+    {
+      "name": "Watchman Trail",
+      "distanceMiles": 1.5,
+      "elevationGainFt": 300,
+      "latitude": 37.200855,
+      "longitude": -112.9728309,
+      "coordinates": [
+        [
+          37.2015211,
+          -112.9846761
+        ],
+        [
+          37.2016859,
+          -112.9813709
+        ],
+        [
+          37.2014733,
+          -112.9789515
+        ],
+        [
+          37.2015945,
+          -112.9753987
+        ],
+        [
+          37.2014925,
+          -112.9742368
+        ],
+        [
+          37.201991,
+          -112.9744377
+        ],
+        [
+          37.200855,
+          -112.9728309
+        ],
+        [
+          37.1997889,
+          -112.9751189
+        ],
+        [
+          37.1999756,
+          -112.9774398
+        ],
+        [
+          37.1987471,
+          -112.9769634
+        ],
+        [
+          37.1994365,
+          -112.9765048
+        ],
+        [
+          37.1994919,
+          -112.9764823
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Out and Back",
+      "surface": "Dirt",
+      "description": "A scenic trail with views of the Watchman peak.",
+      "parkName": "Zion National Park",
+      "stateCode": "UT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/14326873",
+      "source": "osm"
+    },
+    {
+      "name": "Upper Emerald Pool",
+      "distanceMiles": 0.8,
+      "elevationGainFt": 150,
+      "latitude": 37.2575386,
+      "longitude": -112.9665639,
+      "coordinates": [
+        [
+          37.2575386,
+          -112.9665639
+        ],
+        [
+          37.2578985,
+          -112.9647632
+        ],
+        [
+          37.2578686,
+          -112.9645201
+        ],
+        [
+          37.2577876,
+          -112.9638193
+        ],
+        [
+          37.2576078,
+          -112.9633163
+        ],
+        [
+          37.2576722,
+          -112.9628754
+        ],
+        [
+          37.2578576,
+          -112.9624405
+        ],
+        [
+          37.2578338,
+          -112.9617375
+        ],
+        [
+          37.257771,
+          -112.9612399
+        ],
+        [
+          37.2575939,
+          -112.9610426
+        ],
+        [
+          37.2573357,
+          -112.9604509
+        ],
+        [
+          37.2571979,
+          -112.9602338
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Loop",
+      "surface": "Ground",
+      "description": "A short and easy trail leading to beautiful pools.",
+      "parkName": "Zion National Park",
+      "stateCode": "UT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/14326873",
+      "source": "osm"
+    },
+    {
+      "name": "West Rim Trail",
+      "distanceMiles": 1.5,
+      "elevationGainFt": 0,
+      "latitude": 37.2746715,
+      "longitude": -112.9507479,
+      "coordinates": [
+        [
+          37.2746715,
+          -112.9507479
+        ],
+        [
+          37.2750101,
+          -112.9504602
+        ],
+        [
+          37.2760988,
+          -112.9509035
+        ],
+        [
+          37.2777983,
+          -112.9502965
+        ],
+        [
+          37.2784929,
+          -112.9501243
+        ],
+        [
+          37.2789813,
+          -112.9502257
+        ],
+        [
+          37.2797466,
+          -112.950998
+        ],
+        [
+          37.2813393,
+          -112.9520637
+        ],
+        [
+          37.2852377,
+          -112.9547331
+        ],
+        [
+          37.2865678,
+          -112.9553703
+        ],
+        [
+          37.2860004,
+          -112.9557399
+        ],
+        [
+          37.2859885,
+          -112.9557539
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Path",
+      "surface": "Ground",
+      "description": "A scenic trail with excellent visibility.",
+      "parkName": "Zion National Park",
+      "stateCode": "UT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/14326894",
+      "source": "osm"
+    },
+    {
+      "name": "The Subway Bottom-Up Approach",
+      "distanceMiles": 3.5,
+      "elevationGainFt": 0,
+      "latitude": 37.2847126,
+      "longitude": -113.0958144,
+      "coordinates": [
+        [
+          37.2847126,
+          -113.0958144
+        ],
+        [
+          37.2858298,
+          -113.0925957
+        ],
+        [
+          37.288284,
+          -113.0882975
+        ],
+        [
+          37.2892378,
+          -113.0868062
+        ],
+        [
+          37.2895205,
+          -113.0847874
+        ],
+        [
+          37.2930129,
+          -113.0810565
+        ],
+        [
+          37.296629,
+          -113.0764717
+        ],
+        [
+          37.2995717,
+          -113.0702477
+        ],
+        [
+          37.3022266,
+          -113.0634745
+        ],
+        [
+          37.3076158,
+          -113.0577559
+        ],
+        [
+          37.3093554,
+          -113.0519601
+        ]
+      ],
+      "difficulty": "Hard",
+      "trailType": "Path",
+      "surface": "Dirt",
+      "description": "A demanding mountain hiking experience.",
+      "parkName": "Zion National Park",
+      "stateCode": "UT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/14326894",
+      "source": "osm"
+    },
+    {
+      "name": "The Narrows Day Hike Section",
+      "distanceMiles": 5.2,
+      "elevationGainFt": 1200,
+      "latitude": 37.2966093,
+      "longitude": -112.9482437,
+      "coordinates": [
+        [
+          37.2966093,
+          -112.9482437
+        ],
+        [
+          37.299912,
+          -112.9445624
+        ],
+        [
+          37.2999808,
+          -112.94777
+        ],
+        [
+          37.3032533,
+          -112.9473363
+        ],
+        [
+          37.305756,
+          -112.949656
+        ],
+        [
+          37.3082645,
+          -112.9469317
+        ],
+        [
+          37.3100299,
+          -112.9494825
+        ],
+        [
+          37.3127112,
+          -112.9509833
+        ],
+        [
+          37.3192108,
+          -112.9538605
+        ],
+        [
+          37.3230604,
+          -112.9550915
+        ],
+        [
+          37.3308948,
+          -112.9563148
+        ],
+        [
+          37.3312023,
+          -112.9570033
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Path",
+      "surface": "Natural",
+      "description": "A scenic hike through the Narrows with stunning views.",
+      "parkName": "Zion National Park",
+      "stateCode": "UT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/73382616",
+      "source": "osm"
+    },
+    {
+      "name": "Canyon Overlook Trail",
+      "distanceMiles": 0.5,
+      "elevationGainFt": 0,
+      "latitude": 37.2135898,
+      "longitude": -112.9434584,
+      "coordinates": [
+        [
+          37.2135898,
+          -112.9434584
+        ],
+        [
+          37.2134035,
+          -112.9436242
+        ],
+        [
+          37.2130958,
+          -112.9438578
+        ],
+        [
+          37.2126355,
+          -112.9439888
+        ],
+        [
+          37.2127439,
+          -112.9443926
+        ],
+        [
+          37.212824,
+          -112.9445474
+        ],
+        [
+          37.2129092,
+          -112.9447596
+        ],
+        [
+          37.2131318,
+          -112.9449606
+        ],
+        [
+          37.2131322,
+          -112.9451789
+        ],
+        [
+          37.213343,
+          -112.9454908
+        ],
+        [
+          37.213435,
+          -112.9457353
+        ],
+        [
+          37.213335,
+          -112.9459658
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Footpath",
+      "surface": "Dirt",
+      "description": "A scenic trail offering views of the canyon.",
+      "parkName": "Zion National Park",
+      "stateCode": "UT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/144445190",
+      "source": "osm"
+    },
+    {
+      "name": "Mesa Road",
+      "distanceMiles": 5.2,
+      "elevationGainFt": 200,
+      "latitude": 37.3097958,
+      "longitude": -113.201842,
+      "coordinates": [
+        [
+          37.3097958,
+          -113.201842
+        ],
+        [
+          37.3100171,
+          -113.2016831
+        ],
+        [
+          37.3101989,
+          -113.2014164
+        ],
+        [
+          37.3102595,
+          -113.2011735
+        ],
+        [
+          37.3111004,
+          -113.1991732
+        ],
+        [
+          37.3112861,
+          -113.1985969
+        ],
+        [
+          37.3117747,
+          -113.1979682
+        ],
+        [
+          37.3124035,
+          -113.19703
+        ],
+        [
+          37.3129565,
+          -113.196087
+        ],
+        [
+          37.3132823,
+          -113.1952726
+        ],
+        [
+          37.3134831,
+          -113.1948297
+        ],
+        [
+          37.3159815,
+          -113.1896696
+        ],
+        [
+          37.3174168,
+          -113.1865256
+        ],
+        [
+          37.3182797,
+          -113.1842552
+        ],
+        [
+          37.3192081,
+          -113.1823824
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Point to Point",
+      "surface": "Dirt",
+      "description": "A scenic road with beautiful views.",
+      "parkName": "Zion National Park",
+      "stateCode": "UT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/168992911",
+      "source": "osm"
+    },
+    {
+      "name": "Dalton Wash Road",
+      "distanceMiles": 1.5,
+      "elevationGainFt": 0,
+      "latitude": 37.2333564,
+      "longitude": -113.1284067,
+      "coordinates": [
+        [
+          37.2311187,
+          -113.1264051
+        ],
+        [
+          37.2317199,
+          -113.1269318
+        ],
+        [
+          37.232496,
+          -113.1277021
+        ],
+        [
+          37.2328768,
+          -113.1277313
+        ],
+        [
+          37.2333564,
+          -113.1284067
+        ],
+        [
+          37.2336703,
+          -113.129082
+        ],
+        [
+          37.2344114,
+          -113.1298231
+        ],
+        [
+          37.2346498,
+          -113.1304109
+        ],
+        [
+          37.2350276,
+          -113.131203
+        ],
+        [
+          37.2355682,
+          -113.1319332
+        ],
+        [
+          37.2357019,
+          -113.1319916
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Track",
+      "surface": "Dirt",
+      "description": "A scenic route through Dalton Wash.",
+      "parkName": "Zion National Park",
+      "stateCode": "UT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/169067123",
+      "source": "osm"
+    },
+    {
+      "name": "Dalton Wash Road",
+      "distanceMiles": 1.2,
+      "elevationGainFt": 0,
+      "latitude": 37.2306539,
+      "longitude": -113.1210545,
+      "coordinates": [
+        [
+          37.2306539,
+          -113.1210545
+        ],
+        [
+          37.2307934,
+          -113.1212648
+        ],
+        [
+          37.2312748,
+          -113.1216941
+        ],
+        [
+          37.2313725,
+          -113.1218606
+        ],
+        [
+          37.2314039,
+          -113.1220227
+        ],
+        [
+          37.2313795,
+          -113.1221673
+        ],
+        [
+          37.2312574,
+          -113.1224214
+        ],
+        [
+          37.2311457,
+          -113.1229515
+        ],
+        [
+          37.2311353,
+          -113.1240556
+        ],
+        [
+          37.2312539,
+          -113.1253831
+        ],
+        [
+          37.2311492,
+          -113.1259877
+        ],
+        [
+          37.2311187,
+          -113.1264051
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Track",
+      "surface": "Dirt",
+      "description": "A scenic road through Dalton Wash.",
+      "parkName": "Zion National Park",
+      "stateCode": "UT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/169068443",
+      "source": "osm"
+    },
+    {
+      "name": "Red Bull Rampage East Road (CR 0650)",
+      "distanceMiles": 1.5,
+      "elevationGainFt": 200,
+      "latitude": 37.1921004,
+      "longitude": -113.1648706,
+      "coordinates": [
+        [
+          37.1982732,
+          -113.1741303
+        ],
+        [
+          37.197427,
+          -113.1729161
+        ],
+        [
+          37.1968621,
+          -113.1729674
+        ],
+        [
+          37.1947859,
+          -113.1714933
+        ],
+        [
+          37.1935402,
+          -113.1705063
+        ],
+        [
+          37.1932849,
+          -113.1697602
+        ],
+        [
+          37.1925225,
+          -113.1684084
+        ],
+        [
+          37.191178,
+          -113.1682503
+        ],
+        [
+          37.1910486,
+          -113.167917
+        ],
+        [
+          37.1917839,
+          -113.1676991
+        ],
+        [
+          37.1927539,
+          -113.1663489
+        ],
+        [
+          37.1925157,
+          -113.165097
+        ],
+        [
+          37.1921004,
+          -113.1648706
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Point to Point",
+      "surface": "Dirt",
+      "description": "A scenic route used during the Red Bull Rampage event.",
+      "parkName": "Zion National Park",
+      "stateCode": "UT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/169094806",
+      "source": "osm"
+    },
+    {
+      "name": "Red Bull Rampage East Road",
+      "distanceMiles": 1.5,
+      "elevationGainFt": 0,
+      "latitude": 37.1921004,
+      "longitude": -113.1648706,
+      "coordinates": [
+        [
+          37.1921004,
+          -113.1648706
+        ],
+        [
+          37.1899833,
+          -113.1649432
+        ],
+        [
+          37.1882031,
+          -113.1654346
+        ],
+        [
+          37.1859667,
+          -113.1662208
+        ],
+        [
+          37.1848365,
+          -113.1651312
+        ],
+        [
+          37.1811771,
+          -113.1657123
+        ],
+        [
+          37.178852,
+          -113.1660798
+        ],
+        [
+          37.1759242,
+          -113.1667634
+        ],
+        [
+          37.1738373,
+          -113.16646
+        ],
+        [
+          37.1741028,
+          -113.1684939
+        ],
+        [
+          37.1728451,
+          -113.1694435
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Track",
+      "surface": "Dirt",
+      "description": "A scenic route used for the Red Bull Rampage event.",
+      "parkName": "Zion National Park",
+      "stateCode": "UT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/169450854",
+      "source": "osm"
+    },
+    {
+      "name": "CR 0650",
+      "distanceMiles": 1.2,
+      "elevationGainFt": 0,
+      "latitude": 37.1921004,
+      "longitude": -113.1648706,
+      "coordinates": [
+        [
+          37.1921004,
+          -113.1648706
+        ],
+        [
+          37.1922842,
+          -113.1644348
+        ],
+        [
+          37.1927505,
+          -113.1640887
+        ],
+        [
+          37.1932577,
+          -113.1635076
+        ],
+        [
+          37.1943434,
+          -113.162371
+        ],
+        [
+          37.1952318,
+          -113.1608628
+        ],
+        [
+          37.195436,
+          -113.1599142
+        ],
+        [
+          37.1944183,
+          -113.1596151
+        ],
+        [
+          37.1939962,
+          -113.1591408
+        ],
+        [
+          37.193952,
+          -113.1586324
+        ],
+        [
+          37.1925751,
+          -113.1571668
+        ],
+        [
+          37.1925485,
+          -113.1559818
+        ],
+        [
+          37.1926927,
+          -113.1548699
+        ],
+        [
+          37.1924067,
+          -113.1541332
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Track",
+      "surface": "Dirt",
+      "description": "A connecting road with scenic views.",
+      "parkName": "Zion National Park",
+      "stateCode": "UT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/169450854",
+      "source": "osm"
+    },
+    {
+      "name": "South 200 East",
+      "distanceMiles": 1.5,
+      "elevationGainFt": 100,
+      "latitude": 37.140714,
+      "longitude": -113.0377868,
+      "coordinates": [
+        [
+          37.1371407,
+          -113.0395945
+        ],
+        [
+          37.1372581,
+          -113.0396045
+        ],
+        [
+          37.1373675,
+          -113.0394505
+        ],
+        [
+          37.1375357,
+          -113.038935
+        ],
+        [
+          37.1375437,
+          -113.0380546
+        ],
+        [
+          37.1376184,
+          -113.0378872
+        ],
+        [
+          37.1377385,
+          -113.0377935
+        ],
+        [
+          37.1382215,
+          -113.0378504
+        ],
+        [
+          37.1385471,
+          -113.0378169
+        ],
+        [
+          37.1386859,
+          -113.0378671
+        ],
+        [
+          37.1397853,
+          -113.0377533
+        ],
+        [
+          37.140714,
+          -113.0377868
+        ],
+        [
+          37.1416267,
+          -113.03776
+        ],
+        [
+          37.1422065,
+          -113.0374552
+        ],
+        [
+          37.1426834,
+          -113.0373382
+        ],
+        [
+          37.1432118,
+          -113.0372545
+        ],
+        [
+          37.1433906,
+          -113.0369934
+        ],
+        [
+          37.1438068,
+          -113.0364879
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Track",
+      "surface": "Dirt",
+      "description": "A scenic trail with moderate elevation changes.",
+      "parkName": "Zion National Park",
+      "stateCode": "UT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/169856031",
+      "source": "osm"
+    },
+    {
+      "name": "Unnamed Trail",
+      "distanceMiles": 1.5,
+      "elevationGainFt": 200,
+      "latitude": 37.386296,
+      "longitude": -112.9186669,
+      "coordinates": [
+        [
+          37.386296,
+          -112.9186669
+        ],
+        [
+          37.3858432,
+          -112.919777
+        ],
+        [
+          37.3856247,
+          -112.920373
+        ],
+        [
+          37.3850054,
+          -112.9206383
+        ],
+        [
+          37.384485,
+          -112.9208773
+        ],
+        [
+          37.383962,
+          -112.9207758
+        ],
+        [
+          37.3838007,
+          -112.9209952
+        ],
+        [
+          37.3839984,
+          -112.9212048
+        ],
+        [
+          37.3839412,
+          -112.9213915
+        ],
+        [
+          37.3836237,
+          -112.9211688
+        ],
+        [
+          37.3831528,
+          -112.9206317
+        ],
+        [
+          37.382419,
+          -112.9205335
+        ],
+        [
+          37.3815499,
+          -112.9206121
+        ],
+        [
+          37.380928,
+          -112.9204909
+        ],
+        [
+          37.3808083,
+          -112.9200423
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Loop",
+      "surface": "Dirt",
+      "description": "A scenic loop trail with moderate elevation gain.",
+      "parkName": "Zion National Park",
+      "stateCode": "UT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/170183293",
+      "source": "osm"
+    },
+    {
+      "name": "Unnamed Trail",
+      "distanceMiles": 0.8,
+      "elevationGainFt": 100,
+      "latitude": 37.4188083,
+      "longitude": -112.8993788,
+      "coordinates": [
+        [
+          37.4188083,
+          -112.8993788
+        ],
+        [
+          37.4185554,
+          -112.8990391
+        ],
+        [
+          37.4182402,
+          -112.8989148
+        ],
+        [
+          37.417829,
+          -112.8983074
+        ],
+        [
+          37.4177139,
+          -112.8976516
+        ],
+        [
+          37.4174918,
+          -112.8974238
+        ],
+        [
+          37.4171739,
+          -112.8973237
+        ],
+        [
+          37.4168285,
+          -112.8969337
+        ],
+        [
+          37.4166695,
+          -112.8963884
+        ],
+        [
+          37.4168093,
+          -112.8964332
+        ],
+        [
+          37.4169792,
+          -112.896737
+        ],
+        [
+          37.4170039,
+          -112.8965471
+        ],
+        [
+          37.4172095,
+          -112.8962399
+        ],
+        [
+          37.4173137,
+          -112.8963021
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Out and Back",
+      "surface": "Dirt",
+      "description": "A short and easy trail suitable for beginners.",
+      "parkName": "Zion National Park",
+      "stateCode": "UT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/170183293",
+      "source": "osm"
+    },
+    {
+      "name": "Unnamed Trail",
+      "distanceMiles": 2.3,
+      "elevationGainFt": 300,
+      "latitude": 37.3840192,
+      "longitude": -112.9213227,
+      "coordinates": [
+        [
+          37.3840192,
+          -112.9213227
+        ],
+        [
+          37.384924,
+          -112.9225969
+        ],
+        [
+          37.3857763,
+          -112.9236769
+        ],
+        [
+          37.3869941,
+          -112.9236287
+        ],
+        [
+          37.3869853,
+          -112.9252543
+        ],
+        [
+          37.3865636,
+          -112.9279524
+        ],
+        [
+          37.3857291,
+          -112.9300567
+        ],
+        [
+          37.383137,
+          -112.9304278
+        ],
+        [
+          37.3818335,
+          -112.9312332
+        ],
+        [
+          37.3795509,
+          -112.9320274
+        ],
+        [
+          37.3783152,
+          -112.9323392
+        ],
+        [
+          37.3766194,
+          -112.9327511
+        ],
+        [
+          37.3762448,
+          -112.9327474
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Loop",
+      "surface": "Dirt",
+      "description": "A moderate trail with beautiful views.",
+      "parkName": "Zion National Park",
+      "stateCode": "UT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/170183293",
+      "source": "osm"
+    },
+    {
+      "name": "Oak Tree Drive",
+      "distanceMiles": 1.5,
+      "elevationGainFt": 200,
+      "latitude": 37.4085142,
+      "longitude": -112.9767988,
+      "coordinates": [
+        [
+          37.4085142,
+          -112.9767988
+        ],
+        [
+          37.4078322,
+          -112.9743309
+        ],
+        [
+          37.4078604,
+          -112.9718276
+        ],
+        [
+          37.4066746,
+          -112.969959
+        ],
+        [
+          37.4069309,
+          -112.9669735
+        ],
+        [
+          37.4083702,
+          -112.9636369
+        ],
+        [
+          37.4085532,
+          -112.9624491
+        ],
+        [
+          37.4091334,
+          -112.9617435
+        ],
+        [
+          37.4097502,
+          -112.9592437
+        ],
+        [
+          37.411195,
+          -112.9573041
+        ],
+        [
+          37.4112373,
+          -112.9560844
+        ],
+        [
+          37.411226,
+          -112.9545987
+        ],
+        [
+          37.4109666,
+          -112.9541109
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Out and Back",
+      "surface": "Dirt",
+      "description": "A scenic drive through oak trees.",
+      "parkName": "Zion National Park",
+      "stateCode": "UT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/170307245",
+      "source": "osm"
+    },
+    {
+      "name": "The Narrows Top Down",
+      "distanceMiles": 10.5,
+      "elevationGainFt": 1500,
+      "latitude": 37.3698278,
+      "longitude": -112.928648,
+      "coordinates": [
+        [
+          37.3698278,
+          -112.928648
+        ],
+        [
+          37.3670275,
+          -112.9323529
+        ],
+        [
+          37.365893,
+          -112.936859
+        ],
+        [
+          37.3637459,
+          -112.944889
+        ],
+        [
+          37.361173,
+          -112.9500011
+        ],
+        [
+          37.3567323,
+          -112.9511202
+        ],
+        [
+          37.3520687,
+          -112.9491991
+        ],
+        [
+          37.344945,
+          -112.9507203
+        ],
+        [
+          37.3403772,
+          -112.9547962
+        ],
+        [
+          37.3383094,
+          -112.9566303
+        ],
+        [
+          37.3315803,
+          -112.9572417
+        ],
+        [
+          37.3312023,
+          -112.9570033
+        ]
+      ],
+      "difficulty": "Hard",
+      "trailType": "Point to Point",
+      "surface": "Rock",
+      "description": "A challenging hike through the stunning Narrows.",
+      "parkName": "Zion National Park",
+      "stateCode": "UT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/170307245",
+      "source": "osm"
+    },
+    {
+      "name": "Unnamed Trail 1",
+      "distanceMiles": 1.5,
+      "elevationGainFt": 200,
+      "latitude": 37.375,
+      "longitude": -112.855,
+      "coordinates": [
+        [
+          37.3772554,
+          -112.8541343
+        ],
+        [
+          37.3759304,
+          -112.85717
+        ],
+        [
+          37.3758911,
+          -112.8598735
+        ],
+        [
+          37.3769885,
+          -112.8613643
+        ],
+        [
+          37.3758009,
+          -112.8620953
+        ],
+        [
+          37.3730953,
+          -112.8638557
+        ],
+        [
+          37.3715037,
+          -112.8650847
+        ],
+        [
+          37.3709448,
+          -112.867093
+        ],
+        [
+          37.3705749,
+          -112.8687274
+        ],
+        [
+          37.3713988,
+          -112.8703582
+        ],
+        [
+          37.3722273,
+          -112.8723196
+        ],
+        [
+          37.3722586,
+          -112.873359
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Track",
+      "surface": "Dirt",
+      "description": "A scenic hiking trail with moderate elevation changes.",
+      "parkName": "Zion National Park",
+      "stateCode": "UT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/170322512",
+      "source": "osm"
+    },
+    {
+      "name": "Unnamed Trail 2",
+      "distanceMiles": 1.2,
+      "elevationGainFt": 150,
+      "latitude": 37.356,
+      "longitude": -112.845,
+      "coordinates": [
+        [
+          37.3592297,
+          -112.8413793
+        ],
+        [
+          37.3590034,
+          -112.8417254
+        ],
+        [
+          37.3586212,
+          -112.8434666
+        ],
+        [
+          37.3564063,
+          -112.8485986
+        ],
+        [
+          37.3559485,
+          -112.8499083
+        ],
+        [
+          37.3541875,
+          -112.8522026
+        ],
+        [
+          37.3533753,
+          -112.8531639
+        ],
+        [
+          37.3532129,
+          -112.8540835
+        ],
+        [
+          37.3531945,
+          -112.8551006
+        ],
+        [
+          37.3528659,
+          -112.8564614
+        ],
+        [
+          37.3522752,
+          -112.8588579
+        ],
+        [
+          37.3522863,
+          -112.8592619
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Track",
+      "surface": "Dirt",
+      "description": "A gentle trail suitable for beginners.",
+      "parkName": "Zion National Park",
+      "stateCode": "UT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/170322512",
+      "source": "osm"
+    },
+    {
+      "name": "Unnamed Trail 3",
+      "distanceMiles": 1.8,
+      "elevationGainFt": 100,
+      "latitude": 37.32,
+      "longitude": -112.854,
+      "coordinates": [
+        [
+          37.3173363,
+          -112.8532963
+        ],
+        [
+          37.3172924,
+          -112.8545289
+        ],
+        [
+          37.318601,
+          -112.855037
+        ],
+        [
+          37.3190381,
+          -112.8550301
+        ],
+        [
+          37.3199123,
+          -112.8548815
+        ],
+        [
+          37.3211301,
+          -112.8550509
+        ],
+        [
+          37.3220867,
+          -112.8549022
+        ],
+        [
+          37.3228701,
+          -112.8548884
+        ],
+        [
+          37.3243298,
+          -112.8541106
+        ],
+        [
+          37.3241594,
+          -112.8548435
+        ],
+        [
+          37.3245772,
+          -112.8542766
+        ],
+        [
+          37.3247696,
+          -112.8536301
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Track",
+      "surface": "Dirt",
+      "description": "A flat trail perfect for a leisurely walk.",
+      "parkName": "Zion National Park",
+      "stateCode": "UT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/170322512",
+      "source": "osm"
+    },
+    {
+      "name": "Englestead Trailhead Loop",
+      "distanceMiles": 1.5,
+      "elevationGainFt": 200,
+      "latitude": 37.2970644,
+      "longitude": -112.8994377,
+      "coordinates": [
+        [
+          37.2970644,
+          -112.8994377
+        ],
+        [
+          37.3003197,
+          -112.8993118
+        ],
+        [
+          37.300354,
+          -112.8981533
+        ],
+        [
+          37.3004863,
+          -112.8977466
+        ],
+        [
+          37.3009716,
+          -112.8967653
+        ],
+        [
+          37.3016517,
+          -112.896317
+        ],
+        [
+          37.3014593,
+          -112.8956191
+        ],
+        [
+          37.3014544,
+          -112.8942619
+        ],
+        [
+          37.3008331,
+          -112.8932421
+        ],
+        [
+          37.3009128,
+          -112.8923547
+        ],
+        [
+          37.300876,
+          -112.8920451
+        ],
+        [
+          37.3009311,
+          -112.8922468
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Loop",
+      "surface": "Dirt",
+      "description": "A scenic loop trail with moderate elevation gain.",
+      "parkName": "Zion National Park",
+      "stateCode": "UT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/170363477",
+      "source": "osm"
+    },
+    {
+      "name": "Unnamed Trail 1",
+      "distanceMiles": 0.5,
+      "elevationGainFt": 0,
+      "latitude": 37.2767037,
+      "longitude": -112.845258,
+      "coordinates": [
+        [
+          37.2756654,
+          -112.845258
+        ],
+        [
+          37.2767037,
+          -112.8493551
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Track",
+      "surface": "Dirt",
+      "description": "A short dirt track trail.",
+      "parkName": "Zion National Park",
+      "stateCode": "UT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/170754292",
+      "source": "osm"
+    },
+    {
+      "name": "Unnamed Trail 2",
+      "distanceMiles": 1.5,
+      "elevationGainFt": 0,
+      "latitude": 37.2632481,
+      "longitude": -112.8615908,
+      "coordinates": [
+        [
+          37.2632481,
+          -112.8615908
+        ],
+        [
+          37.2775138,
+          -112.8584726
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Track",
+      "surface": "Dirt",
+      "description": "A moderate dirt track trail.",
+      "parkName": "Zion National Park",
+      "stateCode": "UT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/170754292",
+      "source": "osm"
+    },
+    {
+      "name": "Unnamed Trail 3",
+      "distanceMiles": 0.8,
+      "elevationGainFt": 0,
+      "latitude": 37.2851439,
+      "longitude": -112.8391452,
+      "coordinates": [
+        [
+          37.2815435,
+          -112.8463691
+        ],
+        [
+          37.2851439,
+          -112.846247
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Track",
+      "surface": "Dirt",
+      "description": "A short and easy dirt track trail.",
+      "parkName": "Zion National Park",
+      "stateCode": "UT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/170754292",
+      "source": "osm"
+    },
+    {
+      "name": "Weeping Rock",
+      "distanceMiles": 0.1,
+      "elevationGainFt": 0,
+      "latitude": 37.270835,
+      "longitude": -112.9385341,
+      "coordinates": [
+        [
+          37.270835,
+          -112.9385341
+        ],
+        [
+          37.2708617,
+          -112.9385233
+        ],
+        [
+          37.2709406,
+          -112.938508
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Out and Back",
+      "surface": "Paved",
+      "description": "A short trail leading to a scenic viewpoint.",
+      "parkName": "Zion National Park",
+      "stateCode": "UT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/189799838",
+      "source": "osm"
+    },
+    {
+      "name": "Mary Bonner Nature Trail",
+      "distanceMiles": 0,
+      "elevationGainFt": 0,
+      "latitude": 37.176125,
+      "longitude": -113.00833,
+      "coordinates": [
+        [
+          37.1761093,
+          -113.0083411
+        ],
+        [
+          37.176141,
+          -113.0085261
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Path",
+      "surface": "Dirt",
+      "description": "Brief description",
+      "parkName": "Zion National Park",
+      "stateCode": "UT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/540080373",
+      "source": "osm"
+    },
+    {
+      "name": "The Subway Top-Down Approach",
+      "distanceMiles": 2.5,
+      "elevationGainFt": 1000,
+      "latitude": 37.3390897,
+      "longitude": -113.0594013,
+      "coordinates": [
+        [
+          37.3390897,
+          -113.0594013
+        ],
+        [
+          37.3370734,
+          -113.057738
+        ],
+        [
+          37.3352831,
+          -113.0543895
+        ],
+        [
+          37.3337262,
+          -113.0518482
+        ],
+        [
+          37.3321197,
+          -113.0477943
+        ],
+        [
+          37.330115,
+          -113.0451697
+        ],
+        [
+          37.3278731,
+          -113.0439381
+        ],
+        [
+          37.3234705,
+          -113.0404732
+        ],
+        [
+          37.3213983,
+          -113.0400298
+        ],
+        [
+          37.3194754,
+          -113.0401272
+        ],
+        [
+          37.3177726,
+          -113.0405909
+        ],
+        [
+          37.3177276,
+          -113.040604
+        ]
+      ],
+      "difficulty": "Hard",
+      "trailType": "Point to Point",
+      "surface": "Natural",
+      "description": "A challenging hike through stunning landscapes.",
+      "parkName": "Zion National Park",
+      "stateCode": "UT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/603857871",
+      "source": "osm"
+    },
+    {
+      "name": "West Rim Trail",
+      "distanceMiles": 0.5,
+      "elevationGainFt": 100,
+      "latitude": 37.2695348,
+      "longitude": -112.951013,
+      "coordinates": [
+        [
+          37.2695348,
+          -112.951013
+        ],
+        [
+          37.2696269,
+          -112.9508834
+        ],
+        [
+          37.269629,
+          -112.9508562
+        ],
+        [
+          37.2696175,
+          -112.9508328
+        ],
+        [
+          37.2694708,
+          -112.9507024
+        ],
+        [
+          37.2694081,
+          -112.9506181
+        ],
+        [
+          37.2694061,
+          -112.9505771
+        ],
+        [
+          37.2694286,
+          -112.950523
+        ],
+        [
+          37.2695697,
+          -112.9503039
+        ],
+        [
+          37.2695948,
+          -112.9502943
+        ],
+        [
+          37.2696948,
+          -112.9503194
+        ],
+        [
+          37.2698557,
+          -112.9503589
+        ],
+        [
+          37.2699153,
+          -112.9503604
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Path",
+      "surface": "Paved",
+      "description": "A scenic trail with excellent visibility.",
+      "parkName": "Zion National Park",
+      "stateCode": "UT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/699459770",
+      "source": "osm"
+    },
+    {
+      "name": "Walter's Wiggles",
+      "distanceMiles": 0.3,
+      "elevationGainFt": 200,
+      "latitude": 37.2756651,
+      "longitude": -112.9514311,
+      "coordinates": [
+        [
+          37.2756651,
+          -112.9514311
+        ],
+        [
+          37.2756499,
+          -112.9514184
+        ],
+        [
+          37.2756347,
+          -112.9513679
+        ],
+        [
+          37.2756084,
+          -112.9514381
+        ],
+        [
+          37.2755823,
+          -112.9513383
+        ],
+        [
+          37.2755475,
+          -112.9514309
+        ],
+        [
+          37.2755263,
+          -112.951309
+        ],
+        [
+          37.2754994,
+          -112.9514178
+        ],
+        [
+          37.2754518,
+          -112.9514004
+        ],
+        [
+          37.2754435,
+          -112.9512839
+        ],
+        [
+          37.2752562,
+          -112.9513442
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Path",
+      "surface": "Paved",
+      "description": "A challenging series of switchbacks.",
+      "parkName": "Zion National Park",
+      "stateCode": "UT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/699459770",
+      "source": "osm"
+    },
+    {
+      "name": "West Rim Trail",
+      "distanceMiles": 0.1,
+      "elevationGainFt": 50,
+      "latitude": 37.2699769,
+      "longitude": -112.950296,
+      "coordinates": [
+        [
+          37.2699675,
+          -112.9503308
+        ],
+        [
+          37.2699769,
+          -112.950296
+        ],
+        [
+          37.2699838,
+          -112.9502654
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Path",
+      "surface": "Paved",
+      "description": "A short segment of the West Rim Trail.",
+      "parkName": "Zion National Park",
+      "stateCode": "UT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/699459770",
+      "source": "osm"
+    },
+    {
+      "name": "West Rim Trail",
+      "distanceMiles": 0.5,
+      "elevationGainFt": 0,
+      "latitude": 37.2752562,
+      "longitude": -112.9513442,
+      "coordinates": [
+        [
+          37.2752562,
+          -112.9513442
+        ],
+        [
+          37.2751995,
+          -112.9513227
+        ],
+        [
+          37.275174,
+          -112.9513108
+        ],
+        [
+          37.2751445,
+          -112.9512878
+        ],
+        [
+          37.2751283,
+          -112.9512657
+        ],
+        [
+          37.2751093,
+          -112.9512268
+        ],
+        [
+          37.2750652,
+          -112.9510826
+        ],
+        [
+          37.275052,
+          -112.9510488
+        ],
+        [
+          37.2750366,
+          -112.951013
+        ],
+        [
+          37.2749668,
+          -112.950849
+        ],
+        [
+          37.2749553,
+          -112.9508265
+        ],
+        [
+          37.2749396,
+          -112.9508085
+        ],
+        [
+          37.2749234,
+          -112.9507998
+        ],
+        [
+          37.2749048,
+          -112.9507941
+        ],
+        [
+          37.2747976,
+          -112.9507724
+        ],
+        [
+          37.2746865,
+          -112.9507509
+        ],
+        [
+          37.2746715,
+          -112.9507479
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Path",
+      "surface": "Ground",
+      "description": "A scenic trail with excellent visibility.",
+      "parkName": "Zion National Park",
+      "stateCode": "UT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/699460644",
+      "source": "osm"
+    },
+    {
+      "name": "West Rim Trail",
+      "distanceMiles": 0.5,
+      "elevationGainFt": 0,
+      "latitude": 37.2756651,
+      "longitude": -112.9516484,
+      "coordinates": [
+        [
+          37.2699838,
+          -112.9502654
+        ],
+        [
+          37.2700125,
+          -112.9502481
+        ],
+        [
+          37.2731025,
+          -112.9511673
+        ],
+        [
+          37.2752506,
+          -112.9516466
+        ],
+        [
+          37.2752447,
+          -112.9516192
+        ],
+        [
+          37.2751552,
+          -112.9515216
+        ],
+        [
+          37.2752493,
+          -112.951549
+        ],
+        [
+          37.2754724,
+          -112.951647
+        ],
+        [
+          37.275482,
+          -112.9516299
+        ],
+        [
+          37.2754206,
+          -112.951549
+        ],
+        [
+          37.2755266,
+          -112.9514743
+        ],
+        [
+          37.27565,
+          -112.9514629
+        ],
+        [
+          37.2756651,
+          -112.9514311
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Path",
+      "surface": "Paved",
+      "description": "A scenic trail with excellent visibility.",
+      "parkName": "Zion National Park",
+      "stateCode": "UT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/699460644",
+      "source": "osm"
+    },
+    {
+      "name": "Watchman Trail",
+      "distanceMiles": 0.1,
+      "elevationGainFt": 0,
+      "latitude": 37.2005454,
+      "longitude": -112.986893,
+      "coordinates": [
+        [
+          37.2005454,
+          -112.986893
+        ],
+        [
+          37.2005594,
+          -112.9869355
+        ],
+        [
+          37.2006453,
+          -112.9869914
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Out and Back",
+      "surface": "Sett",
+      "description": "Short trail with scenic views.",
+      "parkName": "Zion National Park",
+      "stateCode": "UT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/898062456",
+      "source": "osm"
+    },
+    {
+      "name": "Canyon Overlook Trail",
+      "distanceMiles": 0.5,
+      "elevationGainFt": 0,
+      "latitude": 37.2134858,
+      "longitude": -112.9406179,
+      "coordinates": [
+        [
+          37.2134858,
+          -112.9406179
+        ],
+        [
+          37.2133786,
+          -112.9407187
+        ],
+        [
+          37.2133721,
+          -112.9407198
+        ],
+        [
+          37.2133664,
+          -112.9407172
+        ],
+        [
+          37.2133618,
+          -112.9407127
+        ],
+        [
+          37.2133574,
+          -112.9407036
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Out and Back",
+      "surface": "Dirt",
+      "description": "A scenic trail offering views of the canyon.",
+      "parkName": "Zion National Park",
+      "stateCode": "UT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/984458896",
+      "source": "osm"
+    },
+    {
+      "name": "Virgin River Nature Trail",
+      "distanceMiles": 0.5,
+      "elevationGainFt": 0,
+      "latitude": 37.200766,
+      "longitude": -112.987079,
+      "coordinates": [
+        [
+          37.2008867,
+          -112.9871667
+        ],
+        [
+          37.2006605,
+          -112.987023
+        ],
+        [
+          37.2006453,
+          -112.9869914
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Out and Back",
+      "surface": "Sett",
+      "description": "A scenic trail along the Virgin River.",
+      "parkName": "Zion National Park",
+      "stateCode": "UT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/984469956",
+      "source": "osm"
+    },
+    {
+      "name": "Virgin River Nature Trail",
+      "distanceMiles": 0.5,
+      "elevationGainFt": 0,
+      "latitude": 37.2001,
+      "longitude": -112.9876,
+      "coordinates": [
+        [
+          37.2002117,
+          -112.9878095
+        ],
+        [
+          37.2001022,
+          -112.9876511
+        ],
+        [
+          37.2000592,
+          -112.9875203
+        ],
+        [
+          37.1999894,
+          -112.9874163
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Out and Back",
+      "surface": "Sett",
+      "description": "A scenic trail along the Virgin River.",
+      "parkName": "Zion National Park",
+      "stateCode": "UT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/985034206",
+      "source": "osm"
+    },
+    {
+      "name": "The Narrows Top Down",
+      "distanceMiles": 1.5,
+      "elevationGainFt": 500,
+      "latitude": 37.3711532,
+      "longitude": -112.8809869,
+      "coordinates": [
+        [
+          37.3722586,
+          -112.873359
+        ],
+        [
+          37.3721621,
+          -112.8745695
+        ],
+        [
+          37.3710908,
+          -112.8756558
+        ],
+        [
+          37.371278,
+          -112.8766592
+        ],
+        [
+          37.3710388,
+          -112.8774183
+        ],
+        [
+          37.3709272,
+          -112.8786783
+        ],
+        [
+          37.3709701,
+          -112.8792773
+        ],
+        [
+          37.3700922,
+          -112.8798177
+        ],
+        [
+          37.3711532,
+          -112.8809869
+        ],
+        [
+          37.3706853,
+          -112.8817621
+        ],
+        [
+          37.37062,
+          -112.882339
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Point to Point",
+      "surface": "Natural",
+      "description": "A scenic hike through the Narrows.",
+      "parkName": "Zion National Park",
+      "stateCode": "UT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/1000017169",
+      "source": "osm"
+    },
+    {
+      "name": "Coalpits Wash Trail",
+      "distanceMiles": 1.5,
+      "elevationGainFt": 300,
+      "latitude": 37.1812847,
+      "longitude": -113.079595,
+      "coordinates": [
+        [
+          37.1937357,
+          -113.0764714
+        ],
+        [
+          37.1705517,
+          -113.0812387
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Path",
+      "surface": "Dirt",
+      "description": "A scenic trail through the Coalpits Wash area.",
+      "parkName": "Zion National Park",
+      "stateCode": "UT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/1043098833",
+      "source": "osm"
+    },
+    {
+      "name": "The Subway",
+      "distanceMiles": 1.8,
+      "elevationGainFt": 600,
+      "latitude": 37.3132219,
+      "longitude": -113.0462708,
+      "coordinates": [
+        [
+          37.3093554,
+          -113.0519601
+        ],
+        [
+          37.3177276,
+          -113.040604
+        ]
+      ],
+      "difficulty": "Hard",
+      "trailType": "Path",
+      "surface": "Dirt",
+      "description": "A challenging hike leading to stunning views of The Subway.",
+      "parkName": "Zion National Park",
+      "stateCode": "UT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/1043098833",
+      "source": "osm"
+    },
+    {
+      "name": "Archaeology Trail",
+      "distanceMiles": 0.1,
+      "elevationGainFt": 0,
+      "latitude": 37.1999301,
+      "longitude": -112.9857259,
+      "coordinates": [
+        [
+          37.1999364,
+          -112.9857764
+        ],
+        [
+          37.1999301,
+          -112.9857259
+        ],
+        [
+          37.1999248,
+          -112.9856663
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Footpath",
+      "surface": "Unpaved",
+      "description": "A trail that explores archaeological sites.",
+      "parkName": "Zion National Park",
+      "stateCode": "UT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/1099416868",
+      "source": "osm"
+    },
+    {
+      "name": "Lower Emerald Pool Trail",
+      "distanceMiles": 0.2,
+      "elevationGainFt": 0,
+      "latitude": 37.2575589,
+      "longitude": -112.9624995,
+      "coordinates": [
+        [
+          37.2569961,
+          -112.9626885
+        ],
+        [
+          37.2575589,
+          -112.9624995
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Path",
+      "surface": "Paved",
+      "description": "A short paved trail leading to the Lower Emerald Pool.",
+      "parkName": "Zion National Park",
+      "stateCode": "UT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/1099964238",
+      "source": "osm"
+    },
+    {
+      "name": "Steep Trail",
+      "distanceMiles": 1.5,
+      "elevationGainFt": 800,
+      "latitude": 37.1832136,
+      "longitude": -112.8037636,
+      "coordinates": [
+        [
+          37.1832136,
+          -112.8037636
+        ],
+        [
+          37.1658852,
+          -112.7908861
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Footway",
+      "surface": "Ground",
+      "description": "A steep trail offering scenic views.",
+      "parkName": "Zion National Park",
+      "stateCode": "UT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/1099964238",
+      "source": "osm"
+    },
+    {
+      "name": "West Rim Trail",
+      "distanceMiles": 0.1,
+      "elevationGainFt": 0,
+      "latitude": 37.2699414,
+      "longitude": -112.9503456,
+      "coordinates": [
+        [
+          37.2699153,
+          -112.9503604
+        ],
+        [
+          37.2699675,
+          -112.9503308
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Path",
+      "surface": "Paved",
+      "description": "A scenic trail along the west rim.",
+      "parkName": "Zion National Park",
+      "stateCode": "UT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/1119663109",
+      "source": "osm"
+    },
+    {
+      "name": "Mary Bonner Nature Trail",
+      "distanceMiles": 1.5,
+      "elevationGainFt": 200,
+      "latitude": 37.1732678,
+      "longitude": -113.0100949,
+      "coordinates": [
+        [
+          37.1718519,
+          -113.0109129
+        ],
+        [
+          37.1719908,
+          -113.0108075
+        ],
+        [
+          37.1721639,
+          -113.010524
+        ],
+        [
+          37.1728489,
+          -113.01041
+        ],
+        [
+          37.1732678,
+          -113.0100949
+        ],
+        [
+          37.17363,
+          -113.0099299
+        ],
+        [
+          37.1744048,
+          -113.0095477
+        ],
+        [
+          37.1745843,
+          -113.0093331
+        ],
+        [
+          37.1751111,
+          -113.008916
+        ],
+        [
+          37.1757405,
+          -113.0082723
+        ],
+        [
+          37.1759051,
+          -113.0081556
+        ],
+        [
+          37.1760697,
+          -113.0080714
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Path",
+      "surface": "Dirt",
+      "description": "A scenic trail through nature.",
+      "parkName": "Zion National Park",
+      "stateCode": "UT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/1122199336",
+      "source": "osm"
+    },
+    {
+      "name": "Mary Bonner Nature Trail",
+      "distanceMiles": 0.5,
+      "elevationGainFt": 0,
+      "latitude": 37.1775328,
+      "longitude": -113.0073953,
+      "coordinates": [
+        [
+          37.1761012,
+          -113.008298
+        ],
+        [
+          37.1781422,
+          -113.0049123
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Out and Back",
+      "surface": "Dirt",
+      "description": "A scenic trail through nature.",
+      "parkName": "Zion National Park",
+      "stateCode": "UT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/1122199346",
+      "source": "osm"
+    },
+    {
+      "name": "Mary Bonner Nature Trail",
+      "distanceMiles": 0.2,
+      "elevationGainFt": 0,
+      "latitude": 37.1776136,
+      "longitude": -113.008298,
+      "coordinates": [
+        [
+          37.1776136,
+          -113.008298
+        ],
+        [
+          37.1775328,
+          -113.0080502
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Path",
+      "surface": "Dirt",
+      "description": "A scenic nature trail.",
+      "parkName": "Zion National Park",
+      "stateCode": "UT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/1122199349",
+      "source": "osm"
+    },
+    {
+      "name": "Nung’wu Poa (Paiute) Trail",
+      "distanceMiles": 1.5,
+      "elevationGainFt": 200,
+      "latitude": 37.1766997,
+      "longitude": -113.003473,
+      "coordinates": [
+        [
+          37.1766997,
+          -113.003473
+        ],
+        [
+          37.1751275,
+          -113.0036316
+        ],
+        [
+          37.1735125,
+          -113.0051587
+        ],
+        [
+          37.1729904,
+          -113.0068774
+        ],
+        [
+          37.1733905,
+          -113.0078651
+        ],
+        [
+          37.1724583,
+          -113.0082154
+        ],
+        [
+          37.1720378,
+          -113.0081336
+        ],
+        [
+          37.1721738,
+          -113.008646
+        ],
+        [
+          37.1727579,
+          -113.0092894
+        ],
+        [
+          37.1718847,
+          -113.009579
+        ],
+        [
+          37.1734035,
+          -113.0099473
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Path",
+      "surface": "Dirt",
+      "description": "A challenging trail with beautiful views.",
+      "parkName": "Zion National Park",
+      "stateCode": "UT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/1122199349",
+      "source": "osm"
+    },
+    {
+      "name": "Nung’wu Poa (Paiute) Trail - West Loop",
+      "distanceMiles": 1.2,
+      "elevationGainFt": 100,
+      "latitude": 37.1765458,
+      "longitude": -113.0034451,
+      "coordinates": [
+        [
+          37.1765458,
+          -113.0034451
+        ],
+        [
+          37.1765033,
+          -113.0037842
+        ],
+        [
+          37.1767025,
+          -113.004392
+        ],
+        [
+          37.1766864,
+          -113.0048392
+        ],
+        [
+          37.1767949,
+          -113.0050709
+        ],
+        [
+          37.177007,
+          -113.0049225
+        ],
+        [
+          37.1771658,
+          -113.004646
+        ],
+        [
+          37.1773148,
+          -113.0040525
+        ],
+        [
+          37.1770378,
+          -113.003772
+        ],
+        [
+          37.1767366,
+          -113.0036256
+        ],
+        [
+          37.1765182,
+          -113.0035129
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Loop",
+      "surface": "Dirt",
+      "description": "A scenic loop trail offering views of the surrounding landscape.",
+      "parkName": "Zion National Park",
+      "stateCode": "UT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/1122199353",
+      "source": "osm"
+    },
+    {
+      "name": "Nung’wu Poa (Paiute) Trail - East Loop",
+      "distanceMiles": 1.5,
+      "elevationGainFt": 150,
+      "latitude": 37.1767869,
+      "longitude": -113.0035226,
+      "coordinates": [
+        [
+          37.1767869,
+          -113.0035226
+        ],
+        [
+          37.1777649,
+          -113.0033987
+        ],
+        [
+          37.177497,
+          -113.0031266
+        ],
+        [
+          37.1768594,
+          -113.0030295
+        ],
+        [
+          37.1773584,
+          -113.0027747
+        ],
+        [
+          37.1775663,
+          -113.0023489
+        ],
+        [
+          37.1779579,
+          -113.0016757
+        ],
+        [
+          37.177246,
+          -113.0016765
+        ],
+        [
+          37.1769109,
+          -113.0018667
+        ],
+        [
+          37.1761565,
+          -113.0022097
+        ],
+        [
+          37.17599,
+          -113.0028519
+        ],
+        [
+          37.1760349,
+          -113.0029271
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Loop",
+      "surface": "Dirt",
+      "description": "An enjoyable loop trail with diverse terrain and beautiful scenery.",
+      "parkName": "Zion National Park",
+      "stateCode": "UT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/1122199353",
+      "source": "osm"
+    },
+    {
+      "name": "Watchman Trail",
+      "distanceMiles": 0.5,
+      "elevationGainFt": 0,
+      "latitude": 37.2013076,
+      "longitude": -112.9860931,
+      "coordinates": [
+        [
+          37.2013076,
+          -112.9860931
+        ],
+        [
+          37.2014944,
+          -112.9847626
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Out and Back",
+      "surface": "Paved",
+      "description": "A scenic trail offering views of the surrounding landscape.",
+      "parkName": "Zion National Park",
+      "stateCode": "UT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/1133621181",
+      "source": "osm"
+    },
+    {
+      "name": "Weeping Rock",
+      "distanceMiles": 0.3,
+      "elevationGainFt": 0,
+      "latitude": 37.27083,
+      "longitude": -112.93853,
+      "coordinates": [
+        [
+          37.2707269,
+          -112.9384623
+        ],
+        [
+          37.2707482,
+          -112.93847
+        ],
+        [
+          37.2707687,
+          -112.938481
+        ],
+        [
+          37.2707992,
+          -112.9385008
+        ],
+        [
+          37.270835,
+          -112.9385341
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Out and Back",
+      "surface": "Paved",
+      "description": "Short trail leading to a scenic viewpoint.",
+      "parkName": "Zion National Park",
+      "stateCode": "UT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/1154574553",
+      "source": "osm"
+    },
+    {
+      "name": "Upper Orderville Canyon Trail",
+      "distanceMiles": 4.5,
+      "elevationGainFt": 800,
+      "latitude": 37.3325204,
+      "longitude": -112.8632059,
+      "coordinates": [
+        [
+          37.3325204,
+          -112.8632059
+        ],
+        [
+          37.3303713,
+          -112.864751
+        ],
+        [
+          37.3270474,
+          -112.8683618
+        ],
+        [
+          37.3256203,
+          -112.869786
+        ],
+        [
+          37.3234453,
+          -112.8718629
+        ],
+        [
+          37.323569,
+          -112.8751448
+        ],
+        [
+          37.324356,
+          -112.880192
+        ],
+        [
+          37.3241326,
+          -112.884811
+        ],
+        [
+          37.3193594,
+          -112.8917063
+        ],
+        [
+          37.318859,
+          -112.8955537
+        ],
+        [
+          37.3171694,
+          -112.8997141
+        ],
+        [
+          37.3166894,
+          -112.9010683
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Point to Point",
+      "surface": "Dirt",
+      "description": "A scenic trail through the canyon with moderate elevation changes.",
+      "parkName": "Zion National Park",
+      "stateCode": "UT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/1154574553",
+      "source": "osm"
+    },
+    {
+      "name": "Orderville Canyon Day Hike Section",
+      "distanceMiles": 0.8,
+      "elevationGainFt": 300,
+      "latitude": 37.3088241,
+      "longitude": -112.941351,
+      "coordinates": [
+        [
+          37.307718,
+          -112.9468162
+        ],
+        [
+          37.3088241,
+          -112.941351
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Out and Back",
+      "surface": "Dirt",
+      "description": "A scenic hike through Orderville Canyon.",
+      "parkName": "Zion National Park",
+      "stateCode": "UT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/1161851629",
+      "source": "osm"
+    },
+    {
+      "name": "Upper Orderville Canyon Trail",
+      "distanceMiles": 0.7,
+      "elevationGainFt": 250,
+      "latitude": 37.3145819,
+      "longitude": -112.9060092,
+      "coordinates": [
+        [
+          37.3166894,
+          -112.9010683
+        ],
+        [
+          37.3145819,
+          -112.9060092
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Out and Back",
+      "surface": "Dirt",
+      "description": "A beautiful trail leading to the upper section of Orderville Canyon.",
+      "parkName": "Zion National Park",
+      "stateCode": "UT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/1161851629",
+      "source": "osm"
+    },
+    {
+      "name": "The Narrows Top Down",
+      "distanceMiles": 1.5,
+      "elevationGainFt": 500,
+      "latitude": 37.3705,
+      "longitude": -112.9007,
+      "coordinates": [
+        [
+          37.3699271,
+          -112.8880657
+        ],
+        [
+          37.3711723,
+          -112.9007405
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Out and Back",
+      "surface": "Dirt",
+      "description": "A scenic hike through narrow canyons with stunning views.",
+      "parkName": "Zion National Park",
+      "stateCode": "UT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/1162023748",
+      "source": "osm"
+    },
+    {
+      "name": "The Narrows Top Down",
+      "distanceMiles": 1.2,
+      "elevationGainFt": 0,
+      "latitude": 37.37062,
+      "longitude": -112.882339,
+      "coordinates": [
+        [
+          37.3716494,
+          -112.919053
+        ],
+        [
+          37.37062,
+          -112.882339
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Out and Back",
+      "surface": "Dirt",
+      "description": "A scenic hike through the Narrows with stunning views.",
+      "parkName": "Zion National Park",
+      "stateCode": "UT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/1162023751",
+      "source": "osm"
+    },
+    {
+      "name": "The Narrows Top Down",
+      "distanceMiles": 0.5,
+      "elevationGainFt": 0,
+      "latitude": 37.3699426,
+      "longitude": -112.8866996,
+      "coordinates": [
+        [
+          37.3699426,
+          -112.8866996
+        ],
+        [
+          37.3697577,
+          -112.8867306
+        ],
+        [
+          37.3695737,
+          -112.8868005
+        ],
+        [
+          37.3694534,
+          -112.8868815
+        ],
+        [
+          37.3693491,
+          -112.8870205
+        ],
+        [
+          37.3693044,
+          -112.88716
+        ],
+        [
+          37.3693067,
+          -112.8873185
+        ],
+        [
+          37.3693488,
+          -112.887462
+        ],
+        [
+          37.369442,
+          -112.8875775
+        ],
+        [
+          37.3695272,
+          -112.8876532
+        ],
+        [
+          37.3697082,
+          -112.887824
+        ],
+        [
+          37.3698296,
+          -112.8879449
+        ],
+        [
+          37.3699271,
+          -112.8880657
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Path",
+      "surface": "Dirt",
+      "description": "A scenic hike through The Narrows.",
+      "parkName": "Zion National Park",
+      "stateCode": "UT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/1162023754",
+      "source": "osm"
+    },
+    {
+      "name": "Lava Point Overlook Trail",
+      "distanceMiles": 0.3,
+      "elevationGainFt": 0,
+      "latitude": 37.3838721,
+      "longitude": -113.0288972,
+      "coordinates": [
+        [
+          37.3838721,
+          -113.0288972
+        ],
+        [
+          37.3838746,
+          -113.0288415
+        ],
+        [
+          37.3838662,
+          -113.0288153
+        ],
+        [
+          37.3838228,
+          -113.0287499
+        ],
+        [
+          37.3837561,
+          -113.0286721
+        ],
+        [
+          37.3837248,
+          -113.0286374
+        ],
+        [
+          37.3837126,
+          -113.0286181
+        ],
+        [
+          37.3837119,
+          -113.0286122
+        ],
+        [
+          37.3837095,
+          -113.0285927
+        ],
+        [
+          37.3837157,
+          -113.0285465
+        ],
+        [
+          37.3837157,
+          -113.0285172
+        ],
+        [
+          37.3837132,
+          -113.0284456
+        ],
+        [
+          37.3837138,
+          -113.0283655
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Path",
+      "surface": "Dirt",
+      "description": "A short trail leading to a stunning overlook.",
+      "parkName": "Zion National Park",
+      "stateCode": "UT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/1162023754",
+      "source": "osm"
+    },
+    {
+      "name": "Lava Point Overlook Trail",
+      "distanceMiles": 0.02,
+      "elevationGainFt": 0,
+      "latitude": 37.384125,
+      "longitude": -113.029062,
+      "coordinates": [
+        [
+          37.3840704,
+          -113.0290426
+        ],
+        [
+          37.3841069,
+          -113.0290599
+        ],
+        [
+          37.3841374,
+          -113.0290649
+        ],
+        [
+          37.3841814,
+          -113.0290818
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Path",
+      "surface": "Unknown",
+      "description": "A short trail leading to an overlook.",
+      "parkName": "Zion National Park",
+      "stateCode": "UT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/1193038629",
+      "source": "osm"
+    },
+    {
+      "name": "Watchman Trail",
+      "distanceMiles": 0.02,
+      "elevationGainFt": 0,
+      "latitude": 37.200086,
+      "longitude": -112.978388,
+      "coordinates": [
+        [
+          37.2000939,
+          -112.9782886
+        ],
+        [
+          37.2000946,
+          -112.9783128
+        ],
+        [
+          37.2000911,
+          -112.9783564
+        ],
+        [
+          37.2000775,
+          -112.9784194
+        ],
+        [
+          37.2000749,
+          -112.9784695
+        ],
+        [
+          37.2000987,
+          -112.9785892
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Path",
+      "surface": "Unknown",
+      "description": "A scenic trail with views of the surrounding area.",
+      "parkName": "Zion National Park",
+      "stateCode": "UT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/1193038629",
+      "source": "osm"
+    },
+    {
+      "name": "Mary Bonner Nature Trail",
+      "distanceMiles": 0.03,
+      "elevationGainFt": 0,
+      "latitude": 37.175803,
+      "longitude": -113.008439,
+      "coordinates": [
+        [
+          37.1755044,
+          -113.0085794
+        ],
+        [
+          37.175545,
+          -113.0085767
+        ],
+        [
+          37.1755866,
+          -113.008574
+        ],
+        [
+          37.1756005,
+          -113.00857
+        ],
+        [
+          37.1756144,
+          -113.0085566
+        ],
+        [
+          37.1756294,
+          -113.0085472
+        ],
+        [
+          37.1756572,
+          -113.0085419
+        ],
+        [
+          37.1756743,
+          -113.0085352
+        ],
+        [
+          37.175702,
+          -113.0085244
+        ],
+        [
+          37.1757181,
+          -113.0085244
+        ],
+        [
+          37.1757591,
+          -113.0085348
+        ],
+        [
+          37.1757957,
+          -113.0085277
+        ],
+        [
+          37.1758563,
+          -113.0085056
+        ],
+        [
+          37.1759628,
+          -113.0084437
+        ],
+        [
+          37.1760284,
+          -113.0083915
+        ],
+        [
+          37.1761012,
+          -113.008298
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Path",
+      "surface": "Dirt",
+      "description": "A nature trail with educational signage.",
+      "parkName": "Zion National Park",
+      "stateCode": "UT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/1193038629",
+      "source": "osm"
+    },
+    {
+      "name": "Nung’wu Poa (Paiute) Trail - Phase 2",
+      "distanceMiles": 0.5,
+      "elevationGainFt": 0,
+      "latitude": 37.1741968,
+      "longitude": -113.008068,
+      "coordinates": [
+        [
+          37.1727076,
+          -113.0093006
+        ],
+        [
+          37.1766734,
+          -113.004703
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Path",
+      "surface": "Dirt",
+      "description": "A scenic hiking trail through the Paiute area.",
+      "parkName": "Zion National Park",
+      "stateCode": "UT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/1195334509",
+      "source": "osm"
+    },
+    {
+      "name": "Museum",
+      "distanceMiles": 0.1,
+      "elevationGainFt": 0,
+      "latitude": 37.2081705,
+      "longitude": -112.9802938,
+      "coordinates": [
+        [
+          37.2081705,
+          -112.9802938
+        ],
+        [
+          37.2080195,
+          -112.9802935
+        ],
+        [
+          37.208001,
+          -112.9802916
+        ],
+        [
+          37.2079881,
+          -112.9802947
+        ],
+        [
+          37.2079759,
+          -112.9803017
+        ],
+        [
+          37.2079691,
+          -112.9803078
+        ],
+        [
+          37.2079642,
+          -112.9803171
+        ],
+        [
+          37.2079587,
+          -112.9803348
+        ],
+        [
+          37.2079532,
+          -112.9803456
+        ],
+        [
+          37.2079382,
+          -112.9803561
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Path",
+      "surface": "Paved",
+      "description": "A short path leading to the museum.",
+      "parkName": "Zion National Park",
+      "stateCode": "UT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/1199893444",
+      "source": "osm"
+    },
+    {
+      "name": "Nung’wu Poa (Paiute) Trail - Phase 2",
+      "distanceMiles": 0.5,
+      "elevationGainFt": 0,
+      "latitude": 37.1731043,
+      "longitude": -113.0066929,
+      "coordinates": [
+        [
+          37.1728209,
+          -113.0064379
+        ],
+        [
+          37.1731043,
+          -113.0066929
+        ],
+        [
+          37.1732185,
+          -113.0068686
+        ],
+        [
+          37.1732271,
+          -113.0072367
+        ],
+        [
+          37.173556,
+          -113.0074185
+        ],
+        [
+          37.1738384,
+          -113.0076434
+        ],
+        [
+          37.1739857,
+          -113.007742
+        ],
+        [
+          37.1740888,
+          -113.0078037
+        ],
+        [
+          37.1740384,
+          -113.0078822
+        ],
+        [
+          37.1738961,
+          -113.0080332
+        ],
+        [
+          37.1738408,
+          -113.0082828
+        ],
+        [
+          37.1738738,
+          -113.0084008
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Path",
+      "surface": "Dirt",
+      "description": "A scenic hiking trail through the Paiute area.",
+      "parkName": "Zion National Park",
+      "stateCode": "UT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/1203158860",
+      "source": "osm"
+    },
+    {
+      "name": "Unnamed Trail",
+      "distanceMiles": 0.8,
+      "elevationGainFt": 0,
+      "latitude": 37.2742301,
+      "longitude": -113.1001978,
+      "coordinates": [
+        [
+          37.2742301,
+          -113.1001978
+        ],
+        [
+          37.2740751,
+          -113.0996434
+        ],
+        [
+          37.2742142,
+          -113.0988814
+        ],
+        [
+          37.2742556,
+          -113.0986174
+        ],
+        [
+          37.2745908,
+          -113.0976963
+        ],
+        [
+          37.2744055,
+          -113.0968203
+        ],
+        [
+          37.2753109,
+          -113.096914
+        ],
+        [
+          37.2761769,
+          -113.0975847
+        ],
+        [
+          37.2771041,
+          -113.0972638
+        ],
+        [
+          37.2779798,
+          -113.0970379
+        ],
+        [
+          37.279759,
+          -113.0957807
+        ],
+        [
+          37.2803084,
+          -113.0945333
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Path",
+      "surface": "Ground",
+      "description": "Trail with bad visibility",
+      "parkName": "Zion National Park",
+      "stateCode": "UT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/1305986472",
+      "source": "osm"
+    },
+    {
+      "name": "East Rim Trail",
+      "distanceMiles": 0.5,
+      "elevationGainFt": 0,
+      "latitude": 37.2703735,
+      "longitude": -112.9325577,
+      "coordinates": [
+        [
+          37.2703735,
+          -112.9325577
+        ],
+        [
+          37.2703403,
+          -112.9324271
+        ],
+        [
+          37.2702694,
+          -112.9321404
+        ],
+        [
+          37.2702927,
+          -112.9320206
+        ],
+        [
+          37.2703788,
+          -112.9320176
+        ],
+        [
+          37.2705582,
+          -112.9321216
+        ],
+        [
+          37.2708809,
+          -112.9323478
+        ],
+        [
+          37.2710251,
+          -112.9323832
+        ],
+        [
+          37.2712159,
+          -112.9323875
+        ],
+        [
+          37.2713838,
+          -112.9324001
+        ],
+        [
+          37.2715164,
+          -112.9324687
+        ],
+        [
+          37.2716205,
+          -112.9324843
+        ],
+        [
+          37.2719924,
+          -112.9324236
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Point to Point",
+      "surface": "Dirt",
+      "description": "A scenic trail offering views of the surrounding landscape.",
+      "parkName": "Zion National Park",
+      "stateCode": "UT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/1314425275",
+      "source": "osm"
+    },
+    {
+      "name": "East Rim Trail",
+      "distanceMiles": 0.5,
+      "elevationGainFt": 0,
+      "latitude": 37.2723859,
+      "longitude": -112.9323647,
+      "coordinates": [
+        [
+          37.2719924,
+          -112.9324236
+        ],
+        [
+          37.2722345,
+          -112.9323878
+        ],
+        [
+          37.2723859,
+          -112.9323647
+        ],
+        [
+          37.2725216,
+          -112.9323118
+        ],
+        [
+          37.2726707,
+          -112.9321787
+        ],
+        [
+          37.2727548,
+          -112.9322272
+        ],
+        [
+          37.272866,
+          -112.9321399
+        ],
+        [
+          37.2730684,
+          -112.9319754
+        ],
+        [
+          37.2731421,
+          -112.9318744
+        ],
+        [
+          37.2730144,
+          -112.9316764
+        ],
+        [
+          37.272992,
+          -112.931565
+        ],
+        [
+          37.2730593,
+          -112.9314745
+        ],
+        [
+          37.2732286,
+          -112.9314273
+        ],
+        [
+          37.2732335,
+          -112.9314133
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Path",
+      "surface": "Dirt",
+      "description": "A scenic trail along the East Rim.",
+      "parkName": "Zion National Park",
+      "stateCode": "UT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/1319375555",
+      "source": "osm"
+    },
+    {
+      "name": "Unnamed Trail 1",
+      "distanceMiles": 0.5,
+      "elevationGainFt": 0,
+      "latitude": 37.271007,
+      "longitude": -113.0918697,
+      "coordinates": [
+        [
+          37.2698192,
+          -113.0926247
+        ],
+        [
+          37.271007,
+          -113.0918697
+        ],
+        [
+          37.27188,
+          -113.0904534
+        ],
+        [
+          37.2721948,
+          -113.0897816
+        ],
+        [
+          37.2723325,
+          -113.088761
+        ],
+        [
+          37.2727989,
+          -113.0871208
+        ],
+        [
+          37.2734445,
+          -113.0856335
+        ],
+        [
+          37.2731553,
+          -113.0850542
+        ],
+        [
+          37.2728341,
+          -113.0842844
+        ],
+        [
+          37.2727092,
+          -113.0836192
+        ],
+        [
+          37.2726452,
+          -113.0823492
+        ],
+        [
+          37.2726334,
+          -113.0818892
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Path",
+      "surface": "Ground",
+      "description": "A scenic hiking path with varying visibility.",
+      "parkName": "Zion National Park",
+      "stateCode": "UT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/1333149603",
+      "source": "osm"
+    },
+    {
+      "name": "Unnamed Trail 2",
+      "distanceMiles": 0.6,
+      "elevationGainFt": 0,
+      "latitude": 37.2707407,
+      "longitude": -113.1031249,
+      "coordinates": [
+        [
+          37.2707407,
+          -113.1031249
+        ],
+        [
+          37.2701927,
+          -113.1014881
+        ],
+        [
+          37.2695054,
+          -113.1003173
+        ],
+        [
+          37.2686345,
+          -113.0987589
+        ],
+        [
+          37.2675032,
+          -113.0979905
+        ],
+        [
+          37.2677797,
+          -113.0966641
+        ],
+        [
+          37.2673805,
+          -113.0955805
+        ],
+        [
+          37.2686313,
+          -113.0946162
+        ],
+        [
+          37.2699985,
+          -113.0928125
+        ],
+        [
+          37.2723724,
+          -113.0947809
+        ],
+        [
+          37.2744039,
+          -113.0968754
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Path",
+      "surface": "Ground",
+      "description": "A winding trail through beautiful landscapes.",
+      "parkName": "Zion National Park",
+      "stateCode": "UT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/1333149603",
+      "source": "osm"
+    },
+    {
+      "name": "Deertrap Mountain Trail",
+      "distanceMiles": 1.5,
+      "elevationGainFt": 0,
+      "latitude": 37.2575723,
+      "longitude": -112.9171882,
+      "coordinates": [
+        [
+          37.2526749,
+          -112.9170243
+        ],
+        [
+          37.2541813,
+          -112.9157888
+        ],
+        [
+          37.2559224,
+          -112.9168699
+        ],
+        [
+          37.2575723,
+          -112.9171882
+        ],
+        [
+          37.2589858,
+          -112.917621
+        ],
+        [
+          37.2595914,
+          -112.9157014
+        ],
+        [
+          37.2591017,
+          -112.9140089
+        ],
+        [
+          37.2592361,
+          -112.9111887
+        ],
+        [
+          37.2590748,
+          -112.9091891
+        ],
+        [
+          37.259358,
+          -112.9071741
+        ],
+        [
+          37.2613671,
+          -112.9063539
+        ],
+        [
+          37.2620918,
+          -112.9063031
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Path",
+      "surface": "Dirt",
+      "description": "A scenic trail leading to Deertrap Mountain.",
+      "parkName": "Zion National Park",
+      "stateCode": "UT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/1342953666",
+      "source": "osm"
+    },
+    {
+      "name": "Scoggins Wash Trail",
+      "distanceMiles": 1.2,
+      "elevationGainFt": 0,
+      "latitude": 37.2047133,
+      "longitude": -113.0666661,
+      "coordinates": [
+        [
+          37.2047133,
+          -113.0666661
+        ],
+        [
+          37.204494,
+          -113.0662587
+        ],
+        [
+          37.2041106,
+          -113.0661217
+        ],
+        [
+          37.2039729,
+          -113.0655632
+        ],
+        [
+          37.2039528,
+          -113.0653052
+        ],
+        [
+          37.2039157,
+          -113.0650366
+        ],
+        [
+          37.2038807,
+          -113.0645326
+        ],
+        [
+          37.2037865,
+          -113.0641629
+        ],
+        [
+          37.2036625,
+          -113.0639206
+        ],
+        [
+          37.2034941,
+          -113.0637956
+        ],
+        [
+          37.2034517,
+          -113.0636759
+        ],
+        [
+          37.2032489,
+          -113.0635557
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Path",
+      "surface": "Dirt",
+      "description": "A scenic trail along Scoggins Wash.",
+      "parkName": "Zion National Park",
+      "stateCode": "UT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/1383884938",
+      "source": "osm"
+    },
+    {
+      "name": "Coalpits Wash Trail",
+      "distanceMiles": 1.5,
+      "elevationGainFt": 0,
+      "latitude": 37.2158273,
+      "longitude": -113.0779785,
+      "coordinates": [
+        [
+          37.2158273,
+          -113.0779785
+        ],
+        [
+          37.2153447,
+          -113.0792735
+        ],
+        [
+          37.2145747,
+          -113.0790381
+        ],
+        [
+          37.2139773,
+          -113.0789925
+        ],
+        [
+          37.2109144,
+          -113.0787112
+        ],
+        [
+          37.209165,
+          -113.080813
+        ],
+        [
+          37.202689,
+          -113.081693
+        ],
+        [
+          37.198685,
+          -113.081906
+        ],
+        [
+          37.196475,
+          -113.079469
+        ],
+        [
+          37.1946997,
+          -113.0771479
+        ],
+        [
+          37.1937357,
+          -113.0764714
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Path",
+      "surface": "Dirt",
+      "description": "A trail that follows Coalpits Wash.",
+      "parkName": "Zion National Park",
+      "stateCode": "UT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/1383884938",
+      "source": "osm"
+    },
+    {
+      "name": "Huber Wash Trail",
+      "distanceMiles": 1.5,
+      "elevationGainFt": 300,
+      "latitude": 37.188222,
+      "longitude": -113.0484328,
+      "coordinates": [
+        [
+          37.188222,
+          -113.0484328
+        ],
+        [
+          37.1877869,
+          -113.0491657
+        ],
+        [
+          37.1856632,
+          -113.0499298
+        ],
+        [
+          37.1825315,
+          -113.0515286
+        ],
+        [
+          37.1816425,
+          -113.0542967
+        ],
+        [
+          37.1809758,
+          -113.0570969
+        ],
+        [
+          37.178759,
+          -113.058569
+        ],
+        [
+          37.17691,
+          -113.060009
+        ],
+        [
+          37.175813,
+          -113.060865
+        ],
+        [
+          37.172287,
+          -113.061092
+        ],
+        [
+          37.1710825,
+          -113.0616194
+        ],
+        [
+          37.1710776,
+          -113.0615728
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Path",
+      "surface": "Dirt",
+      "description": "A scenic trail through Huber Wash.",
+      "parkName": "Zion National Park",
+      "stateCode": "UT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/1383891080",
+      "source": "osm"
+    },
+    {
+      "name": "Lower Emerald Pool Trail",
+      "distanceMiles": 0.1,
+      "elevationGainFt": 0,
+      "latitude": 37.2513774,
+      "longitude": -112.958865,
+      "coordinates": [
+        [
+          37.2514274,
+          -112.9590654
+        ],
+        [
+          37.2513374,
+          -112.9587326
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Path",
+      "surface": "Paved",
+      "description": "A short and easy trail leading to the Lower Emerald Pool.",
+      "parkName": "Zion National Park",
+      "stateCode": "UT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/1394211844",
+      "source": "osm"
+    },
+    {
+      "name": "Sand Bench Trail",
+      "distanceMiles": 0.5,
+      "elevationGainFt": 0,
+      "latitude": 37.249075,
+      "longitude": -112.958825,
+      "coordinates": [
+        [
+          37.2497024,
+          -112.958925
+        ],
+        [
+          37.2484989,
+          -112.9586945
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Path",
+      "surface": "Dirt",
+      "description": "A scenic trail that offers views of the surrounding area.",
+      "parkName": "Zion National Park",
+      "stateCode": "UT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/1394211844",
+      "source": "osm"
+    },
+    {
+      "name": "Sand Bench Trail",
+      "distanceMiles": 0.2,
+      "elevationGainFt": 0,
+      "latitude": 37.2497024,
+      "longitude": -112.958925,
+      "coordinates": [
+        [
+          37.2484989,
+          -112.9586945
+        ],
+        [
+          37.2497024,
+          -112.958925
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Path",
+      "surface": "Dirt",
+      "description": "A scenic hiking trail.",
+      "parkName": "Zion National Park",
+      "stateCode": "UT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/1394245273",
+      "source": "osm"
+    },
+    {
+      "name": "Sand Bench Trail",
+      "distanceMiles": 0.1,
+      "elevationGainFt": 0,
+      "latitude": 37.2497024,
+      "longitude": -112.958925,
+      "coordinates": [
+        [
+          37.2500531,
+          -112.9590926
+        ],
+        [
+          37.2497024,
+          -112.958925
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Path",
+      "surface": "Dirt",
+      "description": "A scenic hiking trail.",
+      "parkName": "Zion National Park",
+      "stateCode": "UT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/1394245273",
+      "source": "osm"
+    },
+    {
+      "name": "Menu Falls Foot Path",
+      "distanceMiles": 0.2,
+      "elevationGainFt": 0,
+      "latitude": 37.2798587,
+      "longitude": -112.9445498,
+      "coordinates": [
+        [
+          37.2798587,
+          -112.9445498
+        ],
+        [
+          37.2798683,
+          -112.9444836
+        ],
+        [
+          37.2798818,
+          -112.9444349
+        ],
+        [
+          37.2799416,
+          -112.9442573
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Footpath",
+      "surface": "Paved",
+      "description": "A scenic footpath leading to Menu Falls.",
+      "parkName": "Zion National Park",
+      "stateCode": "UT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/1394379725",
+      "source": "osm"
+    },
+    {
+      "name": "East Rim Trail",
+      "distanceMiles": 1.2,
+      "elevationGainFt": 300,
+      "latitude": 37.2389368,
+      "longitude": -112.8763416,
+      "coordinates": [
+        [
+          37.2415434,
+          -112.8757306
+        ],
+        [
+          37.2408395,
+          -112.8763646
+        ],
+        [
+          37.2405568,
+          -112.8769675
+        ],
+        [
+          37.2399977,
+          -112.8769453
+        ],
+        [
+          37.2389368,
+          -112.8763416
+        ],
+        [
+          37.2385167,
+          -112.8762927
+        ],
+        [
+          37.2379239,
+          -112.8769701
+        ],
+        [
+          37.2370472,
+          -112.8767443
+        ],
+        [
+          37.2360911,
+          -112.8773423
+        ],
+        [
+          37.2349762,
+          -112.8773184
+        ],
+        [
+          37.2342698,
+          -112.8774218
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Loop",
+      "surface": "Dirt",
+      "description": "A scenic trail offering views of the surrounding landscape.",
+      "parkName": "Zion National Park",
+      "stateCode": "UT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/1394576017",
+      "source": "osm"
+    },
+    {
+      "name": "Canyon Overlook Trail",
+      "distanceMiles": 0.5,
+      "elevationGainFt": 200,
+      "latitude": 37.213451,
+      "longitude": -112.9410778,
+      "coordinates": [
+        [
+          37.213451,
+          -112.9410778
+        ],
+        [
+          37.2136898,
+          -112.9423845
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Out and Back",
+      "surface": "Dirt",
+      "description": "A scenic trail offering views of the canyon.",
+      "parkName": "Zion National Park",
+      "stateCode": "UT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/1394584434",
+      "source": "osm"
+    },
+    {
+      "name": "Canyon Overlook Trail",
+      "distanceMiles": 0.3,
+      "elevationGainFt": 0,
+      "latitude": 37.2135557,
+      "longitude": -112.9432094,
+      "coordinates": [
+        [
+          37.2135557,
+          -112.9432094
+        ],
+        [
+          37.2136247,
+          -112.9433412
+        ],
+        [
+          37.2136299,
+          -112.9433657
+        ],
+        [
+          37.2136277,
+          -112.943393
+        ],
+        [
+          37.2136105,
+          -112.9434308
+        ],
+        [
+          37.2135898,
+          -112.9434584
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Out and Back",
+      "surface": "Dirt",
+      "description": "A scenic trail offering views of the canyon.",
+      "parkName": "Zion National Park",
+      "stateCode": "UT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/1394599354",
+      "source": "osm"
+    },
+    {
+      "name": "Canyon Overlook Trail",
+      "distanceMiles": 0.3,
+      "elevationGainFt": 0,
+      "latitude": 37.2137746,
+      "longitude": -112.9424518,
+      "coordinates": [
+        [
+          37.2137427,
+          -112.9424269
+        ],
+        [
+          37.2137746,
+          -112.9424518
+        ],
+        [
+          37.2138726,
+          -112.942522
+        ],
+        [
+          37.2138831,
+          -112.9425364
+        ],
+        [
+          37.2138893,
+          -112.9425499
+        ],
+        [
+          37.2138921,
+          -112.9425684
+        ],
+        [
+          37.2138941,
+          -112.9425819
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Out and Back",
+      "surface": "Dirt",
+      "description": "A scenic trail offering views of the canyon.",
+      "parkName": "Zion National Park",
+      "stateCode": "UT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/1394599363",
+      "source": "osm"
+    },
+    {
+      "name": "Dry Creek Road",
+      "distanceMiles": 5.2,
+      "elevationGainFt": 1200,
+      "latitude": 37.3099168,
+      "longitude": -113.1531879,
+      "coordinates": [
+        [
+          37.3099168,
+          -113.1531879
+        ],
+        [
+          37.304834,
+          -113.149147
+        ],
+        [
+          37.3014174,
+          -113.1442907
+        ],
+        [
+          37.29855,
+          -113.1432594
+        ],
+        [
+          37.2930231,
+          -113.1420375
+        ],
+        [
+          37.2879351,
+          -113.1410473
+        ],
+        [
+          37.2797304,
+          -113.1443354
+        ],
+        [
+          37.2736883,
+          -113.1414603
+        ],
+        [
+          37.2661962,
+          -113.1339812
+        ],
+        [
+          37.2653923,
+          -113.1217014
+        ],
+        [
+          37.2680375,
+          -113.1127802
+        ],
+        [
+          37.2684461,
+          -113.1125439
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Dirt",
+      "surface": "Dirt",
+      "description": "A scenic dirt road trail.",
+      "parkName": "Zion National Park",
+      "stateCode": "UT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/1447580245",
+      "source": "osm"
+    },
+    {
+      "name": "Zion Canyon Trail",
+      "distanceMiles": 0.3,
+      "elevationGainFt": 0,
+      "latitude": 37.1633469,
+      "longitude": -113.0165985,
+      "coordinates": [
+        [
+          37.1633326,
+          -113.0165488
+        ],
+        [
+          37.1633611,
+          -113.0166481
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Out and Back",
+      "surface": "Dirt",
+      "description": "A scenic trail through Zion Canyon.",
+      "parkName": "Zion National Park",
+      "stateCode": "UT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/1460344629",
+      "source": "osm"
+    },
+    {
+      "name": "Kolob Arch",
+      "distanceMiles": 3.5,
+      "elevationGainFt": 800,
+      "latitude": 37.4158656,
+      "longitude": -113.1511625,
+      "coordinates": [
+        [
+          37.4227295,
+          -113.1521435
+        ],
+        [
+          37.4158656,
+          -113.1511625
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Out and Back",
+      "surface": "Dirt",
+      "description": "A scenic trail leading to the stunning Kolob Arch.",
+      "parkName": "Zion National Park",
+      "stateCode": "UT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/1467681375",
+      "source": "osm"
+    },
+    {
+      "name": "La Verkin Creek Trail",
+      "distanceMiles": 5.2,
+      "elevationGainFt": 1200,
+      "latitude": 37.4168255,
+      "longitude": -113.1462684,
+      "coordinates": [
+        [
+          37.4168255,
+          -113.1462684
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Out and Back",
+      "surface": "Dirt",
+      "description": "A scenic trail following La Verkin Creek.",
+      "parkName": "Zion National Park",
+      "stateCode": "UT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/6012701",
+      "source": "osm"
+    },
+    {
+      "name": "Hop Valley Trail",
+      "distanceMiles": 6.5,
+      "elevationGainFt": 800,
+      "latitude": 37.3402381,
+      "longitude": -113.1131902,
+      "coordinates": [
+        [
+          37.3402381,
+          -113.1131902
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Out and Back",
+      "surface": "Dirt",
+      "description": "A beautiful trail through Hop Valley.",
+      "parkName": "Zion National Park",
+      "stateCode": "UT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/6012701",
+      "source": "osm"
+    },
+    {
+      "name": "West Rim Trail",
+      "distanceMiles": 14,
+      "elevationGainFt": 1500,
+      "latitude": 37.2695348,
+      "longitude": -112.951013,
+      "coordinates": [
+        [
+          37.2695348,
+          -112.951013
+        ]
+      ],
+      "difficulty": "Hard",
+      "trailType": "Point to Point",
+      "surface": "Rock",
+      "description": "A challenging trail with stunning views.",
+      "parkName": "Zion National Park",
+      "stateCode": "UT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/6012701",
+      "source": "osm"
+    },
+    {
+      "name": "Connector Trail",
+      "distanceMiles": 3.5,
+      "elevationGainFt": 200,
+      "latitude": 37.3395688,
+      "longitude": -113.0618785,
+      "coordinates": [
+        [
+          37.3395688,
+          -113.0618785
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Connector",
+      "surface": "Dirt",
+      "description": "A scenic connector trail through the forest.",
+      "parkName": "Zion National Park",
+      "stateCode": "UT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/6014582",
+      "source": "osm"
+    },
+    {
+      "name": "Wildcat Canyon Trail",
+      "distanceMiles": 5.2,
+      "elevationGainFt": 300,
+      "latitude": 37.380551,
+      "longitude": -113.0224273,
+      "coordinates": [
+        [
+          37.380551,
+          -113.0224273
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Out and Back",
+      "surface": "Dirt",
+      "description": "A beautiful trail leading to stunning canyon views.",
+      "parkName": "Zion National Park",
+      "stateCode": "UT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/6014582",
+      "source": "osm"
+    },
+    {
+      "name": "East Rim Trail",
+      "distanceMiles": 6.1,
+      "elevationGainFt": 400,
+      "latitude": 37.2784133,
+      "longitude": -112.8663398,
+      "coordinates": [
+        [
+          37.2784133,
+          -112.8663398
+        ]
+      ],
+      "difficulty": "Hard",
+      "trailType": "Loop",
+      "surface": "Rock",
+      "description": "Challenging trail with breathtaking views of the rim.",
+      "parkName": "Zion National Park",
+      "stateCode": "UT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/6014582",
+      "source": "osm"
+    },
+    {
+      "name": "Kayenta Trail",
+      "distanceMiles": 1.5,
+      "elevationGainFt": 300,
+      "latitude": 37.2571979,
+      "longitude": -112.9602338,
+      "coordinates": [
+        [
+          37.2571979,
+          -112.9602338
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Loop",
+      "surface": "Dirt",
+      "description": "A scenic trail with beautiful views.",
+      "parkName": "Zion National Park",
+      "stateCode": "UT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/6019760",
+      "source": "osm"
+    },
+    {
+      "name": "Lower Emerald Pool Trail",
+      "distanceMiles": 1,
+      "elevationGainFt": 150,
+      "latitude": 37.2569961,
+      "longitude": -112.9626885,
+      "coordinates": [
+        [
+          37.2569961,
+          -112.9626885
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Out and Back",
+      "surface": "Paved",
+      "description": "A short and easy trail leading to a beautiful pool.",
+      "parkName": "Zion National Park",
+      "stateCode": "UT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/6019760",
+      "source": "osm"
+    },
+    {
+      "name": "Hidden Canyon",
+      "distanceMiles": 3.5,
+      "elevationGainFt": 800,
+      "latitude": 37.2671774,
+      "longitude": -112.9388814,
+      "coordinates": [
+        [
+          37.2671774,
+          -112.9388814
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Out and Back",
+      "surface": "Dirt",
+      "description": "A challenging trail with stunning canyon views.",
+      "parkName": "Zion National Park",
+      "stateCode": "UT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/6019760",
+      "source": "osm"
+    },
+    {
+      "name": "Cable Mountain Trail",
+      "distanceMiles": 3.5,
+      "elevationGainFt": 800,
+      "latitude": 37.2620918,
+      "longitude": -112.9063031,
+      "coordinates": [
+        [
+          37.2526749,
+          -112.9170243
+        ],
+        [
+          37.2620918,
+          -112.9063031
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Out and Back",
+      "surface": "Dirt",
+      "description": "A scenic trail leading to stunning views.",
+      "parkName": "Zion National Park",
+      "stateCode": "UT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/6019764",
+      "source": "osm"
+    },
+    {
+      "name": "Grotto Trail",
+      "distanceMiles": 2.8,
+      "elevationGainFt": 600,
+      "latitude": 37.2590285,
+      "longitude": -112.9484683,
+      "coordinates": [
+        [
+          37.2517802,
+          -112.9564306
+        ],
+        [
+          37.2590285,
+          -112.9484683
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Loop",
+      "surface": "Dirt",
+      "description": "A beautiful trail through lush vegetation.",
+      "parkName": "Zion National Park",
+      "stateCode": "UT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/6019764",
+      "source": "osm"
+    },
+    {
+      "name": "Telephone Canyon",
+      "distanceMiles": 4.2,
+      "elevationGainFt": 1000,
+      "latitude": 37.2867603,
+      "longitude": -112.9685377,
+      "coordinates": [
+        [
+          37.2867603,
+          -112.9685377
+        ],
+        [
+          37.304727,
+          -112.9859327
+        ]
+      ],
+      "difficulty": "Hard",
+      "trailType": "Loop",
+      "surface": "Rock",
+      "description": "Challenging trail with rocky terrain and stunning views.",
+      "parkName": "Zion National Park",
+      "stateCode": "UT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/6019764",
+      "source": "osm"
+    },
+    {
+      "name": "East Mesa Trail",
+      "distanceMiles": 5.5,
+      "elevationGainFt": 800,
+      "latitude": 37.2805439,
+      "longitude": -112.9366554,
+      "coordinates": [
+        [
+          37.2805439,
+          -112.9366554
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Out and Back",
+      "surface": "Dirt",
+      "description": "A scenic trail with beautiful views.",
+      "parkName": "Zion National Park",
+      "stateCode": "UT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/6019768",
+      "source": "osm"
+    },
+    {
+      "name": "Deertrap Mountain",
+      "distanceMiles": 6.2,
+      "elevationGainFt": 1200,
+      "latitude": 37.248153,
+      "longitude": -112.9451608,
+      "coordinates": [
+        [
+          37.248153,
+          -112.9451608
+        ]
+      ],
+      "difficulty": "Hard",
+      "trailType": "Loop",
+      "surface": "Rock",
+      "description": "Challenging hike with rewarding vistas.",
+      "parkName": "Zion National Park",
+      "stateCode": "UT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/6019768",
+      "source": "osm"
+    },
+    {
+      "name": "Northgate Peaks",
+      "distanceMiles": 4.8,
+      "elevationGainFt": 600,
+      "latitude": 37.3384546,
+      "longitude": -113.0594512,
+      "coordinates": [
+        [
+          37.3384546,
+          -113.0594512
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Loop",
+      "surface": "Dirt",
+      "description": "A beautiful trail through diverse landscapes.",
+      "parkName": "Zion National Park",
+      "stateCode": "UT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/6019768",
+      "source": "osm"
+    },
+    {
+      "name": "Angels Landing Trail--West Rim Trail",
+      "distanceMiles": 5,
+      "elevationGainFt": 1500,
+      "latitude": 37.218278,
+      "longitude": -112.9740143,
+      "coordinates": [
+        [
+          37.2156678,
+          -112.9755462
+        ],
+        [
+          37.2156647,
+          -112.9755694
+        ],
+        [
+          37.2156602,
+          -112.9755943
+        ],
+        [
+          37.2156208,
+          -112.9757592
+        ],
+        [
+          37.2156106,
+          -112.9757912
+        ],
+        [
+          37.2156002,
+          -112.9758096
+        ],
+        [
+          37.2155836,
+          -112.9758261
+        ],
+        [
+          37.2155662,
+          -112.9758382
+        ],
+        [
+          37.2155425,
+          -112.9758507
+        ],
+        [
+          37.2154132,
+          -112.975885
+        ],
+        [
+          37.2153643,
+          -112.9758934
+        ],
+        [
+          37.2152584,
+          -112.9759035
+        ],
+        [
+          37.2151665,
+          -112.9759091
+        ],
+        [
+          37.2151327,
+          -112.9759165
+        ],
+        [
+          37.215103,
+          -112.9759257
+        ],
+        [
+          37.2150779,
+          -112.9759359
+        ],
+        [
+          37.2150531,
+          -112.9759507
+        ],
+        [
+          37.2150043,
+          -112.9759938
+        ],
+        [
+          37.2149314,
+          -112.9760572
+        ],
+        [
+          37.2148655,
+          -112.9761047
+        ],
+        [
+          37.214811,
+          -112.9761355
+        ],
+        [
+          37.2147812,
+          -112.976149
+        ],
+        [
+          37.2147464,
+          -112.9761599
+        ],
+        [
+          37.2146932,
+          -112.9761649
+        ],
+        [
+          37.2145908,
+          -112.9761702
+        ],
+        [
+          37.2145596,
+          -112.9761703
+        ],
+        [
+          37.2145313,
+          -112.9761802
+        ],
+        [
+          37.2145101,
+          -112.9761923
+        ],
+        [
+          37.2143182,
+          -112.9763522
+        ],
+        [
+          37.2141846,
+          -112.9764717
+        ],
+        [
+          37.2140926,
+          -112.97657
+        ],
+        [
+          37.2140677,
+          -112.9766002
+        ],
+        [
+          37.2140443,
+          -112.9766221
+        ],
+        [
+          37.2140314,
+          -112.9766271
+        ],
+        [
+          37.2140165,
+          -112.9766245
+        ],
+        [
+          37.2140021,
+          -112.9766156
+        ],
+        [
+          37.2139912,
+          -112.9765998
+        ]
+      ],
+      "difficulty": "Hard",
+      "trailType": "Out and Back",
+      "surface": "Rock",
+      "description": "A challenging hike with stunning views.",
+      "parkName": "Zion National Park",
+      "stateCode": "UT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/7387173",
+      "source": "osm"
+    },
+    {
+      "name": "Hayduke Trail #13",
+      "distanceMiles": 8,
+      "elevationGainFt": 2000,
+      "latitude": 37.2708617,
+      "longitude": -112.9385233,
+      "coordinates": [
+        [
+          37.2706159,
+          -112.9384257
+        ],
+        [
+          37.2706592,
+          -112.9384408
+        ],
+        [
+          37.2707269,
+          -112.9384623
+        ],
+        [
+          37.2707482,
+          -112.93847
+        ],
+        [
+          37.2707687,
+          -112.938481
+        ],
+        [
+          37.2707992,
+          -112.9385008
+        ],
+        [
+          37.270835,
+          -112.9385341
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Point to Point",
+      "surface": "Dirt",
+      "description": "A scenic trail through diverse landscapes.",
+      "parkName": "Zion National Park",
+      "stateCode": "UT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/7387173",
+      "source": "osm"
+    },
+    {
+      "name": "Pa'rus Trail",
+      "distanceMiles": 3.5,
+      "elevationGainFt": 300,
+      "latitude": 37.20891,
+      "longitude": -112.97828,
+      "coordinates": [
+        [
+          37.2139912,
+          -112.9765998
+        ],
+        [
+          37.2137672,
+          -112.9762785
+        ],
+        [
+          37.2137529,
+          -112.9762555
+        ],
+        [
+          37.2137372,
+          -112.9762376
+        ],
+        [
+          37.2137162,
+          -112.9762213
+        ],
+        [
+          37.2136948,
+          -112.9762117
+        ],
+        [
+          37.2136764,
+          -112.9762107
+        ],
+        [
+          37.2136523,
+          -112.9762113
+        ],
+        [
+          37.2136254,
+          -112.9762184
+        ],
+        [
+          37.2134338,
+          -112.9763247
+        ],
+        [
+          37.2132888,
+          -112.976385
+        ],
+        [
+          37.2132472,
+          -112.9763994
+        ],
+        [
+          37.2130012,
+          -112.9764704
+        ],
+        [
+          37.2129186,
+          -112.976492
+        ],
+        [
+          37.2127063,
+          -112.9765737
+        ],
+        [
+          37.2126372,
+          -112.9765942
+        ],
+        [
+          37.2123352,
+          -112.9766613
+        ],
+        [
+          37.2122698,
+          -112.9766837
+        ],
+        [
+          37.2121607,
+          -112.9767325
+        ],
+        [
+          37.2120159,
+          -112.976802
+        ],
+        [
+          37.2117317,
+          -112.9769656
+        ],
+        [
+          37.2116627,
+          -112.9770071
+        ],
+        [
+          37.2114784,
+          -112.9770969
+        ],
+        [
+          37.2113558,
+          -112.9771607
+        ],
+        [
+          37.2111744,
+          -112.9772686
+        ],
+        [
+          37.2110942,
+          -112.9773197
+        ],
+        [
+          37.2107839,
+          -112.9775498
+        ],
+        [
+          37.2107188,
+          -112.9775926
+        ],
+        [
+          37.2105647,
+          -112.9776833
+        ],
+        [
+          37.2104712,
+          -112.9777341
+        ],
+        [
+          37.2104338,
+          -112.9777498
+        ],
+        [
+          37.2102895,
+          -112.9778021
+        ],
+        [
+          37.2102494,
+          -112.9778198
+        ],
+        [
+          37.2102205,
+          -112.9778357
+        ],
+        [
+          37.2101924,
+          -112.9778551
+        ],
+        [
+          37.210057,
+          -112.9779839
+        ],
+        [
+          37.2100062,
+          -112.9780195
+        ],
+        [
+          37.2099678,
+          -112.97804
+        ],
+        [
+          37.2099266,
+          -112.978056
+        ],
+        [
+          37.2098761,
+          -112.9780676
+        ],
+        [
+          37.2098299,
+          -112.9780739
+        ],
+        [
+          37.2097601,
+          -112.9780758
+        ],
+        [
+          37.2097005,
+          -112.9780724
+        ],
+        [
+          37.209664,
+          -112.9780683
+        ],
+        [
+          37.2096191,
+          -112.978058
+        ],
+        [
+          37.2095617,
+          -112.9780463
+        ],
+        [
+          37.2095133,
+          -112.9780251
+        ],
+        [
+          37.2094641,
+          -112.9779981
+        ],
+        [
+          37.2094124,
+          -112.977965
+        ],
+        [
+          37.209396,
+          -112.9779579
+        ],
+        [
+          37.2093785,
+          -112.9779563
+        ],
+        [
+          37.2093531,
+          -112.9779598
+        ],
+        [
+          37.2092324,
+          -112.9779712
+        ],
+        [
+          37.209198,
+          -112.9779707
+        ],
+        [
+          37.2091546,
+          -112.9779657
+        ],
+        [
+          37.2090993,
+          -112.9779607
+        ],
+        [
+          37.2090694,
+          -112.9779608
+        ],
+        [
+          37.2090405,
+          -112.9779666
+        ],
+        [
+          37.2090137,
+          -112.9779803
+        ],
+        [
+          37.2089934,
+          -112.9779956
+        ],
+        [
+          37.2089767,
+          -112.9780198
+        ],
+        [
+          37.2089612,
+          -112.9780519
+        ],
+        [
+          37.2089474,
+          -112.9780937
+        ],
+        [
+          37.2089422,
+          -112.9781364
+        ],
+        [
+          37.2089395,
+          -112.9781775
+        ],
+        [
+          37.2089327,
+          -112.9782115
+        ],
+        [
+          37.20891,
+          -112.97828
+        ]
+      ],
+      "difficulty": "Easy",
+      "trailType": "Loop",
+      "surface": "Paved",
+      "description": "A family-friendly trail with beautiful views.",
+      "parkName": "Zion National Park",
+      "stateCode": "UT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/7387173",
+      "source": "osm"
+    },
+    {
+      "name": "Watchman Trail",
+      "distanceMiles": 2.5,
+      "elevationGainFt": 368,
+      "latitude": 37.2009672,
+      "longitude": -112.9869957,
+      "coordinates": [
+        [
+          37.2009672,
+          -112.9869957
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Out and Back",
+      "surface": "Dirt",
+      "description": "A scenic trail with views of the Watchman peak.",
+      "parkName": "Zion National Park",
+      "stateCode": "UT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/12224327",
+      "source": "osm"
+    },
+    {
+      "name": "Zion Narrows Bottom-Up Day-Hiking Route",
+      "distanceMiles": 9.4,
+      "elevationGainFt": 200,
+      "latitude": 37.3312023,
+      "longitude": -112.9445389,
+      "coordinates": [
+        [
+          37.3312023,
+          -112.9445389
+        ]
+      ],
+      "difficulty": "Moderate",
+      "trailType": "Out and Back",
+      "surface": "Riverbed",
+      "description": "A popular hike through the Virgin River with towering canyon walls.",
+      "parkName": "Zion National Park",
+      "stateCode": "UT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/12224327",
+      "source": "osm"
+    },
+    {
+      "name": "Zion Narrows Top-Down Hiking Route",
+      "distanceMiles": 16,
+      "elevationGainFt": 1200,
+      "latitude": 37.3312023,
+      "longitude": -112.9570033,
+      "coordinates": [
+        [
+          37.3312023,
+          -112.9570033
+        ]
+      ],
+      "difficulty": "Hard",
+      "trailType": "Point to Point",
+      "surface": "Riverbed",
+      "description": "A challenging hike that requires a permit, starting from the top of the Narrows.",
+      "parkName": "Zion National Park",
+      "stateCode": "UT",
+      "countryCode": "US",
+      "sourceUrl": "https://www.openstreetmap.org/way/12224327",
+      "source": "osm"
+    }
+  ],
+  "source": "osm",
+  "timestamp": "2026-01-24T18:02:28.438Z",
+  "errors": []
+}

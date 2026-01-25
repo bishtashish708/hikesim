@@ -1,0 +1,9 @@
+{
+  "parkName": "Grand Teton National Park",
+  "parkCode": "grte",
+  "trailsFound": 0,
+  "trails": [],
+  "source": "osm",
+  "timestamp": "2026-01-24T17:43:39.015Z",
+  "errors": []
+}

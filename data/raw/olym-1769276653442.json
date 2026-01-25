@@ -1,0 +1,9 @@
+{
+  "parkName": "Olympic National Park",
+  "parkCode": "olym",
+  "trailsFound": 0,
+  "trails": [],
+  "source": "osm",
+  "timestamp": "2026-01-24T17:44:13.442Z",
+  "errors": []
+}

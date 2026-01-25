@@ -18,7 +18,18 @@
     "trails:fetch": "node scripts/fetch-wikidata-trails.mjs",
     "trails:fetch-osm": "tsx scripts/fetch-trails-osm.ts",
     "trails:enrich": "tsx scripts/enrich-existing-hikes.ts",
-    "trails:validate": "tsx scripts/validate-trail-data.ts"
+    "trails:validate": "tsx scripts/validate-trail-data.ts",
+    "collect:yosemite": "tsx scripts/collect-yosemite.ts",
+    "collect:yosemite:live": "tsx scripts/collect-yosemite.ts --live",
+    "collect:verify": "tsx scripts/verify-yosemite-data.ts",
+    "collect:top10": "tsx scripts/collect-top-10-parks.ts",
+    "collect:top10:live": "tsx scripts/collect-top-10-parks.ts --live",
+    "collect:nps": "tsx scripts/collect-nps-trails.ts",
+    "collect:nps:live": "tsx scripts/collect-nps-trails.ts --live",
+    "collect:nps:yosemite": "tsx scripts/collect-nps-trails.ts --park=yose",
+    "collect:improved": "tsx scripts/collect-improved.ts",
+    "collect:improved:live": "tsx scripts/collect-improved.ts --live",
+    "collect:improved:yosemite": "tsx scripts/collect-improved.ts --park=yose --live"
   },
   "dependencies": {
     "@prisma/client": "^6.16.1",

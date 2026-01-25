@@ -3,6 +3,7 @@ import { getServerSession } from 'next-auth';
 import { authOptions } from '@/lib/auth';
 import { prisma } from '@/lib/db';
 import Link from 'next/link';
+import PlanAdjusterButton from '@/components/PlanAdjusterButton';
 
 type Params = {
   params: Promise<{ id: string }>;
@@ -193,12 +194,7 @@ export default async function TrainingPlanDetailPage({ params }: Params) {
                 View Hike
               </Link>
               {plan.aiGenerated && (
-                <button
-                  className="px-6 py-2.5 text-center text-indigo-700 bg-indigo-50 rounded-full hover:bg-indigo-100 font-medium transition-colors"
-                  title="Adjust plan with AI (coming soon)"
-                >
-                  Adjust with AI
-                </button>
+                <PlanAdjusterButton planId={plan.id} />
               )}
             </div>
           </div>
