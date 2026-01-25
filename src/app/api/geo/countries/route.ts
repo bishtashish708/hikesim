@@ -1,12 +1,34 @@
-import { NextResponse } from "next/server";
-import { Country } from "country-state-city";
+import { NextResponse } from 'next/server';
+import { prisma } from '@/lib/db';
 
+export const dynamic = 'force-dynamic';
+export const revalidate = 0;
+
+/**
+ * GET /api/geo/countries
+ * Returns all distinct countries with trail counts
+ */
 export async function GET() {
-  const countries = Country.getAllCountries()
-    .map((country) => ({ code: country.isoCode, name: country.name }))
-    .sort((a, b) => a.name.localeCompare(b.name));
+  try {
+    const countries = await prisma.hike.groupBy({
+      by: ['countryCode'],
+      where: { isSeed: false },
+      _count: true,
+      orderBy: { countryCode: 'asc' },
+    });
 
-  return NextResponse.json({ countries });
+    const countryList = countries.map((c) => ({
+      code: c.countryCode,
+      name: c.countryCode === 'US' ? 'United States' : 'India',
+      count: c._count,
+    }));
+
+    return NextResponse.json({
+      countries: countryList,
+      total: countryList.length,
+    });
+  } catch (error) {
+    console.error('Error fetching countries:', error);
+    return NextResponse.json({ error: 'Failed to fetch countries' }, { status: 500 });
+  }
 }
-
-export const runtime = "nodejs";

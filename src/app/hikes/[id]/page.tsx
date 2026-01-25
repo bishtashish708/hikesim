@@ -190,7 +190,7 @@ export default async function HikeDetailPage({ params }: HikeDetailPageProps) {
               Choose how you want to create your personalized training plan
             </p>
 
-            <div className="grid md:grid-cols-2 gap-6">
+            <div className="flex justify-center">
               {/* Quick Plan (AI) */}
               <div className="bg-white rounded-2xl p-6 shadow-sm border-2 border-indigo-200 hover:border-indigo-300 transition-all">
                 <div className="flex items-start gap-3 mb-4">
@@ -247,129 +247,10 @@ export default async function HikeDetailPage({ params }: HikeDetailPageProps) {
                 />
               </div>
 
-              {/* Custom Plan */}
-              <div className="bg-white rounded-2xl p-6 shadow-sm border-2 border-emerald-200 hover:border-emerald-300 transition-all">
-                <div className="flex items-start gap-3 mb-4">
-                  <div className="w-12 h-12 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-xl flex items-center justify-center text-2xl flex-shrink-0">
-                    ⚙️
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-1">
-                      Custom Plan
-                    </h3>
-                    <p className="text-sm text-gray-600">
-                      Full control with 15-step wizard for detailed customization
-                    </p>
-                  </div>
-                </div>
-
-                <ul className="space-y-2 mb-6 text-sm text-gray-700">
-                  <li className="flex items-start">
-                    <svg className="w-5 h-5 mr-2 text-emerald-600 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                    </svg>
-                    <span>Complete customization</span>
-                  </li>
-                  <li className="flex items-start">
-                    <svg className="w-5 h-5 mr-2 text-emerald-600 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                    </svg>
-                    <span>Choose specific days to train</span>
-                  </li>
-                  <li className="flex items-start">
-                    <svg className="w-5 h-5 mr-2 text-emerald-600 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                    </svg>
-                    <span>Treadmill vs outdoor control</span>
-                  </li>
-                  <li className="flex items-start">
-                    <svg className="w-5 h-5 mr-2 text-emerald-600 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                    </svg>
-                    <span>100% free, no AI costs</span>
-                  </li>
-                </ul>
-
-                <a
-                  href="#custom-plan-builder"
-                  className="block w-full text-center px-6 py-3 text-white bg-emerald-600 rounded-full hover:bg-emerald-700 font-medium transition-colors"
-                >
-                  Start Custom Plan Builder
-                </a>
-              </div>
             </div>
-
-            {/* Comparison Table */}
-            <details className="mt-6">
-              <summary className="cursor-pointer text-sm font-medium text-gray-700 hover:text-gray-900">
-                Need help choosing? Compare features →
-              </summary>
-              <div className="mt-4 bg-white rounded-xl p-4 border border-gray-200">
-                <table className="w-full text-sm">
-                  <thead>
-                    <tr className="border-b border-gray-200">
-                      <th className="text-left py-2 px-3">Feature</th>
-                      <th className="text-center py-2 px-3">Quick Plan (AI)</th>
-                      <th className="text-center py-2 px-3">Custom Plan</th>
-                    </tr>
-                  </thead>
-                  <tbody className="text-gray-700">
-                    <tr className="border-b border-gray-100">
-                      <td className="py-2 px-3">Setup Time</td>
-                      <td className="text-center py-2 px-3">~30 seconds</td>
-                      <td className="text-center py-2 px-3">~5 minutes</td>
-                    </tr>
-                    <tr className="border-b border-gray-100">
-                      <td className="py-2 px-3">Questions to Answer</td>
-                      <td className="text-center py-2 px-3">3</td>
-                      <td className="text-center py-2 px-3">15</td>
-                    </tr>
-                    <tr className="border-b border-gray-100">
-                      <td className="py-2 px-3">AI-Powered</td>
-                      <td className="text-center py-2 px-3">✓</td>
-                      <td className="text-center py-2 px-3">-</td>
-                    </tr>
-                    <tr className="border-b border-gray-100">
-                      <td className="py-2 px-3">Fine-tune Details</td>
-                      <td className="text-center py-2 px-3">Limited</td>
-                      <td className="text-center py-2 px-3">Full Control</td>
-                    </tr>
-                    <tr>
-                      <td className="py-2 px-3">Best For</td>
-                      <td className="text-center py-2 px-3">Beginners</td>
-                      <td className="text-center py-2 px-3">Advanced Users</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </details>
           </div>
         </section>
 
-        {/* Custom Plan Builder (below) */}
-        <section id="custom-plan-builder">
-          <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-200">
-            <div className="mb-6">
-              <h2 className="text-2xl font-bold text-gray-900 mb-2">
-                Custom Plan Builder
-              </h2>
-              <p className="text-gray-600">
-                Create a detailed, personalized training plan with full control over every parameter
-              </p>
-            </div>
-
-            <TrainingPlanBuilder
-              hike={{
-                id: hike.id,
-                name: hike.name,
-                distanceMiles: hike.distanceMiles,
-                elevationGainFt: hike.elevationGainFt,
-                profilePoints,
-              }}
-              fitnessLevel="Intermediate"
-            />
-          </div>
-        </section>
       </main>
     </div>
   );
