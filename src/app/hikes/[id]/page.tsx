@@ -5,6 +5,7 @@ import { authOptions } from "@/lib/auth";
 import { ElevationChart } from "@/components/ElevationChart";
 import { TrainingPlanBuilder } from "@/components/TrainingPlanBuilder";
 import QuickPlanGeneratorWrapper from "@/components/QuickPlanGeneratorWrapper";
+import AdvancedPlanGeneratorWrapper from "@/components/AdvancedPlanGeneratorWrapper";
 import { prisma } from "@/lib/db";
 import type { ProfilePoint } from "@/lib/planGenerator";
 
@@ -284,13 +285,17 @@ export default async function HikeDetailPage({ params }: HikeDetailPageProps) {
                   </p>
                 </div>
 
-                <button
-                  disabled
-                  className="w-full px-6 py-3 text-white bg-gray-400 rounded-full font-medium cursor-not-allowed"
-                  title="Coming soon"
-                >
-                  Coming Soon
-                </button>
+                <AdvancedPlanGeneratorWrapper
+                  hikes={[{
+                    id: hike.id,
+                    name: hike.name,
+                    distanceMiles: hike.distanceMiles,
+                    elevationGainFt: hike.elevationGainFt,
+                    difficulty: hike.difficulty || undefined,
+                    trailType: hike.trailType || undefined,
+                  }]}
+                  userId={userId}
+                />
               </div>
 
             </div>
