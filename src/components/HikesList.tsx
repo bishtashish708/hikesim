@@ -22,14 +22,19 @@ export default function HikesList() {
   const [error, setError] = useState<string | null>(null);
   const [parks, setParks] = useState<string[]>([]);
   const [selectedPark, setSelectedPark] = useState<string>("");
+  const [page, setPage] = useState(1);
+  const [total, setTotal] = useState(0);
+  const [hasMore, setHasMore] = useState(false);
 
   const parkParam = searchParams.get("park") ?? "";
 
   const query = useMemo(() => {
     const params = new URLSearchParams();
     if (parkParam) params.set("park", parkParam);
+    params.set("page", page.toString());
+    params.set("limit", "500"); // Load up to 500 trails at once
     return params.toString();
-  }, [parkParam]);
+  }, [parkParam, page]);
 
   // Load parks list
   useEffect(() => {
@@ -65,6 +70,8 @@ export default function HikesList() {
         const data = await response.json();
         if (isMounted) {
           setItems(data.items ?? []);
+          setTotal(data.total ?? 0);
+          setHasMore(data.hasMore ?? false);
         }
       } catch (err) {
         if (isMounted) {
@@ -82,6 +89,11 @@ export default function HikesList() {
       isMounted = false;
     };
   }, [query]);
+
+  // Reset to page 1 when park changes
+  useEffect(() => {
+    setPage(1);
+  }, [parkParam]);
 
   // Handle park selection
   const handleParkChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
@@ -123,9 +135,9 @@ export default function HikesList() {
   return (
     <section className="space-y-6">
       {/* Park Filter */}
-      <div className="flex gap-4 items-center">
+      <div className="flex gap-4 items-center flex-wrap">
         <label htmlFor="park-filter" className="text-sm font-medium text-slate-700">
-          Filter by National Park:
+          Filter by Park:
         </label>
         <select
           id="park-filter"
@@ -133,13 +145,19 @@ export default function HikesList() {
           onChange={handleParkChange}
           className="rounded-lg border border-slate-300 px-4 py-2 text-sm focus:border-emerald-500 focus:outline-none focus:ring-2 focus:ring-emerald-200"
         >
-          <option value="">All National Parks ({items.length} trails)</option>
+          <option value="">All Parks ({total} trails)</option>
           {parks.map((park) => (
             <option key={park} value={park}>
               {park}
             </option>
           ))}
         </select>
+
+        {parkParam && (
+          <div className="text-sm text-slate-600">
+            Showing {items.length} of {total} trails
+          </div>
+        )}
       </div>
 
       {/* Hikes Grid */}
@@ -183,6 +201,18 @@ export default function HikesList() {
           ))
         )}
       </div>
+
+      {/* Pagination */}
+      {hasMore && (
+        <div className="flex justify-center pt-4">
+          <button
+            onClick={() => setPage((p) => p + 1)}
+            className="rounded-lg bg-emerald-600 px-6 py-2 text-sm font-medium text-white hover:bg-emerald-700 transition-colors"
+          >
+            Load More Trails
+          </button>
+        </div>
+      )}
     </section>
   );
 }

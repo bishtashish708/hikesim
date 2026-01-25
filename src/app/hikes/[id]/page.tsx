@@ -118,10 +118,6 @@ export default async function HikeDetailPage({ params }: HikeDetailPageProps) {
               )}
             </div>
 
-            <div className="rounded-xl border border-emerald-100 bg-emerald-50 px-4 py-3 text-sm text-emerald-700">
-              <div className="font-medium">Profile Data</div>
-              <div>{profilePoints.length} elevation points</div>
-            </div>
           </div>
         </header>
 
