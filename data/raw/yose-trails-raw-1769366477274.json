@@ -1,0 +1,20 @@
+[
+  {
+    "source": "nps",
+    "confidence": 70,
+    "name": "Hiking in Yosemite",
+    "parkName": "Yosemite National Park",
+    "parkCode": "yose",
+    "stateCode": "CA",
+    "description": "From a short walk to the base of a waterfall to a multi-day hike deep into the Yosemite Wilderness, taking a hike is one of the best ways to experience Yosemite's spectacular scenery. Yosemite has an extensive network of over 800 miles of hiking trails.",
+    "url": "https://www.nps.gov/thingstodo/hiking-in-yosemite.htm",
+    "tags": [
+      "Trails"
+    ],
+    "metadata": {
+      "collectedAt": "2026-01-25T18:41:16.115Z",
+      "collectorVersion": "1.0.0",
+      "sourceUrl": "https://www.nps.gov/thingstodo/hiking-in-yosemite.htm"
+    }
+  }
+]

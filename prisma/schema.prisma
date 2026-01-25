@@ -110,6 +110,19 @@ model Hike {
   lastEnriched    DateTime? // When data was last updated
   description     String?   // Trail description
 
+  // AllTrails-specific fields
+  allTrailsId     String?   @unique // trail_id from AllTrails
+  areaName        String?   // area_name (park name)
+  popularity      Float?    // popularity score
+  difficultyRating Int?     // 1-7 difficulty rating
+  routeType       String?   // out and back, loop, point to point
+  visitorUsage    Int?      // 1-3 usage level
+  avgRating       Float?    // average rating (1-5)
+  numReviews      Int?      // number of reviews
+  features        Json?     // array of features (dogs-no, views, etc.)
+  activities      Json?     // array of activities (hiking, camping, etc.)
+  units           String?   // i (imperial) or m (metric)
+
   plans           GeneratedPlan[]
   trainingPlans   TrainingPlan[]
   userProfiles    UserProfile[]

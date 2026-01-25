@@ -30,6 +30,11 @@ export interface RawTrailData {
   };
 }
 
+export interface VerifiedTrailData extends RawTrailData {
+  verificationSources: string[];
+  verifiedAt: Date;
+}
+
 export interface VerificationResult {
   trailId: string;
   canonical: {

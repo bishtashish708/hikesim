@@ -1,0 +1,18 @@
+{
+  "parkName": "Yosemite National Park",
+  "parkCode": "yose",
+  "totalCollected": 1,
+  "totalVerified": 1,
+  "totalValidated": 0,
+  "totalInserted": 0,
+  "rejected": {
+    "tooShort": 1,
+    "lowElevation": 0,
+    "lowConfidence": 0,
+    "duplicate": 0,
+    "other": 0
+  },
+  "errors": [],
+  "duration": 0,
+  "timestamp": "2026-01-25T18:43:56.774Z"
+}
