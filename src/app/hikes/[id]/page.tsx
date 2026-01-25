@@ -4,7 +4,7 @@ import { getServerSession } from "next-auth";
 import { authOptions } from "@/lib/auth";
 import { ElevationChart } from "@/components/ElevationChart";
 import { TrainingPlanBuilder } from "@/components/TrainingPlanBuilder";
-import QuickPlanGenerator from "@/components/QuickPlanGenerator";
+import QuickPlanGeneratorWrapper from "@/components/QuickPlanGeneratorWrapper";
 import { prisma } from "@/lib/db";
 import type { ProfilePoint } from "@/lib/planGenerator";
 
@@ -238,7 +238,7 @@ export default async function HikeDetailPage({ params }: HikeDetailPageProps) {
                   </li>
                 </ul>
 
-                <QuickPlanGenerator
+                <QuickPlanGeneratorWrapper
                   hikes={[{
                     id: hike.id,
                     name: hike.name,
@@ -248,12 +248,6 @@ export default async function HikeDetailPage({ params }: HikeDetailPageProps) {
                     trailType: hike.trailType || undefined,
                   }]}
                   userId={userId}
-                  onPlanGenerated={() => {
-                    // Reload page to show new plan
-                    if (typeof window !== 'undefined') {
-                      window.location.reload();
-                    }
-                  }}
                 />
               </div>
 
