@@ -207,8 +207,8 @@ function parseTrailData(row: AllTrailsRow): any {
     .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
     .join(' ');
 
-  // Generate elevation profile points
-  const profilePoints = generateProfilePoints(distanceMiles, elevationGainFt, routeType);
+  // Generate elevation profile points with trail name and difficulty for realistic variation
+  const profilePoints = generateProfilePoints(distanceMiles, elevationGainFt, routeType, row.name, difficulty);
 
   return {
     name: row.name,
@@ -248,69 +248,122 @@ function parseTrailData(row: AllTrailsRow): any {
 function generateProfilePoints(
   distanceMiles: number,
   elevationGainFt: number,
-  routeType: string
+  routeType: string,
+  trailName: string = '',
+  difficulty: string = 'Moderate'
 ): Array<{ distanceMiles: number; elevationFt: number }> {
   const numPoints = Math.min(100, Math.max(20, Math.floor(distanceMiles * 5)));
   const points: Array<{ distanceMiles: number; elevationFt: number }> = [];
+  const startElevation = 4000 + Math.random() * 3000; // Vary base elevation: 4000-7000 ft
 
-  const startElevation = 5000; // Arbitrary baseline
+  // Determine profile pattern based on trail characteristics
+  const profileType = determineProfileType(trailName, difficulty, elevationGainFt, routeType);
 
-  if (routeType.toLowerCase().includes('loop')) {
-    // Loop: climb, plateau, descend back to start
-    for (let i = 0; i < numPoints; i++) {
-      const progress = i / (numPoints - 1);
-      const distance = distanceMiles * progress;
+  for (let i = 0; i < numPoints; i++) {
+    const progress = i / (numPoints - 1);
+    const distance = distanceMiles * progress;
 
-      let elevationFactor: number;
-      if (progress < 0.4) {
-        // Climb 40% of the way
-        elevationFactor = Math.sin(progress * Math.PI * 1.25);
-      } else if (progress < 0.7) {
-        // Plateau
-        elevationFactor = 0.95 + Math.sin(progress * Math.PI * 10) * 0.05;
-      } else {
-        // Descend
-        elevationFactor = Math.sin((1 - progress) * Math.PI * 1.25);
-      }
+    let elevationFactor: number;
 
-      const elevation = startElevation + elevationGainFt * elevationFactor;
-      points.push({ distanceMiles: distance, elevationFt: Math.round(elevation) });
+    switch (profileType) {
+      case 'steep-start':
+        // Steep initial climb, then gradual
+        elevationFactor = progress < 0.3
+          ? Math.pow(progress / 0.3, 0.6)
+          : 1 - Math.pow(1 - progress, 3) * 0.3;
+        break;
+
+      case 'gradual-climb':
+        // Steady gradual climb to summit
+        elevationFactor = Math.pow(progress, 1.5);
+        break;
+
+      case 'multi-peak':
+        // Multiple ups and downs (2-3 peaks)
+        const peaks = 2 + Math.floor(Math.random() * 2);
+        elevationFactor = 0;
+        for (let p = 0; p < peaks; p++) {
+          const peakProgress = (p + 1) / (peaks + 1);
+          const dist = Math.abs(progress - peakProgress);
+          elevationFactor += Math.exp(-dist * dist * 20) / peaks;
+        }
+        elevationFactor = Math.min(1, elevationFactor * 1.2);
+        break;
+
+      case 'ridge-walk':
+        // Climb to ridge, walk along ridge, then descend
+        if (progress < 0.25) {
+          elevationFactor = Math.pow(progress / 0.25, 0.8);
+        } else if (progress < 0.75) {
+          elevationFactor = 0.9 + Math.sin((progress - 0.25) * 8) * 0.1;
+        } else {
+          elevationFactor = 1 - Math.pow((progress - 0.75) / 0.25, 1.5);
+        }
+        break;
+
+      case 'summit-push':
+        // Moderate climb with steep summit push at end
+        elevationFactor = progress < 0.7
+          ? Math.pow(progress / 0.7, 2) * 0.6
+          : 0.6 + Math.pow((progress - 0.7) / 0.3, 0.5) * 0.4;
+        break;
+
+      case 'loop':
+        // Loop: climb, plateau, descend with variation
+        if (progress < 0.4) {
+          elevationFactor = Math.pow(progress / 0.4, 1.2);
+        } else if (progress < 0.7) {
+          elevationFactor = 0.9 + Math.sin((progress - 0.4) * 12) * 0.1;
+        } else {
+          elevationFactor = Math.pow((1 - progress) / 0.3, 1.3);
+        }
+        break;
+
+      default: // 'out-and-back'
+        // Classic out-and-back: climb to midpoint, return with variation
+        elevationFactor = progress <= 0.5
+          ? Math.pow(progress * 2, 1.2) * 0.5 + Math.sin(progress * Math.PI * 4) * 0.05
+          : Math.pow((1 - progress) * 2, 1.2) * 0.5 + Math.sin(progress * Math.PI * 4) * 0.05;
     }
-  } else if (routeType.toLowerCase().includes('point')) {
-    // Point to point: gradual climb with variations
-    for (let i = 0; i < numPoints; i++) {
-      const progress = i / (numPoints - 1);
-      const distance = distanceMiles * progress;
 
-      // Gradual climb with some variation
-      const elevation =
-        startElevation +
-        elevationGainFt * progress +
-        Math.sin(progress * Math.PI * 6) * (elevationGainFt * 0.1);
+    // Add natural variation (small bumps and dips)
+    const noise = Math.sin(progress * Math.PI * 8 + Math.random() * 2) * 0.03;
+    elevationFactor = Math.max(0, Math.min(1, elevationFactor + noise));
 
-      points.push({ distanceMiles: distance, elevationFt: Math.round(elevation) });
-    }
-  } else {
-    // Out and back: climb to midpoint, descend back
-    for (let i = 0; i < numPoints; i++) {
-      const progress = i / (numPoints - 1);
-      const distance = distanceMiles * progress;
-
-      let elevationFactor: number;
-      if (progress <= 0.5) {
-        // Climbing to midpoint
-        elevationFactor = Math.sin(progress * Math.PI);
-      } else {
-        // Descending back
-        elevationFactor = Math.sin((1 - progress) * Math.PI);
-      }
-
-      const elevation = startElevation + elevationGainFt * elevationFactor;
-      points.push({ distanceMiles: distance, elevationFt: Math.round(elevation) });
-    }
+    const elevation = startElevation + elevationGainFt * elevationFactor;
+    points.push({ distanceMiles: distance, elevationFt: Math.round(elevation) });
   }
 
   return points;
+}
+
+function determineProfileType(
+  trailName: string,
+  difficulty: string,
+  elevationGainFt: number,
+  routeType: string
+): string {
+  const name = trailName.toLowerCase();
+
+  // Check route type first
+  if (routeType.toLowerCase().includes('loop')) return 'loop';
+
+  // Analyze trail name for clues
+  if (name.includes('ridge') || name.includes('pass') || name.includes('col')) return 'ridge-walk';
+  if (name.includes('peak') || name.includes('summit') || name.includes('dome') || name.includes('mountain')) return 'summit-push';
+  if (name.includes('lake') || name.includes('glacier') || name.includes('falls')) return 'gradual-climb';
+  if (name.includes('canyon') || name.includes('valley')) {
+    return elevationGainFt > 3000 ? 'steep-start' : 'gradual-climb';
+  }
+
+  // Use difficulty and elevation gain as fallback
+  if (difficulty === 'Hard' && elevationGainFt > 4000) return 'steep-start';
+  if (difficulty === 'Easy' || elevationGainFt < 1000) return 'gradual-climb';
+  if (routeType.toLowerCase().includes('point')) return 'gradual-climb';
+
+  // Random selection for variety
+  const types = ['out-and-back', 'gradual-climb', 'multi-peak', 'ridge-walk'];
+  return types[Math.floor(Math.random() * types.length)];
 }
 
 function getStateCode(stateName: string): string {

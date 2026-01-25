@@ -190,8 +190,8 @@ export default async function HikeDetailPage({ params }: HikeDetailPageProps) {
               Choose how you want to create your personalized training plan
             </p>
 
-            <div className="flex justify-center">
-              {/* Quick Plan (AI) */}
+            <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+              {/* Quick Plan */}
               <div className="bg-white rounded-2xl p-6 shadow-sm border-2 border-indigo-200 hover:border-indigo-300 transition-all">
                 <div className="flex items-start gap-3 mb-4">
                   <div className="w-12 h-12 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-xl flex items-center justify-center text-2xl flex-shrink-0">
@@ -199,10 +199,10 @@ export default async function HikeDetailPage({ params }: HikeDetailPageProps) {
                   </div>
                   <div>
                     <h3 className="text-xl font-bold text-gray-900 mb-1">
-                      Quick Plan (AI-Powered)
+                      Quick Plan
                     </h3>
                     <p className="text-sm text-gray-600">
-                      Answer 3 quick questions and let AI generate your plan in seconds
+                      Answer a few quick questions and get your plan in seconds
                     </p>
                   </div>
                 </div>
@@ -218,19 +218,13 @@ export default async function HikeDetailPage({ params }: HikeDetailPageProps) {
                     <svg className="w-5 h-5 mr-2 text-indigo-600 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                     </svg>
-                    <span>AI optimizes for your goals</span>
+                    <span>Optimized for your goals</span>
                   </li>
                   <li className="flex items-start">
                     <svg className="w-5 h-5 mr-2 text-indigo-600 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                     </svg>
                     <span>Week-by-week breakdown</span>
-                  </li>
-                  <li className="flex items-start">
-                    <svg className="w-5 h-5 mr-2 text-indigo-600 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                    </svg>
-                    <span>Cost: ~$0.002 per plan</span>
                   </li>
                 </ul>
 
@@ -245,6 +239,58 @@ export default async function HikeDetailPage({ params }: HikeDetailPageProps) {
                   }]}
                   userId={userId}
                 />
+              </div>
+
+              {/* Advanced Customization */}
+              <div className="bg-white rounded-2xl p-6 shadow-sm border-2 border-emerald-200 hover:border-emerald-300 transition-all">
+                <div className="flex items-start gap-3 mb-4">
+                  <div className="w-12 h-12 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-xl flex items-center justify-center text-2xl flex-shrink-0">
+                    ⚙️
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-gray-900 mb-1">
+                      Advanced Customization
+                    </h3>
+                    <p className="text-sm text-gray-600">
+                      Provide detailed inputs for a highly tailored training plan
+                    </p>
+                  </div>
+                </div>
+
+                <ul className="space-y-2 mb-4 text-sm text-gray-700">
+                  <li className="flex items-start">
+                    <svg className="w-5 h-5 mr-2 text-emerald-600 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                    </svg>
+                    <span>Specify training days & schedule</span>
+                  </li>
+                  <li className="flex items-start">
+                    <svg className="w-5 h-5 mr-2 text-emerald-600 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                    </svg>
+                    <span>Detail past training experience</span>
+                  </li>
+                  <li className="flex items-start">
+                    <svg className="w-5 h-5 mr-2 text-emerald-600 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                    </svg>
+                    <span>Most accurate & realistic plan</span>
+                  </li>
+                </ul>
+
+                <div className="mb-6 p-3 bg-amber-50 border-l-4 border-amber-400 rounded">
+                  <p className="text-xs text-amber-800">
+                    <strong>Note:</strong> Advanced customization requires more detailed input but generates the most accurate and realistic training plan tailored to your specific needs.
+                  </p>
+                </div>
+
+                <button
+                  disabled
+                  className="w-full px-6 py-3 text-white bg-gray-400 rounded-full font-medium cursor-not-allowed"
+                  title="Coming soon"
+                >
+                  Coming Soon
+                </button>
               </div>
 
             </div>

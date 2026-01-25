@@ -80,16 +80,68 @@ export default function QuickPlanGenerator({
   // Form state - auto-select first hike if only one is provided
   const [selectedHikeId, setSelectedHikeId] = useState(hikes.length === 1 ? hikes[0].id : '');
   const [fitnessLevel, setFitnessLevel] = useState<FitnessLevel>('intermediate');
+  const [hikeDate, setHikeDate] = useState<string>('');
   const [weeksUntilHike, setWeeksUntilHike] = useState(8);
   const [trainingPreference, setTrainingPreference] = useState<TrainingPreference>('mixed');
   const [includeStrength, setIncludeStrength] = useState(true);
   const [daysPerWeek, setDaysPerWeek] = useState(4);
+  const [ambitionWarning, setAmbitionWarning] = useState<string | null>(null);
 
   const selectedHike = hikes.find(h => h.id === selectedHikeId) || hikes[0];
+
+  // Calculate weeks until hike from selected date
+  const calculateWeeksFromDate = (dateString: string) => {
+    if (!dateString) return 8;
+    const selectedDate = new Date(dateString);
+    const today = new Date();
+    const diffTime = selectedDate.getTime() - today.getTime();
+    const diffWeeks = Math.ceil(diffTime / (1000 * 60 * 60 * 24 * 7));
+    return Math.max(4, Math.min(24, diffWeeks));
+  };
+
+  // Check if plan is overambitious
+  const checkAmbition = (weeks: number, fitness: FitnessLevel, difficulty?: string) => {
+    if (!difficulty) {
+      setAmbitionWarning(null);
+      return;
+    }
+
+    const isOverambitious =
+      (difficulty === 'Hard' && fitness === 'beginner' && weeks < 12) ||
+      (difficulty === 'Hard' && fitness === 'intermediate' && weeks < 8) ||
+      (difficulty === 'Moderate' && fitness === 'beginner' && weeks < 8);
+
+    if (isOverambitious) {
+      setAmbitionWarning(
+        `⚠️ This timeline may be too ambitious for your current fitness level and the hike difficulty. Consider selecting a later date (recommended: ${weeks < 8 ? '12+' : '16+'} weeks) for optimal preparation.`
+      );
+    } else {
+      setAmbitionWarning(null);
+    }
+  };
+
+  // Update weeks when date changes
+  const handleDateChange = (dateString: string) => {
+    setHikeDate(dateString);
+    const weeks = calculateWeeksFromDate(dateString);
+    setWeeksUntilHike(weeks);
+    checkAmbition(weeks, fitnessLevel, selectedHike?.difficulty);
+  };
+
+  // Recheck ambition when fitness level changes
+  const handleFitnessChange = (level: FitnessLevel) => {
+    setFitnessLevel(level);
+    checkAmbition(weeksUntilHike, level, selectedHike?.difficulty);
+  };
 
   const handleGenerate = async () => {
     if (!selectedHikeId) {
       setError('Please select a hike');
+      return;
+    }
+
+    if (!hikeDate) {
+      setError('Please select your hike date');
       return;
     }
 
@@ -149,7 +201,7 @@ export default function QuickPlanGenerator({
         onClick={() => setIsOpen(true)}
         className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors"
       >
-        Generate Quick Plan with AI
+        Generate Quick Plan
       </button>
     );
   }
@@ -233,7 +285,7 @@ export default function QuickPlanGenerator({
                   {(['beginner', 'intermediate', 'expert', 'advanced'] as const).map(level => (
                     <button
                       key={level}
-                      onClick={() => setFitnessLevel(level)}
+                      onClick={() => handleFitnessChange(level)}
                       className={`px-4 py-2 rounded-md border-2 transition-colors ${
                         fitnessLevel === level
                           ? 'border-blue-600 bg-blue-50 text-blue-700'
@@ -246,24 +298,32 @@ export default function QuickPlanGenerator({
                 </div>
               </div>
 
-              {/* Weeks Until Hike */}
+              {/* Hike Date */}
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2">
-                  Weeks Until Hike: {weeksUntilHike}
+                  When do you plan to hike?
                 </label>
                 <input
-                  type="range"
-                  min="4"
-                  max="24"
-                  value={weeksUntilHike}
-                  onChange={(e) => setWeeksUntilHike(parseInt(e.target.value))}
-                  className="w-full"
+                  type="date"
+                  value={hikeDate}
+                  min={new Date(Date.now() + 28 * 24 * 60 * 60 * 1000).toISOString().split('T')[0]}
+                  max={new Date(Date.now() + 168 * 24 * 60 * 60 * 1000).toISOString().split('T')[0]}
+                  onChange={(e) => handleDateChange(e.target.value)}
+                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                 />
-                <div className="flex justify-between text-xs text-gray-500 mt-1">
-                  <span>4 weeks</span>
-                  <span>24 weeks</span>
-                </div>
+                {hikeDate && (
+                  <div className="mt-2 text-sm text-gray-600">
+                    Training period: <strong>{weeksUntilHike} weeks</strong>
+                  </div>
+                )}
               </div>
+
+              {/* Ambition Warning */}
+              {ambitionWarning && (
+                <div className="p-4 bg-amber-50 border-l-4 border-amber-400 rounded-md">
+                  <p className="text-sm text-amber-800">{ambitionWarning}</p>
+                </div>
+              )}
 
               {/* Training Preference */}
               <div>
