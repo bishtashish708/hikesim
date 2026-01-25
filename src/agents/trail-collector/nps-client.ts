@@ -41,8 +41,8 @@ export class NPSClient {
     // Filter for hiking/trail activities
     const trails = data.data
       .filter((activity) => {
-        const name = activity.fullName.toLowerCase();
-        const desc = activity.description?.toLowerCase() || '';
+        const name = (activity.title || activity.fullName || '').toLowerCase();
+        const desc = (activity.shortDescription || activity.description || '').toLowerCase();
 
         return (
           name.includes('trail') ||
@@ -76,12 +76,12 @@ export class NPSClient {
     return {
       source: 'nps',
       confidence: 70, // NPS is official but lacks detailed trail data
-      name: activity.fullName,
+      name: activity.title || activity.fullName || 'Unknown Trail',
       parkName: this.getParkNameFromCode(parkCode),
       parkCode,
       stateCode: this.getStateCodeFromPark(parkCode),
       coordinates: coords,
-      description: activity.description,
+      description: activity.shortDescription || activity.description || '',
       url: activity.url,
       tags: activity.topics?.map((t: any) => t.name) || [],
       metadata: {
