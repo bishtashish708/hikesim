@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "hikesim-mobile",
-    "slug": "hikesim-mobile",
+    "name": "HikeSim",
+    "slug": "hikesim",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -10,16 +10,24 @@
     "splash": {
       "image": "./assets/splash-icon.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#10b981"
     },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.hikesim.app",
+      "buildNumber": "1",
+      "infoPlist": {
+        "NSHealthShareUsageDescription": "HikeSim uses health data to track your hiking workouts and sync progress with challenges.",
+        "NSHealthUpdateUsageDescription": "HikeSim writes workout data to help track your hiking training progress.",
+        "NSLocationWhenInUseUsageDescription": "HikeSim uses your location to show nearby trails and track outdoor workouts."
+      }
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
+        "backgroundColor": "#10b981"
       },
+      "package": "com.hikesim.app",
       "edgeToEdgeEnabled": true,
       "predictiveBackGestureEnabled": false
     },
@@ -28,6 +36,11 @@
     },
     "plugins": [
       "@react-native-community/datetimepicker"
-    ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": ""
+      }
+    }
   }
 }
