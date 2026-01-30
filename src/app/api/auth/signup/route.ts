@@ -1,8 +1,10 @@
 import { NextResponse } from "next/server";
 import bcrypt from "bcryptjs";
+import jwt from "jsonwebtoken";
 import { prisma } from "@/lib/db";
 
 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const JWT_SECRET = process.env.NEXTAUTH_SECRET || 'your-secret-key';
 
 export async function POST(req: Request) {
   const body = await req.json();
@@ -35,7 +37,7 @@ export async function POST(req: Request) {
 
   const passwordHash = await bcrypt.hash(password, 10);
 
-  await prisma.user.create({
+  const user = await prisma.user.create({
     data: {
       name: name || null,
       email,
@@ -43,7 +45,28 @@ export async function POST(req: Request) {
     },
   });
 
-  return NextResponse.json({ ok: true });
+  // Generate JWT token for mobile app
+  const token = jwt.sign(
+    {
+      id: user.id,
+      email: user.email,
+      isAdmin: user.isAdmin,
+    },
+    JWT_SECRET,
+    { expiresIn: '30d' }
+  );
+
+  // Return token and user data for mobile app
+  return NextResponse.json({
+    ok: true,
+    token,
+    user: {
+      id: user.id,
+      email: user.email,
+      name: user.name,
+      isAdmin: user.isAdmin,
+    },
+  });
 }
 
 export const runtime = "nodejs";

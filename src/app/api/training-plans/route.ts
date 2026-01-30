@@ -1,7 +1,10 @@
-import { NextResponse } from "next/server";
+import { NextRequest, NextResponse } from "next/server";
 import { getServerSession } from "next-auth";
+import jwt from "jsonwebtoken";
 import { prisma } from "@/lib/db";
 import { authOptions } from "@/lib/auth";
+
+const JWT_SECRET = process.env.NEXTAUTH_SECRET || 'your-secret-key';
 
 type TrainingPlanPayload = {
   hikeId?: string;
@@ -11,9 +14,79 @@ type TrainingPlanPayload = {
   weeks?: unknown;
 };
 
-export async function POST(request: Request) {
+// Helper to get user from session or JWT token
+async function getAuthenticatedUser(request: NextRequest) {
+  // First try NextAuth session (for web app)
   const session = await getServerSession(authOptions);
-  if (!session?.user?.email) {
+  if (session?.user?.email) {
+    const user = await prisma.user.findUnique({
+      where: { email: session.user.email },
+      select: { id: true, email: true, name: true },
+    });
+    return user;
+  }
+
+  // Then try JWT token (for mobile app)
+  const authHeader = request.headers.get('authorization');
+  if (authHeader?.startsWith('Bearer ')) {
+    const token = authHeader.substring(7);
+    try {
+      const decoded = jwt.verify(token, JWT_SECRET) as { id: string; email: string };
+      const user = await prisma.user.findUnique({
+        where: { id: decoded.id },
+        select: { id: true, email: true, name: true },
+      });
+      return user;
+    } catch (error) {
+      return null;
+    }
+  }
+
+  return null;
+}
+
+// GET - List user's training plans
+export async function GET(request: NextRequest) {
+  const user = await getAuthenticatedUser(request);
+  if (!user) {
+    return NextResponse.json({ error: "Unauthorized." }, { status: 401 });
+  }
+
+  const plans = await prisma.trainingPlan.findMany({
+    where: { userId: user.id },
+    include: {
+      hike: {
+        select: {
+          id: true,
+          name: true,
+          distanceMiles: true,
+          elevationGainFt: true,
+        },
+      },
+    },
+    orderBy: { createdAt: 'desc' },
+  });
+
+  // Format the response for mobile app
+  const formattedPlans = plans.map(plan => ({
+    id: plan.id,
+    hikeName: plan.hike?.name || 'Custom Hike',
+    distanceMiles: plan.hike?.distanceMiles || 0,
+    elevationGainFt: plan.hike?.elevationGainFt || 0,
+    targetDate: plan.targetDate,
+    trainingStartDate: plan.trainingStartDate,
+    durationWeeks: Math.ceil((new Date(plan.targetDate).getTime() - new Date(plan.trainingStartDate).getTime()) / (7 * 24 * 60 * 60 * 1000)),
+    fitnessLevel: (plan.settings as any)?.fitnessLevel || 'beginner',
+    weeklySchedule: plan.weeks || [],
+    createdAt: plan.createdAt,
+  }));
+
+  return NextResponse.json(formattedPlans);
+}
+
+export async function POST(request: NextRequest) {
+  const user = await getAuthenticatedUser(request);
+  if (!user) {
     return NextResponse.json({ error: "Unauthorized." }, { status: 401 });
   }
 
@@ -39,6 +112,7 @@ export async function POST(request: Request) {
 
   const created = await prisma.trainingPlan.create({
     data: {
+      userId: user.id,
       hikeId: body.hikeId,
       trainingStartDate,
       targetDate,

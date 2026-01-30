@@ -26,6 +26,7 @@ model User {
   emailVerified  DateTime?
   image          String?
   passwordHash   String?
+  isAdmin        Boolean   @default(false)
   createdAt      DateTime  @default(now())
   updatedAt      DateTime  @updatedAt
 
@@ -37,6 +38,10 @@ model User {
   trainingPlans  TrainingPlan[]
   generatedPlans GeneratedPlan[]
   feedback       WorkoutFeedback[]
+  healthConnections HealthConnection[]
+  workouts       Workout[]
+  challengeProgress UserChallengeProgress[]
+  earnedBadges   UserBadge[]
 }
 
 model Account {
@@ -123,9 +128,15 @@ model Hike {
   activities      Json?     // array of activities (hiking, camping, etc.)
   units           String?   // i (imperial) or m (metric)
 
+  // Image fields
+  primaryImageUrl String?   // Main thumbnail image
+  images          Json?     // Array of {url, source, caption, verified}
+  imagesEnrichedAt DateTime? // When images were last fetched
+
   plans           GeneratedPlan[]
   trainingPlans   TrainingPlan[]
   userProfiles    UserProfile[]
+  virtualChallenges VirtualChallenge[]
 }
 
 model GeneratedPlan {
@@ -214,4 +225,226 @@ model WorkoutFeedback {
   createdAt  DateTime @default(now())
 
   user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+// Health Platform Integration Models
+
+enum HealthPlatform {
+  APPLE_HEALTH
+  GOOGLE_FIT
+  STRAVA
+  GARMIN
+  FITBIT
+}
+
+enum WorkoutSource {
+  MANUAL
+  APPLE_HEALTH
+  GOOGLE_FIT
+  STRAVA
+  GARMIN
+  FITBIT
+}
+
+enum WorkoutType {
+  HIKE
+  WALK
+  RUN
+  TREADMILL
+  STAIR_CLIMBER
+  OTHER
+}
+
+model HealthConnection {
+  id           String         @id @default(cuid())
+  userId       String
+  platform     HealthPlatform
+  isConnected  Boolean        @default(true)
+  lastSyncAt   DateTime?
+  accessToken  String?        @db.Text  // For OAuth platforms like Strava
+  refreshToken String?        @db.Text
+  expiresAt    DateTime?
+  metadata     Json?          // Platform-specific settings
+  createdAt    DateTime       @default(now())
+  updatedAt    DateTime       @updatedAt
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, platform])
+}
+
+model Workout {
+  id              String        @id @default(cuid())
+  userId          String
+  source          WorkoutSource @default(MANUAL)
+  externalId      String?       // ID from external platform to prevent duplicates
+  workoutType     WorkoutType   @default(HIKE)
+
+  // Core metrics
+  distanceMiles   Float?
+  elevationGainFt Float?
+  durationMinutes Int?
+  caloriesBurned  Int?
+
+  // Heart rate data
+  avgHeartRate    Int?
+  maxHeartRate    Int?
+
+  // Timing
+  startedAt       DateTime
+  endedAt         DateTime?
+
+  // Location (optional)
+  startLatitude   Float?
+  startLongitude  Float?
+  routeData       Json?         // GPS track if available
+
+  // Metadata
+  title           String?
+  notes           String?
+  rawData         Json?         // Original data from health platform
+
+  createdAt       DateTime      @default(now())
+  updatedAt       DateTime      @updatedAt
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, source, externalId])
+  @@index([userId, startedAt])
+}
+
+// Virtual Challenge / Gamification Models
+
+enum ChallengeDifficulty {
+  EASY
+  MODERATE
+  HARD
+  EXTREME
+}
+
+enum ChallengeStatus {
+  ACTIVE
+  COMPLETED
+  FAILED
+  ABANDONED
+}
+
+enum StreakMode {
+  STRICT           // Miss a day = fail
+  GRACE_PERIOD     // Allow 1 rest day per week
+  FLEXIBLE         // No streak requirement, just complete distance
+}
+
+model VirtualChallenge {
+  id                String              @id @default(cuid())
+  name              String              // "Olympic Enchanted Valley"
+  description       String              @db.Text
+  imageUrl          String?
+
+  // Challenge metrics
+  totalDistanceMiles  Float             // Total distance to complete
+  totalElevationGainFt Int?             // Optional elevation requirement
+
+  // Difficulty & timing
+  difficulty        ChallengeDifficulty @default(MODERATE)
+  estimatedDays     Int                 // Suggested days to complete
+  maxDaysAllowed    Int?                // Hard deadline (null = no limit)
+  streakMode        StreakMode          @default(GRACE_PERIOD)
+
+  // Link to real hike (optional)
+  sourceHikeId      String?
+
+  // Milestones (checkpoints along the way)
+  milestones        Json                // [{distanceMiles, name, description, badgeId}]
+
+  // Rewards
+  completionBadgeId String?
+  completionPoints  Int                 @default(100)
+
+  // Visibility
+  isActive          Boolean             @default(true)
+  isFeatured        Boolean             @default(false)
+
+  createdAt         DateTime            @default(now())
+  updatedAt         DateTime            @updatedAt
+
+  sourceHike        Hike?               @relation(fields: [sourceHikeId], references: [id])
+  completionBadge   Badge?              @relation(fields: [completionBadgeId], references: [id])
+  userProgress      UserChallengeProgress[]
+}
+
+model UserChallengeProgress {
+  id                String          @id @default(cuid())
+  userId            String
+  challengeId       String
+
+  // Progress tracking
+  status            ChallengeStatus @default(ACTIVE)
+  distanceCompleted Float           @default(0)
+  elevationCompleted Float          @default(0)
+
+  // Streak tracking
+  currentStreak     Int             @default(0)  // Consecutive days
+  longestStreak     Int             @default(0)
+  lastActivityDate  DateTime?
+  graceDaysUsed     Int             @default(0)  // Rest days used this week
+
+  // Milestones reached (array of milestone indices)
+  milestonesReached Json            @default("[]")
+
+  // Points & multipliers
+  pointsEarned      Int             @default(0)
+  streakMultiplier  Float           @default(1.0)  // Bonus for consecutive days
+
+  // Daily activity logs
+  dailyLogs         Json            @default("[]")  // [{date, distanceMiles, elevationFt, workoutId}]
+
+  // Timing
+  startedAt         DateTime        @default(now())
+  completedAt       DateTime?
+
+  createdAt         DateTime        @default(now())
+  updatedAt         DateTime        @updatedAt
+
+  user              User            @relation(fields: [userId], references: [id], onDelete: Cascade)
+  challenge         VirtualChallenge @relation(fields: [challengeId], references: [id])
+
+  @@unique([userId, challengeId])
+  @@index([userId, status])
+}
+
+model Badge {
+  id          String    @id @default(cuid())
+  name        String    // "Enchanted Valley Finisher"
+  description String
+  imageUrl    String?
+  iconName    String?   // Ionicons name for mobile
+
+  // Badge type
+  category    String    @default("challenge")  // challenge, streak, milestone, special
+  rarity      String    @default("common")     // common, rare, epic, legendary
+
+  // Points awarded when earned
+  points      Int       @default(10)
+
+  createdAt   DateTime  @default(now())
+
+  challenges  VirtualChallenge[]
+  userBadges  UserBadge[]
+}
+
+model UserBadge {
+  id        String   @id @default(cuid())
+  userId    String
+  badgeId   String
+  earnedAt  DateTime @default(now())
+
+  // Context of how it was earned
+  challengeId String?
+  metadata    Json?    // Additional context
+
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  badge     Badge    @relation(fields: [badgeId], references: [id])
+
+  @@unique([userId, badgeId])
 }
