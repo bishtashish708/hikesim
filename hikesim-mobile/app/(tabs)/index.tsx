@@ -22,6 +22,21 @@ export default function DashboardScreen() {
         <Text style={styles.welcomeSubtitle}>Ready to train for your next adventure?</Text>
       </View>
 
+      {/* Start Workout Button */}
+      <TouchableOpacity
+        style={styles.startWorkoutButton}
+        onPress={() => router.push('/track-workout')}
+      >
+        <View style={styles.startWorkoutIcon}>
+          <Ionicons name="play" size={28} color="#ffffff" />
+        </View>
+        <View style={styles.startWorkoutText}>
+          <Text style={styles.startWorkoutTitle}>Start Workout</Text>
+          <Text style={styles.startWorkoutSubtitle}>Track your hike with GPS</Text>
+        </View>
+        <Ionicons name="chevron-forward" size={24} color="#ffffff" />
+      </TouchableOpacity>
+
       {/* Quick Stats */}
       <View style={styles.statsContainer}>
         <View style={styles.statCard}>
@@ -106,6 +121,13 @@ export default function DashboardScreen() {
           </TouchableOpacity>
           <TouchableOpacity
             style={styles.actionCard}
+            onPress={() => router.push('/(tabs)/challenges')}
+          >
+            <Ionicons name="trophy" size={28} color="#f59e0b" />
+            <Text style={styles.actionText}>Challenges</Text>
+          </TouchableOpacity>
+          <TouchableOpacity
+            style={styles.actionCard}
             onPress={() => router.push('/training')}
           >
             <Ionicons name="add-circle" size={28} color="#6366f1" />
@@ -137,6 +159,41 @@ const styles = StyleSheet.create({
   welcomeSubtitle: {
     fontSize: 16,
     color: '#64748b',
+  },
+  startWorkoutButton: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    backgroundColor: '#10b981',
+    padding: 16,
+    borderRadius: 16,
+    marginBottom: 24,
+    shadowColor: '#10b981',
+    shadowOffset: { width: 0, height: 4 },
+    shadowOpacity: 0.3,
+    shadowRadius: 8,
+    elevation: 4,
+  },
+  startWorkoutIcon: {
+    width: 48,
+    height: 48,
+    backgroundColor: 'rgba(255,255,255,0.2)',
+    borderRadius: 24,
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginRight: 12,
+  },
+  startWorkoutText: {
+    flex: 1,
+  },
+  startWorkoutTitle: {
+    fontSize: 18,
+    fontWeight: '600',
+    color: '#ffffff',
+  },
+  startWorkoutSubtitle: {
+    fontSize: 14,
+    color: 'rgba(255,255,255,0.8)',
+    marginTop: 2,
   },
   statsContainer: {
     flexDirection: 'row',

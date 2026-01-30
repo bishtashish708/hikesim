@@ -19,7 +19,10 @@
       "infoPlist": {
         "NSHealthShareUsageDescription": "HikeSim uses health data to track your hiking workouts and sync progress with challenges.",
         "NSHealthUpdateUsageDescription": "HikeSim writes workout data to help track your hiking training progress.",
-        "NSLocationWhenInUseUsageDescription": "HikeSim uses your location to show nearby trails and track outdoor workouts."
+        "NSLocationWhenInUseUsageDescription": "HikeSim uses your location to track your hiking workouts and calculate distance.",
+        "NSLocationAlwaysAndWhenInUseUsageDescription": "HikeSim uses your location to track workouts even when the app is in the background.",
+        "NSMotionUsageDescription": "HikeSim uses motion data to count your steps during workouts.",
+        "UIBackgroundModes": ["location"]
       }
     },
     "android": {
@@ -29,13 +32,35 @@
       },
       "package": "com.hikesim.app",
       "edgeToEdgeEnabled": true,
-      "predictiveBackGestureEnabled": false
+      "predictiveBackGestureEnabled": false,
+      "permissions": [
+        "ACCESS_COARSE_LOCATION",
+        "ACCESS_FINE_LOCATION",
+        "ACCESS_BACKGROUND_LOCATION",
+        "ACTIVITY_RECOGNITION",
+        "FOREGROUND_SERVICE",
+        "FOREGROUND_SERVICE_LOCATION"
+      ]
     },
     "web": {
       "favicon": "./assets/favicon.png"
     },
     "plugins": [
-      "@react-native-community/datetimepicker"
+      "@react-native-community/datetimepicker",
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "HikeSim uses your location to track workouts even when the app is in the background.",
+          "isAndroidBackgroundLocationEnabled": true,
+          "isAndroidForegroundServiceEnabled": true
+        }
+      ],
+      [
+        "expo-sensors",
+        {
+          "motionPermission": "HikeSim uses motion sensors to count your steps during workouts."
+        }
+      ]
     ],
     "extra": {
       "eas": {
