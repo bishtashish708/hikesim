@@ -75,19 +75,30 @@ class WorkoutTracker {
 
   // Request all necessary permissions
   async requestPermissions(): Promise<boolean> {
-    const { status: foreground } = await Location.requestForegroundPermissionsAsync();
-    if (foreground !== 'granted') {
-      this.callbacks.onError?.('Location permission is required to track workouts');
+    try {
+      const { status: foreground } = await Location.requestForegroundPermissionsAsync();
+      if (foreground !== 'granted') {
+        this.callbacks.onError?.('Location permission is required to track workouts');
+        return false;
+      }
+
+      // Try to request background location (may not work in Expo Go)
+      try {
+        const { status: background } = await Location.requestBackgroundPermissionsAsync();
+        if (background !== 'granted') {
+          console.log('Background location not granted - tracking may stop when app is minimized');
+        }
+      } catch (bgError) {
+        // Background permissions not available in Expo Go - that's okay
+        console.log('Background location not available (Expo Go limitation)');
+      }
+
+      return true;
+    } catch (error) {
+      console.error('Permission request error:', error);
+      this.callbacks.onError?.('Could not request location permissions. Please check app settings.');
       return false;
     }
-
-    // Request background location for when app is minimized
-    const { status: background } = await Location.requestBackgroundPermissionsAsync();
-    if (background !== 'granted') {
-      console.log('Background location not granted - tracking may stop when app is minimized');
-    }
-
-    return true;
   }
 
   // Set callbacks for updates
